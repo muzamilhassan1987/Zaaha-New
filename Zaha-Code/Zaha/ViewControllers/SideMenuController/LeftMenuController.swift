@@ -302,6 +302,11 @@ extension LeftMenuController: UITableViewDelegate
                 self.showAboutPopUp()
                 return
             }
+            if (menu == Menu.nearMe) {
+                
+//                self.showAboutPopUp()
+                return
+            }
             self.changeControllers(menu)
         }
     }

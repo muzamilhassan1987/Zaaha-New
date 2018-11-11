@@ -27,7 +27,7 @@ class CreateExperienceController: BaseViewController , StoryBoardHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
         setInitialData()
-        
+        setNavBar()
         // Do any additional setup after loading the view.
     }
     
@@ -43,7 +43,15 @@ class CreateExperienceController: BaseViewController , StoryBoardHandler {
     }
    
     
-    
+    func setNavBar()
+    {
+        self.title = "CREATE STORY"
+        self.navigationController?.isNavigationBarHidden = false
+        
+//        let menuImg = UIImage.init(named: "home_menuIcon")?.flipIfNeeded()
+        
+        //self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
+    }
     
     @IBAction func selectPhoto(_ sender: BaseUIButton) {
     }
