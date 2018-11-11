@@ -16,14 +16,40 @@ enum profileCellEnum : Int {
 
 class ViewProfileController: BaseViewController, StoryBoardHandler {
 
-    static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.booking.rawValue, nil)
+    static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.registeration.rawValue, nil)
     @IBOutlet weak var tblProfileView: UITableView!
     var headerView : ParallaxHeaderView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setNavBar()
         setUpTable()
         // Do any additional setup after loading the view.
+    }
+    func setNavBar()
+    {
+        self.title = "VIEW PROFILE"
+        self.navigationController?.isNavigationBarHidden = false
+        
+        let menuImg = UIImage.init(named: "home_menuIcon")?.flipIfNeeded()
+        
+        self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
+
+        let editImg = UIImage.init(named: "profile_EditIcon")?.flipIfNeeded()
+        self.addBarButtonItemWithImage(editImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionRight, self, #selector(editMenuButton))
+    }
+    @objc func actionMenuButton()
+    {
+        sideMenuController?.showLeftViewAnimated()
+    }
+    @objc func editMenuButton()
+    {
+        let controller = EditProfileController.loadVC()
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true) {
+            
+        }
     }
     func setUpTable() {
         

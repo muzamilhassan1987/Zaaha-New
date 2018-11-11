@@ -32,6 +32,10 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
         let menuImg = UIImage.init(named: "home_menuIcon")?.flipIfNeeded()
         
         self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
+
+        
+
+
     }
 
     

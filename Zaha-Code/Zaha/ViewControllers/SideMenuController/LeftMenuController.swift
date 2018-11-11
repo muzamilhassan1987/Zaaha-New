@@ -185,6 +185,14 @@ class LeftMenuController: BaseViewController
         sideMenuController?.hideLeftViewAnimated()
     }
     
+    @IBAction func showProfile(_ sender: UIButton) {
+        
+        let controller = ViewProfileController.loadVC()
+        setRootViewController(BaseNavigationController(rootViewController: controller))
+        
+    }
+    
+    
     func changeControllers(_ menu: Menu)
     {
 //        if menu == .logOut

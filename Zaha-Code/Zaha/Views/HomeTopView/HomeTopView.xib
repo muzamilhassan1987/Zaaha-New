@@ -32,15 +32,16 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZgP-jf-Cvw" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChristianBale" translatesAutoresizingMaskIntoConstraints="NO" id="ZgP-jf-Cvw" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
                             <rect key="frame" x="147" y="65" width="120" height="120"/>
-                            <color key="backgroundColor" red="1" green="0.95920106429999996" blue="0.00014920818020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="03C-AL-Oqu"/>
-                                <constraint firstAttribute="height" constant="120" id="uLt-qg-jnf"/>
+                                <constraint firstAttribute="width" secondItem="ZgP-jf-Cvw" secondAttribute="height" multiplier="1:1" id="Zgt-yI-lev"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="_maskType" value="circle"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
                     </subviews>
@@ -69,6 +70,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ChristianBale" width="300" height="400"/>
         <image name="bg-home" width="414" height="264"/>
     </resources>
 </document>

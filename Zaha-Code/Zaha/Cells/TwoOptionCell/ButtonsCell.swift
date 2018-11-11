@@ -7,9 +7,13 @@
 //
 
 import UIKit
-
+@objc protocol ButtonTableCellDelegate: class
+{
+    @objc optional  func bookExperience()
+}
 class ButtonsCell: UITableViewCell {
 
+     weak var buttonCellDelegate: ButtonTableCellDelegate?
     @IBOutlet weak var btnBook: BaseUIButton!
     @IBOutlet weak var btnReject: BaseUIButton!
     @IBOutlet weak var btnConfirm: BaseUIButton!
@@ -50,7 +54,7 @@ class ButtonsCell: UITableViewCell {
     }
     
     @IBAction func bookExperience(_ sender: Any) {
-        
+        buttonCellDelegate?.bookExperience!()
         
     }
     

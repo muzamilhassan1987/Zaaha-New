@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -189,15 +190,25 @@
                                     <action selector="actionCross:" destination="nuQ-NI-XTX" eventType="touchUpInside" id="JbT-k7-1AM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy2-cu-Bkg">
+                                <rect key="frame" x="30" y="65" width="70" height="70"/>
+                                <connections>
+                                    <action selector="showProfile:" destination="nuQ-NI-XTX" eventType="touchUpInside" id="Tgl-Yl-7P7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Qy2-cu-Bkg" firstAttribute="leading" secondItem="g3G-aY-8Ob" secondAttribute="leading" id="396-Md-7kW"/>
                             <constraint firstItem="QuG-sr-q8a" firstAttribute="trailing" secondItem="ZlX-1a-WPO" secondAttribute="trailing" constant="16" id="9IR-1S-o0L"/>
+                            <constraint firstItem="Qy2-cu-Bkg" firstAttribute="top" secondItem="g3G-aY-8Ob" secondAttribute="top" id="CzO-YW-TlC"/>
                             <constraint firstItem="ZlX-1a-WPO" firstAttribute="top" secondItem="QuG-sr-q8a" secondAttribute="top" constant="5" id="Fig-iF-lOD"/>
+                            <constraint firstItem="Qy2-cu-Bkg" firstAttribute="trailing" secondItem="g3G-aY-8Ob" secondAttribute="trailing" id="HAz-b4-o6q"/>
                             <constraint firstItem="g3G-aY-8Ob" firstAttribute="leading" secondItem="QuG-sr-q8a" secondAttribute="leading" constant="30" id="O2v-wD-M3b" customClass="BaseLayoutConstraint" customModule="Zaha" customModuleProvider="target"/>
                             <constraint firstItem="XjJ-9z-iyj" firstAttribute="leading" secondItem="g3G-aY-8Ob" secondAttribute="trailing" constant="15" id="TIn-1g-9md"/>
                             <constraint firstItem="g3G-aY-8Ob" firstAttribute="top" secondItem="QuG-sr-q8a" secondAttribute="top" constant="45" id="Zj7-JC-gcE"/>
                             <constraint firstItem="Zki-wU-6TZ" firstAttribute="top" secondItem="g3G-aY-8Ob" secondAttribute="bottom" constant="45" id="aA6-H0-WqF"/>
+                            <constraint firstItem="Qy2-cu-Bkg" firstAttribute="bottom" secondItem="g3G-aY-8Ob" secondAttribute="bottom" id="heJ-mj-ygx"/>
                             <constraint firstAttribute="trailing" secondItem="Zki-wU-6TZ" secondAttribute="trailing" id="j2i-Od-pGj"/>
                             <constraint firstItem="QuG-sr-q8a" firstAttribute="trailing" secondItem="XjJ-9z-iyj" secondAttribute="trailing" constant="16" id="k7Y-mU-eOH"/>
                             <constraint firstItem="Zki-wU-6TZ" firstAttribute="leading" secondItem="NQk-c7-j98" secondAttribute="leading" id="tl7-mL-ubs"/>

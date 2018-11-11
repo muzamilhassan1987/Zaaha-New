@@ -209,6 +209,7 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
                 return cell
         case cellIdentifiers.buttons.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! ButtonsCell
+            cell.buttonCellDelegate = self
             setCellProperties(cell)
             cell.setData(detailType)
             return cell
@@ -304,3 +305,11 @@ extension BookingDetailController: UICollectionViewDelegate, UICollectionViewDat
 ////
 ////
 //}
+extension BookingDetailController: ButtonTableCellDelegate
+{
+
+    func bookExperience() {
+        
+        
+    }
+}
