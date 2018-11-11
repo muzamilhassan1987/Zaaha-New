@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingCell" rowHeight="148" id="KGk-i7-Jjw" customClass="BookingCell" customModule="Zaha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="147.66666666666666"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esQ-nM-DaX" customClass="BaseUIView" customModule="Zaha" customModuleProvider="target">
+                        <rect key="frame" x="20" y="20.000000000000007" width="374" height="127.66666666666669"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XZd-YI-ALO" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="107.66666666666667" height="107.66666666666667"/>
+                                <color key="backgroundColor" red="1" green="0.14908303734921891" blue="0.097010638846381392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XZd-YI-ALO" secondAttribute="height" multiplier="1:1" id="iAI-Hz-WqA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u41-rZ-lqa" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="132.66666666666663" y="44" width="233.33333333333337" height="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="textfieldGray"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontBook"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeSmall"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQL-yE-w6F" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="132.66666666666663" y="68" width="233.33333333333337" height="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="textfieldGray"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontBook"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeSmall"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnC-4y-kkT" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="132.66666666666666" y="87.666666666666671" width="75" height="30"/>
+                                <color key="backgroundColor" red="0.30980392156862746" green="0.38431372549019605" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6h5-Jl-kHn">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="Jo8-fd-EJc">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                <real key="value" value="75"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Confirmed">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontBook"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeXSmall"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="white"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeZ-wM-jTu" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="223" y="87.666666666666671" width="75" height="30"/>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.38431372549999998" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontBook"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeXSmall"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="white"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-zD-JyF" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="132.66666666666663" y="10" width="233.33333333333337" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.77647058820000003" green="0.61960784310000006" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeXLarge"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.33725490196078434" alpha="0.098921654929577468" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XZd-YI-ALO" firstAttribute="top" secondItem="esQ-nM-DaX" secondAttribute="top" constant="10" id="0F0-RM-JcO">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="Bp6-zD-JyF" firstAttribute="leading" secondItem="XZd-YI-ALO" secondAttribute="trailing" constant="15" id="2RL-tG-8CB"/>
+                            <constraint firstItem="XZd-YI-ALO" firstAttribute="leading" secondItem="esQ-nM-DaX" secondAttribute="leading" constant="10" id="5BF-GW-Tfu">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="ZnC-4y-kkT" firstAttribute="leading" secondItem="Bp6-zD-JyF" secondAttribute="leading" id="7fu-Lc-B18"/>
+                            <constraint firstItem="ZnC-4y-kkT" firstAttribute="bottom" secondItem="XZd-YI-ALO" secondAttribute="bottom" id="EH2-Fa-If0"/>
+                            <constraint firstItem="PeZ-wM-jTu" firstAttribute="leading" secondItem="ZnC-4y-kkT" secondAttribute="trailing" constant="15.333333333333343" id="EHp-Tv-84L"/>
+                            <constraint firstItem="PeZ-wM-jTu" firstAttribute="width" secondItem="ZnC-4y-kkT" secondAttribute="width" id="Lei-Rq-zy4"/>
+                            <constraint firstAttribute="bottom" secondItem="XZd-YI-ALO" secondAttribute="bottom" constant="10" id="P3K-5b-Kiz">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="QQL-yE-w6F" firstAttribute="trailing" secondItem="u41-rZ-lqa" secondAttribute="trailing" id="PuT-UI-eCa"/>
+                            <constraint firstAttribute="height" constant="127.67" id="Tkt-hF-RyB">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                        <real key="value" value="127.67"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="Bp6-zD-JyF" firstAttribute="top" secondItem="XZd-YI-ALO" secondAttribute="top" id="USw-JE-hQ5"/>
+                            <constraint firstItem="PeZ-wM-jTu" firstAttribute="centerY" secondItem="ZnC-4y-kkT" secondAttribute="centerY" id="YFu-dn-gbq"/>
+                            <constraint firstItem="u41-rZ-lqa" firstAttribute="top" secondItem="Bp6-zD-JyF" secondAttribute="bottom" constant="8" id="aYd-wD-BEG"/>
+                            <constraint firstItem="QQL-yE-w6F" firstAttribute="leading" secondItem="u41-rZ-lqa" secondAttribute="leading" id="gPy-bS-Xy2"/>
+                            <constraint firstItem="u41-rZ-lqa" firstAttribute="trailing" secondItem="Bp6-zD-JyF" secondAttribute="trailing" id="q5z-jr-9dD"/>
+                            <constraint firstAttribute="trailing" secondItem="Bp6-zD-JyF" secondAttribute="trailing" constant="8" id="qSa-16-bFv"/>
+                            <constraint firstItem="PeZ-wM-jTu" firstAttribute="height" secondItem="ZnC-4y-kkT" secondAttribute="height" id="tL1-4B-9eG"/>
+                            <constraint firstItem="u41-rZ-lqa" firstAttribute="leading" secondItem="Bp6-zD-JyF" secondAttribute="leading" id="wrW-CU-HgG"/>
+                            <constraint firstItem="QQL-yE-w6F" firstAttribute="top" secondItem="u41-rZ-lqa" secondAttribute="bottom" constant="8" id="z0E-pi-nXM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="esQ-nM-DaX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9hm-sN-yzR"/>
+                    <constraint firstItem="esQ-nM-DaX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20.000000000000007" id="SX2-cG-7N8"/>
+                    <constraint firstAttribute="trailing" secondItem="esQ-nM-DaX" secondAttribute="trailing" constant="20" id="cgt-qL-6YX"/>
+                    <constraint firstAttribute="bottom" secondItem="esQ-nM-DaX" secondAttribute="bottom" id="zzd-ds-Lyc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnStatus" destination="ZnC-4y-kkT" id="mRC-6b-E1M"/>
+                <outlet property="btnView" destination="PeZ-wM-jTu" id="6dQ-0X-JzI"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="163.85869565217394"/>
+        </tableViewCell>
+    </objects>
+</document>

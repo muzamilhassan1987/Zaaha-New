@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DescriptionCell" rowHeight="84" id="KGk-i7-Jjw" customClass="DescriptionCell" customModule="Zaha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="476" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="476" height="83.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sT5-K1-4D1">
+                        <rect key="frame" x="20" y="16" width="436" height="51.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddv-xJ-flH" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeGrayText"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizefontLarge"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bf-P2-JQ8" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="30.5" width="436" height="21"/>
+                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeGrayText"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeSmall"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbD-A8-WTo">
+                        <rect key="frame" x="0.0" y="82.5" width="476" height="1"/>
+                        <color key="backgroundColor" red="0.84670447339999999" green="0.84670447339999999" blue="0.84670447339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="G2n-4M-wEh" customClass="BaseLayoutConstraint" customModule="Zaha" customModuleProvider="target"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="sT5-K1-4D1" secondAttribute="bottom" constant="16" id="0oE-Fx-1Qa" customClass="BaseLayoutConstraint" customModule="Zaha" customModuleProvider="target"/>
+                    <constraint firstItem="sT5-K1-4D1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="3Ab-5Q-bXu" customClass="BaseLayoutConstraint" customModule="Zaha" customModuleProvider="target"/>
+                    <constraint firstAttribute="trailing" secondItem="sT5-K1-4D1" secondAttribute="trailing" constant="20" id="N8Z-uM-kfS" customClass="BaseLayoutConstraint" customModule="Zaha" customModuleProvider="target"/>
+                    <constraint firstItem="EbD-A8-WTo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="O74-Mg-hgz"/>
+                    <constraint firstAttribute="trailing" secondItem="EbD-A8-WTo" secondAttribute="trailing" id="PcF-T4-Yxh"/>
+                    <constraint firstAttribute="bottom" secondItem="EbD-A8-WTo" secondAttribute="bottom" id="f1A-SD-ekz"/>
+                    <constraint firstItem="sT5-K1-4D1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="fjN-Si-Fbd" customClass="BaseLayoutConstraint" customModule="Zaha" customModuleProvider="target"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblDescription" destination="Ddv-xJ-flH" id="XG5-MN-dyg"/>
+                <outlet property="lblDescriptionContent" destination="3Bf-P2-JQ8" id="p7y-jQ-jaS"/>
+            </connections>
+            <point key="canvasLocation" x="111" y="92"/>
+        </tableViewCell>
+    </objects>
+</document>

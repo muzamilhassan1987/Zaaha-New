@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eZr-8f-Nd0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Booking List Controller-->
+        <scene sceneID="gzl-NA-gtl">
+            <objects>
+                <viewController storyboardIdentifier="BookingListController" id="Cqa-cO-UF9" customClass="BookingListController" customModule="Zaha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4O0-mO-Op4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-Hn-Wue" customClass="BaseUIView" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_cornerSides" value="topleft,topright"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lyQ-Nw-B3r">
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Cqa-cO-UF9" id="dty-80-7Hs"/>
+                                    <outlet property="delegate" destination="Cqa-cO-UF9" id="HmY-r7-bf1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5RA-NP-94O" firstAttribute="trailing" secondItem="lyQ-Nw-B3r" secondAttribute="trailing" id="1T6-oF-fC8"/>
+                            <constraint firstItem="lyQ-Nw-B3r" firstAttribute="top" secondItem="4qg-Hn-Wue" secondAttribute="top" id="Aph-3v-2nR"/>
+                            <constraint firstItem="4qg-Hn-Wue" firstAttribute="leading" secondItem="4O0-mO-Op4" secondAttribute="leading" id="L26-U9-eko"/>
+                            <constraint firstItem="4qg-Hn-Wue" firstAttribute="top" secondItem="5RA-NP-94O" secondAttribute="top" constant="30" id="L3C-KE-w1A"/>
+                            <constraint firstItem="lyQ-Nw-B3r" firstAttribute="leading" secondItem="5RA-NP-94O" secondAttribute="leading" id="TkQ-9r-1O8"/>
+                            <constraint firstItem="5RA-NP-94O" firstAttribute="bottom" secondItem="4qg-Hn-Wue" secondAttribute="bottom" id="jgy-rV-2Ej"/>
+                            <constraint firstAttribute="trailing" secondItem="4qg-Hn-Wue" secondAttribute="trailing" id="qWc-RR-gAM"/>
+                            <constraint firstItem="5RA-NP-94O" firstAttribute="bottom" secondItem="lyQ-Nw-B3r" secondAttribute="bottom" id="qhA-yG-2rV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5RA-NP-94O"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sUQ-VM-jv8"/>
+                    <connections>
+                        <outlet property="tblBookingList" destination="lyQ-Nw-B3r" id="tTb-x7-7v5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bc-Fc-otY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.11594202898561" y="96.195652173913047"/>
+        </scene>
+        <!--Booking Detail Controller-->
+        <scene sceneID="Sty-P0-jt2">
+            <objects>
+                <viewController storyboardIdentifier="BookingDetailController" id="Yyk-9v-o0u" customClass="BookingDetailController" customModule="Zaha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aq1-C1-BKH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjI-Dw-eJ2" customClass="BaseUIView" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_cornerSides" value="topleft,topright"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-Qg-Jn6">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Yyk-9v-o0u" id="ogX-kf-v8f"/>
+                                    <outlet property="delegate" destination="Yyk-9v-o0u" id="KPO-oy-QkE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Cw-Qg-Jn6" firstAttribute="leading" secondItem="EAZ-a0-IsC" secondAttribute="leading" id="3d5-AK-fsU"/>
+                            <constraint firstItem="EAZ-a0-IsC" firstAttribute="bottom" secondItem="rjI-Dw-eJ2" secondAttribute="bottom" id="FPb-4o-Udh"/>
+                            <constraint firstItem="rjI-Dw-eJ2" firstAttribute="leading" secondItem="Aq1-C1-BKH" secondAttribute="leading" id="GYO-UE-ixp"/>
+                            <constraint firstItem="EAZ-a0-IsC" firstAttribute="bottom" secondItem="6Cw-Qg-Jn6" secondAttribute="bottom" id="I25-NF-Lbc"/>
+                            <constraint firstItem="EAZ-a0-IsC" firstAttribute="trailing" secondItem="6Cw-Qg-Jn6" secondAttribute="trailing" id="LCW-hb-sNx"/>
+                            <constraint firstItem="rjI-Dw-eJ2" firstAttribute="top" secondItem="EAZ-a0-IsC" secondAttribute="top" constant="30" id="Le5-M3-pTg"/>
+                            <constraint firstItem="6Cw-Qg-Jn6" firstAttribute="top" secondItem="rjI-Dw-eJ2" secondAttribute="top" id="VOM-bC-daD"/>
+                            <constraint firstAttribute="trailing" secondItem="rjI-Dw-eJ2" secondAttribute="trailing" id="n2q-Fw-pNB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EAZ-a0-IsC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sow-RB-tMa"/>
+                    <connections>
+                        <outlet property="tblBookingDetail" destination="6Cw-Qg-Jn6" id="O1e-Mg-DsA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIB-Zh-l58" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721" y="81"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="Jpm-bg-AZr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eZr-8f-Nd0" customClass="BaseNavigationController" customModule="Zaha" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9mO-z6-4cb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cqa-cO-UF9" kind="relationship" relationship="rootViewController" id="Jmk-Vq-8Yh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izg-Lp-rBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="96.7016491754123"/>
+        </scene>
+    </scenes>
+</document>

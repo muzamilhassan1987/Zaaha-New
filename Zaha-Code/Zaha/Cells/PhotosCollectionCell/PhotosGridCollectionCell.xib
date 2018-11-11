@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosGridCollectionCell" id="gTV-IL-0wX" customClass="PhotosGridCollectionCell" customModule="Zaha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUg-eH-RCb">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-home" translatesAutoresizingMaskIntoConstraints="NO" id="KeH-Le-l4Z" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasDropShadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KeH-Le-l4Z" firstAttribute="top" secondItem="dSN-zw-YzY" secondAttribute="top" id="Pub-Yj-0Yv"/>
+                            <constraint firstItem="dSN-zw-YzY" firstAttribute="trailing" secondItem="KeH-Le-l4Z" secondAttribute="trailing" id="iR6-2K-WAa"/>
+                            <constraint firstItem="KeH-Le-l4Z" firstAttribute="leading" secondItem="dSN-zw-YzY" secondAttribute="leading" id="vzj-o1-rt1"/>
+                            <constraint firstItem="dSN-zw-YzY" firstAttribute="bottom" secondItem="KeH-Le-l4Z" secondAttribute="bottom" id="xNZ-aL-7IS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dSN-zw-YzY"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="CUg-eH-RCb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TcX-PJ-zYz"/>
+                <constraint firstAttribute="trailing" secondItem="CUg-eH-RCb" secondAttribute="trailing" id="VI1-pL-EGM"/>
+                <constraint firstAttribute="bottom" secondItem="CUg-eH-RCb" secondAttribute="bottom" id="oax-SX-70b"/>
+                <constraint firstItem="CUg-eH-RCb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uFJ-LB-cA6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imgPhoto" destination="KeH-Le-l4Z" id="MlY-C9-ZB3"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bg-home" width="375" height="239"/>
+    </resources>
+</document>
