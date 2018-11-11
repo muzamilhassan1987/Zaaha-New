@@ -25,6 +25,7 @@ enum Menu: String
     case inbox = "Inbox"
     case setting = "Settings"
     case about = "About"
+    case booking = "Bookings"
 }
 
 extension Menu
@@ -108,6 +109,9 @@ extension Menu
 //           return NotificationController.loadVC()
 //
 //
+            
+        case .booking:
+            return BookingListController.loadVC()
         case .setting:
 
             return SettingController.loadVC()
@@ -144,7 +148,8 @@ class LeftMenuController: BaseViewController
         ["icon":"sidebar_myExpIcon", "type":Menu.myExp.rawValue],
         ["icon":"sidebar_inboxIcon", "type":Menu.inbox.rawValue],
         ["icon":"sidebar_settingsIcon", "type":Menu.setting.rawValue],
-        ["icon":"sidebar_aboutIcon", "type":Menu.about.rawValue]
+        ["icon":"sidebar_aboutIcon", "type":Menu.about.rawValue],
+        ["icon":"sidebar_aboutIcon", "type":Menu.booking.rawValue]
     ]
     
     override func didReceiveMemoryWarning()

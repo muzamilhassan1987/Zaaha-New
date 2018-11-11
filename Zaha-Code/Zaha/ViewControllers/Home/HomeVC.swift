@@ -33,7 +33,6 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
         
         self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
 
-        
 
 
     }
@@ -53,6 +52,9 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
             break
         case .stories:
             self.title = "Stories".uppercased()
+           
+            let menuImg = UIImage.init(named: "storeis_plusIcon")?.flipIfNeeded()
+            self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionRight, self, #selector(showCreateExpScreen))
             break
         case .myExperience:
             self.title = "My Experiences".uppercased()
@@ -65,6 +67,11 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
         }
         
         
+    }
+    @objc func showCreateExpScreen()
+    {
+        router.goToCreateExperience(from: self)
+        //sideMenuController?.showLeftViewAnimated()
     }
     @objc func actionMenuButton()
     {
@@ -130,7 +137,35 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeTableViewCell
         cell.selectionStyle = .none
-        cell.setData(.homeList)
+        print(detailType)
+        switch detailType {
+        case .none:
+            if (indexPath.row % 2 == 0) {
+                cell.setData(.homeList)
+            }else{
+                cell.setData(.stories)
+            }
+            
+            
+            break
+        case .upcomingExperience:
+            cell.setData(.homeList)
+            break
+        case .booking:
+            break
+        case .stories:
+            cell.setData(.stories)
+            break
+        case .myExperience:
+            cell.setData(.homeList)
+            break
+        case .pastExperience:
+            cell.setData(.homeList)
+            break
+        default:
+            print("")
+        }
+        //cell.setData(.homeList)
         
         return cell
         

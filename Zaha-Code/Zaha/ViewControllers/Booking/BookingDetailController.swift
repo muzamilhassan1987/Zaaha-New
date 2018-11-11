@@ -80,6 +80,7 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
             break
         case .myExperience:
             self.title = "My Experiences".uppercased()
+            fetchPtlist("MyExperience")
             tempDetailCollection = AmenitiesCollectionCell.pastExpDetailData
             break
         case .pastExperience:

@@ -162,6 +162,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imgVideoIcon" destination="6u2-rZ-M19" id="QdR-Ck-1jD"/>
                 <outlet property="layoutTopPadding" destination="USn-84-ISq" id="e2c-PW-705"/>
                 <outlet property="viewFiveLabels" destination="8Xg-Wq-hbD" id="yZ2-BP-gCj"/>
                 <outlet property="viewTwoLabel" destination="OmR-rz-FUM" id="sTe-WD-6FJ"/>

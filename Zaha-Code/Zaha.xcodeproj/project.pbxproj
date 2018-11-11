@@ -165,6 +165,7 @@
 		1D692458219891DC002CDE61 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D692457219891DC002CDE61 /* EditProfileController.swift */; };
 		1D69245A2198ABF3002CDE61 /* BookSpecialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6924592198ABF3002CDE61 /* BookSpecialController.swift */; };
 		1D69245C2198B030002CDE61 /* PastExperience.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D69245B2198B030002CDE61 /* PastExperience.plist */; };
+		1D69245E2198C0D6002CDE61 /* MyExperience.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D69245D2198C0D6002CDE61 /* MyExperience.plist */; };
 		1D89866F2192460200AD57C9 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D89866E2192460200AD57C9 /* Booking.storyboard */; };
 		1D898672219246A900AD57C9 /* BookingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D898671219246A900AD57C9 /* BookingListController.swift */; };
 		1D8986782192477900AD57C9 /* BookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8986762192477900AD57C9 /* BookingCell.swift */; };
@@ -428,6 +429,7 @@
 		1D692457219891DC002CDE61 /* EditProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		1D6924592198ABF3002CDE61 /* BookSpecialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSpecialController.swift; sourceTree = "<group>"; };
 		1D69245B2198B030002CDE61 /* PastExperience.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PastExperience.plist; sourceTree = "<group>"; };
+		1D69245D2198C0D6002CDE61 /* MyExperience.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyExperience.plist; sourceTree = "<group>"; };
 		1D89866E2192460200AD57C9 /* Booking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
 		1D898671219246A900AD57C9 /* BookingListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListController.swift; sourceTree = "<group>"; };
 		1D8986762192477900AD57C9 /* BookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCell.swift; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 				1A665E592188426500B7CBA2 /* FontManager.plist */,
 				1D9A4D91219867F400BDAC84 /* UpComingExperience.plist */,
 				1D69245B2198B030002CDE61 /* PastExperience.plist */,
+				1D69245D2198C0D6002CDE61 /* MyExperience.plist */,
 			);
 			path = Plists;
 			sourceTree = "<group>";
@@ -1464,6 +1467,7 @@
 				1D8E52F9218EE6D600F49674 /* RobotoCondensed-Italic.ttf in Resources */,
 				1AB84F6021947C7C004D6C58 /* HeaderTitleViewCell.xib in Resources */,
 				1D8E52F0218EE6D600F49674 /* Lato-Medium.ttf in Resources */,
+				1D69245E2198C0D6002CDE61 /* MyExperience.plist in Resources */,
 				1D9A4D8521981A4500BDAC84 /* AmenitiesTableCell.xib in Resources */,
 				1A665F8A21884EC700B7CBA2 /* banner_logo@2x.png in Resources */,
 				1D8E5305218EE6D600F49674 /* Roboto-Bold.ttf in Resources */,

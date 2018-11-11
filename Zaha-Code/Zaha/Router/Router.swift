@@ -56,6 +56,10 @@ class Router  {
         vc.show(viewcontrollerInstance: ChangePasswordViewController.loadVC())
     }
     
+    func goToCreateExperience(from vc : viewController)  {
+        
+        vc.show(viewcontrollerInstance: CreateExperienceController.loadVC())
+    }
     func goToSettingsVC(from vc : viewController) {
         
           vc.show(viewcontrollerInstance: SettingViewController.loadVC())
