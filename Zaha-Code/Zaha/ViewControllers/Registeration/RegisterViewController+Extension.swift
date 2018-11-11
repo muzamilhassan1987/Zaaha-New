@@ -104,22 +104,22 @@ extension RegisterViewController {
 extension RegisterViewController {
     
     func doSignup(params : [String : String]) {
-        let requestParam = self.manager.params(parameters: params as [String : AnyObject])
-        
-        self.manager.api(requestParam, completion: {
-            
-            if self.manager.isSuccess {
-                CurrentUser.data = self.manager.userData
-                FP.emailUser = (self.manager.userData?.email!)!
-             Alert.showMsg(msg: self.manager.message)
-            }
-            else {
-                
-                print("failed")
-            }
-        })
-     
-        
+//        let requestParam = self.manager.params(parameters: params as [String : AnyObject])
+//        
+//        self.manager.api(requestParam, completion: {
+//            
+//            if self.manager.isSuccess {
+//                CurrentUser.data = self.manager.userData
+//                FP.emailUser = (self.manager.userData?.email!)!
+//             Alert.showMsg(msg: self.manager.message)
+//            }
+//            else {
+//                
+//                print("failed")
+//            }
+//        })
+//     
+//        
     }
 }
 

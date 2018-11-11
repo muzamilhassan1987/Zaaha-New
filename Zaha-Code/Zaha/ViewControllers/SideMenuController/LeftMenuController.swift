@@ -10,7 +10,7 @@ import UIKit
 import LGSideMenuController
 //import FCAlertView
 import SwiftMessages
-import RealmSwift
+//import RealmSwift
 //import SKActivityIndicatorView
 import Alamofire
 
@@ -137,7 +137,7 @@ class LeftMenuController: BaseViewController
     
     private let kTableHeaderHeight: CGFloat = DesignUtility.getValueFromRatio(80)
     //let manager = LogoutManager()
-    let realm = try! Realm()
+//    let realm = try! Realm()
 
     var menuArray = [
         ["icon":"sidebar_homeIcon", "type":Menu.home.rawValue],

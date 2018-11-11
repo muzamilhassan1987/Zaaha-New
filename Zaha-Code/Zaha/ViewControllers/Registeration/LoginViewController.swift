@@ -14,7 +14,7 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
     @IBOutlet weak var btnGuestLogin: BaseUIButton!
     
     @IBOutlet weak var lblDontHaveAccount: UILabel!
-    let manager = LoginManager()
+//    let manager = LoginManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -209,32 +209,32 @@ extension LoginViewController : UITextFieldDelegate{
 extension LoginViewController {
     
     func doLogin(params : [String : String]) {
-        let requestParam = self.manager.params(parameters: params as [String : AnyObject])
-        
-        self.manager.api(requestParam, completion: {
-            
-            if self.manager.isSuccess {
-                self.checkIfUserIsVerified(isVerified : (self.manager.userData?.isVerified)!)
-           }
-            else {
-                
-                print("failed")
-            }
-        })
+//        let requestParam = self.manager.params(parameters: params as [String : AnyObject])
+//        
+//        self.manager.api(requestParam, completion: {
+//            
+//            if self.manager.isSuccess {
+//                self.checkIfUserIsVerified(isVerified : (self.manager.userData?.isVerified)!)
+//           }
+//            else {
+//                
+//                print("failed")
+//            }
+//        })
     }
     
     func checkIfUserIsVerified(isVerified : String) {
         
         if Int(isVerified) == 1 {
-        CurrentUser.data =  self.manager.userData
-        CurrentUser.token = self.manager.userData?.token ?? ""
+//        CurrentUser.data =  self.manager.userData
+//        CurrentUser.token = self.manager.userData?.token ?? ""
         CurrentUser.userType = .registered
             
             
             let userDefault = UserDefaults.standard
             userDefault.set(true, forKey: Login.isLoggedIn)
-            userDefault.set(self.manager.userData?.token, forKey: Login.token)
-            UserDefaults.standard.set(try? PropertyListEncoder().encode(self.manager.userData), forKey:Login.userData)
+//            userDefault.set(self.manager.userData?.token, forKey: Login.token)
+         //   UserDefaults.standard.set(try? PropertyListEncoder().encode(self.manager.userData), forKey:Login.userData)
             if FP.loginGuest == true && CartData.cartDict.count > 0{
              
             }else{

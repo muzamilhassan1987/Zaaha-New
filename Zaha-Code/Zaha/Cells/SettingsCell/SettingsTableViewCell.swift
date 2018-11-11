@@ -33,7 +33,7 @@ class SettingsTableViewCell: UITableViewCell {
             switchControll.isHidden = false
             imgRightArrow.isHidden = true
             btnLanguge.isHidden = true
-         switchControll.isOn = CurrentUser.data?.notificationStatus == "1" ? true : false
+        // switchControll.isOn = CurrentUser.data?.notificationStatus == "1" ? true : false
     
             if switchControll.isOn{
                 switchControll.thumbTintColor = selectedColor

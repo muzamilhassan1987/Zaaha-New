@@ -26,11 +26,6 @@ PODS:
   - LGSideMenuController (2.1.1)
   - MICountryPicker (0.2.2)
   - MOLH (0.4)
-  - Realm (3.11.1):
-    - Realm/Headers (= 3.11.1)
-  - Realm/Headers (3.11.1)
-  - RealmSwift (3.11.1):
-    - Realm (= 3.11.1)
   - SwiftMessages (6.0.0):
     - SwiftMessages/App (= 6.0.0)
   - SwiftMessages/App (6.0.0)
@@ -44,7 +39,6 @@ DEPENDENCIES:
   - LGSideMenuController (= 2.1.1)
   - MICountryPicker (from `https://github.com/mustafaibrahim989/MICountryPicker.git`, branch `master`)
   - MOLH (= 0.4)
-  - RealmSwift
   - SwiftMessages
 
 SPEC REPOS:
@@ -59,8 +53,6 @@ SPEC REPOS:
     - Kingfisher
     - LGSideMenuController
     - MOLH
-    - Realm
-    - RealmSwift
     - SwiftMessages
 
 EXTERNAL SOURCES:
@@ -85,10 +77,8 @@ SPEC CHECKSUMS:
   LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
   MICountryPicker: 82122c5f918bc9f9e2c510793fffd188dc8d38ce
   MOLH: e5da53263c1bd1aaefb783d49ae620702288b40d
-  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
-  RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   SwiftMessages: da7c981256a65b3e58022d9027a36584cf4eccf5
 
-PODFILE CHECKSUM: 048a7d5bfd6553a166e168e0551d2bd343629efc
+PODFILE CHECKSUM: eaaa61e90dab0d6e55980b66e96896f8f814712c
 
 COCOAPODS: 1.5.3

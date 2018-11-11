@@ -10,7 +10,7 @@ target 'Zaha' do
    pod 'IQKeyboardManagerSwift', '6.2.0'
   pod 'Kingfisher', '4.10.0'
    pod 'MICountryPicker', :git => 'https://github.com/mustafaibrahim989/MICountryPicker.git', :branch => 'master'
-    pod 'RealmSwift'
+   # pod 'RealmSwift'
     pod 'SwiftMessages'
     pod 'GoogleSignIn'
     pod 'LGSideMenuController','2.1.1'

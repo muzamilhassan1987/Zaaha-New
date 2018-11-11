@@ -53,7 +53,7 @@ enum FP {
 
 
 enum CurrentUser{
-    static var data : User? = nil
+    //static var data : User? = nil
     static var token : String = ""
     static var userType : UserType = .registered
     static var selectedAddressID : Int = 0

@@ -5,7 +5,7 @@ import UIKit
 class TermsConditionViewController: UIViewController, StoryBoardHandler {
     static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.registeration.rawValue , nil)
     
-   var manager = TermsManager()
+   //var manager = TermsManager()
     
     @IBOutlet weak var txtViewTerms: BaseUITextView!
     
@@ -39,18 +39,18 @@ extension TermsConditionViewController{
     func getTerms() {
         
     
-        let requestParam = self.manager.params()
-        
-        self.manager.api(requestParam, completion: {
-            
-            if self.manager.isSuccess {
-           
-             print(self.manager.htmlString)
-            self.txtViewTerms.attributedText = self.manager.htmlString.html2AttributedString
-            }
-            else {
-          
-            }
-        })
+//        let requestParam = self.manager.params()
+//        
+//        self.manager.api(requestParam, completion: {
+//            
+//            if self.manager.isSuccess {
+//           
+//             print(self.manager.htmlString)
+//            self.txtViewTerms.attributedText = self.manager.htmlString.html2AttributedString
+//            }
+//            else {
+//          
+//            }
+//        })
     }
 }

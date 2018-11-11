@@ -12,7 +12,7 @@ class ResetPasswordViewController: BaseViewController , StoryBoardHandler {
     @IBOutlet weak var txtNewPwd: BaseUITextField!
     @IBOutlet weak var txtConfirmPwd: BaseUITextField!
     @IBOutlet weak var btnSubmit: CustomButton!
-    var manager = ResetPasswordManager()
+//    var manager = ResetPasswordManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,19 +114,19 @@ extension ResetPasswordViewController{
     func resetPwd(oldPwd : String , newPwd : String) {
         
         
-        let requestParam = self.manager.params(oldPass: oldPwd,  newPass: newPwd )
-        
-        self.manager.api(requestParam, completion: {
-            
-            if self.manager.isSuccess {
-                //self.manager.message ??
-                Alert.showWithCompletion(msg:  "Your Password has been changed  successfully!", completionAction: {
-                    self.navigationController?.popViewController(animated: true)
-                })
-            }
-            else {
-                
-            }
-        })
+//        let requestParam = self.manager.params(oldPass: oldPwd,  newPass: newPwd )
+//
+//        self.manager.api(requestParam, completion: {
+//
+//            if self.manager.isSuccess {
+//                //self.manager.message ??
+//                Alert.showWithCompletion(msg:  "Your Password has been changed  successfully!", completionAction: {
+//                    self.navigationController?.popViewController(animated: true)
+//                })
+//            }
+//            else {
+//
+//            }
+//        })
     }
 }

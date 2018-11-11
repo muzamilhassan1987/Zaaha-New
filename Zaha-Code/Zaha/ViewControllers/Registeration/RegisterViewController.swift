@@ -12,7 +12,7 @@ class RegisterViewController: BaseViewController, StoryBoardHandler {
    
     var isAccepted = false
     var dataArray:NSMutableArray?
-    let manager = RegisterManager()
+//    let manager = RegisterManager()
     
     lazy var  picker = { () -> MICountryPicker in
         let pick = MICountryPicker()
