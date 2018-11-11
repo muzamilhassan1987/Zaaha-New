@@ -31,13 +31,13 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tb-VP-VsG" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
-                        <rect key="frame" x="225" y="13" width="75" height="30"/>
+                        <rect key="frame" x="225" y="14.333333333333336" width="75" height="27"/>
                         <color key="backgroundColor" red="0.77647058823529413" green="0.61960784313725492" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="HFj-vn-Rih">
+                            <constraint firstAttribute="height" constant="27" id="HFj-vn-Rih">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
-                                        <real key="value" value="30"/>
+                                        <real key="value" value="27"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
@@ -59,6 +59,9 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeXSmall"/>
                             <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="white"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="viewAll:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Nff-l7-EPq"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

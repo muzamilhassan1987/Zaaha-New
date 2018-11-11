@@ -10,6 +10,7 @@ import UIKit
 
 class AmenitiesCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var stackRating: UIStackView!
     
     @IBOutlet weak var lblTitle: BaseUILabel!
     @IBOutlet weak var imgIcon: UIImageView!
@@ -28,7 +29,18 @@ class AmenitiesCollectionCell: UICollectionViewCell {
          AmentiesCellData(image: "upcomingExp_TimeIcon", title: "11 Sep 2018"),
          ]
     
-    
+    static let pastExpDetailData =
+        [AmentiesCellData(image: "upcomingExp_nameIcon", title: "Ali Ahmed"),
+         AmentiesCellData(image: "", title: ""),
+         AmentiesCellData(image: "upcomingExp_locationIcon", title: "Dubai Media City"),
+         AmentiesCellData(image: "upcomingExp_typesOfExpIcon", title: "star"),
+         AmentiesCellData(image: "myExp_ExplorerIcon", title: "08 Explorers"),
+//         AmentiesCellData(image: "upcomingExp_priceIcon", title: "AED 250"),
+            AmentiesCellData(image: "upcomingExp_TimeIcon", title: "11 Sep 2018"),
+             AmentiesCellData(image: "myExp_CultureIcon", title: "Arabic Culture"),
+         AmentiesCellData(image: "upcomingExp_typesOfExpIcon", title: "Type of experience"),
+         
+         ]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -37,8 +49,13 @@ class AmenitiesCollectionCell: UICollectionViewCell {
     
     func setData(_ data:AmentiesCellData) {
     
+        stackRating.isHidden = true
         imgIcon.image = UIImage(named: data.image)
         lblTitle.text = data.title
+        if(data.title == "star") {
+            lblTitle.text = ""
+            stackRating.isHidden = false
+        }
         
     }
 }

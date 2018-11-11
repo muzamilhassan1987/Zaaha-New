@@ -80,9 +80,12 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
             break
         case .myExperience:
             self.title = "My Experiences".uppercased()
+            tempDetailCollection = AmenitiesCollectionCell.pastExpDetailData
             break
         case .pastExperience:
             self.title = "Past Experiences".uppercased()
+            fetchPtlist("PastExperience")
+            tempDetailCollection = AmenitiesCollectionCell.pastExpDetailData
             break
         default:
             print("")
@@ -155,6 +158,10 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
             return UITableView.automaticDimension
         case cellIdentifiers.buttons.rawValue:
             return DesignUtility.getValueFromRatio(80)
+        case cellIdentifiers.viewAll.rawValue:
+            return DesignUtility.getValueFromRatio(50)
+        case cellIdentifiers.photoVideoCell.rawValue:
+            return DesignUtility.getValueFromRatio((self.view.frame.width - DesignUtility.getValueFromRatio(30))/3)
         default:
             print("")
         }
@@ -198,6 +205,7 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
         case cellIdentifiers.amenities.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! AmenitiesTableCell
             cell.collectionView.tag = indexPath.row//(100 * indexPath.section) + 1
+            cell.collectionView.accessibilityHint = cellIdentifiers.amenities.rawValue
             cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
             setCellProperties(cell)
             return cell;
@@ -213,6 +221,22 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
             setCellProperties(cell)
             cell.setData(detailType)
             return cell
+        case cellIdentifiers.viewAll.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! ViewAllCell
+            cell.viewAllCellDelegate = self
+            setCellProperties(cell)
+            cell.setData(dict ?? NSMutableDictionary())
+//            cell.setData(ViewAllEnum)
+//            cell.setData(detailType)
+            return cell
+        case cellIdentifiers.photoVideoCell.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! PhotoCollectionTableCell
+            cell.collectionView.tag = indexPath.row//(100 * indexPath.section) + 1
+            cell.collectionView.accessibilityHint = cellIdentifiers.photoVideoCell.rawValue
+            cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
+            setCellProperties(cell)
+            return cell;
+            
         default:
             print("")
         }
@@ -259,16 +283,40 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
 
 extension BookingDetailController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tempDetailCollection.count
+        
+        switch collectionView.accessibilityHint {
+        case cellIdentifiers.amenities.rawValue:
+            return tempDetailCollection.count
+        case cellIdentifiers.photoVideoCell.rawValue:
+            return 3
+        default:
+            print("")
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosGridCollectionCell", for: indexPath) as! PhotosGridCollectionCell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AmenitiesCollectionCell", for: indexPath) as! AmenitiesCollectionCell
-        cell.setData(tempDetailCollection[indexPath.row])
-        return cell
+        
         print("calling")
-        //return cell
+        
+        
+        switch collectionView.accessibilityHint {
+        case cellIdentifiers.amenities.rawValue:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AmenitiesCollectionCell", for: indexPath) as! AmenitiesCollectionCell
+            cell.setData(tempDetailCollection[indexPath.row])
+            return cell
+        case cellIdentifiers.photoVideoCell.rawValue:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosGridCollectionCell", for: indexPath) as! PhotosGridCollectionCell
+           // cell.setData(tempDetailCollection[indexPath.row])
+            return cell
+        default:
+            print("")
+        }
+        
+        
+        return UICollectionViewCell()
         
     }
     
@@ -309,7 +357,27 @@ extension BookingDetailController: ButtonTableCellDelegate
 {
 
     func bookExperience() {
+        let controller = BookSpecialController.loadVC()
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true) {
+            
+        }
         
+    }
+}
+
+extension BookingDetailController: ViewAllCellDelegate
+{
+    
+    func viewAllClick() {
+        //let controller = PhotosController.loadVC()
+        router.goToUpPhotosController(from: self)
+//        controller.modalPresentationStyle = .overCurrentContext
+//        controller.modalTransitionStyle = .crossDissolve
+//        self.present(controller, animated: true) {
+//
+//        }
         
     }
 }

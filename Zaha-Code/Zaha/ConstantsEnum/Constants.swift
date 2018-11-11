@@ -142,4 +142,6 @@ enum cellIdentifiers : String {
     case amenities = "AmenitiesTableCell"
     case description = "DescriptionCell"
     case buttons = "ButtonsCell"
+    case viewAll = "ViewAllCell"
+    case photoVideoCell = "PhotoCollectionTableCell"
 }

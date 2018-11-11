@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="29.600000000000001" y="96.7016491754123"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Special Controller-->
         <scene sceneID="kK5-v3-xJH">
             <objects>
-                <viewController id="49B-xI-hcS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookSpecialController" id="49B-xI-hcS" customClass="BookSpecialController" customModule="Zaha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1qb-bl-vf4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +156,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz5-tX-b2F">
                                                 <rect key="frame" x="271" y="13" width="37" height="37"/>
                                                 <state key="normal" backgroundImage="upcomingExp_closeBtn"/>
+                                                <connections>
+                                                    <action selector="crossButtonPressed:" destination="49B-xI-hcS" eventType="touchUpInside" id="yRh-vM-NcQ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experience Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFH-1E-IlW">
                                                 <rect key="frame" x="27" y="26" width="133" height="16"/>
@@ -196,6 +199,9 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="submitButtonPressed:" destination="49B-xI-hcS" eventType="touchUpInside" id="Ubl-fe-ele"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

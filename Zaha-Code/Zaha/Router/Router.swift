@@ -73,6 +73,9 @@ class Router  {
     func goToUpComingExperienceController(from vc : viewController) {
         vc.show(viewcontrollerInstance: UpcommingExperienceDetailViewController.loadVC())
     }
+    func goToUpPhotosController(from vc : viewController) {
+        vc.show(viewcontrollerInstance: PhotosController.loadVC())
+    }
     func goToBookingDetailController(from vc : viewController, type : BookingDetailEnum) {
         
         vc.show(viewcontrollerInstance: BookingDetailController.loadVC()) { (vc : BookingDetailController) in

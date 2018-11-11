@@ -32,7 +32,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpc-Qp-IpX" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
-                        <rect key="frame" x="30" y="14.666666666666666" width="315" height="20.666666666666671"/>
+                        <rect key="frame" x="30" y="14.999999999999998" width="315" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -42,27 +42,52 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeSmall"/>
                         </userDefinedRuntimeAttributes>
                     </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EiU-32-8hC">
+                        <rect key="frame" x="30" y="17.666666666666668" width="71" height="15.000000000000004"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarFilled" translatesAutoresizingMaskIntoConstraints="NO" id="JkJ-Kv-lD7">
+                                <rect key="frame" x="0.0" y="0.0" width="13" height="15"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarFilled" translatesAutoresizingMaskIntoConstraints="NO" id="Gxx-Qp-B9F">
+                                <rect key="frame" x="13" y="0.0" width="13" height="15"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarFilled" translatesAutoresizingMaskIntoConstraints="NO" id="tE5-AL-Rf0">
+                                <rect key="frame" x="26" y="0.0" width="13" height="15"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="KyE-6t-TbL">
+                                <rect key="frame" x="39" y="0.0" width="16" height="15"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="MIn-rE-iZW">
+                                <rect key="frame" x="55" y="0.0" width="16" height="15"/>
+                            </imageView>
+                        </subviews>
+                    </stackView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="EiU-32-8hC" firstAttribute="centerY" secondItem="rpc-Qp-IpX" secondAttribute="centerY" id="Aab-Rl-Bf6"/>
                 <constraint firstItem="rpc-Qp-IpX" firstAttribute="leading" secondItem="Rsj-p4-pNF" secondAttribute="trailing" id="G8g-nc-Y4P"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="rpc-Qp-IpX" secondAttribute="trailing" constant="10" id="J7s-Sy-dbA"/>
                 <constraint firstAttribute="bottom" secondItem="Rsj-p4-pNF" secondAttribute="bottom" id="Llm-AZ-1Ai"/>
                 <constraint firstItem="Rsj-p4-pNF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Tap-7H-ArH"/>
                 <constraint firstItem="Rsj-p4-pNF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="etK-hZ-2rw"/>
                 <constraint firstItem="rpc-Qp-IpX" firstAttribute="centerY" secondItem="Rsj-p4-pNF" secondAttribute="centerY" id="jBd-dK-SUd"/>
+                <constraint firstItem="EiU-32-8hC" firstAttribute="leading" secondItem="rpc-Qp-IpX" secondAttribute="leading" id="m99-PN-A6p"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="355" height="50"/>
             <connections>
                 <outlet property="imgIcon" destination="Rsj-p4-pNF" id="tYr-k3-96x"/>
                 <outlet property="lblTitle" destination="rpc-Qp-IpX" id="70b-oz-zRc"/>
+                <outlet property="stackRating" destination="EiU-32-8hC" id="tzw-lt-XPu"/>
             </connections>
             <point key="canvasLocation" x="-96.799999999999997" y="153.82308845577214"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="pastExp_StarEmpty" width="16" height="15"/>
+        <image name="pastExp_StarFilled" width="13" height="12"/>
         <image name="upcomingExp_nameIcon" width="15" height="15"/>
     </resources>
 </document>
