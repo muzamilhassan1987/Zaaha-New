@@ -27,12 +27,13 @@ class RegisterViewController: BaseViewController, StoryBoardHandler {
     
 //        if let path = Bundle.main.path(forResource: "FormData", ofType: "plist") {
 //            dataArray = NSMutableArray(contentsOfFile: path);
-//
+////
 //            for data:NSMutableDictionary in (dataArray as? [NSMutableDictionary])! {
 //                if let cellId:String = data["cellIdentifier"] as? String {
 //                    tblSignup.register(UINib.init(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
 //                }
-//            }
+//           }
+//
 //        }
 //        tblSignup.delegate = self
 //        tblSignup.dataSource = self

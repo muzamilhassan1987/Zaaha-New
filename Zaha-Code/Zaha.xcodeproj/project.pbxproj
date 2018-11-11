@@ -222,6 +222,13 @@
 		1D9A4D7D219769D700BDAC84 /* PhotoCollectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A4D7B219769D700BDAC84 /* PhotoCollectionTableCell.swift */; };
 		1D9A4D7E219769D700BDAC84 /* PhotoCollectionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9A4D7C219769D700BDAC84 /* PhotoCollectionTableCell.xib */; };
 		1D9A4D8021976E9A00BDAC84 /* BaseViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A4D7F21976E9A00BDAC84 /* BaseViewController+Extension.swift */; };
+		1D9A4D8421981A4500BDAC84 /* AmenitiesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A4D8221981A4500BDAC84 /* AmenitiesTableCell.swift */; };
+		1D9A4D8521981A4500BDAC84 /* AmenitiesTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9A4D8321981A4500BDAC84 /* AmenitiesTableCell.xib */; };
+		1D9A4D8A21981A7500BDAC84 /* AmenitiesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A4D8821981A7500BDAC84 /* AmenitiesCollectionCell.swift */; };
+		1D9A4D8B21981A7500BDAC84 /* AmenitiesCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9A4D8921981A7500BDAC84 /* AmenitiesCollectionCell.xib */; };
+		1D9A4D8F21982FAA00BDAC84 /* ButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A4D8D21982FAA00BDAC84 /* ButtonsCell.swift */; };
+		1D9A4D9021982FAA00BDAC84 /* ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9A4D8E21982FAA00BDAC84 /* ButtonsCell.xib */; };
+		1D9A4D92219867F400BDAC84 /* UpComingExperience.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D9A4D91219867F400BDAC84 /* UpComingExperience.plist */; };
 		591F02982186E7C0000CCE12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F02972186E7C0000CCE12 /* AppDelegate.swift */; };
 		591F029D2186E7C0000CCE12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591F029B2186E7C0000CCE12 /* Main.storyboard */; };
 		591F029F2186E7C4000CCE12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591F029E2186E7C4000CCE12 /* Assets.xcassets */; };
@@ -475,6 +482,13 @@
 		1D9A4D7B219769D700BDAC84 /* PhotoCollectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionTableCell.swift; sourceTree = "<group>"; };
 		1D9A4D7C219769D700BDAC84 /* PhotoCollectionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionTableCell.xib; sourceTree = "<group>"; };
 		1D9A4D7F21976E9A00BDAC84 /* BaseViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseViewController+Extension.swift"; sourceTree = "<group>"; };
+		1D9A4D8221981A4500BDAC84 /* AmenitiesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenitiesTableCell.swift; sourceTree = "<group>"; };
+		1D9A4D8321981A4500BDAC84 /* AmenitiesTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmenitiesTableCell.xib; sourceTree = "<group>"; };
+		1D9A4D8821981A7500BDAC84 /* AmenitiesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenitiesCollectionCell.swift; sourceTree = "<group>"; };
+		1D9A4D8921981A7500BDAC84 /* AmenitiesCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmenitiesCollectionCell.xib; sourceTree = "<group>"; };
+		1D9A4D8D21982FAA00BDAC84 /* ButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCell.swift; sourceTree = "<group>"; };
+		1D9A4D8E21982FAA00BDAC84 /* ButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsCell.xib; sourceTree = "<group>"; };
+		1D9A4D91219867F400BDAC84 /* UpComingExperience.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UpComingExperience.plist; sourceTree = "<group>"; };
 		232EE712D892DDD2B6726D63 /* Pods-ZahaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZahaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZahaUITests/Pods-ZahaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A4C547E3241A78902FBFBD0 /* Pods-ZahaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZahaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZahaTests/Pods-ZahaTests.release.xcconfig"; sourceTree = "<group>"; };
 		362EC65D50D6BCD6C8239C60 /* Pods-Zaha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zaha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zaha/Pods-Zaha.release.xcconfig"; sourceTree = "<group>"; };
@@ -571,6 +585,7 @@
 			children = (
 				1A665E582188426500B7CBA2 /* ColorManager.plist */,
 				1A665E592188426500B7CBA2 /* FontManager.plist */,
+				1D9A4D91219867F400BDAC84 /* UpComingExperience.plist */,
 			);
 			path = Plists;
 			sourceTree = "<group>";
@@ -866,6 +881,8 @@
 		1A665F4321884BBB00B7CBA2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1D9A4D8C21982F9100BDAC84 /* TwoOptionCell */,
+				1D9A4D8121981A2600BDAC84 /* AmenitiesCell */,
 				1D9A4D78219769B600BDAC84 /* PhotoCollectionTableCell */,
 				1D9A4D7121975D8100BDAC84 /* ViewAllCell */,
 				1D9A4D5F2197496F00BDAC84 /* UpcomingExpDetailTableCell */,
@@ -1189,6 +1206,26 @@
 			path = PhotoCollectionTableCell;
 			sourceTree = "<group>";
 		};
+		1D9A4D8121981A2600BDAC84 /* AmenitiesCell */ = {
+			isa = PBXGroup;
+			children = (
+				1D9A4D8221981A4500BDAC84 /* AmenitiesTableCell.swift */,
+				1D9A4D8321981A4500BDAC84 /* AmenitiesTableCell.xib */,
+				1D9A4D8821981A7500BDAC84 /* AmenitiesCollectionCell.swift */,
+				1D9A4D8921981A7500BDAC84 /* AmenitiesCollectionCell.xib */,
+			);
+			path = AmenitiesCell;
+			sourceTree = "<group>";
+		};
+		1D9A4D8C21982F9100BDAC84 /* TwoOptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				1D9A4D8D21982FAA00BDAC84 /* ButtonsCell.swift */,
+				1D9A4D8E21982FAA00BDAC84 /* ButtonsCell.xib */,
+			);
+			path = TwoOptionCell;
+			sourceTree = "<group>";
+		};
 		4CC9240863E1FCFB375C71AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1393,8 +1430,10 @@
 			files = (
 				D08453A6218E12F4001E57B0 /* MyExperienceModule.storyboard in Resources */,
 				1D9A4D5C2194D06400BDAC84 /* ProfileInfoCell.xib in Resources */,
+				1D9A4D8B21981A7500BDAC84 /* AmenitiesCollectionCell.xib in Resources */,
 				1A665F9721884F2B00B7CBA2 /* ImageTableViewCell.xib in Resources */,
 				1A665FAB218865F100B7CBA2 /* HomeTableViewCell.xib in Resources */,
+				1D9A4D9021982FAA00BDAC84 /* ButtonsCell.xib in Resources */,
 				1A665F5C21884BD900B7CBA2 /* PhoneTableViewCell.xib in Resources */,
 				1D9A4D6B2197496F00BDAC84 /* UpcomingExpDetailDescriptionTableViewCell.xib in Resources */,
 				1D8E52FA218EE6D600F49674 /* Roboto-BoldCondensedItalic.ttf in Resources */,
@@ -1415,6 +1454,7 @@
 				1D8E52F9218EE6D600F49674 /* RobotoCondensed-Italic.ttf in Resources */,
 				1AB84F6021947C7C004D6C58 /* HeaderTitleViewCell.xib in Resources */,
 				1D8E52F0218EE6D600F49674 /* Lato-Medium.ttf in Resources */,
+				1D9A4D8521981A4500BDAC84 /* AmenitiesTableCell.xib in Resources */,
 				1A665F8A21884EC700B7CBA2 /* banner_logo@2x.png in Resources */,
 				1D8E5305218EE6D600F49674 /* Roboto-Bold.ttf in Resources */,
 				1D89866F2192460200AD57C9 /* Booking.storyboard in Resources */,
@@ -1436,6 +1476,7 @@
 				1D8E5304218EE6D600F49674 /* Roboto-BlackItalic.ttf in Resources */,
 				1D8E5302218EE6D600F49674 /* Roboto-CondensedItalic.ttf in Resources */,
 				1A665F8C21884EC700B7CBA2 /* HeaderCollectionReusableView.xib in Resources */,
+				1D9A4D92219867F400BDAC84 /* UpComingExperience.plist in Resources */,
 				1D8E52F1218EE6D600F49674 /* Roboto-Medium.ttf in Resources */,
 				1D8E52F3218EE6D600F49674 /* RobotoCondensed-Bold.ttf in Resources */,
 				1D8986792192477900AD57C9 /* BookingCell.xib in Resources */,
@@ -1715,6 +1756,7 @@
 				1D9A4D662197496F00BDAC84 /* UpcomingExpDetailInfoTableViewCell.swift in Sources */,
 				1D8986782192477900AD57C9 /* BookingCell.swift in Sources */,
 				1A665F4521884BBB00B7CBA2 /* Cells.swift in Sources */,
+				1D9A4D8A21981A7500BDAC84 /* AmenitiesCollectionCell.swift in Sources */,
 				1A665F122188482900B7CBA2 /* LoginModel.swift in Sources */,
 				1A665F8B21884EC700B7CBA2 /* ParallaxHeaderView.swift in Sources */,
 				1A665EE52188426600B7CBA2 /* BaseUIImageView.swift in Sources */,
@@ -1727,6 +1769,7 @@
 				1A665F5821884BD900B7CBA2 /* AcceptCheckboxTableViewCell.swift in Sources */,
 				1A665EE92188426600B7CBA2 /* FontDesignable.swift in Sources */,
 				1A665F9921884F7800B7CBA2 /* TermsManager.swift in Sources */,
+				1D9A4D8421981A4500BDAC84 /* AmenitiesTableCell.swift in Sources */,
 				1A665EDA2188426600B7CBA2 /* BaseUICollectionView.swift in Sources */,
 				1A665EE42188426600B7CBA2 /* BaseUIBarButtonItem.swift in Sources */,
 				1A665F2321884A3D00B7CBA2 /* ResetPasswordViewController.swift in Sources */,
@@ -1762,6 +1805,7 @@
 				1AB84F562194752D004D6C58 /* HeaderTitleView.swift in Sources */,
 				1D9A4D692197496F00BDAC84 /* UpcomingExpDetailDescriptionTableViewCell.swift in Sources */,
 				1A665EF6218846C500B7CBA2 /* Storyboards.swift in Sources */,
+				1D9A4D8F21982FAA00BDAC84 /* ButtonsCell.swift in Sources */,
 				1A665EE62188426600B7CBA2 /* CornerDesignable.swift in Sources */,
 				1A665EB32188426600B7CBA2 /* FontManager.swift in Sources */,
 				1A665F3E21884AA500B7CBA2 /* RegisterManager.swift in Sources */,

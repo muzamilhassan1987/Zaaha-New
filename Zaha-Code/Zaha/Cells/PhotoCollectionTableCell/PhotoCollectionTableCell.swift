@@ -34,15 +34,18 @@ class PhotoCollectionTableCell: UITableViewCell {
         
         let flow = UICollectionViewFlowLayout.init()
         var cellSize:CGSize!
-        let width = (collectionView.bounds.width/3) - DesignUtility.getValueFromRatio(7.5)
-        cellSize = CGSize(width: width, height: width)
-        flow.itemSize = cellSize
-        flow.scrollDirection = .horizontal//UICollectionViewScrollDirectionHorizontal;
-        flow.minimumInteritemSpacing = 0;
+        let numberOfCellsPerRow: CGFloat = 3
+//        let width = (collectionView.bounds.width/3) - DesignUtility.getValueFromRatio(7.5)
         flow.minimumLineSpacing = DesignUtility.getValueFromRatio(15)
-        //        DesignUtility.getValueFromRatio()
+        let width = (collectionView.frame.width - max(0, numberOfCellsPerRow - 1)*flow.minimumLineSpacing)/3
+        cellSize = CGSize(width: width, height: width)
+        
+        flow.itemSize = cellSize
+        flow.scrollDirection = .horizontal
+        flow.minimumInteritemSpacing = 0;
         collectionView.collectionViewLayout = flow
-        //collectionView.backgroundColor = UIColor.yellow
+//        collectionView.backgroundColor = UIColor.yellow
+        
     }
     
 //    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
@@ -84,6 +87,8 @@ extension PhotoCollectionTableCell {
 //    self.collectionView.setContentOffset(CGPoint(x:0,y:0), animated: false)
 //        collectionView.scrollsToTop = true
         collectionView.reloadData()
+        self.collectionView.scrollToItem(at:IndexPath(item: 0, section: 0), at: .right, animated: false)
+
 //        self.collectionView.setContentOffset(CGPoint(x:0,y:0), animated: false)
         
     }

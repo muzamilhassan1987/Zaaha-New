@@ -36,7 +36,29 @@ extension Menu
         {
         case .home:
             
-            return HomeVC.loadVC()
+            let controller = HomeVC.loadVC()
+            controller.detailType = .none
+            return controller
+            
+        case .stories:
+            let controller = HomeVC.loadVC()
+            controller.detailType = .stories
+            return controller
+            
+        case .upcomingExp:
+            let controller = HomeVC.loadVC()
+            controller.detailType = .upcomingExperience
+            return controller
+            
+        case .pastExp:
+            let controller = HomeVC.loadVC()
+            controller.detailType = .pastExperience
+            return controller
+            
+        case .myExp:
+            let controller = HomeVC.loadVC()
+            controller.detailType = .myExperience
+            return controller
             
 //        case .featuredAds:
 //

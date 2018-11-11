@@ -14,9 +14,12 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
     static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.home.rawValue , nil)
     
     @IBOutlet weak var homeTblView: UITableView!
+    var detailType = BookingDetailEnum.none
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBar()
+        setInitialData()
+        print(detailType)
         homeTblView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         // Do any additional setup after loading the view.
         
@@ -31,6 +34,34 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
         self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
     }
 
+    
+    func setInitialData() {
+        
+        switch detailType {
+        case .none:
+            self.title = "Home".uppercased()
+            break
+        case .upcomingExperience:
+            self.title = "Upcoming Experiences"
+            break
+        case .booking:
+            self.title = "Booking".uppercased()
+            break
+        case .stories:
+            self.title = "Stories".uppercased()
+            break
+        case .myExperience:
+            self.title = "My Experiences".uppercased()
+            break
+        case .pastExperience:
+            self.title = "Past Experiences".uppercased()
+            break
+        default:
+            print("")
+        }
+        
+        
+    }
     @objc func actionMenuButton()
     {
         sideMenuController?.showLeftViewAnimated()
@@ -108,7 +139,21 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
       //  var controller = UpComingExperienceDetailController.loadVC()
-        router.goToUpComingExperienceController(from: self)
+        //router.goToUpComingExperienceController(from: self)
+        
+        print(detailType)
+        router.goToBookingDetailController(from: self, type: detailType)
+//        switch detailType {
+//        case .none,.upcomingExperience :
+//            router.goToBookingDetailController(from: self, type: .upcomingExperience)
+//            break
+//        case .booking:
+//            router.goToBookingDetailController(from: self, type: .booking)
+//            break
+//
+//        default:
+//            print("")
+//        }
     }
     
 }

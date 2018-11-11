@@ -115,6 +115,15 @@ struct SheduleData {
 }
 
 
+enum BookingDetailEnum : Int {
+    case none
+    case upcomingExperience
+    case booking
+    case stories
+    case myExperience
+    case pastExperience
+}
+
 
 enum CodeType {
     case signup , forgetPwd
@@ -129,4 +138,8 @@ enum BookingDetailCellEnum: Int
     
 }
 
-
+enum cellIdentifiers : String {
+    case amenities = "AmenitiesTableCell"
+    case description = "DescriptionCell"
+    case buttons = "ButtonsCell"
+}

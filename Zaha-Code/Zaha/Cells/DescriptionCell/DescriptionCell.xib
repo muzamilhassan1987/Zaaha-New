@@ -28,7 +28,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeGrayText"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizefontLarge"/>
                                 </userDefinedRuntimeAttributes>
@@ -73,6 +73,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
             <connections>
                 <outlet property="lblDescription" destination="Ddv-xJ-flH" id="XG5-MN-dyg"/>
                 <outlet property="lblDescriptionContent" destination="3Bf-P2-JQ8" id="p7y-jQ-jaS"/>
+                <outlet property="viewBottomBar" destination="EbD-A8-WTo" id="Y93-kd-qfD"/>
             </connections>
             <point key="canvasLocation" x="111" y="92"/>
         </tableViewCell>

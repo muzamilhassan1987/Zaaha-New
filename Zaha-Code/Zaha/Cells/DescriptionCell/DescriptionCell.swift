@@ -14,6 +14,7 @@ enum DescriptionCellTypeEnum :Int {
 
 class DescriptionCell: UITableViewCell
 {
+    @IBOutlet weak var viewBottomBar: UIView!
     @IBOutlet weak var lblDescription: BaseUILabel!
     @IBOutlet weak var lblDescriptionContent: BaseUILabel!
     
@@ -36,14 +37,33 @@ class DescriptionCell: UITableViewCell
         
     }
     
-    func setData(_ type : DescriptionCellTypeEnum) {
+    func setData(_ type : BookingDetailEnum) {
         
         var desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales et nulla sed mollis. Pellentesque eu lectus vel nulla posuere aliquam. Ut eget justo feugiat, tristique lorem vel, semper tellus. Donec dapibus, enim et dignissim tempor, nibh sapien placerat eros, ac vehicula nisi mauris sed libero. Quisque at nunc sed mauris fringilla fermentum faucibus in odio. Quisque eleifend velit orci, eget ornare eros faucibus vel. Nulla lobortis tellus vel nulla mattis tristique."
         
         switch type {
-        case .bookingDetailDesc:
+            
+        case .none:
+            //            lblDescription.text = "Explorer Preferences:"
             lblDescription.isHidden = true
             lblDescriptionContent.text = desc
+            viewBottomBar.backgroundColor = UIColor.clear
+            self.layoutIfNeeded()
+            
+        case .booking:
+            lblDescription.text = "Explorer Preferences:"
+            lblDescription.isHidden = false
+            lblDescriptionContent.text = desc
+            viewBottomBar.backgroundColor = UIColor.clear
+            self.layoutIfNeeded()
+            
+        case .upcomingExperience:
+//            lblDescription.text = "Explorer Preferences:"
+            lblDescription.isHidden = true
+            lblDescriptionContent.text = desc
+            viewBottomBar.backgroundColor = UIColor.clear
+            self.layoutIfNeeded()
+            
             break
         default:
             print("")

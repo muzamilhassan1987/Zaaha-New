@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ButtonsCell" rowHeight="70" id="KGk-i7-Jjw" customClass="ButtonsCell" customModule="Zaha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3W-xC-qcr" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                        <rect key="frame" x="67.5" y="17.5" width="85" height="35"/>
+                        <color key="backgroundColor" red="0.30980392159999998" green="0.38431372549999998" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="WV5-WT-GcP">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                        <real key="value" value="85"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstAttribute="height" constant="35" id="fQa-fL-jlQ">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="Confirm">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontBook"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeXSmall"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="white"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTv-jZ-KgF" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                        <rect key="frame" x="167.5" y="17.5" width="85" height="35"/>
+                        <color key="backgroundColor" red="0.73725490196078436" green="0.23529411764705882" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="Reject">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontBook"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeXSmall"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="white"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhS-9J-HlT" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                        <rect key="frame" x="20" y="11" width="131" height="48"/>
+                        <state key="normal" title="BOOK" backgroundImage="login_login_btn">
+                            <color key="titleColor" red="0.77647058820000003" green="0.61960784310000006" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="bookExperience:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="U5w-zQ-lco"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="JTv-jZ-KgF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5rc-HN-jdl"/>
+                    <constraint firstItem="yhS-9J-HlT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Lzd-aD-u3S"/>
+                    <constraint firstItem="JTv-jZ-KgF" firstAttribute="height" secondItem="x3W-xC-qcr" secondAttribute="height" id="PbO-io-fPL"/>
+                    <constraint firstItem="yhS-9J-HlT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bNl-Iw-jHo"/>
+                    <constraint firstItem="JTv-jZ-KgF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="50" id="iOG-Bx-w0m">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                <real key="value" value="50"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </constraint>
+                    <constraint firstItem="JTv-jZ-KgF" firstAttribute="width" secondItem="x3W-xC-qcr" secondAttribute="width" id="nrs-iR-cKq"/>
+                    <constraint firstItem="x3W-xC-qcr" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-50" id="tNs-KK-Hu5">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                <real key="value" value="-50"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </constraint>
+                    <constraint firstItem="x3W-xC-qcr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vxl-zW-EOc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnBook" destination="yhS-9J-HlT" id="V8q-m8-DYx"/>
+                <outlet property="btnConfirm" destination="x3W-xC-qcr" id="Qqg-4e-ayt"/>
+                <outlet property="btnReject" destination="JTv-jZ-KgF" id="4pP-C7-tlb"/>
+            </connections>
+            <point key="canvasLocation" x="96" y="101.64917541229386"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="login_login_btn" width="131" height="48"/>
+    </resources>
+</document>
