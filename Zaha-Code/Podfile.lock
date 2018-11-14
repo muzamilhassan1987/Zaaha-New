@@ -29,6 +29,7 @@ PODS:
   - SwiftMessages (6.0.0):
     - SwiftMessages/App (= 6.0.0)
   - SwiftMessages/App (6.0.0)
+  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - MICountryPicker (from `https://github.com/mustafaibrahim989/MICountryPicker.git`, branch `master`)
   - MOLH (= 0.4)
   - SwiftMessages
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -54,6 +56,7 @@ SPEC REPOS:
     - LGSideMenuController
     - MOLH
     - SwiftMessages
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   MICountryPicker:
@@ -78,7 +81,8 @@ SPEC CHECKSUMS:
   MICountryPicker: 82122c5f918bc9f9e2c510793fffd188dc8d38ce
   MOLH: e5da53263c1bd1aaefb783d49ae620702288b40d
   SwiftMessages: da7c981256a65b3e58022d9027a36584cf4eccf5
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: eaaa61e90dab0d6e55980b66e96896f8f814712c
+PODFILE CHECKSUM: fb10a78b44cbeea141d31428233ee06def3c24a6
 
 COCOAPODS: 1.5.3

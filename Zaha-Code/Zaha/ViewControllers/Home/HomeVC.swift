@@ -10,7 +10,12 @@ import UIKit
 import GoogleSignIn
 
 class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBoardHandler {
-
+ 
+    var manager = HomeManager()
+    var storiesArray = [Stories]()
+    var experienceArray = [Experiences]()
+    var mergedArray = [AnyObject]()
+    
     static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.home.rawValue , nil)
     
     @IBOutlet weak var homeTblView: UITableView!
@@ -21,6 +26,7 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
         setInitialData()
         print(detailType)
         homeTblView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
+        callHomeService()
         // Do any additional setup after loading the view.
         
     }
@@ -32,8 +38,6 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
         let menuImg = UIImage.init(named: "home_menuIcon")?.flipIfNeeded()
         
         self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
-
-
 
     }
 
@@ -195,4 +199,20 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
 //        }
     }
     
+}
+
+
+extension HomeVC{
+    
+       func callHomeService(){
+        let requestParam = self.manager.params()
+        
+        self.manager.api(requestParam, completion: {
+            if self.manager.isSuccess {
+                let homeData = HomeTimeLine(fromDictionary: self.manager.homeTimeLineData)
+                self.storiesArray = homeData.stories
+                self.experienceArray = homeData.experiences
+            }
+        })
+    }
 }
