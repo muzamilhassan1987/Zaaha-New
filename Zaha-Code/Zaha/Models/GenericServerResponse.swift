@@ -12,13 +12,13 @@ class GenericServerResponse <T> : Codable where T: Encodable, T: Decodable {
     
     let message : String?
     let response : String?
-    let result : T?
+    let data : T?
     
     
     enum CodingKeys: String, CodingKey {
         case message = "Message"
-        case response = "Response"
-        case result = "Result"
+        case response = "response"
+        case data = "data"
     }
     
     
@@ -26,7 +26,7 @@ class GenericServerResponse <T> : Codable where T: Encodable, T: Decodable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         message = try values.decodeIfPresent(String.self, forKey: .message) ?? String()
         response = try values.decodeIfPresent(String.self, forKey: .response) ?? String()
-        result = try values.decodeIfPresent(T.self, forKey: .result)  //?? Result()
+        data = try values.decodeIfPresent(T.self, forKey: .data)  //?? Result()
         
     }
 }
@@ -43,7 +43,7 @@ class BaseResponse  : Codable  {
     
     enum CodingKeys: String, CodingKey {
         case message = "Message"
-        case response = "Response"
+        case response = "response"
       
     }
     

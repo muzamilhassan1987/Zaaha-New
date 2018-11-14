@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A4A1190810AA82D44E77F3A01CDA8B51"
-               BlueprintName = "MOLH"
+               BlueprintIdentifier = "125D0886E6E34CF97A60A3D07CDA3F85"
+               BlueprintName = "ISPageControl"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "MOLH.framework">
+               BuildableName = "ISPageControl.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

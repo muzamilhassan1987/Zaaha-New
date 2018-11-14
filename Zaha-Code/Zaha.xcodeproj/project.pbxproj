@@ -224,6 +224,11 @@
 		5DA40B05664CAFD98410EF02 /* Pods_ZahaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AD12A0D01A0328573D4CF8 /* Pods_ZahaTests.framework */; };
 		9F092CACFFF227AD1215B545 /* Pods_ZahaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652F7617021952CADBA00059 /* Pods_ZahaUITests.framework */; };
 		B2FF3CF525E5BF6CFDACBD2B /* Pods_Zaha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61582C593E832186BC8A0A47 /* Pods_Zaha.framework */; };
+		D0534482219C9AE000F864B3 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0534481219C9AE000F864B3 /* HomeManager.swift */; };
+		D053448C219CAE7C00F864B3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053448B219CAE7C00F864B3 /* Response.swift */; };
+		D0534490219CB0D200F864B3 /* HomeTimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053448D219CB0D200F864B3 /* HomeTimeLine.swift */; };
+		D0534491219CB0D200F864B3 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053448E219CB0D200F864B3 /* Stories.swift */; };
+		D0534492219CB0D200F864B3 /* Experiences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D053448F219CB0D200F864B3 /* Experiences.swift */; };
 		D084539C218C7DD9001E57B0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084539B218C7DD9001E57B0 /* HomeVC.swift */; };
 		D084539E218E12B7001E57B0 /* StoriesModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D084539D218E12B7001E57B0 /* StoriesModule.storyboard */; };
 		D08453A0218E12C9001E57B0 /* UpcommingExperienceModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D084539F218E12C9001E57B0 /* UpcommingExperienceModule.storyboard */; };
@@ -480,6 +485,11 @@
 		652F7617021952CADBA00059 /* Pods_ZahaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZahaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AD12A0D01A0328573D4CF8 /* Pods_ZahaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZahaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43B4B046411E10F4E59B82E /* Pods-ZahaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZahaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZahaTests/Pods-ZahaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0534481219C9AE000F864B3 /* HomeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		D053448B219CAE7C00F864B3 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D053448D219CB0D200F864B3 /* HomeTimeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTimeLine.swift; sourceTree = "<group>"; };
+		D053448E219CB0D200F864B3 /* Stories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		D053448F219CB0D200F864B3 /* Experiences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experiences.swift; sourceTree = "<group>"; };
 		D084539B218C7DD9001E57B0 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		D084539D218E12B7001E57B0 /* StoriesModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoriesModule.storyboard; sourceTree = "<group>"; };
 		D084539F218E12C9001E57B0 /* UpcommingExperienceModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcommingExperienceModule.storyboard; sourceTree = "<group>"; };
@@ -741,8 +751,12 @@
 		1A665EF7218847DF00B7CBA2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D053448F219CB0D200F864B3 /* Experiences.swift */,
+				D053448D219CB0D200F864B3 /* HomeTimeLine.swift */,
+				D053448E219CB0D200F864B3 /* Stories.swift */,
 				1A665F9C21885DC600B7CBA2 /* GenericServerResponse.swift */,
 				1A665EF8218847DF00B7CBA2 /* Models.swift */,
+				D053448B219CAE7C00F864B3 /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -802,13 +816,6 @@
 				1D692457219891DC002CDE61 /* EditProfileController.swift */,
 			);
 			path = Registeration;
-			sourceTree = "<group>";
-		};
-		1A665F3A21884A9800B7CBA2 /* ServiceManagers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ServiceManagers;
 			sourceTree = "<group>";
 		};
 		1A665F4321884BBB00B7CBA2 /* Cells */ = {
@@ -1198,12 +1205,12 @@
 		591F02962186E7C0000CCE12 /* Zaha */ = {
 			isa = PBXGroup;
 			children = (
+				D0534480219C9AE000F864B3 /* ServiceManagers */,
 				1AB84F3F21943D8B004D6C58 /* Views */,
 				1D8E52C7218EE6D600F49674 /* Resources */,
 				1A665FA02188611F00B7CBA2 /* Storyboards */,
 				1A665F6221884C3500B7CBA2 /* Router */,
 				1A665F4321884BBB00B7CBA2 /* Cells */,
-				1A665F3A21884A9800B7CBA2 /* ServiceManagers */,
 				1A665F1821884A1600B7CBA2 /* ViewControllers */,
 				1A665EF7218847DF00B7CBA2 /* Models */,
 				1A665EF2218846C500B7CBA2 /* ConstantsEnum */,
@@ -1243,6 +1250,14 @@
 				652F7617021952CADBA00059 /* Pods_ZahaUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0534480219C9AE000F864B3 /* ServiceManagers */ = {
+			isa = PBXGroup;
+			children = (
+				D0534481219C9AE000F864B3 /* HomeManager.swift */,
+			);
+			path = ServiceManagers;
 			sourceTree = "<group>";
 		};
 		D084539A218C7DB7001E57B0 /* Home */ = {
@@ -1529,6 +1544,7 @@
 				"${BUILT_PRODUCTS_DIR}/MICountryPicker/MICountryPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/MOLH/MOLH.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -1545,6 +1561,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MICountryPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MOLH.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1654,6 +1671,7 @@
 				1A665ECA2188426600B7CBA2 /* Alert.swift in Sources */,
 				1A665EB12188426600B7CBA2 /* printLog.swift in Sources */,
 				1A665ED02188426600B7CBA2 /* BaseUIStepper.swift in Sources */,
+				D0534490219CB0D200F864B3 /* HomeTimeLine.swift in Sources */,
 				1A665ED52188426600B7CBA2 /* BaseUISlider.swift in Sources */,
 				1A665EB52188426600B7CBA2 /* ColorManager.swift in Sources */,
 				1A665F2A21884A4E00B7CBA2 /* ChangePasswordViewController.swift in Sources */,
@@ -1680,6 +1698,7 @@
 				1D8986782192477900AD57C9 /* BookingCell.swift in Sources */,
 				1A665F4521884BBB00B7CBA2 /* Cells.swift in Sources */,
 				1D9A4D8A21981A7500BDAC84 /* AmenitiesCollectionCell.swift in Sources */,
+				D0534491219CB0D200F864B3 /* Stories.swift in Sources */,
 				1A665F8B21884EC700B7CBA2 /* ParallaxHeaderView.swift in Sources */,
 				1A665EE52188426600B7CBA2 /* BaseUIImageView.swift in Sources */,
 				D084539C218C7DD9001E57B0 /* HomeVC.swift in Sources */,
@@ -1706,12 +1725,14 @@
 				1A0899552196A90A0036AEF3 /* CreateExperienceController.swift in Sources */,
 				1D9A4D8021976E9A00BDAC84 /* BaseViewController+Extension.swift in Sources */,
 				1A665EE22188426600B7CBA2 /* BaseUITextView.swift in Sources */,
+				D053448C219CAE7C00F864B3 /* Response.swift in Sources */,
 				1A665F5E21884BD900B7CBA2 /* ButtonTableViewCell.swift in Sources */,
 				1A665EF9218847DF00B7CBA2 /* Models.swift in Sources */,
 				1A665EC82188426600B7CBA2 /* Date+Extensions.swift in Sources */,
 				1A0899532195B79F0036AEF3 /* AboutController.swift in Sources */,
 				1A665ED72188426600B7CBA2 /* CodeInputView.swift in Sources */,
 				1A665F3621884A5A00B7CBA2 /* TermsConditionViewController.swift in Sources */,
+				D0534492219CB0D200F864B3 /* Experiences.swift in Sources */,
 				1A665ED42188426600B7CBA2 /* BaseUITableViewCell.swift in Sources */,
 				1A665F8E21884EC700B7CBA2 /* HeaderCollectionReusableView.swift in Sources */,
 				1A665EB62188426600B7CBA2 /* AFParam.swift in Sources */,
@@ -1719,6 +1740,7 @@
 				1A089950219570BF0036AEF3 /* PhotosListCollectionCell.swift in Sources */,
 				1A665EC42188426600B7CBA2 /* String+Extensions.swift in Sources */,
 				1A665EAE2188426600B7CBA2 /* LeakInspector.swift in Sources */,
+				D0534482219C9AE000F864B3 /* HomeManager.swift in Sources */,
 				1A665EEB2188426600B7CBA2 /* MaskDesignable.swift in Sources */,
 				1AB84F562194752D004D6C58 /* HeaderTitleView.swift in Sources */,
 				1D9A4D692197496F00BDAC84 /* UpcomingExpDetailDescriptionTableViewCell.swift in Sources */,
