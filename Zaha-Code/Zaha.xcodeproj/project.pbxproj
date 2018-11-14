@@ -215,6 +215,11 @@
 		1D9A4D8F21982FAA00BDAC84 /* ButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A4D8D21982FAA00BDAC84 /* ButtonsCell.swift */; };
 		1D9A4D9021982FAA00BDAC84 /* ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9A4D8E21982FAA00BDAC84 /* ButtonsCell.xib */; };
 		1D9A4D92219867F400BDAC84 /* UpComingExperience.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D9A4D91219867F400BDAC84 /* UpComingExperience.plist */; };
+		1DF409C0219CA8120009B178 /* ServiceManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409BE219CA8120009B178 /* ServiceManagers.swift */; };
+		1DF409C1219CA8120009B178 /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409BF219CA8120009B178 /* RegisterManager.swift */; };
+		1DF409C6219CA85B0009B178 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409C3219CA85A0009B178 /* RegisterResponse.swift */; };
+		1DF409C7219CA85B0009B178 /* RegisterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409C4219CA85A0009B178 /* RegisterBase.swift */; };
+		1DF409C8219CA85B0009B178 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409C5219CA85A0009B178 /* UserData.swift */; };
 		591F02982186E7C0000CCE12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F02972186E7C0000CCE12 /* AppDelegate.swift */; };
 		591F029D2186E7C0000CCE12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591F029B2186E7C0000CCE12 /* Main.storyboard */; };
 		591F029F2186E7C4000CCE12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591F029E2186E7C4000CCE12 /* Assets.xcassets */; };
@@ -461,6 +466,11 @@
 		1D9A4D8D21982FAA00BDAC84 /* ButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCell.swift; sourceTree = "<group>"; };
 		1D9A4D8E21982FAA00BDAC84 /* ButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsCell.xib; sourceTree = "<group>"; };
 		1D9A4D91219867F400BDAC84 /* UpComingExperience.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UpComingExperience.plist; sourceTree = "<group>"; };
+		1DF409BE219CA8120009B178 /* ServiceManagers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManagers.swift; sourceTree = "<group>"; };
+		1DF409BF219CA8120009B178 /* RegisterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
+		1DF409C3219CA85A0009B178 /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		1DF409C4219CA85A0009B178 /* RegisterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBase.swift; sourceTree = "<group>"; };
+		1DF409C5219CA85A0009B178 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		232EE712D892DDD2B6726D63 /* Pods-ZahaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZahaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZahaUITests/Pods-ZahaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A4C547E3241A78902FBFBD0 /* Pods-ZahaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZahaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZahaTests/Pods-ZahaTests.release.xcconfig"; sourceTree = "<group>"; };
 		362EC65D50D6BCD6C8239C60 /* Pods-Zaha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zaha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zaha/Pods-Zaha.release.xcconfig"; sourceTree = "<group>"; };
@@ -741,6 +751,7 @@
 		1A665EF7218847DF00B7CBA2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1DF409C2219CA85A0009B178 /* RegisterModel */,
 				1A665F9C21885DC600B7CBA2 /* GenericServerResponse.swift */,
 				1A665EF8218847DF00B7CBA2 /* Models.swift */,
 			);
@@ -802,13 +813,6 @@
 				1D692457219891DC002CDE61 /* EditProfileController.swift */,
 			);
 			path = Registeration;
-			sourceTree = "<group>";
-		};
-		1A665F3A21884A9800B7CBA2 /* ServiceManagers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ServiceManagers;
 			sourceTree = "<group>";
 		};
 		1A665F4321884BBB00B7CBA2 /* Cells */ = {
@@ -1160,6 +1164,25 @@
 			path = TwoOptionCell;
 			sourceTree = "<group>";
 		};
+		1DF409BD219CA8120009B178 /* ServiceManagers */ = {
+			isa = PBXGroup;
+			children = (
+				1DF409BE219CA8120009B178 /* ServiceManagers.swift */,
+				1DF409BF219CA8120009B178 /* RegisterManager.swift */,
+			);
+			path = ServiceManagers;
+			sourceTree = "<group>";
+		};
+		1DF409C2219CA85A0009B178 /* RegisterModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DF409C3219CA85A0009B178 /* RegisterResponse.swift */,
+				1DF409C4219CA85A0009B178 /* RegisterBase.swift */,
+				1DF409C5219CA85A0009B178 /* UserData.swift */,
+			);
+			path = RegisterModel;
+			sourceTree = "<group>";
+		};
 		4CC9240863E1FCFB375C71AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1198,12 +1221,12 @@
 		591F02962186E7C0000CCE12 /* Zaha */ = {
 			isa = PBXGroup;
 			children = (
+				1DF409BD219CA8120009B178 /* ServiceManagers */,
 				1AB84F3F21943D8B004D6C58 /* Views */,
 				1D8E52C7218EE6D600F49674 /* Resources */,
 				1A665FA02188611F00B7CBA2 /* Storyboards */,
 				1A665F6221884C3500B7CBA2 /* Router */,
 				1A665F4321884BBB00B7CBA2 /* Cells */,
-				1A665F3A21884A9800B7CBA2 /* ServiceManagers */,
 				1A665F1821884A1600B7CBA2 /* ViewControllers */,
 				1A665EF7218847DF00B7CBA2 /* Models */,
 				1A665EF2218846C500B7CBA2 /* ConstantsEnum */,
@@ -1602,6 +1625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF409C6219CA85B0009B178 /* RegisterResponse.swift in Sources */,
 				1A665EB22188426600B7CBA2 /* GlobalStatic.swift in Sources */,
 				1A089946219564D70036AEF3 /* PhotosController.swift in Sources */,
 				1A665EC02188426600B7CBA2 /* UIColor+Utility.swift in Sources */,
@@ -1638,6 +1662,7 @@
 				1A665ED32188426600B7CBA2 /* BaseUIStackView.swift in Sources */,
 				1A665EE02188426600B7CBA2 /* BaseUISegmentedControl.swift in Sources */,
 				1AB84F65219484BE004D6C58 /* DescriptionCell.swift in Sources */,
+				1DF409C7219CA85B0009B178 /* RegisterBase.swift in Sources */,
 				1D8E52C0218EDFD600F49674 /* SideMenuController.swift in Sources */,
 				1A665F5B21884BD900B7CBA2 /* PhoneTableViewCell.swift in Sources */,
 				1A665F3721884A5A00B7CBA2 /* LoginViewController.swift in Sources */,
@@ -1682,6 +1707,7 @@
 				1D9A4D8A21981A7500BDAC84 /* AmenitiesCollectionCell.swift in Sources */,
 				1A665F8B21884EC700B7CBA2 /* ParallaxHeaderView.swift in Sources */,
 				1A665EE52188426600B7CBA2 /* BaseUIImageView.swift in Sources */,
+				1DF409C1219CA8120009B178 /* RegisterManager.swift in Sources */,
 				D084539C218C7DD9001E57B0 /* HomeVC.swift in Sources */,
 				1A08994A219570920036AEF3 /* PhotosGridCollectionCell.swift in Sources */,
 				1A665F1E21884A1600B7CBA2 /* SplashViewController.swift in Sources */,
@@ -1703,6 +1729,7 @@
 				1D89867B2193834E00AD57C9 /* SettingController.swift in Sources */,
 				1A665F6421884C3500B7CBA2 /* Router.swift in Sources */,
 				1A665EEA2188426600B7CBA2 /* PlaceholderDesignable.swift in Sources */,
+				1DF409C8219CA85B0009B178 /* UserData.swift in Sources */,
 				1A0899552196A90A0036AEF3 /* CreateExperienceController.swift in Sources */,
 				1D9A4D8021976E9A00BDAC84 /* BaseViewController+Extension.swift in Sources */,
 				1A665EE22188426600B7CBA2 /* BaseUITextView.swift in Sources */,
@@ -1713,6 +1740,7 @@
 				1A665ED72188426600B7CBA2 /* CodeInputView.swift in Sources */,
 				1A665F3621884A5A00B7CBA2 /* TermsConditionViewController.swift in Sources */,
 				1A665ED42188426600B7CBA2 /* BaseUITableViewCell.swift in Sources */,
+				1DF409C0219CA8120009B178 /* ServiceManagers.swift in Sources */,
 				1A665F8E21884EC700B7CBA2 /* HeaderCollectionReusableView.swift in Sources */,
 				1A665EB62188426600B7CBA2 /* AFParam.swift in Sources */,
 				1A665EBF2188426600B7CBA2 /* Array+Extensions.swift in Sources */,

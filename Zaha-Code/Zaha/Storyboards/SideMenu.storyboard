@@ -218,6 +218,8 @@
                         <viewLayoutGuide key="safeArea" id="QuG-sr-q8a"/>
                     </view>
                     <connections>
+                        <outlet property="imgProfile" destination="g3G-aY-8Ob" id="hBn-oM-tsV"/>
+                        <outlet property="lblName" destination="XjJ-9z-iyj" id="ld7-E5-qD7"/>
                         <outlet property="tblSideMenu" destination="Zki-wU-6TZ" id="CdV-jf-QWk"/>
                     </connections>
                 </viewController>

@@ -135,6 +135,9 @@ class LeftMenuController: BaseViewController
 {
     @IBOutlet weak var tblSideMenu: UITableView!
     
+    @IBOutlet weak var imgProfile: BaseUIImageView!
+    @IBOutlet weak var btnProfile: BaseUIButton!
+    @IBOutlet weak var lblName: BaseUILabel!
     private let kTableHeaderHeight: CGFloat = DesignUtility.getValueFromRatio(80)
     //let manager = LogoutManager()
 //    let realm = try! Realm()
@@ -161,10 +164,18 @@ class LeftMenuController: BaseViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        if let url = CurrentUser.data?.imageUrl {
+            print(url)
+            imgProfile.setImageFromUrl(urlStr: url)
+        }
+        lblName.text = CurrentUser.data!.firstName!  + " " + CurrentUser.data!.lastName!
         
        // setHeader()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(true)

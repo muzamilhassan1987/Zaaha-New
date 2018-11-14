@@ -142,8 +142,16 @@ public extension String {
     var isContainsWhitespace : Bool {
         return(self.rangeOfCharacter(from: .whitespacesAndNewlines) != nil)
     }
+    func replace(_ string:String, replacement:String) -> String {
+        return self.replacingOccurrences(of: string, with: replacement, options: NSString.CompareOptions.literal, range: nil)
+    }
+    func removeWhitespace() -> String {
+        return self.replace(" ", replacement: "%20")
+    }
     
 }
+
+
 public class StringClass {
     
     

@@ -341,7 +341,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="gotoHomeController:" destination="HSu-On-QXF" eventType="touchUpInside" id="W7a-c5-Cq5"/>
+                                                    <action selector="submitTapped:" destination="HSu-On-QXF" eventType="touchUpInside" id="AxZ-0h-OYy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiM-Lu-KHX">
@@ -473,6 +473,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dtp-1d-c1r"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="dcz-EC-gsT" id="TcE-qf-6NF"/>
+                        <outlet property="txtPwd" destination="W7D-k2-P6D" id="FfW-6G-rTY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjJ-C8-bps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -556,6 +560,9 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="ggy-hK-3fp" eventType="touchUpInside" id="ICW-dX-abd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -607,6 +614,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wp4-xO-yR6"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="Ait-To-cbx" id="dVI-t4-jkc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6td-kG-soR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -693,7 +703,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="login_userIcon"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="leftImageLeftPadding">
@@ -725,7 +735,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="signup_emailIcon"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="leftImageLeftPadding">
@@ -818,6 +828,9 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signupBtnTapped" destination="r7m-9B-kBK" eventType="touchUpInside" id="3yi-oO-GWV"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Upload Photo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CoX-4J-eAL" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="421.33333333333337" width="374" height="45"/>
@@ -876,6 +889,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="browsePicture:" destination="r7m-9B-kBK" eventType="touchUpInside" id="tQl-uX-z7D"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -980,6 +996,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nTe-cB-mGj"/>
                     </view>
+                    <connections>
+                        <outlet property="btnBrowsePicture" destination="3Y3-5o-edA" id="E4T-D5-Jfm"/>
+                        <outlet property="txtConfirmPassword" destination="6Gd-gf-AHY" id="Oz0-JO-bkJ"/>
+                        <outlet property="txtEmail" destination="Oep-0I-Myz" id="OkM-DU-ud5"/>
+                        <outlet property="txtFirstName" destination="kaX-Ar-OYC" id="7HZ-Mv-5Ua"/>
+                        <outlet property="txtLastName" destination="501-Y4-u7I" id="6Dd-WH-tXJ"/>
+                        <outlet property="txtPassword" destination="F3S-wQ-RMP" id="Pea-yQ-uWI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGB-0K-taj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1090,12 +1114,12 @@
         <scene sceneID="44J-wb-qQz">
             <objects>
                 <viewController storyboardIdentifier="EditProfileController" id="oEm-7T-j7Y" customClass="EditProfileController" customModule="Zaha" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="aRg-AP-uuS">
+                    <view key="view" contentMode="scaleToFill" id="aRg-AP-uuS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LZ-Ro-adS">
-                                <rect key="frame" x="24" y="74" width="366" height="541"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LZ-Ro-adS">
+                                <rect key="frame" x="24" y="143" width="366" height="541"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMV-Q7-Rrf">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="541"/>
@@ -1123,19 +1147,19 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="366" height="478"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-Da-V3j" userLabel="ChangePhotoView">
-                                                        <rect key="frame" x="28" y="39.999999999999993" width="320" height="72.333333333333314"/>
+                                                        <rect key="frame" x="28" y="40.000000000000007" width="320" height="72.666666666666686"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_Field" translatesAutoresizingMaskIntoConstraints="NO" id="RqS-Vm-7qu">
-                                                                <rect key="frame" x="0.0" y="31.333333333333343" width="320" height="41"/>
+                                                                <rect key="frame" x="0.0" y="31.666666666666657" width="320" height="41"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tf-18-elS">
-                                                                <rect key="frame" x="2" y="2.3333333333333428" width="103" height="21"/>
+                                                                <rect key="frame" x="2" y="2.6666666666666572" width="103" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                                 <color key="textColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="singup_uploadIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4r2-U9-7Ih">
-                                                                <rect key="frame" x="10" y="44.333333333333343" width="19" height="15"/>
+                                                                <rect key="frame" x="10" y="44.666666666666657" width="19" height="15"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSQ-ba-dbE" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="213" y="37" width="97" height="30"/>
@@ -1165,7 +1189,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eE-um-geL">
-                                                                <rect key="frame" x="36" y="45.333333333333343" width="264" height="13"/>
+                                                                <rect key="frame" x="36" y="45.666666666666657" width="264" height="13"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                                 <color key="textColor" red="0.33333333329999998" green="0.29803921570000003" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1188,22 +1212,22 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kc0-qJ-Hpq" userLabel="FirstNameView">
-                                                        <rect key="frame" x="28" y="122.33333333333334" width="320" height="72.666666666666657"/>
+                                                        <rect key="frame" x="28" y="122.66666666666669" width="320" height="72.333333333333314"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_Field" translatesAutoresizingMaskIntoConstraints="NO" id="ebp-Ym-jhh">
-                                                                <rect key="frame" x="0.0" y="31.666666666666686" width="320" height="41"/>
+                                                                <rect key="frame" x="0.0" y="31.333333333333314" width="320" height="41"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGa-f8-fth">
-                                                                <rect key="frame" x="2" y="2.6666666666666856" width="79" height="21"/>
+                                                                <rect key="frame" x="2" y="2.3333333333333144" width="79" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                                 <color key="textColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="login_userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FvJ-2Z-G9x">
-                                                                <rect key="frame" x="10" y="44.666666666666686" width="15" height="15"/>
+                                                                <rect key="frame" x="10" y="44.333333333333314" width="15" height="15"/>
                                                             </imageView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUI-yh-9fi">
-                                                                <rect key="frame" x="35" y="31.666666666666686" width="275" height="41"/>
+                                                                <rect key="frame" x="35" y="31.333333333333314" width="275" height="41"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1225,22 +1249,22 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvm-jz-Azf" userLabel="LastNameView">
-                                                        <rect key="frame" x="28" y="205.00000000000003" width="320" height="72.333333333333343"/>
+                                                        <rect key="frame" x="28" y="205" width="320" height="72.666666666666686"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_Field" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-G9-118">
-                                                                <rect key="frame" x="0.0" y="31.333333333333314" width="320" height="41"/>
+                                                                <rect key="frame" x="0.0" y="31.666666666666686" width="320" height="41"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctu-Ff-Trr">
-                                                                <rect key="frame" x="2" y="2.3333333333333144" width="77.666666666666671" height="21"/>
+                                                                <rect key="frame" x="2" y="2.6666666666666856" width="77.666666666666671" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                                 <color key="textColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="login_userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="WJ7-Mt-uTp">
-                                                                <rect key="frame" x="10" y="44.333333333333314" width="15" height="15"/>
+                                                                <rect key="frame" x="10" y="44.666666666666686" width="15" height="15"/>
                                                             </imageView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLn-Oo-Z6y">
-                                                                <rect key="frame" x="35" y="31.333333333333314" width="275" height="41"/>
+                                                                <rect key="frame" x="35" y="31.666666666666686" width="275" height="41"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1262,13 +1286,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiN-RR-1RB" userLabel="CultureView">
-                                                        <rect key="frame" x="28" y="287.33333333333337" width="320" height="72.666666666666686"/>
+                                                        <rect key="frame" x="28" y="287.66666666666669" width="320" height="72.333333333333314"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_FieldDown" translatesAutoresizingMaskIntoConstraints="NO" id="hYI-7u-P0U">
-                                                                <rect key="frame" x="0.0" y="31.666666666666686" width="320" height="41"/>
+                                                                <rect key="frame" x="0.0" y="31.333333333333314" width="320" height="41"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Culture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbM-qw-MNr">
-                                                                <rect key="frame" x="2" y="2.6666666666666856" width="52" height="21"/>
+                                                                <rect key="frame" x="2" y="2.3333333333333144" width="52" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                                 <color key="textColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1277,7 +1301,7 @@
                                                                 <rect key="frame" x="10" y="44" width="16" height="16"/>
                                                             </imageView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Culture" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ze6-UK-1PJ">
-                                                                <rect key="frame" x="36" y="31.666666666666686" width="254" height="41"/>
+                                                                <rect key="frame" x="36" y="31.333333333333314" width="254" height="41"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>

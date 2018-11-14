@@ -7,12 +7,27 @@ import MOLH
 class RegisterViewController: BaseViewController, StoryBoardHandler {
     static var myStoryBoard: (forIphone: String, forIpad: String?) =  (Storyboards.registeration.rawValue, nil)
     
+    
+    @IBOutlet weak var txtFirstName: BaseUITextField!
+    
+    @IBOutlet weak var txtLastName: BaseUITextField!
+    
+    @IBOutlet weak var txtConfirmPassword: BaseUITextField!
+    @IBOutlet weak var txtPassword: BaseUITextField!
+    @IBOutlet weak var txtEmail: BaseUITextField!
+    
+    @IBOutlet weak var btnBrowsePicture: BaseUIButton!
+    
     @IBOutlet weak var btnGoBack: UIButton!
     @IBOutlet weak var tblSignup: UITableView!
    
     var isAccepted = false
     var dataArray:NSMutableArray?
-//    let manager = RegisterManager()
+    
+    var imgProfile : UIImage? = nil
+    var imgData : Data?
+    
+    let manager = RegisterManager()
     
     lazy var  picker = { () -> MICountryPicker in
         let pick = MICountryPicker()
@@ -92,9 +107,16 @@ class RegisterViewController: BaseViewController, StoryBoardHandler {
         self.dismiss(animated: true, completion: {
         })
     }
-     func signupBtnTapped() {
-         self.showImagePicker()
-       //--ww  validateSignupForm()
+    
+    
+    @IBAction func browsePicture(_ sender: BaseUIButton) {
+        self.showImagePicker()
+    }
+    
+    @IBAction func signupBtnTapped() {
+       //  self.showImagePicker()
+        validateSignupFormScroll()
+//       validateSignupForm()
    }
 }
 
@@ -175,6 +197,7 @@ extension RegisterViewController: ImagePickerPresentable {
     
     func getImage(img: UIImage?) {
         
+        self.imgProfile = img
         print(img)
     }
     
