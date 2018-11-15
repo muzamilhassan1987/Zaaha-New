@@ -26,7 +26,7 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
         setInitialData()
         print(detailType)
         homeTblView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
-        callHomeService()
+        //callHomeService()
         // Do any additional setup after loading the view.
         
     }
