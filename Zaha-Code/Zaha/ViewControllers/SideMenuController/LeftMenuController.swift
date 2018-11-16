@@ -135,9 +135,13 @@ class LeftMenuController: BaseViewController
 {
     @IBOutlet weak var tblSideMenu: UITableView!
     
+    @IBOutlet weak var imgProfile: BaseUIImageView!
+    @IBOutlet weak var btnProfile: BaseUIButton!
+    @IBOutlet weak var lblName: BaseUILabel!
     private let kTableHeaderHeight: CGFloat = DesignUtility.getValueFromRatio(80)
     //let manager = LogoutManager()
 //    let realm = try! Realm()
+    var manager = CultureManager()
 
     var menuArray = [
         ["icon":"sidebar_homeIcon", "type":Menu.home.rawValue],
@@ -161,10 +165,18 @@ class LeftMenuController: BaseViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        if let url = CurrentUser.data?.imageUrl {
+            print(url)
+            imgProfile.setImageFromUrl(urlStr: url)
+        }
+        lblName.text = CurrentUser.data!.firstName!  + " " + CurrentUser.data!.lastName!
+        getHomeList()
        // setHeader()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(true)
@@ -348,6 +360,24 @@ extension LeftMenuController
 //            alertView.dismiss()
 //        }
 //    }
+}
+
+
+extension LeftMenuController
+{
+
+    func getHomeList() {
+        
+        let requestParam = self.manager.params()
+        self.manager.apiGetCultureList(requestParam, completion: {
+            
+            if self.manager.isSuccess {
+                print(self.manager.data)
+                Culture.data = self.manager.data!
+            }
+        })
+    }
+    
 }
 
 

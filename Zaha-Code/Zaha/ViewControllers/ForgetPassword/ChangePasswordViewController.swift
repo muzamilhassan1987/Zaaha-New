@@ -17,7 +17,7 @@ class ChangePasswordViewController: UIViewController, StoryBoardHandler {
     
     @IBOutlet weak var btnGoBack: UIButton!
     @IBOutlet weak var lblHeader: BaseUILabel!
-    
+    let manager = RegisterManager()
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,13 +108,18 @@ class ChangePasswordViewController: UIViewController, StoryBoardHandler {
         let pwdText = txtNewPwd.text
         let confirmPwd = txtConfirmPwd.text
         if (pwdText?.isEmptyStr())! {
-            return (false, GlobalStatic.getLocalizedString("new_pwd_needed"))
+            return (false, "Kindly provide new password")
+           // return (false, GlobalStatic.getLocalizedString("new_pwd_needed"))
         }else if (pwdText?.isContainsWhitespace)! {
-            return (false, GlobalStatic.getLocalizedString("pwd_space"))
+            return (false, "Password must not contain white spaces")
+            //return (false, GlobalStatic.getLocalizedString("pwd_space"))
         }else if (pwdText?.count)! < Constants.minimumLengthPwd || (pwdText?.count)! > Constants.maximumLengthPwd {
-            return (false, "\(GlobalStatic.getLocalizedString("pwd_min"))  \(Constants.minimumLengthPwd) \(GlobalStatic.getLocalizedString("pwd_max")) \(Constants.maximumLengthPwd) \(GlobalStatic.getLocalizedString("characters"))")
+            return (false, "Password should be between \(Constants.minimumLengthPwd) and \(Constants.maximumLengthPwd) characters")
+            //return (false, "\(GlobalStatic.getLocalizedString("pwd_min"))  \(Constants.minimumLengthPwd) \(GlobalStatic.getLocalizedString("pwd_max")) \(Constants.maximumLengthPwd) \(GlobalStatic.getLocalizedString("characters"))")
+            
         }else if !(confirmPwd?.elementsEqual(pwdText!))! {
-            return (false, GlobalStatic.getLocalizedString("pwd_not_matched"))
+            return (false, "New password and confirm password not matched")
+            //return (false, GlobalStatic.getLocalizedString("pwd_not_matched"))
         }
         return (true, "")
     }

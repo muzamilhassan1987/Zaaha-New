@@ -341,7 +341,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="gotoHomeController:" destination="HSu-On-QXF" eventType="touchUpInside" id="W7a-c5-Cq5"/>
+                                                    <action selector="submitTapped:" destination="HSu-On-QXF" eventType="touchUpInside" id="AxZ-0h-OYy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiM-Lu-KHX">
@@ -473,6 +473,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dtp-1d-c1r"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="dcz-EC-gsT" id="TcE-qf-6NF"/>
+                        <outlet property="txtPwd" destination="W7D-k2-P6D" id="FfW-6G-rTY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjJ-C8-bps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -556,6 +560,9 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="ggy-hK-3fp" eventType="touchUpInside" id="ICW-dX-abd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -607,6 +614,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wp4-xO-yR6"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="Ait-To-cbx" id="dVI-t4-jkc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6td-kG-soR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -693,7 +703,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="login_userIcon"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="leftImageLeftPadding">
@@ -725,7 +735,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="signup_emailIcon"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="leftImageLeftPadding">
@@ -818,6 +828,9 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signupBtnTapped" destination="r7m-9B-kBK" eventType="touchUpInside" id="3yi-oO-GWV"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Upload Photo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CoX-4J-eAL" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="421.33333333333337" width="374" height="45"/>
@@ -876,6 +889,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="browsePicture:" destination="r7m-9B-kBK" eventType="touchUpInside" id="tQl-uX-z7D"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -980,6 +996,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nTe-cB-mGj"/>
                     </view>
+                    <connections>
+                        <outlet property="btnBrowsePicture" destination="3Y3-5o-edA" id="E4T-D5-Jfm"/>
+                        <outlet property="txtConfirmPassword" destination="6Gd-gf-AHY" id="Oz0-JO-bkJ"/>
+                        <outlet property="txtEmail" destination="Oep-0I-Myz" id="OkM-DU-ud5"/>
+                        <outlet property="txtFirstName" destination="kaX-Ar-OYC" id="7HZ-Mv-5Ua"/>
+                        <outlet property="txtLastName" destination="501-Y4-u7I" id="6Dd-WH-tXJ"/>
+                        <outlet property="txtPassword" destination="F3S-wQ-RMP" id="Pea-yQ-uWI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGB-0K-taj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1095,7 +1119,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LZ-Ro-adS">
-                                <rect key="frame" x="24" y="74" width="366" height="541"/>
+                                <rect key="frame" x="24" y="143" width="366" height="541"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMV-Q7-Rrf">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="541"/>
@@ -1163,6 +1187,9 @@
                                                                         <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="browsePhoto:" destination="oEm-7T-j7Y" eventType="touchUpInside" id="v5z-8G-LUC"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eE-um-geL">
                                                                 <rect key="frame" x="36" y="45.333333333333343" width="264" height="13"/>
@@ -1202,7 +1229,7 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="login_userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FvJ-2Z-G9x">
                                                                 <rect key="frame" x="10" y="44.666666666666686" width="15" height="15"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUI-yh-9fi">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUI-yh-9fi" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="35" y="31.666666666666686" width="275" height="41"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1239,7 +1266,7 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="login_userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="WJ7-Mt-uTp">
                                                                 <rect key="frame" x="10" y="44.333333333333314" width="15" height="15"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLn-Oo-Z6y">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLn-Oo-Z6y" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="35" y="31.333333333333314" width="275" height="41"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1276,12 +1303,18 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="profile_cultureIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vUr-1N-MiW">
                                                                 <rect key="frame" x="10" y="44" width="16" height="16"/>
                                                             </imageView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Culture" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ze6-UK-1PJ">
+                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Culture" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ze6-UK-1PJ" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="36" y="31.666666666666686" width="254" height="41"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-rp-VNY">
+                                                                <rect key="frame" x="0.0" y="31.666666666666686" width="320" height="41"/>
+                                                                <connections>
+                                                                    <action selector="selectCulture:" destination="oEm-7T-j7Y" eventType="touchUpInside" id="KFP-uo-8k3"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -1289,11 +1322,15 @@
                                                             <constraint firstItem="Ze6-UK-1PJ" firstAttribute="leading" secondItem="vUr-1N-MiW" secondAttribute="trailing" constant="10" id="CHH-Ha-F7r"/>
                                                             <constraint firstItem="hYI-7u-P0U" firstAttribute="top" secondItem="dbM-qw-MNr" secondAttribute="bottom" constant="8" id="Ifb-hd-Gw9"/>
                                                             <constraint firstAttribute="bottom" secondItem="hYI-7u-P0U" secondAttribute="bottom" id="Nla-dy-dAJ"/>
+                                                            <constraint firstItem="ujb-rp-VNY" firstAttribute="top" secondItem="hYI-7u-P0U" secondAttribute="top" id="X5t-TT-Mab"/>
                                                             <constraint firstAttribute="trailing" secondItem="hYI-7u-P0U" secondAttribute="trailing" id="ZV4-kK-tpJ"/>
                                                             <constraint firstItem="Ze6-UK-1PJ" firstAttribute="bottom" secondItem="hYI-7u-P0U" secondAttribute="bottom" id="aXd-iP-qya"/>
                                                             <constraint firstItem="Ze6-UK-1PJ" firstAttribute="trailing" secondItem="hYI-7u-P0U" secondAttribute="trailing" constant="-30" id="gQp-md-HiO"/>
+                                                            <constraint firstItem="ujb-rp-VNY" firstAttribute="bottom" secondItem="hYI-7u-P0U" secondAttribute="bottom" id="hap-sZ-BTw"/>
                                                             <constraint firstItem="vUr-1N-MiW" firstAttribute="leading" secondItem="PiN-RR-1RB" secondAttribute="leading" constant="10" id="l5R-LL-GSA"/>
+                                                            <constraint firstItem="ujb-rp-VNY" firstAttribute="trailing" secondItem="hYI-7u-P0U" secondAttribute="trailing" id="lDJ-I5-z9e"/>
                                                             <constraint firstItem="hYI-7u-P0U" firstAttribute="leading" secondItem="PiN-RR-1RB" secondAttribute="leading" id="pe4-Ao-8GH"/>
+                                                            <constraint firstItem="ujb-rp-VNY" firstAttribute="leading" secondItem="hYI-7u-P0U" secondAttribute="leading" id="qsz-pE-lg7"/>
                                                             <constraint firstItem="Ze6-UK-1PJ" firstAttribute="top" secondItem="hYI-7u-P0U" secondAttribute="top" id="wK8-KL-MCg"/>
                                                             <constraint firstItem="vUr-1N-MiW" firstAttribute="centerY" secondItem="Ze6-UK-1PJ" secondAttribute="centerY" id="yY4-Ky-xk9"/>
                                                         </constraints>
@@ -1309,6 +1346,9 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="updateProfile:" destination="oEm-7T-j7Y" eventType="touchUpInside" id="d3I-tZ-few"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1379,6 +1419,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RQV-hs-Jda"/>
                     </view>
+                    <connections>
+                        <outlet property="btnBrowsePhoto" destination="jSQ-ba-dbE" id="Fns-hL-XKf"/>
+                        <outlet property="btnSave" destination="Px1-v3-e9G" id="X1G-yZ-a4W"/>
+                        <outlet property="txtCulture" destination="Ze6-UK-1PJ" id="iSo-KZ-Fzu"/>
+                        <outlet property="txtFirstName" destination="BUI-yh-9fi" id="pza-Wf-MyQ"/>
+                        <outlet property="txtLastName" destination="mLn-Oo-Z6y" id="oMz-tV-ork"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mnd-ee-zQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

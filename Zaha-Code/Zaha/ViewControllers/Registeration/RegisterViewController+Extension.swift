@@ -2,6 +2,58 @@
 import UIKit
 extension RegisterViewController {
     
+    func  validateSignupFormScroll(){
+        let fv = FormValidator()
+        
+        var parameters = [String : String]()
+       // self.imgProfile = UIImage(named: "bg-home")
+        let firstName = fv.validateName(title: txtFirstName.placeholder!, text: txtFirstName.text!)
+        let lastName = fv.validateName(title: txtLastName.placeholder!, text: txtLastName.text!)
+        let email = fv.validateEmail(title: txtEmail.placeholder!, text: txtEmail.text!)
+        let password = fv.validatePassword(title: txtPassword.placeholder!, text: txtPassword.text!)
+        let confirmPassword = fv.validateConfirmPassword(title: txtConfirmPassword.placeholder!, pwd: txtPassword.text!, cpwd: txtConfirmPassword.text!)
+       
+        if (firstName.0 == false) {
+            Alert.showMsg(msg: firstName.1)
+            return
+        }
+        if (lastName.0 == false) {
+            Alert.showMsg(msg: lastName.1)
+            return
+        }
+        if (email.0 == false) {
+            Alert.showMsg(msg: email.1)
+            return
+        }
+        if (password.0 == false) {
+            Alert.showMsg(msg: password.1)
+            return
+        }
+        if (confirmPassword.0 == false) {
+            Alert.showMsg(msg: confirmPassword.1)
+            return
+        }
+        guard let imgProfile = self.imgProfile else {
+            Alert.showMsg(msg: "Select profile image")
+            return
+        }
+       // UIImage.jp
+        self.imgData = imgProfile.jpegData(compressionQuality: 0.1)
+        
+        parameters.updateValue(txtFirstName.text!, forKey: "first_name")
+        parameters.updateValue(txtLastName.text!, forKey: "last_name")
+        parameters.updateValue(txtEmail.text!, forKey: "email")
+        parameters.updateValue(txtPassword.text!, forKey: "password")
+        parameters.updateValue("ios", forKey: "device_type")
+        parameters.updateValue("123456789", forKey: "device_token")
+        print(parameters)
+       
+        doSignup(params: parameters, imgData: self.imgData!)
+    }
+    
+    
+    
+    
     func  validateSignupForm(){
          let fv = FormValidator()
       
@@ -84,7 +136,7 @@ extension RegisterViewController {
    
          parameters.updateValue("ios", forKey: "device_type")
          parameters.updateValue("123456789", forKey: "device_token")
-        doSignup(params: parameters)
+       // doSignup(params: parameters)
  }
 
     
@@ -103,24 +155,37 @@ extension RegisterViewController {
 // MARK: - Networking
 extension RegisterViewController {
     
-    func doSignup(params : [String : String]) {
-//        let requestParam = self.manager.params(parameters: params as [String : AnyObject])
-//        
-//        self.manager.api(requestParam, completion: {
-//            
-//            if self.manager.isSuccess {
-//                CurrentUser.data = self.manager.userData
-//                FP.emailUser = (self.manager.userData?.email!)!
-//             Alert.showMsg(msg: self.manager.message)
-//            }
-//            else {
-//                
-//                print("failed")
-//            }
-//        })
-//     
-//        
+    func doSignup(params : [String : String], imgData : Data) {
+        let imageProfile = UIImage(data: self.imgData!)!
+        
+        //let requestParam = self.manager.params(parameters: params as [String : AnyObject])
+        let requestParam = self.manager.paramsWithImage(parameters: params as [String : AnyObject], img: imageProfile)
+        print(imageProfile)
+        print(params)
+        print(requestParam)
+        print(requestParam.images)
+        print(requestParam.endpoint)
+    
+        self.manager.apiWithImage(requestParam,imageData: imgData, completion: {
+            
+            if self.manager.isSuccess {
+                //CurrentUser.data = self.manager.userData
+              //  FP.emailUser = (self.manager.userData?.email!)!
+                Alert.showWithCompletion(msg: self.manager.message, completionAction: {
+                    self.navigationController?.popViewController(animated: true)
+                })
+            }
+            else {
+                
+                print("failed")
+            }
+        })
+     
+        
     }
+    
+    
+    
 }
 
 

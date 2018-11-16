@@ -11,7 +11,7 @@ public class DefaultConfig: NSObject {
     static let shared = DefaultConfig()
     
     //Project settings
-    public var baseUrl:String = "http://laundry.stagingic.com/api/";
+    public var baseUrl:String = "https://thebrandszone.com/zaha-app/api/";
     public var baseUrlImage:String = "http://laundry.stagingic.com/api/resize/";
 
     public var defaultFontName:String = "fontDefault";

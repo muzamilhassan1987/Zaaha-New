@@ -58,6 +58,7 @@ class ViewProfileController: BaseViewController, StoryBoardHandler {
         
         let headerViewFrame = CGRect(x: 0, y: 0, width: self.tblProfileView.bounds.width, height: DesignUtility.getValueFromRatio(HeaderHeight.mainHeaderHeight.rawValue))
         let homeView = HomeTopView.init(frame: headerViewFrame)
+        homeView.setData(.viewProfile, data: CurrentUser.data)
         headerView  = ParallaxHeaderView.init(frame: headerViewFrame, view: homeView)
         tblProfileView.tableHeaderView  = headerView
         
@@ -105,7 +106,9 @@ extension ViewProfileController : UITableViewDataSource, UITableViewDelegate {
         
         
         let  sectionCell = tableView.dequeueReusableCell(withIdentifier: "HeaderTitleViewCell") as! HeaderTitleViewCell
-        sectionCell.setData(HeaderTitleTypeEnum.viewProfile)
+        
+        sectionCell.setData(.viewProfile, data: CurrentUser.data!)
+        //sectionCell.setData(HeaderTitleTypeEnum.viewProfile, curr)
         return sectionCell
     }
     
@@ -141,7 +144,7 @@ extension ViewProfileController : UITableViewDataSource, UITableViewDelegate {
         }
         else if (indexPath.row > 0) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeTableViewCell
-            cell.setData(.viewProfile)
+            //cell.setData(.viewProfile)
             cell.selectionStyle = .none
             return cell
         }

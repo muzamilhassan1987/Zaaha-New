@@ -5,7 +5,7 @@ import UIKit
 class TermsConditionViewController: UIViewController, StoryBoardHandler {
     static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.registeration.rawValue , nil)
     
-   //var manager = TermsManager()
+   var manager = CMSManager()
     
     @IBOutlet weak var txtViewTerms: BaseUITextView!
     
@@ -21,7 +21,7 @@ class TermsConditionViewController: UIViewController, StoryBoardHandler {
         let img = UIImage.init(named: "backBtn")?.flipIfNeeded()
         btnGoBack.setImage(img, for: .normal)
         self.txtViewTerms.text = ""
-         getTerms()
+         //getTerms()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,23 +34,4 @@ class TermsConditionViewController: UIViewController, StoryBoardHandler {
     }
 
 }
-extension TermsConditionViewController{
-    
-    func getTerms() {
-        
-    
-//        let requestParam = self.manager.params()
-//        
-//        self.manager.api(requestParam, completion: {
-//            
-//            if self.manager.isSuccess {
-//           
-//             print(self.manager.htmlString)
-//            self.txtViewTerms.attributedText = self.manager.htmlString.html2AttributedString
-//            }
-//            else {
-//          
-//            }
-//        })
-    }
-}
+

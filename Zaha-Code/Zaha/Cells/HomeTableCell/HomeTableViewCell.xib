@@ -162,8 +162,16 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imgMain" destination="A8z-c6-K1f" id="YW9-3p-dVj"/>
                 <outlet property="imgVideoIcon" destination="6u2-rZ-M19" id="QdR-Ck-1jD"/>
                 <outlet property="layoutTopPadding" destination="USn-84-ISq" id="e2c-PW-705"/>
+                <outlet property="lblCategory" destination="ea5-IK-Dna" id="kLF-ct-jNX"/>
+                <outlet property="lblDateTime" destination="E4e-cJ-r8P" id="7h8-V1-M6H"/>
+                <outlet property="lblExpTitle" destination="dSP-MD-ciO" id="jLZ-y2-s10"/>
+                <outlet property="lblMaestro" destination="SNk-j0-vxp" id="Ej8-o2-mJ1"/>
+                <outlet property="lblPrice" destination="WSS-WB-bI0" id="iFh-2s-dsm"/>
+                <outlet property="lblStoryDateTime" destination="QDe-Vf-dqA" id="uc9-ks-zmo"/>
+                <outlet property="lblStoryTitle" destination="Rqh-w1-CL5" id="Lzg-Hy-wWz"/>
                 <outlet property="viewFiveLabels" destination="8Xg-Wq-hbD" id="yZ2-BP-gCj"/>
                 <outlet property="viewTwoLabel" destination="OmR-rz-FUM" id="sTe-WD-6FJ"/>
             </connections>

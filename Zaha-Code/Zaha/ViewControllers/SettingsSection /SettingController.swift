@@ -13,6 +13,8 @@ class SettingController: BaseViewController , StoryBoardHandler {
     static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.setting.rawValue , nil)
     
     @IBOutlet weak var tblSetting: UITableView!
+    var manager = RegisterManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,11 +74,13 @@ class SettingController: BaseViewController , StoryBoardHandler {
     @IBAction func logout(_ sender: Any) {
         
         Alert.showWithTwoActions(title: "Logout", msg: "Are you sure you want to logout?", okBtnTitle: "Yes", okBtnAction: {
-            router.goToLoginScreen(from: self)
+//                self.logoutService()
+            self.updatePushStatus()
         }, cancelBtnTitle: "No") {
             
         }
     }
+    
     
     
     
@@ -109,5 +113,52 @@ extension SettingController : UITableViewDelegate,UITableViewDataSource {
         //        return 200
     }
     
+    
+}
+
+
+extension SettingController{
+    
+    func logoutService() {
+        
+        let param = [
+            "device_token" :CurrentUser.deviceToken,
+            //"deviceType" : 2
+            ] as [String:String]
+        let requestParam = self.manager.paramsLogout(parameters: param as [String : AnyObject])
+        self.manager.apiLogout(requestParam, completion: {
+            
+            if self.manager.isSuccess {
+                router.goToLoginScreen(from: self)
+            }
+        })
+    }
+    
+    
+    func updatePushStatus() {
+        
+        let param = [
+            "notify_status" :"0",
+            //"deviceType" : 2
+            ] as [String:String]
+        
+        print(CurrentUser.token)
+        let requestParam = self.manager.paramsNotificationOnOff(parameters: param as [String : AnyObject])
+        self.manager.apiUpdatePushStatus(requestParam, completion: {
+            
+            if self.manager.isSuccess {
+                Alert.showWithCompletion(msg: self.manager.message, completionAction: {
+                })
+            }
+        })
+    }
+    //        if let obj1 = self.manager.data[0] as? HomeExperience {
+    //            print(obj1.title)
+    //            // obj is a string array. Do something with stringArray
+    //        }
+    //        if let obj1 = self.manager.data[3] as? HomeStory {
+    //            print(obj1.title)
+    //            // obj is a string array. Do something with stringArray
+    //        }
     
 }

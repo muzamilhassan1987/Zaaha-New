@@ -9,7 +9,7 @@ enum Constants {
     static let maximumLengthName = 30
     static let maximumLengthNumber = 20
     static let minimumLengthNumber = 8
-    static let maximumLengthText = 50
+    static let maximumLengthText = 30
     static let minimumLengthPwd = 6
     static let maximumLengthPwd = 20
     static let maximumLengthTextView = 500
@@ -51,9 +51,12 @@ enum FP {
 }
 
 
-
+enum Culture{
+    static var data : [CultureData]? = nil
+    
+}
 enum CurrentUser{
-    //static var data : User? = nil
+    static var data : UserData? = nil
     static var token : String = ""
     static var userType : UserType = .registered
     static var selectedAddressID : Int = 0
@@ -86,7 +89,7 @@ enum GoogleMap{
 }
 
 enum ServiceCodes {
-    static let successCode : String = "200"
+    static let successCode : Int = 200
 }
 
 enum UserDefaultKey {

@@ -13,7 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeTopView" customModule="Zaha" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="BF6-TY-X4M"/>
+                <outlet property="imgBg" destination="D3P-AX-EkA" id="YXE-5K-CN1"/>
                 <outlet property="imgLogo" destination="ZgP-jf-Cvw" id="wfW-tr-luS"/>
+                <outlet property="imgblur" destination="cx0-ET-AIO" id="b2l-6f-ONa"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,6 +27,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-home" translatesAutoresizingMaskIntoConstraints="NO" id="D3P-AX-EkA" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-home" translatesAutoresizingMaskIntoConstraints="NO" id="cx0-ET-AIO" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -49,9 +59,13 @@
                     <constraints>
                         <constraint firstItem="D3P-AX-EkA" firstAttribute="leading" secondItem="OHH-fG-Ul9" secondAttribute="leading" id="25g-FO-qhe"/>
                         <constraint firstItem="ZgP-jf-Cvw" firstAttribute="centerY" secondItem="D3P-AX-EkA" secondAttribute="centerY" id="9I3-63-uC7"/>
+                        <constraint firstItem="cx0-ET-AIO" firstAttribute="leading" secondItem="D3P-AX-EkA" secondAttribute="leading" id="NLb-ba-GUI"/>
                         <constraint firstItem="ZgP-jf-Cvw" firstAttribute="centerX" secondItem="D3P-AX-EkA" secondAttribute="centerX" id="RE1-98-1jI"/>
                         <constraint firstAttribute="trailing" secondItem="D3P-AX-EkA" secondAttribute="trailing" id="f0Z-py-nMm"/>
+                        <constraint firstItem="cx0-ET-AIO" firstAttribute="trailing" secondItem="D3P-AX-EkA" secondAttribute="trailing" id="iW9-8w-wj3"/>
+                        <constraint firstItem="cx0-ET-AIO" firstAttribute="top" secondItem="D3P-AX-EkA" secondAttribute="top" id="lTV-oc-6dB"/>
                         <constraint firstItem="D3P-AX-EkA" firstAttribute="top" secondItem="OHH-fG-Ul9" secondAttribute="top" id="oSX-aV-t4D"/>
+                        <constraint firstItem="cx0-ET-AIO" firstAttribute="bottom" secondItem="D3P-AX-EkA" secondAttribute="bottom" id="q0x-zI-wUF"/>
                         <constraint firstAttribute="bottom" secondItem="D3P-AX-EkA" secondAttribute="bottom" id="zYY-MN-NBd"/>
                     </constraints>
                 </view>

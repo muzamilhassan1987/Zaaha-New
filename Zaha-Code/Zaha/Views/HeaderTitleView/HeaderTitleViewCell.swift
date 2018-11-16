@@ -29,12 +29,15 @@ class HeaderTitleViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setData(_ type : HeaderTitleTypeEnum) {
+    func setData(_ type : HeaderTitleTypeEnum, data : Any? = nil) {
+        
         
         switch type {
         case .none:
             break
         case .viewProfile:
+            let user = data as! UserData
+            lblTitle.text = user.firstName! + user.lastName!
             lblTitle.textAlignment = .center
             break
         default:

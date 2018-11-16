@@ -108,6 +108,7 @@ extension AFNetwork {
             switch response.result {
             case .success:
                 debugPrint(response)
+                
                 success(response.data)
             case .failure:
                 let error : Error = response.result.error!
@@ -119,7 +120,7 @@ extension AFNetwork {
     }
     
     //file upload
-    func apiRequestUpload(_ info: AFParam, isSpinnerNeeded: Bool, success:@escaping (NSDictionary?) -> Void, failure:@escaping (Error) -> Void) {
+    func apiRequestUpload(_ info: AFParam, isSpinnerNeeded: Bool, success:@escaping (Data?) -> Void, failure:@escaping (Error) -> Void) {
         
         //if spinner needed
         if isSpinnerNeeded {
@@ -128,8 +129,9 @@ extension AFNetwork {
             }
         }
         
+        print(self.baseURL)
         let URL = try! URLRequest(url: self.baseURL + info.endpoint, method: info.method, headers: mergeWithCommonHeaders(info.headers))
-        
+        print(URL)
         alamoFireManager.upload(multipartFormData: { (multipartFormData) in
             
             //multipart params
@@ -149,7 +151,8 @@ extension AFNetwork {
                         value.pngData()
                         let imageData = value.pngData() as Data?
                         if imageData != nil {
-                            multipartFormData.append(imageData!, withName: "image[]")
+                            multipartFormData.append(imageData!, withName: "profile_image", fileName: "image.png", mimeType: "image/png")
+                           // multipartFormData.append(imageData!, withName: "image[]")
                         }
                     }
                 }
@@ -160,7 +163,7 @@ extension AFNetwork {
             //remove spinner
             if isSpinnerNeeded {
                 DispatchQueue.main.async {
-                    AFNetwork.shared.hideSpinner()
+                   // AFNetwork.shared.hideSpinner()
                 }
             }
             
@@ -175,7 +178,7 @@ extension AFNetwork {
                     }
                     .validate()
                     .responseJSON { response in
-                        
+                        AFNetwork.shared.hideSpinner()
                         //set progress view
                         self.setProgressProgress(1.0)
                         
@@ -183,9 +186,10 @@ extension AFNetwork {
                         case .success(let value):
                             
                             debugPrint(value)
-                            
+                       
                             if let result = response.result.value {
-                                success(result as? NSDictionary)
+                                success(response.data)
+                                //success(result as? NSDictionary)
                             }
                             else {
                                 success(nil)
@@ -198,6 +202,7 @@ extension AFNetwork {
                         }
                 }
             case .failure(let encodingError):
+                AFNetwork.shared.hideSpinner()
                 failure(encodingError)
             }
         })

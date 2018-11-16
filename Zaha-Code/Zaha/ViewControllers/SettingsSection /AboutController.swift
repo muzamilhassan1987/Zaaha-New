@@ -23,6 +23,8 @@ class AboutController: BaseViewController , StoryBoardHandler {
     var type = AboutType.none
     static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.setting.rawValue , nil)
     var isPrivacyPolicy = false
+    var cmsType  = ""
+    var manager = CMSManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         setInitialData()
@@ -30,6 +32,12 @@ class AboutController: BaseViewController , StoryBoardHandler {
         //setNavBar()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getTerms()
+    }
+    
     
     func setInitialData() {
         
@@ -43,19 +51,22 @@ class AboutController: BaseViewController , StoryBoardHandler {
         case AboutType.about:
             title = "About Us"
             subTitle = "Zoha - About Us"
-            //desc = ""
+            cmsType = "about_us"
+            desc = ""
             break
             
         case .terms:
             title = "Terms & Conditions"
             subTitle = "Zoha - Terms & Conditions"
-            //desc = ""
+            cmsType = "term_condition"
+            desc = ""
             break
             
         case .privacy:
             title = "Privacy Policy"
             subTitle = "Zoha - Privacy Policy"
-            //desc = ""
+            desc = ""
+             cmsType = "privacy_policy"
             break
         default:
             print("")
@@ -67,6 +78,12 @@ class AboutController: BaseViewController , StoryBoardHandler {
         lblSubtitle.text = subTitle
     }
     
+    
+    func getCMSData() {
+        
+        
+        
+    }
     
     @IBAction func crossButtonPressed(_ sender: UIButton) {
         print("Called Action")
@@ -105,4 +122,28 @@ class AboutController: BaseViewController , StoryBoardHandler {
     }
     */
 
+}
+extension AboutController{
+    
+    func getTerms() {
+        
+        let parameters = [
+            "type" : cmsType
+            ] as [String : String]
+        print(parameters)
+        let requestParam = self.manager.paramsCMS(parameters: parameters as [String : AnyObject])
+        self.manager.api(requestParam, completion: {
+            
+            if self.manager.isSuccess {
+                
+                self.lblDesc.attributedText = self.manager.htmlString.html2AttributedString
+                //self.lblDesc.text = self.manager.data?.descriptionField!
+//                print(self.manager.htmlString)
+//                self.txtViewTerms.attributedText = self.manager.htmlString.html2AttributedString
+            }
+            else {
+                
+            }
+        })
+    }
 }

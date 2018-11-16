@@ -11,6 +11,8 @@ enum HeaderTypeEnum:Int {
 
 class HomeTopView: UIView {
 
+    @IBOutlet weak var imgblur: BaseUIImageView!
+    @IBOutlet weak var imgBg: BaseUIImageView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var lblFirst: BaseUILabel!
@@ -43,13 +45,17 @@ class HomeTopView: UIView {
         ParallaxHeaderView.delegateScroll = self
     }
 
-    func setData(_ type : HeaderTypeEnum) {
-        
+    func setData(_ type : HeaderTypeEnum, data : Any? = nil) {
+        imgblur.isHidden = true
         switch type {
         case .BookingDetail:
             imgLogo.isHidden = true
             break
         case .viewProfile:
+            let user = data as! UserData
+            
+            imgLogo.setImageFromUrl(urlStr: user.imageUrl!)
+            imgBg.setImageFromUrl(urlStr: user.imageUrl!)
             imgLogo.isHidden = false
             break
         default:

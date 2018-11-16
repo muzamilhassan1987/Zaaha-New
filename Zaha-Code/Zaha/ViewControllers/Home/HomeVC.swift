@@ -15,6 +15,8 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
     
     @IBOutlet weak var homeTblView: UITableView!
     var detailType = BookingDetailEnum.none
+    var arrDataList = [BaseHomeModel]()
+    var manager = HomeManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBar()
@@ -23,6 +25,10 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
         homeTblView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         // Do any additional setup after loading the view.
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.getHomeList()
     }
     func setNavBar()
     {
@@ -131,40 +137,42 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
 
 extension HomeVC : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.arrDataList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeTableViewCell
         cell.selectionStyle = .none
         print(detailType)
-        switch detailType {
-        case .none:
-            if (indexPath.row % 2 == 0) {
-                cell.setData(.homeList)
-            }else{
-                cell.setData(.stories)
-            }
-            
-            
-            break
-        case .upcomingExperience:
-            cell.setData(.homeList)
-            break
-        case .booking:
-            break
-        case .stories:
-            cell.setData(.stories)
-            break
-        case .myExperience:
-            cell.setData(.homeList)
-            break
-        case .pastExperience:
-            cell.setData(.homeList)
-            break
-        default:
-            print("")
-        }
+        cell.setData(data: self.arrDataList[indexPath.row])
+        //cell.setData(.homeList, data: self.arrDataList[indexPath.row])
+//        switch detailType {
+//        case .none:
+//            if (indexPath.row % 2 == 0) {
+//                cell.setData(.homeList)
+//            }else{
+//                cell.setData(.stories)
+//            }
+//
+//
+//            break
+//        case .upcomingExperience:
+//            cell.setData(.homeList)
+//            break
+//        case .booking:
+//            break
+//        case .stories:
+//            cell.setData(.stories)
+//            break
+//        case .myExperience:
+//            cell.setData(.homeList)
+//            break
+//        case .pastExperience:
+//            cell.setData(.homeList)
+//            break
+//        default:
+//            print("")
+//        }
         //cell.setData(.homeList)
         
         return cell
@@ -196,3 +204,52 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
     }
     
 }
+extension HomeVC{
+    
+    func getHomeList() {
+        
+        let requestParam = self.manager.paramsHome(detailType)
+        self.manager.api(requestParam, completion: {
+            
+            if self.manager.isSuccess {
+                print(self.manager.data)
+                self.arrangeArrayResponse()
+            }
+        })
+    }
+    
+    func arrangeArrayResponse() {
+        print(self.manager.data)
+        
+        var data = [BaseHomeModel]()
+        for obj in self.manager.data {
+            if let objExperience = obj as? HomeExperience {
+//                print(obj1.title)
+                data.append(objExperience)
+                // obj is a string array. Do something with stringArray
+            }
+            if let objStory = obj as? HomeStory {
+                data.append(objStory)
+//                print(obj1.title)
+                // obj is a string array. Do something with stringArray
+            }
+            
+            
+        }
+        self.arrDataList = data.sorted(by: { $0.sortingDateNew! < $1.sortingDateNew!})
+        homeTblView.reloadData()
+        
+        }
+//        if let obj1 = self.manager.data[0] as? HomeExperience {
+//            print(obj1.title)
+//            // obj is a string array. Do something with stringArray
+//        }
+//        if let obj1 = self.manager.data[3] as? HomeStory {
+//            print(obj1.title)
+//            // obj is a string array. Do something with stringArray
+//        }
+    
+    }
+    
+    
+

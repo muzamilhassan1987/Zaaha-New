@@ -73,7 +73,7 @@ public class FormValidator {
     
     func validateName(title: String , text : String) -> (Bool , String) {
         do {
-        let name = try validateText(text, rules: [.empty(name:title),.onlyAlphabets(name: text), .minimumLength(name: title, len: 3), .maximumLength(name : title , len: 10)])
+        let name = try validateText(text, rules: [.empty(name:title),.onlyAlphabets(name: text), .minimumLength(name: title, len: 3), .maximumLength(name : title , len: 30)])
              return (true,name)
         }catch{
           return (false,"\(error)")

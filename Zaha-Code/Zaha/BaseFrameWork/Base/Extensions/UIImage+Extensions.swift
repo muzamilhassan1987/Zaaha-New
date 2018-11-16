@@ -3,7 +3,7 @@
 
 
 import UIKit
-
+import Kingfisher
 extension UIImage {
     
     func maskWithColor(color: UIColor) -> UIImage? {
@@ -69,5 +69,60 @@ extension UIImage {
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage!
+    }
+}
+extension UIImageView {
+    
+    func setImageFromUrl(urlStr:String){
+        
+        if urlStr.isEmpty{
+            return
+        }
+        
+        let url = URL(string: urlStr.removeWhitespace())!
+        //--ww print(url)
+        self.kf.indicatorType = .activity
+        self.kf.setImage(with: url,
+                         placeholder: nil,
+                         options: [.transition(.fade(1))],
+                         progressBlock: nil,
+                         completionHandler: nil)
+    }
+}
+
+extension UIButton {
+    func setImageURL(urlStr:String) {
+        
+        let url = URL(string: urlStr.removeWhitespace())!
+        //--ww  print(url)
+        self.kf.setImage(with: url, for: .normal)
+        //        self.kf.indicatorType = .activity
+        //        self.kf.setImage(with: url,
+        //                         placeholder: nil,
+        //                         options: [.transition(.fade(1))],
+        //                         progressBlock: nil,
+        //                         completionHandler: nil)
+        
+    }
+    
+    func setImageURLWithCompletion(urlStr:String, success : @escaping ((UIImage) -> Void) ) {
+        
+        let url = URL(string: urlStr)!
+        //--ww  print(url)
+        //--ww    self.kf.setImage(with: url, for: .normal)
+        //        self.kf.indicatorType = .activity
+        //        self.kf.setImage(with: url,
+        //                         placeholder: nil,
+        //                         options: [.transition(.fade(1))],
+        //                         progressBlock: nil,
+        //                         completionHandler: nil)
+        
+        self.kf.setImage(with: url, for: .normal, placeholder: nil, options: nil, progressBlock: { (v, c) in
+            
+        }) { (img, error, cache, url) in
+            if let image = img {
+                success(image)
+            }
+        }
     }
 }

@@ -14,12 +14,14 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
     @IBOutlet weak var btnGuestLogin: BaseUIButton!
     
     @IBOutlet weak var lblDontHaveAccount: UILabel!
-//    let manager = LoginManager()
+    let manager = RegisterManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBar()
         
+        txtEmail.text = "rrrr@rrrr.com"
+        txtPwd.text = "qwerty1"
       // Do any additional setup after loading the view.
 //           txtEmail.delegate = self
 //           txtPwd.delegate = self
@@ -161,7 +163,7 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
                 "email" : txtEmail.text!,
                 "password" :txtPwd.text!,
                 "device_type" : "ios",
-                "device_token" : CurrentUser.deviceToken,
+                "device_token" :"212123"// CurrentUser.deviceToken,
                 ] as [String : String]
             
             
@@ -177,11 +179,14 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
         
         
         if (emailText?.isEmptyStr())!{
-            return (false, GlobalStatic.getLocalizedString("email_needed"))
+            return (false, "Enter email")
+            //return (false, GlobalStatic.getLocalizedString("email_needed"))
         }else if !(emailText?.isValidEmail())!{
-            return (false, GlobalStatic.getLocalizedString("valid_email_needed"))
+            return (false, "Enter valid email")
+            //return (false, GlobalStatic.getLocalizedString("valid_email_needed"))
         }else if (pwdTExt?.isEmptyStr())! {
-            return (false, GlobalStatic.getLocalizedString("pwd_needed"))
+            return (false, "Enter password")
+            //return (false, GlobalStatic.getLocalizedString("pwd_needed"))
         }
         
         return (true, "")
@@ -209,18 +214,31 @@ extension LoginViewController : UITextFieldDelegate{
 extension LoginViewController {
     
     func doLogin(params : [String : String]) {
-//        let requestParam = self.manager.params(parameters: params as [String : AnyObject])
-//        
-//        self.manager.api(requestParam, completion: {
-//            
-//            if self.manager.isSuccess {
-//                self.checkIfUserIsVerified(isVerified : (self.manager.userData?.isVerified)!)
-//           }
-//            else {
-//                
-//                print("failed")
-//            }
-//        })
+        let requestParam = self.manager.paramsLogin(parameters: params as [String : AnyObject])
+        
+        self.manager.apiLogin(requestParam, completion: {
+            
+            if self.manager.isSuccess {
+                CurrentUser.data =  self.manager.userData
+                CurrentUser.token = self.manager.userData?.token ?? ""
+                CurrentUser.userType = .registered
+                print(CurrentUser.data?.email)
+                print(CurrentUser.data?.id)
+                print(CurrentUser.data?.firstName)
+                
+                let userDefault = UserDefaults.standard
+                userDefault.set(true, forKey: Login.isLoggedIn)
+                userDefault.set(self.manager.userData?.token, forKey: Login.token)
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(self.manager.userData), forKey:Login.userData)
+                
+                router.goToHomeAsRoot(from: self)
+                //self.checkIfUserIsVerified(isVerified : (self.manager.userData?.isVerified)!)
+           }
+            else {
+                
+                print("failed")
+            }
+        })
     }
     
     func checkIfUserIsVerified(isVerified : String) {
