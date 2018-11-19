@@ -136,6 +136,10 @@ enum CodeType {
     case signup , forgetPwd
 }
 
+enum Type {
+    static var data : [TypeData]? = nil
+}
+
 enum BookingDetailCellEnum: Int
 {
     //case imageSlidShowCell

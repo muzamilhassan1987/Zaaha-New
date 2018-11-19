@@ -8,25 +8,25 @@
 import Foundation
 
 class HomeRootClass : Codable {
-
-	let data : HomeData?
-	let response : HomeResponse?
-
-
-	enum CodingKeys: String, CodingKey {
-		case data
-		case response
-	}
-	required init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
-		data = try values.decodeIfPresent(HomeData.self, forKey: .data)  //?? HomeData()
-		response = try values.decodeIfPresent(HomeResponse.self, forKey: .response)  //?? HomeResponse()
-	}
-
-
+    
+    let data : HomeData?
+    let response : HomeResponse?
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case data
+        case response
+    }
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        data = try values.decodeIfPresent(HomeData.self, forKey: .data)  //?? HomeData()
+        response = try values.decodeIfPresent(HomeResponse.self, forKey: .response)  //?? HomeResponse()
+    }
+    
+    
 }
 
 protocol BaseHomeModel {
     
-    var sortingDateNew : Date? { get }
+        var sortingDateNew : Date? { get }
 }

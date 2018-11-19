@@ -9,6 +9,8 @@ import Foundation
 
 class HomeStory : Codable, BaseHomeModel {
 
+    
+
 	let createdAt : String?
 	let experienceId : Int?
 	let experienceTitle : String?
