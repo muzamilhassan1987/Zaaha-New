@@ -70,6 +70,16 @@ class SettingController: BaseViewController , StoryBoardHandler {
         sideMenuController?.showLeftViewAnimated()
     }
     
+    @IBAction func changePassword(_ sender: BaseUIButton) {
+        
+        let controller = ChangePasswordController.loadVC()
+//        controller.type = AboutType.privacy
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true) {
+            
+        }
+    }
     
     @IBAction func logout(_ sender: Any) {
         

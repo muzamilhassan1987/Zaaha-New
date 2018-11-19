@@ -11,6 +11,9 @@ import UIKit
 class AmenitiesTableCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var detailType = BookingDetailEnum.none
+//    var
+    var arrAmenities = [AmentiesCellData]()
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.register(UINib(nibName: "AmenitiesCollectionCell", bundle: nil), forCellWithReuseIdentifier: "AmenitiesCollectionCell")
@@ -49,6 +52,51 @@ class AmenitiesTableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setAmenitiesData(_ data : HomeExperience!, type : BookingDetailEnum!) {
+        print(type)
+        self.detailType = type
+        switch detailType {
+        case .none:
+            break
+        case .upcomingExperience:
+            self.appendUpcomingData(data)
+            break
+        case .booking:
+            break
+        case .stories:
+            break
+        case .myExperience:
+            break
+        case .pastExperience:
+            break
+        default:
+            print("")
+        }
+        
+        
+    }
+    
+    func appendUpcomingData(_ data : HomeExperience!) {
+        arrAmenities.removeAll()
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_nameIcon", title: data.maestrosName!))
+        arrAmenities.append(AmentiesCellData(image: "", title: ""))
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_locationIcon", title: data.location!))
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_priceIcon", title: "AED \(data.amount!)"))
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_typesOfExpIcon", title: data.experienceTypeName!))
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_TimeIcon", title: data.publishDate!))
+    }
+    func appendPastData(_ data : HomeExperience!) {
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_nameIcon", title: data.maestrosName!))
+        arrAmenities.append(AmentiesCellData(image: "", title: ""))
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_locationIcon", title: data.location!))
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_typesOfExpIcon", title: data.location!))//star
+        arrAmenities.append(AmentiesCellData(image: "myExp_ExplorerIcon", title: data.location!))//explorers
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_TimeIcon", title: data.publishDate!))
+        arrAmenities.append(AmentiesCellData(image: "myExp_CultureIcon", title: data.cultureName ?? "N/A"))
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_typesOfExpIcon", title: data.experienceTypeName!))
+        
     }
     
 }

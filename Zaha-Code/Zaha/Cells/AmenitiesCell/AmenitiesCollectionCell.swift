@@ -41,6 +41,13 @@ class AmenitiesCollectionCell: UICollectionViewCell {
          AmentiesCellData(image: "upcomingExp_typesOfExpIcon", title: "Type of experience"),
          
          ]
+    
+//    static func setAmenitiesData(_ data : HomeExperience!) {
+//        
+//        
+//        
+//    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -52,7 +59,7 @@ class AmenitiesCollectionCell: UICollectionViewCell {
         stackRating.isHidden = true
         imgIcon.image = UIImage(named: data.image)
         lblTitle.text = data.title
-        if(data.title == "star") {
+        if(data.image == "star") {
             lblTitle.text = ""
             stackRating.isHidden = false
         }
@@ -67,5 +74,17 @@ struct AmentiesCellData {
     
     func printName() {
         print("\(self.image) \(self.title)")
+    }
+}
+struct AmentiesCellDataTest {
+    var maestroName: String
+    var location: String
+    var rating : String
+    var time : String
+    var explorersCount : String
+    var experienceType : String
+    var culture : String
+    func printName() {
+        print("\(self.maestroName) \(self.culture)")
     }
 }

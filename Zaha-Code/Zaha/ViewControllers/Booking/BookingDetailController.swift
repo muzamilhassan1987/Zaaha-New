@@ -18,34 +18,35 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
     var tempCollectionCount = 0
     var tempDetailCollection = AmenitiesCollectionCell.bookingDetailData
 //    var cellPreData = []
+    var manager = DetailPostManager()
+    var detailData : Any? = nil
+    var experienceData : HomeExperience?
+    var arrAmenities = [AmentiesCellData]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setInitialData()
-        setUpTable()
+        if let objExperience = detailData as? HomeExperience {
+            self.experienceData = objExperience
+        }
+        if let objStory = detailData as? HomeStory {
+        }
         
+//        setInitialData()
+        setUpTable()
+        print("------------------------------------")
+        print(detailType)
         // Do any additional setup after loading the view.
     }
     
     
     func setUpTable() {
         
-        tblBookingDetail.delegate = self
-        tblBookingDetail.dataSource = self
+        tblBookingDetail.delegate = nil
+        tblBookingDetail.dataSource = nil
         
-        let parallaxViewFrame = CGRect(x: 0, y: 0, width: self.tblBookingDetail.bounds.width, height: DesignUtility.getValueFromRatio(HeaderHeight.mainHeaderHeight.rawValue))
-        let homeView = HomeTopView.init(frame: parallaxViewFrame)
-        homeView.setData(.BookingDetail)
-        headerView  = ParallaxHeaderView.init(frame: parallaxViewFrame, view: homeView)
-        tblBookingDetail.tableHeaderView  = headerView
         
-//        tblBookingDetail.register(UINib(nibName: "BookingCell", bundle: nil), forCellReuseIdentifier: "BookingCell")
+        
         tblBookingDetail.register(UINib(nibName: "HeaderTitleViewCell", bundle: nil), forCellReuseIdentifier: "HeaderTitleViewCell")
-//        tblBookingDetail.register(UINib(nibName: "DescriptionCell", bundle: nil), forCellReuseIdentifier: "DescriptionCell")
-//        tblBookingDetail.register(UINib(nibName: "PhotoCollectionTableCell", bundle: nil), forCellReuseIdentifier: "PhotoCollectionTableCell")
-//        tblBookingDetail.register(UINib(nibName: "AmenitiesTableCell", bundle: nil), forCellReuseIdentifier: "AmenitiesTableCell")
-//        tblBookingDetail.register(UINib(nibName: "ButtonsCell", bundle: nil), forCellReuseIdentifier: "ButtonsCell")
-        
         
         
         tblBookingDetail.estimatedRowHeight = 200.0
@@ -55,7 +56,16 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
         
        // tblBookingDetail.register(UINib.init(nibName: homeCellReuseIdentifier, bundle: nil), forCellReuseIdentifier: homeCellReuseIdentifier)
     }
-    
+    func setUpTableData() {
+        tblBookingDetail.delegate = self
+        tblBookingDetail.dataSource = self
+        let parallaxViewFrame = CGRect(x: 0, y: 0, width: self.tblBookingDetail.bounds.width, height: DesignUtility.getValueFromRatio(HeaderHeight.mainHeaderHeight.rawValue))
+        let homeView = HomeTopView.init(frame: parallaxViewFrame)
+        //homeView.setData(.BookingDetail)
+        homeView.setData(.BookingDetail, data: experienceData!)
+        headerView  = ParallaxHeaderView.init(frame: parallaxViewFrame, view: homeView)
+        tblBookingDetail.tableHeaderView  = headerView
+    }
     func setInitialData() {
         
         switch detailType {
@@ -68,6 +78,7 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
         case .upcomingExperience:
             self.title = "Upcoming Experiences".uppercased()
             fetchPtlist("UpComingExperience")
+            tempCollectionCount = 6
             tempDetailCollection = AmenitiesCollectionCell.upcomingDetailData
             
             break
@@ -81,20 +92,31 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
         case .myExperience:
             self.title = "My Experiences".uppercased()
             fetchPtlist("MyExperience")
+            tempCollectionCount = 8
             tempDetailCollection = AmenitiesCollectionCell.pastExpDetailData
             break
         case .pastExperience:
             self.title = "Past Experiences".uppercased()
             fetchPtlist("PastExperience")
+            tempCollectionCount = 8
             tempDetailCollection = AmenitiesCollectionCell.pastExpDetailData
             break
         default:
             print("")
         }
         
+        tblBookingDetail.reloadData()
         
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getDetailServer()
+        
+    }
+
+    
+    
     func fetchPtlist(_ plist : String) {
         if let path = Bundle.main.path(forResource: plist, ofType: "plist") {
             dataArray = NSMutableArray(contentsOfFile: path);
@@ -186,7 +208,7 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
         
         
         let  sectionCell = tableView.dequeueReusableCell(withIdentifier: "HeaderTitleViewCell") as! HeaderTitleViewCell
-        
+        sectionCell.setData(.experienceDetail, data: experienceData!)
         return sectionCell 
     }
     
@@ -207,6 +229,9 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! AmenitiesTableCell
             cell.collectionView.tag = indexPath.row//(100 * indexPath.section) + 1
             cell.collectionView.accessibilityHint = cellIdentifiers.amenities.rawValue
+            cell.setAmenitiesData(experienceData!, type: detailType)
+            self.arrAmenities.removeAll()
+            self.arrAmenities = cell.arrAmenities
             cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
             setCellProperties(cell)
             return cell;
@@ -214,7 +239,7 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
         case cellIdentifiers.description.rawValue:
                 let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! DescriptionCell
                 setCellProperties(cell)
-                cell.setData(detailType)
+                cell.setData(experienceData!, type: detailType)
                 return cell
         case cellIdentifiers.buttons.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! ButtonsCell
@@ -287,7 +312,8 @@ extension BookingDetailController: UICollectionViewDelegate, UICollectionViewDat
         
         switch collectionView.accessibilityHint {
         case cellIdentifiers.amenities.rawValue:
-            return tempDetailCollection.count
+            return self.arrAmenities.count
+            //return tempDetailCollection.count
         case cellIdentifiers.photoVideoCell.rawValue:
             return 3
         default:
@@ -306,7 +332,8 @@ extension BookingDetailController: UICollectionViewDelegate, UICollectionViewDat
         switch collectionView.accessibilityHint {
         case cellIdentifiers.amenities.rawValue:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AmenitiesCollectionCell", for: indexPath) as! AmenitiesCollectionCell
-            cell.setData(tempDetailCollection[indexPath.row])
+            cell.setData(self.arrAmenities[indexPath.row])
+            //cell.setda
             return cell
         case cellIdentifiers.photoVideoCell.rawValue:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosGridCollectionCell", for: indexPath) as! PhotosGridCollectionCell
@@ -381,4 +408,29 @@ extension BookingDetailController: ViewAllCellDelegate
 //        }
         
     }
+}
+
+
+extension BookingDetailController{
+    
+    func getDetailServer() {
+        
+        var parameters = [String : String]()
+       parameters.updateValue("\(String(describing: self.experienceData!.id!))", forKey: "experience_id")
+        print(parameters)
+        let requestParam =  self.manager.paramsDetail(parameters as [String : AnyObject], type: detailType)
+        self.manager.api(requestParam, completion: {
+            
+            if self.manager.isSuccess {
+                print(self.manager.data)
+                self.detailData = self.manager.experienceData!
+                self.experienceData! = self.manager.experienceData!
+                self.setInitialData()
+                self.setUpTableData()
+
+            }
+        })
+    }
+    
+    
 }

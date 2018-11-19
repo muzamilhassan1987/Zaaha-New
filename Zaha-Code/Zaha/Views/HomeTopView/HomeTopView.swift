@@ -46,10 +46,14 @@ class HomeTopView: UIView {
     }
 
     func setData(_ type : HeaderTypeEnum, data : Any? = nil) {
+        
+        
+        
         imgblur.isHidden = true
         switch type {
         case .BookingDetail:
             imgLogo.isHidden = true
+            self.setDetail(data: data)
             break
         case .viewProfile:
             let user = data as! UserData
@@ -62,6 +66,17 @@ class HomeTopView: UIView {
             print("")
         }
     }
+    
+    func setDetail(data : Any?) {
+        
+        if let objExperience = data as? HomeExperience {
+            imgBg.setImageFromUrl(urlStr: objExperience.imageUrl!)
+        }
+        if let objStory = data as? HomeStory {
+            //imgBg.setImageFromUrl(urlStr: objStory//.imageUrl!)
+        }
+    }
+    
  
 }
 extension HomeTopView : UpdateFrameDelegate {

@@ -50,6 +50,9 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="textfieldGray"/>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizefontLarge"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="changePassword:" destination="YS4-H0-NRC" eventType="touchUpInside" id="oGl-He-69y"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63k-4S-DXY" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="72" width="60" height="30"/>
@@ -422,7 +425,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-P0-Of1">
-                                                <rect key="frame" x="26.999999999999993" y="23.333333333333343" width="100.33333333333331" height="18.666666666666671"/>
+                                                <rect key="frame" x="26.999999999999993" y="26" width="92.333333333333314" height="16"/>
                                                 <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="16"/>
                                                 <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -434,7 +437,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="366" height="401"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaha - Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ben-dT-WxH">
-                                                        <rect key="frame" x="31" y="20" width="151.33333333333334" height="23"/>
+                                                        <rect key="frame" x="31" y="20" width="141.66666666666666" height="23"/>
                                                         <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="16"/>
                                                         <color key="textColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>

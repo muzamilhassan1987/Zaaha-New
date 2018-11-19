@@ -80,10 +80,11 @@ class Router  {
     func goToUpPhotosController(from vc : viewController) {
         vc.show(viewcontrollerInstance: PhotosController.loadVC())
     }
-    func goToBookingDetailController(from vc : viewController, type : BookingDetailEnum) {
+    func goToBookingDetailController(from vc : viewController, type : BookingDetailEnum, data : Any?) {
         
         vc.show(viewcontrollerInstance: BookingDetailController.loadVC()) { (vc : BookingDetailController) in
             vc.detailType = type
+            vc.detailData = data
         }
         
        

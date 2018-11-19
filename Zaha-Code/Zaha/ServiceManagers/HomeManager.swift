@@ -66,6 +66,13 @@ extension HomeManager {
         print(CurrentUser.token)
         print("---------------------------------------------------")
         print(getEndPoint(type))
+//        if (type == .nearMe) {
+//            var parameters = [String : String]()
+//            parameters.updateValue(CurrentUser., forKey: "password")
+//            parameters.updateValue(getString(dict["text"]), forKey: "password")
+//            let param = AFParam(endpoint: getEndPoint(type), params: [:], headers: headers, method: .get, parameterEncoding:JSONEncoding.default, images: [])
+//            return param
+//        }
         let param = AFParam(endpoint: getEndPoint(type), params: [:], headers: headers, method: .get, parameterEncoding:JSONEncoding.default, images: [])
         return param
     }
@@ -87,11 +94,14 @@ extension HomeManager {
             return "getStories"
             
         case .myExperience:
-           
+            return "getMyExperiences"
             break
         case .pastExperience:
             return "getPastExperience"
             
+        case .nearMe:
+            //return "getNearByExperience?latitude=23.7888&longitude=-23.7888"
+            return "getNearByExperience?latitude=\(String(describing: CurrentUser.currentLocation!.coordinate.latitude))&longitude=\(String(describing: CurrentUser.currentLocation!.coordinate.longitude))"
         default:
             print("")
         }

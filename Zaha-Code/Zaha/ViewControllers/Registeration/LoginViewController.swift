@@ -21,7 +21,7 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
         setNavBar()
         
         txtEmail.text = "rrrr@rrrr.com"
-        txtPwd.text = "qwerty1"
+        txtPwd.text = "qwerty12"
       // Do any additional setup after loading the view.
 //           txtEmail.delegate = self
 //           txtPwd.delegate = self

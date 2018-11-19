@@ -14,6 +14,9 @@
 		1A089951219570BF0036AEF3 /* PhotosListCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A08994F219570BF0036AEF3 /* PhotosListCollectionCell.xib */; };
 		1A0899532195B79F0036AEF3 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0899522195B79F0036AEF3 /* AboutController.swift */; };
 		1A0899552196A90A0036AEF3 /* CreateExperienceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0899542196A90A0036AEF3 /* CreateExperienceController.swift */; };
+		1A2FEA0F21A2B552005FF1BB /* DetailPostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FEA0E21A2B552005FF1BB /* DetailPostManager.swift */; };
+		1A2FEA1321A2BF07005FF1BB /* DetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FEA1221A2BF07005FF1BB /* DetailData.swift */; };
+		1A2FEA1521A2BF11005FF1BB /* DetailExperienceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FEA1421A2BF11005FF1BB /* DetailExperienceBase.swift */; };
 		1A4BE9D3219E9A060027A67F /* CultureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BE9D0219E9A060027A67F /* CultureResponse.swift */; };
 		1A4BE9D4219E9A060027A67F /* CultureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BE9D1219E9A060027A67F /* CultureData.swift */; };
 		1A4BE9D5219E9A060027A67F /* CultureBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BE9D2219E9A060027A67F /* CultureBase.swift */; };
@@ -234,6 +237,9 @@
 		1DF409C6219CA85B0009B178 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409C3219CA85A0009B178 /* RegisterResponse.swift */; };
 		1DF409C7219CA85B0009B178 /* RegisterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409C4219CA85A0009B178 /* RegisterBase.swift */; };
 		1DF409C8219CA85B0009B178 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409C5219CA85A0009B178 /* UserData.swift */; };
+		1DF409D021A138A70009B178 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409CF21A138A70009B178 /* UserLocationManager.swift */; };
+		1DF409D221A151E20009B178 /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409D121A151E20009B178 /* ChangePasswordController.swift */; };
+		1DF409D421A168850009B178 /* PostDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF409D321A168850009B178 /* PostDetailManager.swift */; };
 		591F02982186E7C0000CCE12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F02972186E7C0000CCE12 /* AppDelegate.swift */; };
 		591F029D2186E7C0000CCE12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591F029B2186E7C0000CCE12 /* Main.storyboard */; };
 		591F029F2186E7C4000CCE12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591F029E2186E7C4000CCE12 /* Assets.xcassets */; };
@@ -279,6 +285,9 @@
 		1A08994F219570BF0036AEF3 /* PhotosListCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosListCollectionCell.xib; sourceTree = "<group>"; };
 		1A0899522195B79F0036AEF3 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		1A0899542196A90A0036AEF3 /* CreateExperienceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExperienceController.swift; sourceTree = "<group>"; };
+		1A2FEA0E21A2B552005FF1BB /* DetailPostManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPostManager.swift; sourceTree = "<group>"; };
+		1A2FEA1221A2BF07005FF1BB /* DetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailData.swift; sourceTree = "<group>"; };
+		1A2FEA1421A2BF11005FF1BB /* DetailExperienceBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailExperienceBase.swift; sourceTree = "<group>"; };
 		1A4BE9D0219E9A060027A67F /* CultureResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureResponse.swift; sourceTree = "<group>"; };
 		1A4BE9D1219E9A060027A67F /* CultureData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureData.swift; sourceTree = "<group>"; };
 		1A4BE9D2219E9A060027A67F /* CultureBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureBase.swift; sourceTree = "<group>"; };
@@ -499,6 +508,9 @@
 		1DF409C3219CA85A0009B178 /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		1DF409C4219CA85A0009B178 /* RegisterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterBase.swift; sourceTree = "<group>"; };
 		1DF409C5219CA85A0009B178 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		1DF409CF21A138A70009B178 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
+		1DF409D121A151E20009B178 /* ChangePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
+		1DF409D321A168850009B178 /* PostDetailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailManager.swift; sourceTree = "<group>"; };
 		232EE712D892DDD2B6726D63 /* Pods-ZahaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZahaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZahaUITests/Pods-ZahaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A4C547E3241A78902FBFBD0 /* Pods-ZahaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZahaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZahaTests/Pods-ZahaTests.release.xcconfig"; sourceTree = "<group>"; };
 		362EC65D50D6BCD6C8239C60 /* Pods-Zaha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zaha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zaha/Pods-Zaha.release.xcconfig"; sourceTree = "<group>"; };
@@ -773,6 +785,7 @@
 			children = (
 				1A665EA82188426500B7CBA2 /* BaseLayoutConstraint.swift */,
 				1A665EA92188426500B7CBA2 /* Utility.swift */,
+				1DF409CF21A138A70009B178 /* UserLocationManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -852,6 +865,7 @@
 				1D8E5311218F2CF800F49674 /* MenuSelectionController.swift */,
 				1D9A4D562194CC1100BDAC84 /* ViewProfileController.swift */,
 				1D692457219891DC002CDE61 /* EditProfileController.swift */,
+				1DF409D121A151E20009B178 /* ChangePasswordController.swift */,
 			);
 			path = Registeration;
 			sourceTree = "<group>";
@@ -998,6 +1012,8 @@
 		1A82338A219D539600EBDE31 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1A2FEA1421A2BF11005FF1BB /* DetailExperienceBase.swift */,
+				1A2FEA1221A2BF07005FF1BB /* DetailData.swift */,
 				1A82338B219D539600EBDE31 /* HomeRootClass.swift */,
 				1A82338C219D539600EBDE31 /* HomeStory.swift */,
 				1A82338D219D539600EBDE31 /* HomeData.swift */,
@@ -1230,6 +1246,8 @@
 		1DF409BD219CA8120009B178 /* ServiceManagers */ = {
 			isa = PBXGroup;
 			children = (
+				1A2FEA0E21A2B552005FF1BB /* DetailPostManager.swift */,
+				1DF409D321A168850009B178 /* PostDetailManager.swift */,
 				1A823395219D54A400EBDE31 /* HomeManager.swift */,
 				1DF409BE219CA8120009B178 /* ServiceManagers.swift */,
 				1DF409BF219CA8120009B178 /* RegisterManager.swift */,
@@ -1718,12 +1736,14 @@
 				1A665ED12188426600B7CBA2 /* BaseUIPageControl.swift in Sources */,
 				1A665EC22188426600B7CBA2 /* Integer+Extensions.swift in Sources */,
 				1A665EF12188426600B7CBA2 /* Utility.swift in Sources */,
+				1DF409D021A138A70009B178 /* UserLocationManager.swift in Sources */,
 				1A665EDB2188426600B7CBA2 /* BaseUISwitch.swift in Sources */,
 				1D69245A2198ABF3002CDE61 /* BookSpecialController.swift in Sources */,
 				1D9A4D7621975DD800BDAC84 /* ViewAllCell.swift in Sources */,
 				1A665EBA2188426600B7CBA2 /* CornerSide.swift in Sources */,
 				1A665ED92188426600B7CBA2 /* BaseUILabel.swift in Sources */,
 				1A665F2E21884A4E00B7CBA2 /* ForgetPasswordViewController.swift in Sources */,
+				1A2FEA1321A2BF07005FF1BB /* DetailData.swift in Sources */,
 				1A665EED2188426600B7CBA2 /* ButtonImageDesignable.swift in Sources */,
 				1A665F5621884BD900B7CBA2 /* SettingsTableViewCell.swift in Sources */,
 				1A665EB42188426600B7CBA2 /* BaseManager.swift in Sources */,
@@ -1757,6 +1777,7 @@
 				1A665F5A21884BD900B7CBA2 /* TextFieldTableViewCell.swift in Sources */,
 				1A665F9221884F0500B7CBA2 /* HomeViewController.swift in Sources */,
 				1A823390219D539600EBDE31 /* HomeRootClass.swift in Sources */,
+				1A2FEA0F21A2B552005FF1BB /* DetailPostManager.swift in Sources */,
 				1A665F2C21884A4E00B7CBA2 /* EnterCodeViewController.swift in Sources */,
 				1A823386219D405400EBDE31 /* CMSBase.swift in Sources */,
 				1D9A4D5B2194D06400BDAC84 /* ProfileInfoCell.swift in Sources */,
@@ -1772,6 +1793,7 @@
 				1A665F1D21884A1600B7CBA2 /* BaseViewController.swift in Sources */,
 				1A665EB92188426600B7CBA2 /* BorderSide.swift in Sources */,
 				1A665EC62188426600B7CBA2 /* ButtonItems+Extensions.swift in Sources */,
+				1DF409D221A151E20009B178 /* ChangePasswordController.swift in Sources */,
 				1A665EAF2188426600B7CBA2 /* LeakInspectorAlertProvider.swift in Sources */,
 				1A665ECC2188426600B7CBA2 /* DefaultConfig.swift in Sources */,
 				1D9A4D662197496F00BDAC84 /* UpcomingExpDetailInfoTableViewCell.swift in Sources */,
@@ -1814,6 +1836,7 @@
 				1A823387219D405400EBDE31 /* CMSData.swift in Sources */,
 				1A665EF9218847DF00B7CBA2 /* Models.swift in Sources */,
 				1A665EC82188426600B7CBA2 /* Date+Extensions.swift in Sources */,
+				1A2FEA1521A2BF11005FF1BB /* DetailExperienceBase.swift in Sources */,
 				1A4BE9D4219E9A060027A67F /* CultureData.swift in Sources */,
 				1A0899532195B79F0036AEF3 /* AboutController.swift in Sources */,
 				1A665ED72188426600B7CBA2 /* CodeInputView.swift in Sources */,
@@ -1825,6 +1848,7 @@
 				1A665EBF2188426600B7CBA2 /* Array+Extensions.swift in Sources */,
 				1A089950219570BF0036AEF3 /* PhotosListCollectionCell.swift in Sources */,
 				1A665EC42188426600B7CBA2 /* String+Extensions.swift in Sources */,
+				1DF409D421A168850009B178 /* PostDetailManager.swift in Sources */,
 				1A665EAE2188426600B7CBA2 /* LeakInspector.swift in Sources */,
 				1A665EEB2188426600B7CBA2 /* MaskDesignable.swift in Sources */,
 				1AB84F562194752D004D6C58 /* HeaderTitleView.swift in Sources */,
@@ -2025,6 +2049,7 @@
 			baseConfigurationReference = D88A20108DE1ED7AFED2D393 /* Pods-Zaha.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LQ8XDF245Q;
 				INFOPLIST_FILE = Zaha/Info.plist;
@@ -2033,7 +2058,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamingic.zaha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamingic.zahajjhj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Teaming_WildCard_New;
 				SWIFT_VERSION = 4.2;
@@ -2046,6 +2071,7 @@
 			baseConfigurationReference = 362EC65D50D6BCD6C8239C60 /* Pods-Zaha.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = LQ8XDF245Q;
 				INFOPLIST_FILE = Zaha/Info.plist;
@@ -2054,7 +2080,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamingic.zaha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamingic.zahajjhj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Teaming_WildCard_New;
 				SWIFT_VERSION = 4.2;

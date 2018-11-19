@@ -3,7 +3,7 @@
 
 
 import UIKit
-
+import CoreLocation
 
 // Class for Utility methods.
 public class Utility: NSObject {
@@ -55,9 +55,21 @@ public class Utility: NSObject {
             let str = "Staging"
             return str + " V " + version
         }
-        
         return "1.0"
         
+    }
+    
+    static public func getCurrentLocation(){
+        
+        let locManager = CLLocationManager()
+        locManager.requestWhenInUseAuthorization()
+        
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            let currentLocation = locManager.location
+            CurrentUser.currentLocation! = currentLocation!
+            
+        }
     }
     
 }

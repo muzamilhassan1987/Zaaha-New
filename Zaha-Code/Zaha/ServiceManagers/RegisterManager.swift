@@ -324,6 +324,13 @@ extension RegisterManager {
         let param = AFParam(endpoint: "register", params: parameters, headers: headers, method: .post, parameterEncoding:JSONEncoding.default, images: [])
         return param
     }
+    func paramsUpdatePasswod(parameters : [String : AnyObject]) -> AFParam {
+        
+        let headers: [String : String] = ["token":CurrentUser.token]
+        
+        let param = AFParam(endpoint: "changePassword", params: parameters, headers: headers, method: .post, parameterEncoding:JSONEncoding.default, images: [])
+        return param
+    }
     
     
     func paramsForgotPassword(parameters : [String : AnyObject]) -> AFParam {

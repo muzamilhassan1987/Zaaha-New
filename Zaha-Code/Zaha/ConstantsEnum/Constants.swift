@@ -3,7 +3,7 @@
 //
 
 import UIKit
-
+import CoreLocation
 enum Constants {
     static let minimumLengthName = 3
     static let maximumLengthName = 30
@@ -56,6 +56,9 @@ enum Culture{
     
 }
 enum CurrentUser{
+    //var currentLocation(location, locationString) = (CLLocationCoordinate2D(), "")
+    //var tupleVar = (CLLocationCoordinate2D, String, String)
+    static var currentLocation : CLLocation?
     static var data : UserData? = nil
     static var token : String = ""
     static var userType : UserType = .registered
@@ -121,6 +124,7 @@ struct SheduleData {
 enum BookingDetailEnum : Int {
     case none
     case upcomingExperience
+    case nearMe
     case booking
     case stories
     case myExperience
@@ -147,4 +151,13 @@ enum cellIdentifiers : String {
     case buttons = "ButtonsCell"
     case viewAll = "ViewAllCell"
     case photoVideoCell = "PhotoCollectionTableCell"
+}
+
+
+enum BookingStatus : Int {
+    case Available
+    case Pending
+    case Cancel
+    case Rejected
+    case Completed  
 }

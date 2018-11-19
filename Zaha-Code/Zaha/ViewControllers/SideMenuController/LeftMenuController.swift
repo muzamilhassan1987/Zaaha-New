@@ -50,6 +50,11 @@ extension Menu
             let controller = HomeVC.loadVC()
             controller.detailType = .upcomingExperience
             return controller
+        case .nearMe:
+            let controller = HomeVC.loadVC()
+            controller.detailType = .nearMe
+            
+            return controller
             
         case .pastExp:
             let controller = HomeVC.loadVC()
@@ -171,8 +176,14 @@ class LeftMenuController: BaseViewController
         }
         lblName.text = CurrentUser.data!.firstName!  + " " + CurrentUser.data!.lastName!
         getHomeList()
+        //NSNotification.Name(rawValue: kLocationDidChangeNotification)
+        
        // setHeader()
     }
+    
+    
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -314,11 +325,11 @@ extension LeftMenuController: UITableViewDelegate
                 self.showAboutPopUp()
                 return
             }
-            if (menu == Menu.nearMe) {
-                
-//                self.showAboutPopUp()
-                return
-            }
+//            if (menu == Menu.nearMe) {
+//
+////                self.showAboutPopUp()
+//                return
+//            }
             if (menu == Menu.inbox) {
                 
                 //                self.showAboutPopUp()
@@ -379,6 +390,8 @@ extension LeftMenuController
     }
     
 }
+
+//Location
 
 
 

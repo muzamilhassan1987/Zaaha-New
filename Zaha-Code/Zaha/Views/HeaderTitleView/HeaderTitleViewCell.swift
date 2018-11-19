@@ -11,6 +11,7 @@ import UIKit
 enum HeaderTitleTypeEnum : Int {
     case none
     case viewProfile
+    case experienceDetail
     
 }
 
@@ -40,11 +41,25 @@ class HeaderTitleViewCell: UITableViewCell {
             lblTitle.text = user.firstName! + user.lastName!
             lblTitle.textAlignment = .center
             break
+        case .experienceDetail:
+            self.setDetail(data: data)
+            
+            break
         default:
             print("")
         }
     }
     
-    
+    func setDetail(data : Any?) {
+        
+        if let objExperience = data as? HomeExperience {
+            lblTitle.text = objExperience.title!
+            lblTitle.textAlignment = .center
+        }
+        if let objStory = data as? HomeStory {
+            lblTitle.text = objStory.title!
+            lblTitle.textAlignment = .center
+        }
+    }
     
 }

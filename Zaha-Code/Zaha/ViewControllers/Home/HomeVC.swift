@@ -8,6 +8,9 @@
 
 import UIKit
 import GoogleSignIn
+import CoreLocation
+import MapKit
+
 
 class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBoardHandler {
 
@@ -17,18 +20,39 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
     var detailType = BookingDetailEnum.none
     var arrDataList = [BaseHomeModel]()
     var manager = HomeManager()
+    let LocationMgr = UserLocationManager.SharedManager
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBar()
         setInitialData()
         print(detailType)
         homeTblView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
+//
+//
+//        NotificationCenter.default.addObserver(self, selector: Selector(("locationUpdateNotification")), name: NSNotification.Name(rawValue: kLocationDidChangeNotification), object: nil)
+//
+//
+//
+        
+        LocationMgr.delegate = self
         // Do any additional setup after loading the view.
         
+        
     }
+    
+    
+//    func locationUpdateNotification(notification: NSNotification) {
+//        let userinfo = notification.userInfo
+//        CurrentUser.currentLocation! = userinfo!["location"] as! CLLocation
+//        //        currentLocation = location
+//        print("Latitude : \(CurrentUser.currentLocation!.coordinate.latitude)")
+//        print("Longitude : \(CurrentUser.currentLocation!.coordinate.longitude)")
+//
+//    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.getHomeList()
+        
     }
     func setNavBar()
     {
@@ -189,7 +213,8 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
         //router.goToUpComingExperienceController(from: self)
         
         print(detailType)
-        router.goToBookingDetailController(from: self, type: detailType)
+        router.goToBookingDetailController(from: self, type: detailType, data: self.arrDataList[indexPath.row])
+       // router.goToBookingDetailController(from: self, type: detailType, )
 //        switch detailType {
 //        case .none,.upcomingExperience :
 //            router.goToBookingDetailController(from: self, type: .upcomingExperience)
@@ -251,5 +276,16 @@ extension HomeVC{
     
     }
     
-    
 
+
+extension HomeVC :LocationUpdateProtocol {
+    
+    func locationDidUpdateToLocation(location: CLLocation) {
+//        currentLocation = location
+        print(location)
+        CurrentUser.currentLocation = location
+        print("Latitude : \(CurrentUser.currentLocation!.coordinate.latitude)")
+        print("Longitude : \(CurrentUser.currentLocation!.coordinate.longitude)")
+        self.LocationMgr.stopUpdatingLocation()
+    }
+}
