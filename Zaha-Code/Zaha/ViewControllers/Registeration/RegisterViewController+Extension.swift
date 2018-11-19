@@ -159,7 +159,7 @@ extension RegisterViewController {
         let imageProfile = UIImage(data: self.imgData!)!
         
         //let requestParam = self.manager.params(parameters: params as [String : AnyObject])
-        let requestParam = self.manager.paramsWithImage(parameters: params as [String : AnyObject], img: imageProfile)
+        let requestParam = self.manager.paramsWithImage(parameters: params as [String : AnyObject], img: imageProfile, isSocialLogin: false)
         print(imageProfile)
         print(params)
         print(requestParam)

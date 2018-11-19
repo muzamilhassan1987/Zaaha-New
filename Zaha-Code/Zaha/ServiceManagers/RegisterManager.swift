@@ -162,6 +162,48 @@ class RegisterManager: AFManagerProtocol {
         }
     }
     
+    func apiSocial(_ param: AFParam, completion: @escaping () -> Void) {
+        
+        //set default value
+        
+        self.isSuccess = false
+        
+        //Request
+        AFNetwork.shared.apiRequestUpload(param, isSpinnerNeeded: true, success: { (response) in
+            
+            guard let data = response else { return }
+            
+            do {
+                let decoder = JSONDecoder()
+                print(data)
+                // let dataExample: Data = NSKeyedArchiver.archivedData(withRootObject: data)
+                
+                
+                let model = try decoder.decode(RegisterBase.self, from: data)
+                
+                //check success case from server
+                if model.response?.responseCode! == ServiceCodes.successCode {
+                    self.isSuccess = true
+                    self.message = model.response?.message ?? "To complete the registration process, we have sent you a verification code on your email"
+                    self.userData =  model.data
+                    
+                }else{
+                    Alert.showMsg(msg: model.response?.message ?? "Server not responding")
+                }
+                
+            } catch let err {
+                
+                print("Err", err)
+            }
+            
+            completion()
+        }) { (error) in
+            
+            completion()
+        }
+    }
+    
+    
     func apiChangePassword(_ param: AFParam, completion: @escaping () -> Void) {
         
         //set default value
@@ -341,14 +383,19 @@ extension RegisterManager {
          return param
     }
     
-    func paramsWithImage(parameters : [String : AnyObject], img : UIImage) -> AFParam {
+    func paramsWithImage(parameters : [String : AnyObject], img : UIImage, isSocialLogin:Bool) -> AFParam {
         
         let headers: [String : String] = [:]
-        
-        let imageCompressed = imageWithImage(image: img, scaledToSize: CGSize(width: 200, height: 200))
-        let param = AFParam(endpoint: "register", params: parameters, headers: headers, method: .post, parameterEncoding:JSONEncoding.default, images: [imageCompressed])
-        return param
+        if isSocialLogin{
+            let param = AFParam(endpoint: "socialLogin", params: parameters, headers: headers, method: .post, parameterEncoding:JSONEncoding.default, images: [])
+            return param
+        }else{
+            let imageCompressed = imageWithImage(image: img, scaledToSize: CGSize(width: 200, height: 200))
+            let param = AFParam(endpoint: "register", params: parameters, headers: headers, method: .post, parameterEncoding:JSONEncoding.default, images: [imageCompressed])
+            return param
+        }
     }
+    
     func paramsUpdateProfile(parameters : [String : AnyObject], img : Data?) -> AFParam {
         
         let headers: [String : String] = ["token":CurrentUser.token]

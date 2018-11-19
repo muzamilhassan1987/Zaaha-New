@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2oy-go-lqu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2oy-go-lqu">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -347,10 +347,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiM-Lu-KHX">
                                                 <rect key="frame" x="20" y="356" width="212" height="50"/>
                                                 <state key="normal" image="login_facebookBtn"/>
+                                                <connections>
+                                                    <action selector="facebookLoginClicked:" destination="HSu-On-QXF" eventType="touchUpInside" id="sPd-fZ-M7i"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="org-67-71f">
                                                 <rect key="frame" x="20" y="414" width="212" height="50"/>
                                                 <state key="normal" image="login_googleBtn"/>
+                                                <connections>
+                                                    <action selector="googleLoginClicked:" destination="HSu-On-QXF" eventType="touchUpInside" id="1Fy-bZ-WwR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWX-x0-Xo2" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="540" width="97" height="22"/>
@@ -1667,23 +1673,23 @@
         </scene>
     </scenes>
     <resources>
-        <image name="experienceBooking_BlackTop" width="328" height="464"/>
-        <image name="experienceBooking_whiteBG" width="328" height="401"/>
+        <image name="experienceBooking_BlackTop" width="328.33334350585938" height="464"/>
+        <image name="experienceBooking_whiteBG" width="328.33334350585938" height="401.33334350585938"/>
         <image name="login_background" width="375" height="667"/>
-        <image name="login_facebookBtn" width="212" height="50"/>
-        <image name="login_googleBtn" width="212" height="50"/>
-        <image name="login_login_btn" width="131" height="47"/>
+        <image name="login_facebookBtn" width="212.33332824707031" height="50"/>
+        <image name="login_googleBtn" width="212.33332824707031" height="50"/>
+        <image name="login_login_btn" width="131" height="47.666667938232422"/>
         <image name="login_signupArrow" width="17" height="15"/>
         <image name="login_userIcon" width="15" height="15"/>
-        <image name="profile_cultureIcon" width="16" height="16"/>
+        <image name="profile_cultureIcon" width="16.666666030883789" height="16.666666030883789"/>
         <image name="signup_emailIcon" width="17" height="12"/>
-        <image name="singup_lockIcon" width="15" height="19"/>
-        <image name="singup_uploadIcon" width="19" height="15"/>
-        <image name="upcomingExp_Field" width="262" height="41"/>
-        <image name="upcomingExp_FieldDown" width="262" height="41"/>
+        <image name="singup_lockIcon" width="15.666666984558105" height="19"/>
+        <image name="singup_uploadIcon" width="19.666666030883789" height="15.666666984558105"/>
+        <image name="upcomingExp_Field" width="262" height="41.666667938232422"/>
+        <image name="upcomingExp_FieldDown" width="262" height="41.666667938232422"/>
         <image name="upcomingExp_closeBtn" width="37" height="37"/>
-        <image name="writeAReview_WhiteBox" width="328" height="478"/>
-        <image name="writeAReview_blackBox" width="328" height="541"/>
+        <image name="writeAReview_WhiteBox" width="328.33334350585938" height="478.33334350585938"/>
+        <image name="writeAReview_blackBox" width="328.33334350585938" height="541"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bsy-0U-pKk"/>
