@@ -88,7 +88,7 @@ extension DetailPostManager {
         //"getHomeTimeLine"
         switch detailType {
         case .none:
-            return "getHomeTimeLine"
+            return "getUpComingExperienceById"
             
         case .upcomingExperience:
             return "getUpComingExperienceById"

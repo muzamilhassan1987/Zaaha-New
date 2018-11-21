@@ -121,6 +121,8 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
         if let path = Bundle.main.path(forResource: plist, ofType: "plist") {
             dataArray = NSMutableArray(contentsOfFile: path);
             //
+            
+            tblBookingDetail.register(UINib.init(nibName: "BookingStatusCell", bundle: nil), forCellReuseIdentifier: "BookingStatusCell")
             for data:NSMutableDictionary in (dataArray as? [NSMutableDictionary])! {
                 if let cellId:String = data["cellIdentifier"] as? String {
                     tblBookingDetail.register(UINib.init(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
@@ -242,11 +244,31 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
                 cell.setData(experienceData!, type: detailType)
                 return cell
         case cellIdentifiers.buttons.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! ButtonsCell
-            cell.buttonCellDelegate = self
-            setCellProperties(cell)
-            cell.setData(detailType)
-            return cell
+            if (detailType == .none || detailType == .upcomingExperience) {
+                if(experienceData?.bookingStatus! == BookingStatus.Available.rawValue) {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! ButtonsCell
+                    cell.buttonCellDelegate = self
+                    setCellProperties(cell)
+                    cell.setData(detailType)
+                    return cell
+                }
+                else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "BookingStatusCell", for: indexPath) as! BookingStatusCell
+                    //cell.buttonCellDelegate = self
+                    setCellProperties(cell)
+                    cell.setData(experienceData!, type: detailType)
+                    return cell
+                }
+                
+            }
+            else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! ButtonsCell
+                cell.buttonCellDelegate = self
+                setCellProperties(cell)
+                cell.setData(detailType)
+                return cell
+            }
+            
         case cellIdentifiers.viewAll.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! ViewAllCell
             cell.viewAllCellDelegate = self

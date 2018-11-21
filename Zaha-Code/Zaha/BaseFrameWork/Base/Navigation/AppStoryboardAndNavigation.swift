@@ -48,6 +48,7 @@ public extension StoryBoardHandler where Self: UIViewController {
     public func show<T: UIViewController>(viewcontrollerInstance:UIViewController , configure: ((T) -> Void)? = nil) {
         
         configure?(viewcontrollerInstance as! T)
+        
         show(viewcontrollerInstance, sender: self)
     }
     

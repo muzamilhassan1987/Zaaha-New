@@ -47,6 +47,10 @@ class HomeTableViewCell: UITableViewCell {
     func setData(_ type : HomeTableViewType? = nil, data : BaseHomeModel) {
         
         
+        viewTwoLabel.isHidden = true
+        viewFiveLabels.isHidden = true
+        
+        
         if let objExperience = data as? HomeExperience {
             self.type = .homeList
             experience = objExperience
@@ -54,10 +58,9 @@ class HomeTableViewCell: UITableViewCell {
         if let objStory = data as? HomeStory {
             self.type = .stories
             story = objStory
+            
         }
-        viewTwoLabel.isHidden = true
-        viewFiveLabels.isHidden = true
-        imgVideoIcon.isHidden = true
+        
         switch self.type {
         case .viewProfile:
             viewTwoLabel.isHidden = false
@@ -66,7 +69,7 @@ class HomeTableViewCell: UITableViewCell {
             break
         case .stories:
             viewTwoLabel.isHidden = false
-            imgVideoIcon.isHidden = true
+            imgVideoIcon.isHidden = false
             layoutTopPadding.constant = 20.0
             //imgMain.setImageFromUrl(urlStr: story!.imageUrl!)
             lblStoryTitle.text = story?.title!
@@ -75,7 +78,7 @@ class HomeTableViewCell: UITableViewCell {
             break
         case .homeList:
             viewFiveLabels.isHidden = false
-            imgVideoIcon.isHidden = false
+            imgVideoIcon.isHidden = true
             imgMain.setImageFromUrl(urlStr: experience!.imageUrl!)
             lblExpTitle.text = experience?.title!
             lblPrice.text = "AED \(String(describing: experience!.amount!))"

@@ -28,6 +28,7 @@ class HomeExperience : Codable, BaseHomeModel {
 	let title : String?
 	let userId : Int?
     let sortingDate : Date?
+    let bookingStatus : Int?
     
 	enum CodingKeys: String, CodingKey {
 		case amount = "amount"
@@ -46,6 +47,7 @@ class HomeExperience : Codable, BaseHomeModel {
 		case publishTime = "publish_time"
 		case title = "title"
 		case userId = "user_id"
+        case bookingStatus = "booking_status"
 	}
 	required init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -65,11 +67,13 @@ class HomeExperience : Codable, BaseHomeModel {
 		publishTime = try values.decodeIfPresent(String.self, forKey: .publishTime) ?? String()
 		title = try values.decodeIfPresent(String.self, forKey: .title) ?? String()
 		userId = try values.decodeIfPresent(Int.self, forKey: .userId) ?? Int()
+        bookingStatus = try values.decodeIfPresent(Int.self, forKey: .bookingStatus) ?? Int()
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         sortingDate = dateFormatter.date(from: createdAt!)
         print(sortingDate)
+        
 	}
     var sortingDateNew : Date? {
         return sortingDate

@@ -95,7 +95,7 @@ extension HomeManager {
             
         case .myExperience:
             return "getMyExperiences"
-            break
+            
         case .pastExperience:
             return "getPastExperience"
             
