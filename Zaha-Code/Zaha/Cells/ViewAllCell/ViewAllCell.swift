@@ -8,12 +8,13 @@
 
 import UIKit
 
-@objc protocol ViewAllCellDelegate: class
+protocol ViewAllCellDelegate: class
 {
-    @objc optional  func viewAllClick()
+    func viewAllClick(_ type : ViewAllEnum)
 }
 
 enum ViewAllEnum : Int {
+    case none
     case photo
     case video
 }
@@ -23,6 +24,7 @@ class ViewAllCell: UITableViewCell {
     weak var viewAllCellDelegate: ViewAllCellDelegate?
     @IBOutlet weak var lblTitle: BaseUILabel!
     var data:NSMutableDictionary?
+    var type = ViewAllEnum.none
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -39,7 +41,7 @@ class ViewAllCell: UITableViewCell {
         self.data = data
         let enumType = data["enumType"] as? String
         let type:Int = Int(enumType!) ?? 0
-        
+        self.type = ViewAllEnum(rawValue: type)!
         print(enumType)
         if (type == 0) {
             lblTitle.text = "Photos"
@@ -76,7 +78,7 @@ class ViewAllCell: UITableViewCell {
     }
     
     @IBAction func viewAll(_ sender: Any) {
-        viewAllCellDelegate?.viewAllClick!()
+        viewAllCellDelegate?.viewAllClick(self.type)
         
     }
 }

@@ -17,7 +17,9 @@ class PhotosController: BaseViewController , StoryBoardHandler {
     var cellType:String = "Grid"
     @IBOutlet var btnGrid: UIButton!
     @IBOutlet var btnList: UIButton!
-    
+    var arrPhotos : [HomePicture]? = nil
+    var arrVideos : [HomeVideo]? = nil
+    var detailType = BookingDetailEnum.none
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -74,20 +76,42 @@ extension PhotosController : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
-        return 20
+        if let photos = self.arrPhotos {
+            return photos.count
+        }
+        if let videos = self.arrVideos {
+            return videos.count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
         if(cellType == "Grid"){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosGridCollectionCell", for: indexPath) as! PhotosGridCollectionCell
+            if let photos = self.arrPhotos {
+                cell.setPhoto(photos[indexPath.row])
+            }
+            if let videos = self.arrVideos {
+                cell.setVideo(videos[indexPath.row])
+            }
+            
             return cell
         }
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosListCollectionCell", for: indexPath) as! PhotosListCollectionCell
+            if let photos = self.arrPhotos {
+                cell.setPhoto(photos[indexPath.row])
+            }
+            if let videos = self.arrVideos {
+                cell.setVideo(videos[indexPath.row])
+            }
             return cell
         }
     }
+    
+
+    
 }
 extension PhotosController: UICollectionViewDelegateFlowLayout{
     

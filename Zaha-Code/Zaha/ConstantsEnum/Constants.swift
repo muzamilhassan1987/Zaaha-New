@@ -155,6 +155,7 @@ enum cellIdentifiers : String {
     case buttons = "ButtonsCell"
     case viewAll = "ViewAllCell"
     case photoVideoCell = "PhotoCollectionTableCell"
+    
 }
 
 

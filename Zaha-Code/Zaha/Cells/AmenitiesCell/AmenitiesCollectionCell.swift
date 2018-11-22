@@ -14,6 +14,7 @@ class AmenitiesCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var lblTitle: BaseUILabel!
     @IBOutlet weak var imgIcon: UIImageView!
+    @IBOutlet var imgStars: [UIImageView]!
     static let bookingDetailData =
         [AmentiesCellData(image: "upcomingExp_nameIcon", title: "Ali Ahmed"),
         AmentiesCellData(image: "", title: ""),
@@ -59,20 +60,41 @@ class AmenitiesCollectionCell: UICollectionViewCell {
         stackRating.isHidden = true
         imgIcon.image = UIImage(named: data.image)
         lblTitle.text = data.title
-        if(data.image == "star") {
+        if(data.title == "star") {
             lblTitle.text = ""
             stackRating.isHidden = false
+            setStars(data.rating!)
         }
         
     }
+    
+    func setStars(_ rating : Int) {
+        
+        for image in imgStars {
+            if image.tag <= rating {
+                image.image = UIImage(named: "pastExp_StarFilled")
+            } else {
+                image.image = UIImage(named: "pastExp_StarEmpty")
+            }
+        }
+        
+    }
+    
 }
 
 
 struct AmentiesCellData {
     var image: String
     var title: String
+    var rating: Int?
+    init(image: String, title: String, rating : Int = 0) {
+        self.image = image
+        self.title = title
+        self.rating = rating
+    }
     
     func printName() {
+        
         print("\(self.image) \(self.title)")
     }
 }

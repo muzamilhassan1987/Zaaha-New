@@ -23,12 +23,24 @@ class HomeExperience : Codable, BaseHomeModel {
 	let isActive : String?
 	let location : String?
 	let maestrosName : String?
+    let noSeats : Int?
+    let pictures : [HomePicture]?
 	let publishDate : String?
 	let publishTime : String?
+    let rating : Int?
+    let reservationCharges : Int?
+    let reviews : [HomeReview]?
+    let stories : [HomeStory]?
+    let totalBookings : Int?
+    let totalPictures : Int?
+    let totalStories : Int?
+    let totalVideos : Int?
 	let title : String?
 	let userId : Int?
     let sortingDate : Date?
     let bookingStatus : Int?
+    let videos : [HomeVideo]?
+    
     
 	enum CodingKeys: String, CodingKey {
 		case amount = "amount"
@@ -48,6 +60,17 @@ class HomeExperience : Codable, BaseHomeModel {
 		case title = "title"
 		case userId = "user_id"
         case bookingStatus = "booking_status"
+        case noSeats = "no_seats"
+        case rating = "rating"
+        case reservationCharges = "reservation_charges"
+        case totalBookings = "total_bookings"
+        case totalPictures = "total_pictures"
+        case totalStories = "total_stories"
+        case totalVideos = "total_videos"
+        case pictures = "pictures"
+        case reviews = "reviews"
+        case stories = "stories"
+        case videos = "videos"
 	}
 	required init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -68,6 +91,20 @@ class HomeExperience : Codable, BaseHomeModel {
 		title = try values.decodeIfPresent(String.self, forKey: .title) ?? String()
 		userId = try values.decodeIfPresent(Int.self, forKey: .userId) ?? Int()
         bookingStatus = try values.decodeIfPresent(Int.self, forKey: .bookingStatus) ?? Int()
+        
+        noSeats = try values.decodeIfPresent(Int.self, forKey: .noSeats) ?? Int()
+        rating = try values.decodeIfPresent(Int.self, forKey: .rating) ?? Int()
+        
+        reservationCharges = try values.decodeIfPresent(Int.self, forKey: .reservationCharges) ?? Int()
+        totalBookings = try values.decodeIfPresent(Int.self, forKey: .totalBookings) ?? Int()
+        totalPictures = try values.decodeIfPresent(Int.self, forKey: .totalPictures) ?? Int()
+        totalStories = try values.decodeIfPresent(Int.self, forKey: .totalStories) ?? Int()
+        totalVideos = try values.decodeIfPresent(Int.self, forKey: .totalVideos) ?? Int()
+        pictures = try values.decodeIfPresent([HomePicture].self, forKey: .pictures) ?? [HomePicture]()
+        
+        reviews = try values.decodeIfPresent([HomeReview].self, forKey: .reviews) ?? [HomeReview]()
+        stories = try values.decodeIfPresent([HomeStory].self, forKey: .stories) ?? [HomeStory]()
+        videos = try values.decodeIfPresent([HomeVideo].self, forKey: .videos) ?? [HomeVideo]()
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"

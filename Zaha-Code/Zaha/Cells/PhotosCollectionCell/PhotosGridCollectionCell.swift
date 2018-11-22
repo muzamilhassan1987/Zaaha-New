@@ -31,5 +31,15 @@ class PhotosGridCollectionCell: UICollectionViewCell {
     override func layoutIfNeeded() {
         super.layoutIfNeeded()
     }
+    
+    func setPhoto(_ data : HomePicture) {
+        
+        imgPhoto.setImageFromUrl(urlStr: data.imageUrl!)
+    }
+    func setVideo(_ data : HomeVideo) {
+        
+        imgPhoto.setImageFromUrl(urlStr: data.videoThumbUrl!)
+    }
+    
 
 }

@@ -45,19 +45,19 @@
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EiU-32-8hC">
                         <rect key="frame" x="30" y="17.666666666666668" width="71" height="15.000000000000004"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarFilled" translatesAutoresizingMaskIntoConstraints="NO" id="JkJ-Kv-lD7">
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarFilled" translatesAutoresizingMaskIntoConstraints="NO" id="JkJ-Kv-lD7">
                                 <rect key="frame" x="0.0" y="0.0" width="13" height="15"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarFilled" translatesAutoresizingMaskIntoConstraints="NO" id="Gxx-Qp-B9F">
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarFilled" translatesAutoresizingMaskIntoConstraints="NO" id="Gxx-Qp-B9F">
                                 <rect key="frame" x="13" y="0.0" width="13" height="15"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarFilled" translatesAutoresizingMaskIntoConstraints="NO" id="tE5-AL-Rf0">
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarFilled" translatesAutoresizingMaskIntoConstraints="NO" id="tE5-AL-Rf0">
                                 <rect key="frame" x="26" y="0.0" width="13" height="15"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="KyE-6t-TbL">
+                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="KyE-6t-TbL">
                                 <rect key="frame" x="39" y="0.0" width="16" height="15"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="MIn-rE-iZW">
+                            <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pastExp_StarEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="MIn-rE-iZW">
                                 <rect key="frame" x="55" y="0.0" width="16" height="15"/>
                             </imageView>
                         </subviews>
@@ -81,6 +81,11 @@
                 <outlet property="imgIcon" destination="Rsj-p4-pNF" id="tYr-k3-96x"/>
                 <outlet property="lblTitle" destination="rpc-Qp-IpX" id="70b-oz-zRc"/>
                 <outlet property="stackRating" destination="EiU-32-8hC" id="tzw-lt-XPu"/>
+                <outletCollection property="imgStars" destination="JkJ-Kv-lD7" collectionClass="NSMutableArray" id="vd3-59-mgA"/>
+                <outletCollection property="imgStars" destination="Gxx-Qp-B9F" collectionClass="NSMutableArray" id="D0J-cw-6cW"/>
+                <outletCollection property="imgStars" destination="tE5-AL-Rf0" collectionClass="NSMutableArray" id="0Jw-NR-KD5"/>
+                <outletCollection property="imgStars" destination="KyE-6t-TbL" collectionClass="NSMutableArray" id="rus-eW-fZm"/>
+                <outletCollection property="imgStars" destination="MIn-rE-iZW" collectionClass="NSMutableArray" id="HP7-8l-eCi"/>
             </connections>
             <point key="canvasLocation" x="-96.799999999999997" y="153.82308845577214"/>
         </collectionViewCell>

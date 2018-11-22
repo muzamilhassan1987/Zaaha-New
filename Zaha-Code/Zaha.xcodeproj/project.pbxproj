@@ -161,6 +161,9 @@
 		1AB84F64219484BE004D6C58 /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB84F62219484BE004D6C58 /* DescriptionCell.xib */; };
 		1AB84F65219484BE004D6C58 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB84F63219484BE004D6C58 /* DescriptionCell.swift */; };
 		1AD86853219700DE0063D831 /* UpComingExperienceDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD86852219700DE0063D831 /* UpComingExperienceDetailController.swift */; };
+		1AE12C6B21A67CB9000C64AD /* HomePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE12C6A21A67CB9000C64AD /* HomePicture.swift */; };
+		1AE12C7021A67D52000C64AD /* HomeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE12C6D21A67D52000C64AD /* HomeVideo.swift */; };
+		1AE12C7121A67D52000C64AD /* HomeReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE12C6E21A67D52000C64AD /* HomeReview.swift */; };
 		1AE68C7921A548C000D82B0B /* BookingStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE68C7721A548C000D82B0B /* BookingStatusCell.swift */; };
 		1AE68C7A21A548C000D82B0B /* BookingStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE68C7821A548C000D82B0B /* BookingStatusCell.xib */; };
 		1D692458219891DC002CDE61 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D692457219891DC002CDE61 /* EditProfileController.swift */; };
@@ -445,6 +448,9 @@
 		1AB84F62219484BE004D6C58 /* DescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
 		1AB84F63219484BE004D6C58 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		1AD86852219700DE0063D831 /* UpComingExperienceDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingExperienceDetailController.swift; sourceTree = "<group>"; };
+		1AE12C6A21A67CB9000C64AD /* HomePicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePicture.swift; sourceTree = "<group>"; };
+		1AE12C6D21A67D52000C64AD /* HomeVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVideo.swift; sourceTree = "<group>"; };
+		1AE12C6E21A67D52000C64AD /* HomeReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeReview.swift; sourceTree = "<group>"; };
 		1AE68C7721A548C000D82B0B /* BookingStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingStatusCell.swift; sourceTree = "<group>"; };
 		1AE68C7821A548C000D82B0B /* BookingStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingStatusCell.xib; sourceTree = "<group>"; };
 		1D692457219891DC002CDE61 /* EditProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
@@ -1048,9 +1054,12 @@
 				1A2FEA1421A2BF11005FF1BB /* DetailExperienceBase.swift */,
 				1A2FEA1221A2BF07005FF1BB /* DetailData.swift */,
 				1A82338B219D539600EBDE31 /* HomeRootClass.swift */,
+				1AE12C6E21A67D52000C64AD /* HomeReview.swift */,
 				1A82338C219D539600EBDE31 /* HomeStory.swift */,
 				1A82338D219D539600EBDE31 /* HomeData.swift */,
 				1A82338E219D539600EBDE31 /* HomeExperience.swift */,
+				1AE12C6A21A67CB9000C64AD /* HomePicture.swift */,
+				1AE12C6D21A67D52000C64AD /* HomeVideo.swift */,
 				1A82338F219D539600EBDE31 /* HomeResponse.swift */,
 			);
 			path = Home;
@@ -1871,6 +1880,7 @@
 				1A665F8B21884EC700B7CBA2 /* ParallaxHeaderView.swift in Sources */,
 				1A665EE52188426600B7CBA2 /* BaseUIImageView.swift in Sources */,
 				1DF409C1219CA8120009B178 /* RegisterManager.swift in Sources */,
+				1AE12C7021A67D52000C64AD /* HomeVideo.swift in Sources */,
 				D084539C218C7DD9001E57B0 /* HomeVC.swift in Sources */,
 				1A08994A219570920036AEF3 /* PhotosGridCollectionCell.swift in Sources */,
 				1A665F1E21884A1600B7CBA2 /* SplashViewController.swift in Sources */,
@@ -1880,6 +1890,7 @@
 				1A665F5821884BD900B7CBA2 /* AcceptCheckboxTableViewCell.swift in Sources */,
 				1A665EE92188426600B7CBA2 /* FontDesignable.swift in Sources */,
 				1D9A4D8421981A4500BDAC84 /* AmenitiesTableCell.swift in Sources */,
+				1AE12C6B21A67CB9000C64AD /* HomePicture.swift in Sources */,
 				1A665EDA2188426600B7CBA2 /* BaseUICollectionView.swift in Sources */,
 				1A4BE9D5219E9A060027A67F /* CultureBase.swift in Sources */,
 				1A665EE42188426600B7CBA2 /* BaseUIBarButtonItem.swift in Sources */,
@@ -1889,6 +1900,7 @@
 				1A665EF5218846C500B7CBA2 /* Constants.swift in Sources */,
 				1A665ECB2188426600B7CBA2 /* DesignUtility.swift in Sources */,
 				D0A805A521A33B5700F0F245 /* PickerView.swift in Sources */,
+				1AE12C7121A67D52000C64AD /* HomeReview.swift in Sources */,
 				1A823392219D539600EBDE31 /* HomeData.swift in Sources */,
 				1A665EBD2188426600B7CBA2 /* MaskType.swift in Sources */,
 				1A665F3921884A5A00B7CBA2 /* RegisterViewController.swift in Sources */,

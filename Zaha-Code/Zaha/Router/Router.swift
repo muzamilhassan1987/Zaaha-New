@@ -77,8 +77,12 @@ class Router  {
     func goToUpComingExperienceController(from vc : viewController) {
         vc.show(viewcontrollerInstance: UpcommingExperienceDetailViewController.loadVC())
     }
-    func goToUpPhotosController(from vc : viewController) {
-        vc.show(viewcontrollerInstance: PhotosController.loadVC())
+    func goToUpPhotosController(from vc : viewController, type : BookingDetailEnum, videos : [HomeVideo]? = nil , photos : [HomePicture]? = nil) {
+        vc.show(viewcontrollerInstance: PhotosController.loadVC()) { (vc : PhotosController) in
+            vc.arrPhotos = photos
+            vc.arrVideos = videos
+            vc.detailType = type
+        }
     }
     func goToBookingDetailController(from vc : viewController, type : BookingDetailEnum, data : Any?) {
         

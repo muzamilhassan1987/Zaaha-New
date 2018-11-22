@@ -11,6 +11,9 @@ import UIKit
 class PhotoCollectionTableCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var detailType = BookingDetailEnum.none
+    //    var
+    var arrMediaPhotos = [HomePicture]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,6 +51,30 @@ class PhotoCollectionTableCell: UITableViewCell {
         
     }
     
+    func setMediaData(_ data : HomeExperience!, type : BookingDetailEnum!) {
+        print(type)
+        self.detailType = type
+        switch detailType {
+        case .none:
+            break
+        case .upcomingExperience:
+            //self.appendUpcomingData(data)
+            break
+        case .booking:
+            break
+        case .stories:
+            break
+        case .myExperience:
+            break
+        case .pastExperience:
+            //self.appendPastData(data)
+            break
+        default:
+            print("")
+        }
+        
+        
+    }
 //    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
 //        // With autolayout enabled on collection view's cells we need to force a collection view relayout with the shown size (width)
 //        print("this" , collectionView?.collectionViewLayout.collectionViewContentSize)
@@ -87,7 +114,7 @@ extension PhotoCollectionTableCell {
 //    self.collectionView.setContentOffset(CGPoint(x:0,y:0), animated: false)
 //        collectionView.scrollsToTop = true
         collectionView.reloadData()
-        self.collectionView.scrollToItem(at:IndexPath(item: 0, section: 0), at: .right, animated: false)
+       // self.collectionView.scrollToItem(at:IndexPath(item: 0, section: 0), at: .right, animated: false)
 
 //        self.collectionView.setContentOffset(CGPoint(x:0,y:0), animated: false)
         

@@ -70,6 +70,7 @@ class AmenitiesTableCell: UITableViewCell {
         case .myExperience:
             break
         case .pastExperience:
+            self.appendPastData(data)
             break
         default:
             print("")
@@ -91,7 +92,9 @@ class AmenitiesTableCell: UITableViewCell {
         arrAmenities.append(AmentiesCellData(image: "upcomingExp_nameIcon", title: data.maestrosName!))
         arrAmenities.append(AmentiesCellData(image: "", title: ""))
         arrAmenities.append(AmentiesCellData(image: "upcomingExp_locationIcon", title: data.location!))
-        arrAmenities.append(AmentiesCellData(image: "upcomingExp_typesOfExpIcon", title: data.location!))//star
+       
+        
+        arrAmenities.append(AmentiesCellData(image: "upcomingExp_typesOfExpIcon", title: "star", rating : data.rating!))//star
         arrAmenities.append(AmentiesCellData(image: "myExp_ExplorerIcon", title: data.location!))//explorers
         arrAmenities.append(AmentiesCellData(image: "upcomingExp_TimeIcon", title: data.publishDate!))
         arrAmenities.append(AmentiesCellData(image: "myExp_CultureIcon", title: data.cultureName ?? "N/A"))

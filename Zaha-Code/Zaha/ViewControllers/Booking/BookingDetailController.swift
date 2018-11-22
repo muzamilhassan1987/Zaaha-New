@@ -22,6 +22,9 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
     var detailData : Any? = nil
     var experienceData : HomeExperience?
     var arrAmenities = [AmentiesCellData]()
+    var arrPhotos = [HomePicture]()
+    var arrVideos = [HomeVideo]()
+    var arrStories = [HomeStory]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,6 +71,10 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
     }
     func setInitialData() {
         
+        
+        self.arrPhotos = experienceData!.pictures!
+        self.arrVideos = experienceData!.videos!
+        self.arrStories = experienceData!.stories!
         switch detailType {
         case .none:
             self.title = "Home".uppercased()
@@ -98,6 +105,8 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
         case .pastExperience:
             self.title = "Past Experiences".uppercased()
             fetchPtlist("PastExperience")
+            filterDataArray("videos")
+            filterDataArray("pictures")
             tempCollectionCount = 8
             tempDetailCollection = AmenitiesCollectionCell.pastExpDetailData
             break
@@ -105,10 +114,47 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
             print("")
         }
         
+        
         tblBookingDetail.reloadData()
         
     }
 
+    func filterDataArray(_ type : String) {
+        
+        
+        let k = dataArray! as Array
+//        var selectedIndex = 0
+        let index = k.index {
+            if let dic = $0 as? Dictionary<String,AnyObject> {
+                
+                if let value = dic["type"]  as? String, value == type{
+                    return true
+                }
+            }
+            return false
+        }
+        if (type == "videos") {
+            if self.arrVideos.count <= 0 {
+                if let ind = index {
+                    dataArray?.removeObject(at: ind)
+                    dataArray?.removeObject(at: ind - 1)
+                }
+            }
+        }
+        else if (type == "pictures") {
+            if self.arrPhotos.count <= 0 {
+                if let ind = index {
+                    dataArray?.removeObject(at: ind)
+                    dataArray?.removeObject(at: ind-1)
+                }
+            }
+        }
+        
+    
+        //let index = dataArray!.index(where: {$0["type"] == "5mbps"})
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getDetailServer()
@@ -128,7 +174,6 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
                     tblBookingDetail.register(UINib.init(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
                 }
             }
-            
         }
     }
     
@@ -274,15 +319,31 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
             cell.viewAllCellDelegate = self
             setCellProperties(cell)
             cell.setData(dict ?? NSMutableDictionary())
+            
 //            cell.setData(ViewAllEnum)
 //            cell.setData(detailType)
             return cell
         case cellIdentifiers.photoVideoCell.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! PhotoCollectionTableCell
             cell.collectionView.tag = indexPath.row//(100 * indexPath.section) + 1
+            
+            
+            //dict?["type"] as? String/
             cell.collectionView.accessibilityHint = cellIdentifiers.photoVideoCell.rawValue
+            cell.collectionView.accessibilityValue = dict?["type"] as? String
+            print(cell.collectionView.accessibilityHint!)
             cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
             setCellProperties(cell)
+            
+//            if (cell.collectionView.accessibilityHint! == "videos"){
+//                cell.setMediaData(<#T##data: HomeExperience!##HomeExperience!#>, type: <#T##BookingDetailEnum!#>)
+//            }
+//            else if (cell.collectionView.accessibilityHint! == "pictures"){
+//
+//            }
+            cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.section)
+            setCellProperties(cell)
+            //cell.setAmenitiesData(experienceData!, type: detailType)
             return cell;
             
         default:
@@ -337,7 +398,14 @@ extension BookingDetailController: UICollectionViewDelegate, UICollectionViewDat
             return self.arrAmenities.count
             //return tempDetailCollection.count
         case cellIdentifiers.photoVideoCell.rawValue:
-            return 3
+            if (collectionView.accessibilityValue! == "videos"){
+                return arrVideos.count >= 3 ? 3 : arrVideos.count
+            }
+            else if (collectionView.accessibilityValue! == "pictures"){
+                return arrPhotos.count >= 3 ? 3 : arrPhotos.count
+            }
+            print(arrPhotos.count >= 3 ? 3 : arrPhotos.count)
+            return 0// arrPhotos.count >= 3 ? 3 : arrPhotos.count
         default:
             print("")
         }
@@ -359,6 +427,15 @@ extension BookingDetailController: UICollectionViewDelegate, UICollectionViewDat
             return cell
         case cellIdentifiers.photoVideoCell.rawValue:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosGridCollectionCell", for: indexPath) as! PhotosGridCollectionCell
+            print(self.arrPhotos.count)
+            print(self.arrVideos.count)
+            if (collectionView.accessibilityValue! == "videos"){
+                cell.setVideo(self.arrVideos[indexPath.row])
+            }
+            else if (collectionView.accessibilityValue! == "pictures"){
+                cell.setPhoto(self.arrPhotos[indexPath.row])
+            }
+            
            // cell.setData(tempDetailCollection[indexPath.row])
             return cell
         default:
@@ -419,15 +496,13 @@ extension BookingDetailController: ButtonTableCellDelegate
 
 extension BookingDetailController: ViewAllCellDelegate
 {
-    
-    func viewAllClick() {
-        //let controller = PhotosController.loadVC()
-        router.goToUpPhotosController(from: self)
-//        controller.modalPresentationStyle = .overCurrentContext
-//        controller.modalTransitionStyle = .crossDissolve
-//        self.present(controller, animated: true) {
-//
-//        }
+    func viewAllClick(_ type: ViewAllEnum) {
+        if (type == .photo){
+            router.goToUpPhotosController(from: self, type: detailType, videos: nil, photos: self.arrPhotos)
+        }
+        else if (type == .photo){
+            router.goToUpPhotosController(from: self, type: detailType, videos: self.arrVideos, photos: nil)
+        }
         
     }
 }
@@ -437,8 +512,10 @@ extension BookingDetailController{
     
     func getDetailServer() {
         
+//        var parameters = [String : String]()
+//       parameters.updateValue("\(String(describing: self.experienceData!.id!))", forKey: "experience_id")
         var parameters = [String : String]()
-       parameters.updateValue("\(String(describing: self.experienceData!.id!))", forKey: "experience_id")
+        parameters.updateValue("1", forKey: "experience_id")
         print(parameters)
         let requestParam =  self.manager.paramsDetail(parameters as [String : AnyObject], type: detailType)
         self.manager.api(requestParam, completion: {

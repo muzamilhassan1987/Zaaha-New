@@ -26,7 +26,7 @@
 		<key>image</key>
 		<string>logo</string>
 		<key>enumType</key>
-		<string>0</string>
+		<string>1</string>
 	</dict>
 	<dict>
 		<key>cellIdentifier</key>
@@ -34,7 +34,7 @@
 		<key>title</key>
 		<string>Photos</string>
 		<key>type</key>
-		<string>img</string>
+		<string>pictures</string>
 		<key>kind</key>
 		<string>image</string>
 		<key>image</key>
@@ -52,7 +52,7 @@
 		<key>image</key>
 		<string>logo</string>
 		<key>enumType</key>
-		<string>1</string>
+		<string>2</string>
 	</dict>
 	<dict>
 		<key>cellIdentifier</key>
@@ -60,7 +60,7 @@
 		<key>title</key>
 		<string>Photos</string>
 		<key>type</key>
-		<string>img</string>
+		<string>videos</string>
 		<key>kind</key>
 		<string>image</string>
 		<key>image</key>
