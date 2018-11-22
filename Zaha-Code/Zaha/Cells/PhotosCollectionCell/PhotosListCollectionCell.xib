@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,15 +23,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                         <color key="backgroundColor" red="0.98600260419999997" green="0.95649797030000006" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-home" translatesAutoresizingMaskIntoConstraints="NO" id="Ltj-2v-saP" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasDropShadow" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="vGF-Bn-O8d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9nB-qb-dDE"/>
                 <constraint firstItem="vGF-Bn-O8d" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DFs-M1-HPK"/>
+                <constraint firstItem="Ltj-2v-saP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Q57-3s-YKk"/>
+                <constraint firstItem="Ltj-2v-saP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RON-bz-sf0"/>
+                <constraint firstAttribute="bottom" secondItem="Ltj-2v-saP" secondAttribute="bottom" id="Usu-vL-1YC"/>
+                <constraint firstAttribute="trailing" secondItem="Ltj-2v-saP" secondAttribute="trailing" id="xjZ-uI-XzJ"/>
                 <constraint firstAttribute="trailing" secondItem="vGF-Bn-O8d" secondAttribute="trailing" id="yL1-JK-Sar"/>
                 <constraint firstAttribute="bottom" secondItem="vGF-Bn-O8d" secondAttribute="bottom" id="ylD-Ve-SUN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imgPhoto" destination="Ltj-2v-saP" id="Zkn-xB-SqH"/>
+            </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="bg-home" width="375" height="239"/>
+    </resources>
 </document>

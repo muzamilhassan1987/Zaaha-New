@@ -10,6 +10,7 @@ import UIKit
 
 class PhotosListCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var imgPhoto: BaseUIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,6 +21,14 @@ class PhotosListCollectionCell: UICollectionViewCell {
     
     override func layoutIfNeeded() {
         super.layoutIfNeeded()
+    }
+    func setPhoto(_ data : HomePicture) {
+        
+        imgPhoto.setImageFromUrl(urlStr: data.imageUrl!)
+    }
+    func setVideo(_ data : HomeVideo) {
+        
+        imgPhoto.setImageFromUrl(urlStr: data.videoThumbUrl!)
     }
 
 }
