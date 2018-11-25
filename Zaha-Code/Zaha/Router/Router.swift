@@ -60,6 +60,12 @@ class Router  {
         
         vc.show(viewcontrollerInstance: CreateExperienceController.loadVC())
     }
+    
+    func goToCreateStory(from vc : viewController)  {
+        
+        vc.show(viewcontrollerInstance: CreateStoryController.loadVC())
+    }
+    
     func goToSettingsVC(from vc : viewController) {
         
           vc.show(viewcontrollerInstance: SettingViewController.loadVC())

@@ -26,7 +26,7 @@ class CreateExperienceController: BaseViewController , StoryBoardHandler , Picke
     
     var cultureManager = CultureManager()
     var typeListManager = TypeListManager()
-    var createExpManager = CreateExperienceManager()
+    var createExpManager = ExperienceManager()
     var cultureNameArray = [String]()
     var typeNameArray = [String]()
     let locationManager = CLLocationManager()
@@ -78,7 +78,7 @@ class CreateExperienceController: BaseViewController , StoryBoardHandler , Picke
     
     func setNavBar()
     {
-        self.title = "CREATE STORY"
+        self.title = "CREATE EXPERIENCE"
         self.navigationController?.isNavigationBarHidden = false
     }
     

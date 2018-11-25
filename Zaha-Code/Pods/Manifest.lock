@@ -40,6 +40,7 @@ PODS:
   - SwiftMessages (6.0.0):
     - SwiftMessages/App (= 6.0.0)
   - SwiftMessages/App (6.0.0)
+  - Tags (0.1.8)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - MICountryPicker (from `https://github.com/mustafaibrahim989/MICountryPicker.git`, branch `master`)
   - MOLH (= 0.4)
   - SwiftMessages
+  - Tags
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -71,6 +73,7 @@ SPEC REPOS:
     - LGSideMenuController
     - MOLH
     - SwiftMessages
+    - Tags
 
 EXTERNAL SOURCES:
   MICountryPicker:
@@ -99,7 +102,8 @@ SPEC CHECKSUMS:
   MICountryPicker: 82122c5f918bc9f9e2c510793fffd188dc8d38ce
   MOLH: e5da53263c1bd1aaefb783d49ae620702288b40d
   SwiftMessages: da7c981256a65b3e58022d9027a36584cf4eccf5
+  Tags: 06eb9d45fcc234025d1b0053f78b9bb27f53a9d5
 
-PODFILE CHECKSUM: 58992ac520781b0f7a3a97280d9531c7c9e06f08
+PODFILE CHECKSUM: fa074bc07486bf0bd54a8916959bbb1e1ff14996
 
 COCOAPODS: 1.5.3

@@ -17,6 +17,7 @@ target 'Zaha' do
     pod 'ISPageControl', '~> 0.1.0'
     pod 'ActionSheetPicker-3.0'
     pod 'FBSDKLoginKit'
+    pod 'Tags'
   # Pods for Zaha
   # Pods for Zaha
 

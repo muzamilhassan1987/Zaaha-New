@@ -100,7 +100,8 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
     }
     @objc func showCreateExpScreen()
     {
-        router.goToCreateExperience(from: self)
+        //router.goToCreateExperience(from: self)
+        router.goToCreateStory(from: self)
         //sideMenuController?.showLeftViewAnimated()
     }
     @objc func actionMenuButton()
