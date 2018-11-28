@@ -177,7 +177,7 @@ class LeftMenuController: BaseViewController
         lblName.text = CurrentUser.data!.firstName!  + " " + CurrentUser.data!.lastName!
         getHomeList()
         //NSNotification.Name(rawValue: kLocationDidChangeNotification)
-        
+        self.view.backgroundColor = UIColor.white
        // setHeader()
     }
     
@@ -294,6 +294,7 @@ class LeftMenuController: BaseViewController
         
         let controller = AboutController.loadVC()
         controller.type = AboutType.privacy
+        controller.view.backgroundColor = UIColor.clear
         controller.modalPresentationStyle = .overCurrentContext
         controller.modalTransitionStyle = .crossDissolve
         sideMenuController?.present(controller, animated: true) {
@@ -353,7 +354,6 @@ extension LeftMenuController: UITableViewDataSource
         
         cell.imgSideMenuIcon.image = UIImage(named:menuArray[indexPath.row]["icon"]!)
         cell.lblTitle.text = menuArray[indexPath.row]["type"]
-        
         return cell
     }
 }

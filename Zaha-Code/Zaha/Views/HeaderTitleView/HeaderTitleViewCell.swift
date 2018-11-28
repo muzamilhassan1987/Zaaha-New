@@ -54,7 +54,7 @@ class HeaderTitleViewCell: UITableViewCell {
         
         if let objExperience = data as? HomeExperience {
             lblTitle.text = objExperience.title!
-            lblTitle.textAlignment = .center
+            lblTitle.textAlignment = .left
         }
         if let objStory = data as? HomeStory {
             lblTitle.text = objStory.title!

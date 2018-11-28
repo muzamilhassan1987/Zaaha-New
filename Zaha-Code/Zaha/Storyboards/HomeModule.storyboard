@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HOME-->
+        <!--HomeVC-->
         <scene sceneID="hAh-MQ-aXS">
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="t0H-aB-eoL" customClass="HomeVC" customModule="Zaha" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DRc-Hy-Ic7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="HOME" id="CPH-uk-I0r">
+                    <navigationItem key="navigationItem" id="CPH-uk-I0r">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" id="zLu-2F-tGD">
                             <connections>
                                 <action selector="googleSignInButtonClicked:" destination="t0H-aB-eoL" id="uOl-NX-rFR"/>

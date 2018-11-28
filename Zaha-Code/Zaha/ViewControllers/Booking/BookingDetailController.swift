@@ -25,6 +25,7 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
     var arrPhotos = [HomePicture]()
     var arrVideos = [HomeVideo]()
     var arrStories = [HomeStory]()
+    var isDataLoaded = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +42,10 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        baseNavigation?.createBackButton()
+    }
     
     func setUpTable() {
         
@@ -77,33 +82,32 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
         self.arrStories = experienceData!.stories!
         switch detailType {
         case .none:
-            self.title = "Home".uppercased()
             fetchPtlist("UpComingExperience")
             tempCollectionCount = 6
             tempDetailCollection = AmenitiesCollectionCell.upcomingDetailData
             break
         case .upcomingExperience:
-            self.title = "Upcoming Experiences".uppercased()
+            baseNavigation?.lblTitle.text = "Upcoming Experiences".uppercased()
             fetchPtlist("UpComingExperience")
             tempCollectionCount = 6
             tempDetailCollection = AmenitiesCollectionCell.upcomingDetailData
             
             break
         case .booking:
-            self.title = "Booking".uppercased()
+            baseNavigation?.lblTitle.text = "Booking".uppercased()
             tempDetailCollection = AmenitiesCollectionCell.bookingDetailData
             break
         case .stories:
-            self.title = "Stories".uppercased()
+            baseNavigation?.lblTitle.text = "Stories".uppercased()
             break
         case .myExperience:
-            self.title = "My Experiences".uppercased()
+            baseNavigation?.lblTitle.text = "My Experiences".uppercased()
             fetchPtlist("MyExperience")
             tempCollectionCount = 8
             tempDetailCollection = AmenitiesCollectionCell.pastExpDetailData
             break
         case .pastExperience:
-            self.title = "Past Experiences".uppercased()
+            baseNavigation?.lblTitle.text = "Past Experiences".uppercased()
             fetchPtlist("PastExperience")
             filterDataArray("videos")
             filterDataArray("pictures")
@@ -157,7 +161,10 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        getDetailServer()
+        if(isDataLoaded == false) {
+            getDetailServer()
+        }
+        
         
     }
 
@@ -515,13 +522,17 @@ extension BookingDetailController{
 //        var parameters = [String : String]()
 //       parameters.updateValue("\(String(describing: self.experienceData!.id!))", forKey: "experience_id")
         var parameters = [String : String]()
+        
+        
         parameters.updateValue("1", forKey: "experience_id")
+        //parameters.updateValue(String(experienceData!.id!), forKey: "experience_id")
         print(parameters)
         let requestParam =  self.manager.paramsDetail(parameters as [String : AnyObject], type: detailType)
         self.manager.api(requestParam, completion: {
             
             if self.manager.isSuccess {
                 print(self.manager.data)
+                self.isDataLoaded = true
                 self.detailData = self.manager.experienceData!
                 self.experienceData! = self.manager.experienceData!
                 self.setInitialData()

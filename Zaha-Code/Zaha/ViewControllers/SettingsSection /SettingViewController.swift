@@ -25,8 +25,10 @@ class SettingViewController: BaseViewController, StoryBoardHandler {
     
     func setUpHeader() {
         
+        baseNavigation?.lblTitle.text = "SETTINGS"
         self.navigationController?.isNavigationBarHidden = false
-        self.title =  GlobalStatic.getLocalizedString("settings")
+//        self.navigationController?.isNavigationBarHidden = false
+//        self.title =  GlobalStatic.getLocalizedString("settings")
        
     }
 
@@ -35,6 +37,12 @@ class SettingViewController: BaseViewController, StoryBoardHandler {
         tblSettings.delegate = self
         tblSettings.dataSource = self
       tblSettings.register(UINib.init(nibName: settingCellReuseIdentifier, bundle: nil), forCellReuseIdentifier: settingCellReuseIdentifier)
+    }
+    
+    func setNavBar() {
+        
+        
+        
     }
     
  

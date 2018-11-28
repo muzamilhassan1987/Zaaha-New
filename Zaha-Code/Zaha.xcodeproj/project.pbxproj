@@ -17,6 +17,9 @@
 		1A2FEA0F21A2B552005FF1BB /* DetailPostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FEA0E21A2B552005FF1BB /* DetailPostManager.swift */; };
 		1A2FEA1321A2BF07005FF1BB /* DetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FEA1221A2BF07005FF1BB /* DetailData.swift */; };
 		1A2FEA1521A2BF11005FF1BB /* DetailExperienceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FEA1421A2BF11005FF1BB /* DetailExperienceBase.swift */; };
+		1A43166221AD2537002AF59E /* FuturaStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A43165F21AD2537002AF59E /* FuturaStd-Medium.otf */; };
+		1A43166321AD2537002AF59E /* FuturaStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A43166021AD2537002AF59E /* FuturaStd-Bold.otf */; };
+		1A43166421AD2537002AF59E /* FuturaStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A43166121AD2537002AF59E /* FuturaStd-Book.otf */; };
 		1A4BE9D3219E9A060027A67F /* CultureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BE9D0219E9A060027A67F /* CultureResponse.swift */; };
 		1A4BE9D4219E9A060027A67F /* CultureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BE9D1219E9A060027A67F /* CultureData.swift */; };
 		1A4BE9D5219E9A060027A67F /* CultureBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BE9D2219E9A060027A67F /* CultureBase.swift */; };
@@ -211,10 +214,7 @@
 		1D8E5308218EE6D600F49674 /* RobotoMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E52E9218EE6D600F49674 /* RobotoMono-Thin.ttf */; };
 		1D8E5309218EE6D600F49674 /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E52EA218EE6D600F49674 /* RobotoSlab-Regular.ttf */; };
 		1D8E530B218EE7A600F49674 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E530A218EE7A500F49674 /* BaseNavigationController.swift */; };
-		1D8E530F218F0B0F00F49674 /* Futura Std Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E530D218F0B0F00F49674 /* Futura Std Book.otf */; };
-		1D8E5310218F0B0F00F49674 /* Futura Std Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E530E218F0B0F00F49674 /* Futura Std Medium.otf */; };
 		1D8E5312218F2CF800F49674 /* MenuSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E5311218F2CF800F49674 /* MenuSelectionController.swift */; };
-		1D8E5314218F40E300F49674 /* Futura Std Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E5313218F40E300F49674 /* Futura Std Bold.otf */; };
 		1D9A4D572194CC1100BDAC84 /* ViewProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A4D562194CC1100BDAC84 /* ViewProfileController.swift */; };
 		1D9A4D5B2194D06400BDAC84 /* ProfileInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A4D592194D06400BDAC84 /* ProfileInfoCell.swift */; };
 		1D9A4D5C2194D06400BDAC84 /* ProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9A4D5A2194D06400BDAC84 /* ProfileInfoCell.xib */; };
@@ -309,6 +309,9 @@
 		1A2FEA0E21A2B552005FF1BB /* DetailPostManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPostManager.swift; sourceTree = "<group>"; };
 		1A2FEA1221A2BF07005FF1BB /* DetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailData.swift; sourceTree = "<group>"; };
 		1A2FEA1421A2BF11005FF1BB /* DetailExperienceBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailExperienceBase.swift; sourceTree = "<group>"; };
+		1A43165F21AD2537002AF59E /* FuturaStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Medium.otf"; sourceTree = "<group>"; };
+		1A43166021AD2537002AF59E /* FuturaStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Bold.otf"; sourceTree = "<group>"; };
+		1A43166121AD2537002AF59E /* FuturaStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Book.otf"; sourceTree = "<group>"; };
 		1A4BE9D0219E9A060027A67F /* CultureResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureResponse.swift; sourceTree = "<group>"; };
 		1A4BE9D1219E9A060027A67F /* CultureData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureData.swift; sourceTree = "<group>"; };
 		1A4BE9D2219E9A060027A67F /* CultureBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureBase.swift; sourceTree = "<group>"; };
@@ -503,10 +506,7 @@
 		1D8E52E9218EE6D600F49674 /* RobotoMono-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Thin.ttf"; sourceTree = "<group>"; };
 		1D8E52EA218EE6D600F49674 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		1D8E530A218EE7A500F49674 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		1D8E530D218F0B0F00F49674 /* Futura Std Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Std Book.otf"; sourceTree = "<group>"; };
-		1D8E530E218F0B0F00F49674 /* Futura Std Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Std Medium.otf"; sourceTree = "<group>"; };
 		1D8E5311218F2CF800F49674 /* MenuSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionController.swift; sourceTree = "<group>"; };
-		1D8E5313218F40E300F49674 /* Futura Std Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Std Bold.otf"; sourceTree = "<group>"; };
 		1D9A4D562194CC1100BDAC84 /* ViewProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileController.swift; sourceTree = "<group>"; };
 		1D9A4D592194D06400BDAC84 /* ProfileInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCell.swift; sourceTree = "<group>"; };
 		1D9A4D5A2194D06400BDAC84 /* ProfileInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoCell.xib; sourceTree = "<group>"; };
@@ -1220,9 +1220,9 @@
 		1D8E530C218F0B0F00F49674 /* FuturaStd */ = {
 			isa = PBXGroup;
 			children = (
-				1D8E5313218F40E300F49674 /* Futura Std Bold.otf */,
-				1D8E530D218F0B0F00F49674 /* Futura Std Book.otf */,
-				1D8E530E218F0B0F00F49674 /* Futura Std Medium.otf */,
+				1A43166021AD2537002AF59E /* FuturaStd-Bold.otf */,
+				1A43166121AD2537002AF59E /* FuturaStd-Book.otf */,
+				1A43165F21AD2537002AF59E /* FuturaStd-Medium.otf */,
 			);
 			path = FuturaStd;
 			sourceTree = "<group>";
@@ -1585,6 +1585,7 @@
 				1D8E52F0218EE6D600F49674 /* Lato-Medium.ttf in Resources */,
 				1D69245E2198C0D6002CDE61 /* MyExperience.plist in Resources */,
 				1D9A4D8521981A4500BDAC84 /* AmenitiesTableCell.xib in Resources */,
+				1A43166421AD2537002AF59E /* FuturaStd-Book.otf in Resources */,
 				1A665F8A21884EC700B7CBA2 /* banner_logo@2x.png in Resources */,
 				1D8E5305218EE6D600F49674 /* Roboto-Bold.ttf in Resources */,
 				1D89866F2192460200AD57C9 /* Booking.storyboard in Resources */,
@@ -1592,7 +1593,6 @@
 				1AE68C7A21A548C000D82B0B /* BookingStatusCell.xib in Resources */,
 				1D8E52F6218EE6D600F49674 /* RobotoSlab-Thin.ttf in Resources */,
 				1AB84F5221945D21004D6C58 /* HomeTopView.xib in Resources */,
-				1D8E5310218F0B0F00F49674 /* Futura Std Medium.otf in Resources */,
 				1A665F9021884EC700B7CBA2 /* bg-home@2x.png in Resources */,
 				1D8E52F5218EE6D600F49674 /* Roboto-Regular.ttf in Resources */,
 				1D8E52EF218EE6D600F49674 /* Poppins-SemiBold.ttf in Resources */,
@@ -1608,6 +1608,7 @@
 				1D8E5302218EE6D600F49674 /* Roboto-CondensedItalic.ttf in Resources */,
 				1A665F8C21884EC700B7CBA2 /* HeaderCollectionReusableView.xib in Resources */,
 				1D9A4D92219867F400BDAC84 /* UpComingExperience.plist in Resources */,
+				1A43166221AD2537002AF59E /* FuturaStd-Medium.otf in Resources */,
 				1D8E52F1218EE6D600F49674 /* Roboto-Medium.ttf in Resources */,
 				1D8E52F3218EE6D600F49674 /* RobotoCondensed-Bold.ttf in Resources */,
 				1D8986792192477900AD57C9 /* BookingCell.xib in Resources */,
@@ -1619,7 +1620,6 @@
 				1D8E52FB218EE6D600F49674 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				1D8E5308218EE6D600F49674 /* RobotoMono-Thin.ttf in Resources */,
 				1A665F8821884EC700B7CBA2 /* banner_logo@3x.png in Resources */,
-				1D8E5314218F40E300F49674 /* Futura Std Bold.otf in Resources */,
 				591F029F2186E7C4000CCE12 /* Assets.xcassets in Resources */,
 				1D8E5303218EE6D600F49674 /* Roboto-Italic.ttf in Resources */,
 				D0A805A121A33AFA00F0F245 /* PickerViewModule.storyboard in Resources */,
@@ -1634,8 +1634,8 @@
 				1D8E5307218EE6D600F49674 /* Roboto-Black.ttf in Resources */,
 				1D8E52F7218EE6D600F49674 /* Roboto-MediumItalic.ttf in Resources */,
 				1D8E52F8218EE6D600F49674 /* Roboto-BoldCondensed.ttf in Resources */,
+				1A43166321AD2537002AF59E /* FuturaStd-Bold.otf in Resources */,
 				591F029D2186E7C0000CCE12 /* Main.storyboard in Resources */,
-				1D8E530F218F0B0F00F49674 /* Futura Std Book.otf in Resources */,
 				D08453A4218E12E2001E57B0 /* PastExperienceModule.storyboard in Resources */,
 				1D9A4D682197496F00BDAC84 /* UpcomingExpDetailImageTableViewCell.xib in Resources */,
 				1A665EAC2188426600B7CBA2 /* ColorManager.plist in Resources */,
@@ -2166,17 +2166,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZY6E7A22M6;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LQ8XDF245Q;
 				INFOPLIST_FILE = Zaha/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.Zaha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamingic.zahanew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Teaming_WildCard_New;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2188,17 +2188,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZY6E7A22M6;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LQ8XDF245Q;
 				INFOPLIST_FILE = Zaha/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.Zaha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teamingic.zahanew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Teaming_WildCard_New;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -60,9 +60,19 @@ class RegisterViewController: BaseViewController, StoryBoardHandler {
     }
     func setNavBar()
     {
-        self.title = "SIGNUP"
+        baseNavigation?.lblTitle.text = "SIGNUP"
         self.navigationController?.isNavigationBarHidden = false
+    
+       // let customView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 44.0))
+       // customView.backgroundColor = UIColor.yellow
         
+      //  self.navigationController?.navigationBar.setTitleVerticalPositionAdjustment(CGFloat(15), for: UIBarMetrics.default)
+        
+        //navigationItem.leftBarButtonItem?.setBackgroundVerticalPositionAdjustment(CGFloat(15), for: .default)
+
+
+       
+        //self.navigationController?.navigationItem.leftBarButtonItem?.setBackgroundVerticalPositionAdjustment(CGFloat(30), for: UIBarMetrics.default)
         //        let img = UIImage.init(named: "home_backArrow")?.flipIfNeeded()
         //self.addBarButtonItemWithImage(img!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
     }

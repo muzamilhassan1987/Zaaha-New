@@ -59,6 +59,7 @@ class AmenitiesTableCell: UITableViewCell {
         self.detailType = type
         switch detailType {
         case .none:
+            self.appendUpcomingData(data)
             break
         case .upcomingExperience:
             self.appendUpcomingData(data)
@@ -116,7 +117,7 @@ extension AmenitiesTableCell {
         //    self.collectionView.setContentOffset(CGPoint(x:0,y:0), animated: false)
         //        collectionView.scrollsToTop = true
         collectionView.reloadData()
-        self.collectionView.scrollToItem(at:IndexPath(item: 0, section: 0), at: .right, animated: false)
+        //self.collectionView.scrollToItem(at:IndexPath(item: 0, section: 0), at: .right, animated: false)
         
         //        self.collectionView.setContentOffset(CGPoint(x:0,y:0), animated: false)
         

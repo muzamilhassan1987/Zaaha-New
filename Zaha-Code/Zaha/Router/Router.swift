@@ -90,12 +90,17 @@ class Router  {
             vc.detailType = type
         }
     }
-    func goToBookingDetailController(from vc : viewController, type : BookingDetailEnum, data : Any?) {
+    func goToBookingDetailController(from vc : viewController, type : BookingDetailEnum,navigation : BaseNavigationController, data : Any?) {
         
-        vc.show(viewcontrollerInstance: BookingDetailController.loadVC()) { (vc : BookingDetailController) in
+        vc.navigateWithCustomNavigation(viewControllerInstance: BookingDetailController.loadVC(), navController: navigation) { (vc : BookingDetailController) in
             vc.detailType = type
             vc.detailData = data
         }
+        
+//        vc.show(viewcontrollerInstance: BookingDetailController.loadVC()) { (vc : BookingDetailController) in
+//            vc.detailType = type
+//            vc.detailData = data
+//        }
         
        
     }

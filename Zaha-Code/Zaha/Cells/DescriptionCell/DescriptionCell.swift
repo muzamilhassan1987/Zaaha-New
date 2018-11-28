@@ -49,7 +49,8 @@ class DescriptionCell: UITableViewCell
         case .none:
             //            lblDescription.text = "Explorer Preferences:"
             lblDescription.isHidden = true
-            lblDescriptionContent.text = desc
+           // lblDescriptionContent.text = desc
+            lblDescriptionContent.text = data.descriptionField!
             viewBottomBar.backgroundColor = UIColor.clear
             self.layoutIfNeeded()
             
@@ -63,6 +64,7 @@ class DescriptionCell: UITableViewCell
         case .upcomingExperience:
 //            lblDescription.text = "Explorer Preferences:"
             lblDescription.isHidden = true
+            print(data.descriptionField)
             lblDescriptionContent.text = data.descriptionField!
             viewBottomBar.backgroundColor = UIColor.clear
             self.layoutIfNeeded()

@@ -14,11 +14,12 @@ public class DesignUtility: NSObject {
     
     
     // addition  to set layout on iPhone X (Dimensions: 1125px x 2436px (375pt x 812pt @3x).)
-    @nonobjc static let deviceRatioIphone:CGFloat =
-        (UIScreen.main.bounds.height > 736.0 ? 667.0 : UIScreen.main.bounds.height ) / 736.0;
+    //@nonobjc static let deviceRatioIphone:CGFloat =
+     //   (UIScreen.main.bounds.height > 736.0 ? 667.0 : UIScreen.main.bounds.height ) / 736.0;
+    
+    @nonobjc static let deviceRatioIphone:CGFloat = UIScreen.main.bounds.width / 375
     
     @nonobjc static let deviceRatioIpad:CGFloat = UIScreen.main.bounds.height / 1366.0;
-    
     
     public class func getValueFromRatio(_ value:CGFloat) ->CGFloat
     {

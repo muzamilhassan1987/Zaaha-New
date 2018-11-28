@@ -18,7 +18,7 @@ class ForgetPasswordViewController: BaseViewController, StoryBoardHandler {
     }
     func setNavBar()
     {
-        self.title = "FORGOT PASSWORD"
+        baseNavigation?.lblTitle.text = "FORGOT PASSWORD"
         self.navigationController?.isNavigationBarHidden = false
         
         //        let img = UIImage.init(named: "home_backArrow")?.flipIfNeeded()

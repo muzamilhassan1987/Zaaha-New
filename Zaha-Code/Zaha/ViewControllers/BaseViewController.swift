@@ -7,15 +7,49 @@ import UIKit
 class BaseViewController: UIViewController {
     
     var storedOffsets = [Int: CGFloat]()
-    
+    var baseNavigation : BaseNavigationController?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        if (self.navigationController as? BaseNavigationController) != nil {
+            baseNavigation = (self.navigationController as! BaseNavigationController)
         
-        self.setupAppDefaultNavigationBar()
+        }
+        self.view.backgroundColor = UIColor.init(hexString: "##575756")
+        self.setupNavigationBar()
+        //self.setupAppDefaultNavigationBar()
         self.hideKeyboardWhenTappedAround()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if (baseNavigation != nil) {
+            for btn in baseNavigation!.mainView.subviews {
+                if let btn1 = btn as? UIButton {
+                    btn1.removeFromSuperview()
+                }
+            }
+        }
+
+    }
+    func setupNavigationBar() {
+        
+        if baseNavigation != nil{
+            if (baseNavigation!.viewControllers.count) > 1{
+                
+                baseNavigation?.createBackButton()
+                
+                //let img = UIImage.init(named: "home_backArrow")?.flipIfNeeded()
+                
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: UIView())
+                //self.addBarButtonItemWithImage(img ?? UIImage(), CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(self.goBack))
+                
+            }
+        }
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,29 +69,26 @@ class BaseViewController: UIViewController {
     //Mark : Customizing navigation bar, adding bar buttons and custom title view
     func setupAppDefaultNavigationBar()  {
         
+        
+        
         //Setting navigation bar background color, its font and title color
         let barBgColor = UIColor.init(hexString: "#707070")
         let titleFont = UIFont.init(name: "FuturaStd-Medium", size: DesignUtility.getFontSize(fSize: 18))
-        
+        print(self.navigationController)
         self.navigationController?.navigationBar.setCustomNavigationBarWith(navigationBarTintColor: barBgColor, navigationBarTitleFont: titleFont!, navigationBarForegroundColor: UIColor.white)
-        
-//        self.navigationController?.view.backgroundColor = UIColor.white
+        baseNavigation?.navigationItem.hidesBackButton = true
         self.navigationItem.hidesBackButton = true
-        
-//        self.navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
-//        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-//        self.navigationController?.navigationBar.layer.shadowRadius = 3.0
-//        self.navigationController?.navigationBar.layer.shadowOpacity = 0.5
-//        self.navigationController?.navigationBar.layer.masksToBounds = false
-        
-        //If navigation controller have more than 1 view controller then add backbutton
+        self.navigationItem.leftBarButtonItems = []
+        self.navigationItem.setHidesBackButton(true, animated:true);
         if self.navigationController != nil{
+            
             
             self.setupSideButton()
         }
     }
     
     func setupSideButton(){
+        
         
         if (self.navigationController?.viewControllers.count)! > 1{
             
@@ -67,9 +98,17 @@ class BaseViewController: UIViewController {
             //   (UIImage(named: "backBtn")?.maskWithColor(color: UIColor.white)?.withRenderingMode(.alwaysOriginal))!
             let img = UIImage.init(named: "home_backArrow")?.flipIfNeeded()
           
-            
             self.addBarButtonItemWithImage(img ?? UIImage(), CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(self.goBack))
+           
+            baseNavigation?.createButton(img ?? UIImage(), CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(self.goBack))
+            
+//            self.navigationItem.leftBarButtonItem?.setBackgroundVerticalPositionAdjustment(CGFloat(30), for: UIBarMetrics.default)
         }
+        
+    }
+    func createBackArrowButton() {
+        
+        
         
     }
     
@@ -86,7 +125,7 @@ class BaseViewController: UIViewController {
         btn1.setImage(image, for: .normal)
         btn1.frame = CGRect(x: 0, y: 0, width: DesignUtility.getValueFromRatio(44), height: DesignUtility.getValueFromRatio(44))
         btn1.addTarget(self, action: selector, for: .touchUpInside)
-        
+//        btn1.backgroundColor = UIColor.yellow
         let item1 = UIBarButtonItem(customView: btn1)
         
         
@@ -94,7 +133,7 @@ class BaseViewController: UIViewController {
             
             switch postion {
             case .BarButtonItemPositionLeft:
-                
+            
                 if self.navigationItem.leftBarButtonItem != nil{
                     
                     if (self.navigationItem.leftBarButtonItems?.count)! > 0{
@@ -121,6 +160,7 @@ class BaseViewController: UIViewController {
                     self.navigationItem.rightBarButtonItem = item1
                 }
             }
+            //self.navigationItem.leftBarButtonItem?.setBackgroundVerticalPositionAdjustment(CGFloat(30), for: UIBarMetrics.default)
         }
     }
     

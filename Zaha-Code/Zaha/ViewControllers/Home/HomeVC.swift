@@ -21,6 +21,7 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
     var arrDataList = [BaseHomeModel]()
     var manager = HomeManager()
     let LocationMgr = UserLocationManager.SharedManager
+    var isDataLoaded = false
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBar()
@@ -51,46 +52,60 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
 //    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.getHomeList()
+        if(self.isDataLoaded == false) {
+            self.getHomeList()
+        }
+        
         
     }
     func setNavBar()
     {
-        self.title = "HOME"
+        baseNavigation?.lblTitle.text = "HOME"
         self.navigationController?.isNavigationBarHidden = false
         
         let menuImg = UIImage.init(named: "home_menuIcon")?.flipIfNeeded()
         
-        self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
+        
+        
+        
+        //self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
 
 
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        if let btnBack = baseNavigation?.btnBack {
+//            btnBack.removeFromSuperview()
+//        }
+        baseNavigation?.createHomeButton(target: self, #selector(actionMenuButton))
+    }
+    
     
     func setInitialData() {
         
         switch detailType {
         case .none:
-            self.title = "Home".uppercased()
+            baseNavigation?.lblTitle.text  = "Home".uppercased()
             break
         case .upcomingExperience:
-            self.title = "Upcoming Experiences"
+            baseNavigation?.lblTitle.text = "Upcoming Experiences"
             break
         case .booking:
-            self.title = "Booking".uppercased()
+            baseNavigation?.lblTitle.text = "Booking".uppercased()
             break
         case .stories:
-            self.title = "Stories".uppercased()
+            baseNavigation?.lblTitle.text = "Stories".uppercased()
            
             let menuImg = UIImage.init(named: "storeis_plusIcon")?.flipIfNeeded()
-            self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionRight, self, #selector(showCreateExpScreen))
+            //self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionRight, self, #selector(showCreateExpScreen))
             break
         case .myExperience:
-            self.title = "My Experiences".uppercased()
+            baseNavigation?.lblTitle.text = "My Experiences".uppercased()
             break
         case .pastExperience:
-            self.title = "Past Experiences".uppercased()
+            baseNavigation?.lblTitle.text = "Past Experiences".uppercased()
             break
         default:
             print("")
@@ -214,7 +229,10 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
         //router.goToUpComingExperienceController(from: self)
         
         print(detailType)
-        router.goToBookingDetailController(from: self, type: detailType, data: self.arrDataList[indexPath.row])
+        
+        router.goToBookingDetailController(from: self, type: detailType, navigation: baseNavigation!, data: self.arrDataList[indexPath.row])
+        
+        
        // router.goToBookingDetailController(from: self, type: detailType, )
 //        switch detailType {
 //        case .none,.upcomingExperience :
@@ -246,7 +264,7 @@ extension HomeVC{
     
     func arrangeArrayResponse() {
         print(self.manager.data)
-        
+        self.isDataLoaded = true
         var data = [BaseHomeModel]()
         for obj in self.manager.data {
             if let objExperience = obj as? HomeExperience {

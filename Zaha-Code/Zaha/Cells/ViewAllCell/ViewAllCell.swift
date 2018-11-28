@@ -43,10 +43,10 @@ class ViewAllCell: UITableViewCell {
         let type:Int = Int(enumType!) ?? 0
         self.type = ViewAllEnum(rawValue: type)!
         print(enumType)
-        if (type == 0) {
+        if (type == 1) {
             lblTitle.text = "Photos"
         }
-        else {
+        else if (type == 2) {
             lblTitle.text = "Videos"
         }
         //print(identifier)

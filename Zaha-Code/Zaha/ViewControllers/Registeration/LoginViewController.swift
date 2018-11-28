@@ -8,6 +8,7 @@ import FBSDKLoginKit
 class LoginViewController: BaseViewController, StoryBoardHandler {
     static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.registeration.rawValue , nil)
     
+    @IBOutlet weak var btnForgotPwd1: UIButton!
     @IBOutlet weak var btnForgotPwd: BaseUIButton!
     @IBOutlet weak var txtEmail: BaseUITextField!
     @IBOutlet weak var txtPwd: BaseUITextField!
@@ -22,6 +23,9 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBar()
+        
+        //btnForgotPwd1.titleLabel?.font =  UIFont(name: "FuturaStd-Medium", size: 20)
+        
         
         txtEmail.text = "rrrr@rrrr.com"
         txtPwd.text = "qwerty12"
@@ -40,17 +44,22 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
     }
     override func viewWillAppear(_ animated: Bool)
     {
-        
+        super.viewWillAppear(animated)
+        baseNavigation?.lblTitle.text = "LOGIN"
     }
     
     func setNavBar()
     {
-        self.title = "LOGIN"
+//        self.title = "LOGIN"
+        
         self.navigationController?.isNavigationBarHidden = false
         
         //        let img = UIImage.init(named: "home_backArrow")?.flipIfNeeded()
         //self.addBarButtonItemWithImage(img!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
     }
+    
+   
+    
     @objc func actionMenuButton()
     {
         self.navigationController?.popViewController(animated: true)

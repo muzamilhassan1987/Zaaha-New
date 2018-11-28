@@ -26,6 +26,12 @@ class PhotosController: BaseViewController , StoryBoardHandler {
         registeredNibs()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        baseNavigation?.createBackButton()
+    }
+    
     func registeredNibs(){
         
         

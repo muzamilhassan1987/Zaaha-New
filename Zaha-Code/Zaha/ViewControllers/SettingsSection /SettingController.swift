@@ -28,6 +28,7 @@ class SettingController: BaseViewController , StoryBoardHandler {
     @IBAction func showTerms(_ sender: Any) {
         let controller = AboutController.loadVC()
         controller.type = AboutType.terms
+        controller.view.backgroundColor = UIColor.clear
         controller.modalPresentationStyle = .overCurrentContext
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true) {
@@ -37,6 +38,7 @@ class SettingController: BaseViewController , StoryBoardHandler {
     @IBAction func showAbout(_ sender: UIButton) {
         let controller = AboutController.loadVC()
         controller.type = AboutType.about
+        controller.view.backgroundColor = UIColor.clear
         controller.modalPresentationStyle = .overCurrentContext
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true) {
@@ -48,6 +50,7 @@ class SettingController: BaseViewController , StoryBoardHandler {
         
         let controller = AboutController.loadVC()
         controller.type = AboutType.privacy
+        controller.view.backgroundColor = UIColor.clear
         controller.modalPresentationStyle = .overCurrentContext
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true) {
@@ -58,12 +61,16 @@ class SettingController: BaseViewController , StoryBoardHandler {
     }
     func setNavBar()
     {
-        self.title = "SETTINGS"
+        baseNavigation?.lblTitle.text = "SETTINGS"
         self.navigationController?.isNavigationBarHidden = false
         
-        let menuImg = UIImage.init(named: "home_menuIcon")?.flipIfNeeded()
+        //let menuImg = UIImage.init(named: "home_menuIcon")?.flipIfNeeded()
         
-        self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
+        //baseNavigation?.createButton(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        baseNavigation?.createHomeButton(target: self, #selector(actionMenuButton))
     }
     @objc func actionMenuButton()
     {
