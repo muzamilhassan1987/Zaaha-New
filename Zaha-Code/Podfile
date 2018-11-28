@@ -18,6 +18,7 @@ target 'Zaha' do
     pod 'ActionSheetPicker-3.0'
     pod 'FBSDKLoginKit'
     pod 'Tags'
+    pod 'VGPlayer', '~> 0.2.0'
   # Pods for Zaha
   # Pods for Zaha
 

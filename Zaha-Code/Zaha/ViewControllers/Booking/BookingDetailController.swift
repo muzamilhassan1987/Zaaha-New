@@ -524,8 +524,8 @@ extension BookingDetailController{
         var parameters = [String : String]()
         
         
-        parameters.updateValue("1", forKey: "experience_id")
-        //parameters.updateValue(String(experienceData!.id!), forKey: "experience_id")
+        //parameters.updateValue("1", forKey: "experience_id")
+        parameters.updateValue(String(experienceData!.id!), forKey: "experience_id")
         print(parameters)
         let requestParam =  self.manager.paramsDetail(parameters as [String : AnyObject], type: detailType)
         self.manager.api(requestParam, completion: {

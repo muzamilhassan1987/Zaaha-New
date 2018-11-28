@@ -22,9 +22,18 @@ class ViewProfileController: BaseViewController, StoryBoardHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setNavBar()
+        //setNavBar()
         setUpTable()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        baseNavigation?.createHomeButton(target: self, #selector(actionMenuButton))
+        
+        let editImg = UIImage.init(named: "profile_EditIcon")?.flipIfNeeded()
+        baseNavigation?.createButton(editImg!, CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionRight, self, #selector(editMenuButton))
+        baseNavigation?.lblTitle.text = "PROFILE"
+        self.title = ""
     }
     func setNavBar()
     {
@@ -38,6 +47,7 @@ class ViewProfileController: BaseViewController, StoryBoardHandler {
         let editImg = UIImage.init(named: "profile_EditIcon")?.flipIfNeeded()
         self.addBarButtonItemWithImage(editImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionRight, self, #selector(editMenuButton))
     }
+    
     @objc func actionMenuButton()
     {
         sideMenuController?.showLeftViewAnimated()

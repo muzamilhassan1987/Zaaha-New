@@ -104,6 +104,9 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
         case .myExperience:
             baseNavigation?.lblTitle.text = "My Experiences".uppercased()
             break
+        case .nearMe:
+            baseNavigation?.lblTitle.text = "Near Me".uppercased()
+            break
         case .pastExperience:
             baseNavigation?.lblTitle.text = "Past Experiences".uppercased()
             break
@@ -230,9 +233,15 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
         
         print(detailType)
         
-        router.goToBookingDetailController(from: self, type: detailType, navigation: baseNavigation!, data: self.arrDataList[indexPath.row])
         
-        
+        let data = self.arrDataList[indexPath.row]
+        if let objExperience = data as? HomeExperience {
+            router.goToBookingDetailController(from: self, type: detailType, navigation: baseNavigation!, data: self.arrDataList[indexPath.row])
+        }
+        if let objStory = data as? HomeStory {
+            
+            
+        }
        // router.goToBookingDetailController(from: self, type: detailType, )
 //        switch detailType {
 //        case .none,.upcomingExperience :
