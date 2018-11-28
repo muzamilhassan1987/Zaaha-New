@@ -43,12 +43,21 @@ class CreateStoryController: BaseViewController , StoryBoardHandler {
         
         // Do any additional setup after loading the view.
         
-        setNavBar()
+       // setNavBar()
         getExperienceList()
         self.tagsView.delegate = self
         self.tagsLabel.numberOfLines = 0
         
         self.makeTagsString()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //        if let btnBack = baseNavigation?.btnBack {
+        //            btnBack.removeFromSuperview()
+        //        }
+        baseNavigation?.lblTitle.text = "CREATE STORY"
+        baseNavigation?.createBackButton()
     }
     
     private func makeTagsString() {

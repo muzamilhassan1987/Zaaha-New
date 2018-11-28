@@ -38,7 +38,7 @@ class HomeExperience : Codable, BaseHomeModel {
 	let title : String?
 	let userId : Int?
     let sortingDate : Date?
-    let bookingStatus : Int?
+    var bookingStatus : Int?
     let videos : [HomeVideo]?
     
     

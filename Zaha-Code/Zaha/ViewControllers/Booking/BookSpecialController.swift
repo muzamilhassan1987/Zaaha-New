@@ -9,8 +9,15 @@
 
 import UIKit
 
-class BookSpecialController: BaseViewController, StoryBoardHandler {
+@objc protocol SubmitBookingDelegate: class
+{
+    @objc optional  func submitBooking(_ request : String)
+}
 
+class BookSpecialController: BaseViewController, StoryBoardHandler {
+    @IBOutlet weak var txtView: BaseUITextView!
+    
+    weak var submitBookingDelegate: SubmitBookingDelegate?
     static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.booking.rawValue, nil)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +33,7 @@ class BookSpecialController: BaseViewController, StoryBoardHandler {
     @IBAction func submitButtonPressed(_ sender: UIButton) {
         print("Called Action")
         self.dismiss(animated: true) {
-            
+            self.submitBookingDelegate?.submitBooking!(self.txtView.text!)
         }
     }
 

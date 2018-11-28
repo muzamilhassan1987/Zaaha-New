@@ -15,7 +15,7 @@ class UserData : Codable {
     let firstName : String?
     let id : Int?
     let imageUrl : String?
-    let isNotify : String?
+    var isNotify : String?
     let lastName : String?
     let profileImage : String?
     let rating : Int?

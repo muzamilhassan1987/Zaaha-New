@@ -100,8 +100,8 @@ extension HomeManager {
             return "getPastExperience"
             
         case .nearMe:
-            //return "getNearByExperience?latitude=23.7888&longitude=-23.7888"
-            return "getNearByExperience?latitude=\(String(describing: CurrentUser.currentLocation!.coordinate.latitude))&longitude=\(String(describing: CurrentUser.currentLocation!.coordinate.longitude))"
+            return "getNearByExperience?latitude=23.7888&longitude=-23.7888"
+            //return "getNearByExperience?latitude=\(String(describing: CurrentUser.currentLocation!.coordinate.latitude))&longitude=\(String(describing: CurrentUser.currentLocation!.coordinate.longitude))"
         default:
             print("")
         }

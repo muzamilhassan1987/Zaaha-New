@@ -14,6 +14,14 @@ class Router  {
         
     }
     
+    func goToCreateStoryController(from vc : viewController) {
+        
+        vc.show(viewcontrollerInstance: CreateStoryController.loadVC()) { (vc : CreateStoryController) in
+            //vc.titleHeader = title
+        }
+        
+        
+    }
     func goToBookingDetailController(from vc : viewController , withTitle title : String) {
         
         vc.show(viewcontrollerInstance: BookingDetailController.loadVC()) { (vc : BookingDetailController) in

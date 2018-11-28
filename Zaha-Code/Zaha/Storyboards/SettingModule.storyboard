@@ -87,6 +87,23 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizefontLarge"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyf-vN-VME" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                                <rect key="frame" x="261" y="112.5" width="32" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="8c7-6j-eIm"/>
+                                                                </constraints>
+                                                                <state key="normal" image="notificationoff">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="textfieldGray"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizefontLarge"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="upDatePush:" destination="YS4-H0-NRC" eventType="touchUpInside" id="JIS-Af-rPp"/>
+                                                                </connections>
+                                                            </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI7-iV-ikb" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="150" width="159" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -127,6 +144,7 @@
                                                             <constraint firstItem="63k-4S-DXY" firstAttribute="height" secondItem="TxZ-7V-K6O" secondAttribute="height" id="2nC-IW-PWO"/>
                                                             <constraint firstItem="GVi-hd-d7N" firstAttribute="leading" secondItem="TxZ-7V-K6O" secondAttribute="leading" id="4Lk-pf-QKb"/>
                                                             <constraint firstItem="XI7-iV-ikb" firstAttribute="leading" secondItem="TxZ-7V-K6O" secondAttribute="leading" id="4cG-N7-hYQ"/>
+                                                            <constraint firstItem="Pyf-vN-VME" firstAttribute="centerY" secondItem="GVi-hd-d7N" secondAttribute="centerY" id="AgH-2u-EN0"/>
                                                             <constraint firstItem="2yI-Hn-eJc" firstAttribute="leading" secondItem="TrG-JS-NiW" secondAttribute="leading" id="BE9-Gq-4MB"/>
                                                             <constraint firstItem="TxZ-7V-K6O" firstAttribute="top" secondItem="2yI-Hn-eJc" secondAttribute="bottom" constant="10" id="D35-U2-jbA"/>
                                                             <constraint firstAttribute="width" constant="343" id="Nr8-iK-H8Y">
@@ -137,6 +155,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </constraint>
                                                             <constraint firstItem="XI7-iV-ikb" firstAttribute="top" secondItem="GVi-hd-d7N" secondAttribute="bottom" constant="5" id="PxP-e4-7IV"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Pyf-vN-VME" secondAttribute="trailing" constant="50" id="SJs-Rk-3g3"/>
                                                             <constraint firstAttribute="height" constant="200" id="SPd-gU-4hm"/>
                                                             <constraint firstItem="63k-4S-DXY" firstAttribute="leading" secondItem="TxZ-7V-K6O" secondAttribute="leading" id="V0Z-SC-iN9"/>
                                                             <constraint firstItem="2yI-Hn-eJc" firstAttribute="top" secondItem="TrG-JS-NiW" secondAttribute="top" id="Xn7-VL-BOG"/>
@@ -387,6 +406,9 @@
                         <viewLayoutGuide key="safeArea" id="qZ8-JW-o1e"/>
                     </view>
                     <navigationItem key="navigationItem" id="aQs-Yt-rXd"/>
+                    <connections>
+                        <outlet property="btnNotification" destination="Pyf-vN-VME" id="T8y-5M-oR9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEE-st-qyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -546,6 +568,7 @@
     <resources>
         <image name="experienceBooking_BlackTop" width="328" height="464"/>
         <image name="experienceBooking_whiteBG" width="328" height="401"/>
+        <image name="notificationoff" width="32" height="14"/>
         <image name="setting_PrivacyPolicyGrayBox" width="298" height="334"/>
         <image name="upcomingExp_closeBtn" width="37" height="37"/>
     </resources>

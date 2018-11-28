@@ -12,6 +12,7 @@ class SettingController: BaseViewController , StoryBoardHandler {
     
     static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.setting.rawValue , nil)
     
+    @IBOutlet weak var btnNotification: BaseUIButton!
     @IBOutlet weak var tblSetting: UITableView!
     var manager = RegisterManager()
     
@@ -20,11 +21,20 @@ class SettingController: BaseViewController , StoryBoardHandler {
         
         
         setNavBar()
+        setNotificationButton()
        // tblSetting.estimatedRowHeight = 200.0
       //  tblSetting.rowHeight = UITableView.automaticDimension
         // Do any additional setup after loading the view.
     }
     
+    func setNotificationButton() {
+        if (CurrentUser.data?.isNotify! == "1") {
+            btnNotification.setImage(UIImage(named:"notificationon"), for: .normal)
+        }
+        else {
+            btnNotification.setImage(UIImage(named:"notificationoff"), for: .normal)
+        }
+    }
     @IBAction func showTerms(_ sender: Any) {
         let controller = AboutController.loadVC()
         controller.type = AboutType.terms
@@ -91,13 +101,17 @@ class SettingController: BaseViewController , StoryBoardHandler {
     @IBAction func logout(_ sender: Any) {
         
         Alert.showWithTwoActions(title: "Logout", msg: "Are you sure you want to logout?", okBtnTitle: "Yes", okBtnAction: {
-//                self.logoutService()
-            self.updatePushStatus()
+                self.logoutService()
+//            self.updatePushStatus()
         }, cancelBtnTitle: "No") {
             
         }
     }
     
+    @IBAction func upDatePush(_ sender: BaseUIButton) {
+        
+        self.updatePushStatus()
+    }
     
     
     
@@ -154,8 +168,15 @@ extension SettingController{
     
     func updatePushStatus() {
         
+        var notify = ""
+        if (CurrentUser.data?.isNotify! == "1") {
+            notify = "0"
+        }
+        else {
+            notify = "1"
+        }
         let param = [
-            "notify_status" :"0",
+            "notify_status" :notify,
             //"deviceType" : 2
             ] as [String:String]
         
@@ -164,8 +185,12 @@ extension SettingController{
         self.manager.apiUpdatePushStatus(requestParam, completion: {
             
             if self.manager.isSuccess {
-                Alert.showWithCompletion(msg: self.manager.message, completionAction: {
-                })
+                
+                CurrentUser.data?.isNotify! = notify
+                print(CurrentUser.data?.isNotify!)
+                self.setNotificationButton()
+//                Alert.showWithCompletion(msg: self.manager.message, completionAction: {
+//                })
             }
         })
     }

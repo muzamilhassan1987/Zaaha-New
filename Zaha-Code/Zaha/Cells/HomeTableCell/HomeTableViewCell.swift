@@ -16,8 +16,9 @@ enum HomeTableViewType : Int {
 }
 
 class HomeTableViewCell: UITableViewCell {
-    @IBOutlet weak var imgVideoIcon: UIImageView!
+    @IBOutlet weak var imgVideoIcon: UIButton!
     
+    @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var imgMain: UIImageView!
     @IBOutlet weak var lblStoryDateTime: UILabel!
     @IBOutlet weak var lblStoryTitle: UILabel!
@@ -49,7 +50,7 @@ class HomeTableViewCell: UITableViewCell {
         
         viewTwoLabel.isHidden = true
         viewFiveLabels.isHidden = true
-        
+        webView.isHidden = true
         
         if let objExperience = data as? HomeExperience {
             self.type = .homeList
@@ -92,5 +93,11 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     
+    @IBAction func PlayVideo(_ sender: UIButton) {
+        
+        let url = URL(string: (story?.videoUrl!)!)
+        webView.isHidden = false
+        webView.loadRequest(URLRequest(url: url!))
+    }
     
 }

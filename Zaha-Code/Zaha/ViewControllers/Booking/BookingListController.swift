@@ -11,11 +11,17 @@ class BookingListController: BaseViewController , StoryBoardHandler {
         super.viewDidLoad()
 
         
-        setNavBar()
+        //setNavBar()
         tblBookingList.register(UINib(nibName: "BookingCell", bundle: nil), forCellReuseIdentifier: "BookingCell")
         tblBookingList.estimatedRowHeight = 200.0
         tblBookingList.rowHeight = UITableView.automaticDimension
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        baseNavigation?.lblTitle.text = "BOOKINGS"
+        baseNavigation?.createHomeButton(target: self, #selector(actionMenuButton))
+        
     }
     func setNavBar()
     {

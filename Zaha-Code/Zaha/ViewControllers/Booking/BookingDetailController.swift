@@ -492,12 +492,23 @@ extension BookingDetailController: ButtonTableCellDelegate
 
     func bookExperience() {
         let controller = BookSpecialController.loadVC()
+        controller.submitBookingDelegate = self
         controller.modalPresentationStyle = .overCurrentContext
+        controller.view.backgroundColor = UIColor.clear
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true) {
             
         }
         
+    }
+}
+
+extension BookingDetailController: SubmitBookingDelegate
+{
+    
+    func submitBooking(_ request : String) {
+        
+        self.bookExperienceService(request)
     }
 }
 
@@ -543,4 +554,30 @@ extension BookingDetailController{
     }
     
     
+    
+    func bookExperienceService(_ request : String) {
+        
+        //        var parameters = [String : String]()
+        //       parameters.updateValue("\(String(describing: self.experienceData!.id!))", forKey: "experience_id")
+        var parameters = [String : String]()
+        
+        
+        //parameters.updateValue("1", forKey: "experience_id")
+        parameters.updateValue(String(experienceData!.id!), forKey: "experience_id")
+        parameters.updateValue(request, forKey: "special_request")
+        print(parameters)
+        let requestParam =  self.manager.paramsSubmitBooking(parameters as [String : AnyObject])
+        self.manager.apiSubmitBooking(requestParam, completion: {
+            
+            if self.manager.isSuccess {
+                
+                self.experienceData?.bookingStatus = 1
+                self.tblBookingDetail.reloadData()
+                Alert.showMsg(msg: self.manager.message )
+            }
+            else {
+                Alert.showMsg(msg: self.manager.message )
+            }
+        })
+    }
 }

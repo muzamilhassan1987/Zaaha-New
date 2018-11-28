@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Status:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79L-2U-jOl" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
-                        <rect key="frame" x="20" y="11.5" width="54" height="20.5"/>
+                        <rect key="frame" x="20" y="0.0" width="54" height="43.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Confirmed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfT-eF-GVT" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
-                        <rect key="frame" x="79" y="11.5" width="81" height="20.5"/>
+                        <rect key="frame" x="79" y="0.0" width="81" height="43.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -49,13 +49,15 @@
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="UfT-eF-GVT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1hV-0i-963"/>
+                    <constraint firstAttribute="bottom" secondItem="UfT-eF-GVT" secondAttribute="bottom" id="5EO-sC-19u"/>
                     <constraint firstItem="tix-Le-SCe" firstAttribute="leading" secondItem="UfT-eF-GVT" secondAttribute="trailing" id="73E-a8-jW7"/>
                     <constraint firstAttribute="bottom" secondItem="tix-Le-SCe" secondAttribute="bottom" id="9Fe-Lq-zyX"/>
-                    <constraint firstItem="UfT-eF-GVT" firstAttribute="centerY" secondItem="79L-2U-jOl" secondAttribute="centerY" id="Lt5-En-cv9"/>
                     <constraint firstItem="79L-2U-jOl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="W3n-Qx-cOr"/>
-                    <constraint firstItem="79L-2U-jOl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cZ0-oe-adC"/>
+                    <constraint firstAttribute="bottom" secondItem="79L-2U-jOl" secondAttribute="bottom" id="bn9-E9-ZvQ"/>
                     <constraint firstItem="UfT-eF-GVT" firstAttribute="leading" secondItem="79L-2U-jOl" secondAttribute="trailing" constant="5" id="cyv-TL-22K"/>
                     <constraint firstItem="tix-Le-SCe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lsZ-AI-2Qf"/>
+                    <constraint firstItem="79L-2U-jOl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="u77-d9-f9G"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

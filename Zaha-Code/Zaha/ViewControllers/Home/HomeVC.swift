@@ -80,6 +80,14 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
 //            btnBack.removeFromSuperview()
 //        }
         baseNavigation?.createHomeButton(target: self, #selector(actionMenuButton))
+        if (detailType == .stories) {
+            let editImg = UIImage.init(named: "storeis_plusIcon")?.flipIfNeeded()
+            baseNavigation?.createButton(editImg!, CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionRight, self, #selector(gotoCreateStoryController))
+        }
+    }
+    
+    @objc func gotoCreateStoryController() {
+        router.goToCreateStory(from: self)
     }
     
     
@@ -239,7 +247,9 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
             router.goToBookingDetailController(from: self, type: detailType, navigation: baseNavigation!, data: self.arrDataList[indexPath.row])
         }
         if let objStory = data as? HomeStory {
-            
+//            let vc = UIStoryboard(name: "Booking", bundle: nil).instantiateViewController(withIdentifier: "VGVerticalViewController_ID") as! VGVerticalViewController
+//            vc.stringServer = objStory.videoUrl!
+//            self.navigationController?.pushViewController(vc, animated: true)
             
         }
        // router.goToBookingDetailController(from: self, type: detailType, )

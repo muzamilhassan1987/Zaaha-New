@@ -313,7 +313,7 @@ class RegisterManager: AFManagerProtocol {
                 if model.response?.responseCode! == ServiceCodes.successCode {
                     self.isSuccess = true
                     self.message = model.response?.message ?? " "
-                    CurrentUser.data = nil
+                   // CurrentUser.data = nil
                 }
                 else
                 {

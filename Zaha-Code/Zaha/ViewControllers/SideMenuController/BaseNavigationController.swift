@@ -103,6 +103,18 @@ class BaseNavigationController: UINavigationController, StoryBoardHandler
         
         
     }
+    func createAddStoryButton(target:UIViewController, _ selector:Selector) {
+        
+//        btnHome = UIButton()
+//        let menuImg = UIImage.init(named: "storeis_plusIcon")?.flipIfNeeded()
+//        btnHome?.setImage(menuImg, for: .normal)
+//        btnHome?.frame = CGRect(x: 20, y: 0, width: DesignUtility.getFontSize(fSize: 44), height: DesignUtility.getFontSize(fSize: 44))
+//        btnHome?.center.y = mainView.center.y
+//        btnHome?.addTarget(target, action: selector, for: .touchUpInside)
+//        mainView.addSubview(btnHome!)
+        
+        
+    }
    
     
     

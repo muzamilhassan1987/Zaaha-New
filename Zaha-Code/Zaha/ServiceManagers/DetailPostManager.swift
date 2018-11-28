@@ -59,6 +59,45 @@ class DetailPostManager: AFManagerProtocol {
             completion()
         }
     }
+    
+    func apiSubmitBooking(_ param: AFParam, completion: @escaping () -> Void) {
+        
+        //set default value
+        
+        self.isSuccess = false
+        
+        //Request
+        AFNetwork.shared.apiRequest(param, isSpinnerNeeded: true, success: { (response) in
+            
+            guard let data = response else { return }
+            
+            do {
+                let decoder = JSONDecoder()
+                let model = try decoder.decode(DetailExperienceBase.self, from: data)
+                
+                //check success case from server
+                if model.response?.responseCode! == ServiceCodes.successCode {
+                    self.isSuccess = true
+                    self.message = model.response?.message ?? " "
+//                    self.experienceData = model.data?.experiences!
+//                    print(self.experienceData?.id)
+//                    print(self.data)
+                    
+                }else{
+                    //Alert.showMsg(msg: model.response?.message ?? "Server not responding")
+                }
+                
+            } catch let err {
+                
+                print("Err", err)
+            }
+            
+            completion()
+        }) { (error) in
+            
+            completion()
+        }
+    }
 }
 
 extension DetailPostManager {
@@ -67,18 +106,15 @@ extension DetailPostManager {
         //getCms?type=(term_condition,privacy_policy,about_us)
         let headers: [String : String] = ["token":CurrentUser.data!.token!]
         
-        print(CurrentUser.token)
-        print("---------------------------------------------------")
-        print(getEndPoint(type))
-        print(parameters)
-//        if (type == .nearMe) {
-//            var parameters = [String : String]()
-//            parameters.updateValue(CurrentUser., forKey: "password")
-//            parameters.updateValue(getString(dict["text"]), forKey: "password")
-//            let param = AFParam(endpoint: getEndPoint(type), params: [:], headers: headers, method: .get, parameterEncoding:JSONEncoding.default, images: [])
-//            return param
-//        }
         let param = AFParam(endpoint: getEndPoint(type), params: parameters, headers: headers, method: .get, parameterEncoding:JSONEncoding.default, images: [])
+        return param
+    }
+    
+    func paramsSubmitBooking(_ parameters : [String : AnyObject]) -> AFParam {
+        //getCms?type=(term_condition,privacy_policy,about_us)
+        let headers: [String : String] = ["token":CurrentUser.data!.token!]
+        
+        let param = AFParam(endpoint: "experienceBooking", params: parameters, headers: headers, method: .post, parameterEncoding:JSONEncoding.default, images: [])
         return param
     }
     

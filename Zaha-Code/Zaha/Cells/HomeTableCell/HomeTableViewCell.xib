@@ -25,9 +25,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_demo_image" translatesAutoresizingMaskIntoConstraints="NO" id="A8z-c6-K1f" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
                                 <rect key="frame" x="30" y="0.0" width="315" height="232"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_video_icon" translatesAutoresizingMaskIntoConstraints="NO" id="6u2-rZ-M19">
-                                <rect key="frame" x="156.5" y="52" width="62" height="62"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OmR-rz-FUM">
                                 <rect key="frame" x="30" y="158" width="315" height="74"/>
                                 <subviews>
@@ -132,20 +129,35 @@
                                     <constraint firstItem="ea5-IK-Dna" firstAttribute="top" secondItem="E4e-cJ-r8P" secondAttribute="top" id="yO7-zU-DbZ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="317-FZ-Xrw">
+                                <rect key="frame" x="156.5" y="52" width="62" height="62"/>
+                                <state key="normal" image="home_video_icon"/>
+                                <connections>
+                                    <action selector="PlayVideo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cC1-kQ-Y3g"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeU-dH-Xvd">
+                                <rect key="frame" x="30" y="0.0" width="315" height="232"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="232" id="0Eh-CE-olX"/>
+                            <constraint firstItem="jeU-dH-Xvd" firstAttribute="bottom" secondItem="A8z-c6-K1f" secondAttribute="bottom" id="0Op-hR-ips"/>
                             <constraint firstItem="OmR-rz-FUM" firstAttribute="centerX" secondItem="8Xg-Wq-hbD" secondAttribute="centerX" id="2PG-s7-gQB"/>
-                            <constraint firstItem="6u2-rZ-M19" firstAttribute="centerX" secondItem="dWD-WA-ILN" secondAttribute="centerX" id="3Ps-td-mRz"/>
                             <constraint firstItem="8Xg-Wq-hbD" firstAttribute="trailing" secondItem="A8z-c6-K1f" secondAttribute="trailing" id="3z9-Z7-ucL"/>
                             <constraint firstAttribute="bottom" secondItem="A8z-c6-K1f" secondAttribute="bottom" id="4tJ-lV-9I6"/>
-                            <constraint firstItem="6u2-rZ-M19" firstAttribute="top" secondItem="dWD-WA-ILN" secondAttribute="top" constant="52" id="GxN-Rz-CkX"/>
+                            <constraint firstItem="jeU-dH-Xvd" firstAttribute="leading" secondItem="A8z-c6-K1f" secondAttribute="leading" id="CPC-SG-cbX"/>
+                            <constraint firstItem="317-FZ-Xrw" firstAttribute="centerX" secondItem="dWD-WA-ILN" secondAttribute="centerX" id="SHz-bu-1zl"/>
+                            <constraint firstItem="317-FZ-Xrw" firstAttribute="top" secondItem="dWD-WA-ILN" secondAttribute="top" constant="52" id="UwM-gd-4NB"/>
                             <constraint firstItem="A8z-c6-K1f" firstAttribute="top" secondItem="dWD-WA-ILN" secondAttribute="top" id="VI5-Id-tCi"/>
                             <constraint firstAttribute="trailing" secondItem="A8z-c6-K1f" secondAttribute="trailing" constant="30" id="Xgh-Qm-rtn"/>
                             <constraint firstItem="OmR-rz-FUM" firstAttribute="centerY" secondItem="8Xg-Wq-hbD" secondAttribute="centerY" id="hdX-kX-xzF"/>
                             <constraint firstItem="A8z-c6-K1f" firstAttribute="leading" secondItem="dWD-WA-ILN" secondAttribute="leading" constant="30" id="ic7-M2-mQx"/>
                             <constraint firstItem="8Xg-Wq-hbD" firstAttribute="bottom" secondItem="A8z-c6-K1f" secondAttribute="bottom" id="jQn-Uz-njs"/>
+                            <constraint firstItem="jeU-dH-Xvd" firstAttribute="top" secondItem="A8z-c6-K1f" secondAttribute="top" id="q1X-6L-PxH"/>
+                            <constraint firstItem="jeU-dH-Xvd" firstAttribute="trailing" secondItem="A8z-c6-K1f" secondAttribute="trailing" id="tEk-6R-K7k"/>
                             <constraint firstItem="OmR-rz-FUM" firstAttribute="width" secondItem="8Xg-Wq-hbD" secondAttribute="width" id="vgl-f2-G8J"/>
                             <constraint firstItem="8Xg-Wq-hbD" firstAttribute="leading" secondItem="A8z-c6-K1f" secondAttribute="leading" id="x9M-zB-jzG"/>
                         </constraints>
@@ -163,7 +175,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imgMain" destination="A8z-c6-K1f" id="YW9-3p-dVj"/>
-                <outlet property="imgVideoIcon" destination="6u2-rZ-M19" id="QdR-Ck-1jD"/>
+                <outlet property="imgVideoIcon" destination="317-FZ-Xrw" id="5Ac-uw-trG"/>
                 <outlet property="layoutTopPadding" destination="USn-84-ISq" id="e2c-PW-705"/>
                 <outlet property="lblCategory" destination="ea5-IK-Dna" id="kLF-ct-jNX"/>
                 <outlet property="lblDateTime" destination="E4e-cJ-r8P" id="7h8-V1-M6H"/>
@@ -174,6 +186,7 @@
                 <outlet property="lblStoryTitle" destination="Rqh-w1-CL5" id="Lzg-Hy-wWz"/>
                 <outlet property="viewFiveLabels" destination="8Xg-Wq-hbD" id="yZ2-BP-gCj"/>
                 <outlet property="viewTwoLabel" destination="OmR-rz-FUM" id="sTe-WD-6FJ"/>
+                <outlet property="webView" destination="jeU-dH-Xvd" id="kfG-H9-V6u"/>
             </connections>
             <point key="canvasLocation" x="132.80000000000001" y="40.929535232383813"/>
         </tableViewCell>
