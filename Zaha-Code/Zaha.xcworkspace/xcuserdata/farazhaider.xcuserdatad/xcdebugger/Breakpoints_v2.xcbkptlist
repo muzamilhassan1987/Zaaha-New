@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Zaha/ViewControllers/Registeration/LoginViewController.swift"
-            timestampString = "564325976.805424"
+            filePath = "Zaha/ViewControllers/Home/HomeVC.swift"
+            timestampString = "565174833.9328229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
-            landmarkName = "callSocialLoginService(paramDictionary:)"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "setInitialData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

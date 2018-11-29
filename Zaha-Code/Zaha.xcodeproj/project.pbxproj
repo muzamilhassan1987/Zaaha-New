@@ -252,6 +252,10 @@
 		591F02A22186E7C4000CCE12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591F02A02186E7C4000CCE12 /* LaunchScreen.storyboard */; };
 		591F02AD2186E7C4000CCE12 /* ZahaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F02AC2186E7C4000CCE12 /* ZahaTests.swift */; };
 		591F02B82186E7C4000CCE12 /* ZahaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F02B72186E7C4000CCE12 /* ZahaUITests.swift */; };
+		59CFAE1E21AFD37300082C04 /* InboxListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CFAE1D21AFD37300082C04 /* InboxListViewController.swift */; };
+		59CFAE2021AFD37C00082C04 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CFAE1F21AFD37C00082C04 /* ChatViewController.swift */; };
+		59CFAE2321AFD81900082C04 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CFAE2221AFD81900082C04 /* ChatCell.swift */; };
+		59CFAE2521AFE82E00082C04 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CFAE2421AFE82E00082C04 /* InboxCell.swift */; };
 		5DA40B05664CAFD98410EF02 /* Pods_ZahaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AD12A0D01A0328573D4CF8 /* Pods_ZahaTests.framework */; };
 		9F092CACFFF227AD1215B545 /* Pods_ZahaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652F7617021952CADBA00059 /* Pods_ZahaUITests.framework */; };
 		B2FF3CF525E5BF6CFDACBD2B /* Pods_Zaha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61582C593E832186BC8A0A47 /* Pods_Zaha.framework */; };
@@ -555,6 +559,10 @@
 		591F02B32186E7C4000CCE12 /* ZahaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZahaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		591F02B72186E7C4000CCE12 /* ZahaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZahaUITests.swift; sourceTree = "<group>"; };
 		591F02B92186E7C4000CCE12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59CFAE1D21AFD37300082C04 /* InboxListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxListViewController.swift; sourceTree = "<group>"; };
+		59CFAE1F21AFD37C00082C04 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		59CFAE2221AFD81900082C04 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		59CFAE2421AFE82E00082C04 /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
 		61582C593E832186BC8A0A47 /* Pods_Zaha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zaha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		652F7617021952CADBA00059 /* Pods_ZahaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZahaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AD12A0D01A0328573D4CF8 /* Pods_ZahaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZahaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -867,6 +875,7 @@
 		1A665F1821884A1600B7CBA2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				59CFAE1821AFD28400082C04 /* Inbox */,
 				1D9A4D532194C4DC00BDAC84 /* UpcomingExperience */,
 				1D8986702192468100AD57C9 /* Booking */,
 				1D8E52BE218EDFA900F49674 /* SideMenuController */,
@@ -926,6 +935,7 @@
 		1A665F4321884BBB00B7CBA2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				59CFAE2121AFD7FF00082C04 /* ChatCell */,
 				1D9A4D8C21982F9100BDAC84 /* TwoOptionCell */,
 				1D9A4D8121981A2600BDAC84 /* AmenitiesCell */,
 				1D9A4D78219769B600BDAC84 /* PhotoCollectionTableCell */,
@@ -1406,6 +1416,24 @@
 			path = ZahaUITests;
 			sourceTree = "<group>";
 		};
+		59CFAE1821AFD28400082C04 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				59CFAE1D21AFD37300082C04 /* InboxListViewController.swift */,
+				59CFAE1F21AFD37C00082C04 /* ChatViewController.swift */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		59CFAE2121AFD7FF00082C04 /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				59CFAE2221AFD81900082C04 /* ChatCell.swift */,
+				59CFAE2421AFE82E00082C04 /* InboxCell.swift */,
+			);
+			path = ChatCell;
+			sourceTree = "<group>";
+		};
 		AD32DF690CAA5CCD2680F56E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1830,6 +1858,7 @@
 				1A665EE82188426600B7CBA2 /* FillDesignable.swift in Sources */,
 				1A665F7D21884E3900B7CBA2 /* ImagePickerHelper.swift in Sources */,
 				1A665ECD2188426600B7CBA2 /* DeviceUtility.swift in Sources */,
+				59CFAE1E21AFD37300082C04 /* InboxListViewController.swift in Sources */,
 				1A665F3821884A5A00B7CBA2 /* RegisterViewController+Extension.swift in Sources */,
 				1AB84F5121945D21004D6C58 /* HomeTopView.swift in Sources */,
 				1A665EEC2188426600B7CBA2 /* SideImageDesignable.swift in Sources */,
@@ -1851,6 +1880,7 @@
 				1D9A4D7621975DD800BDAC84 /* ViewAllCell.swift in Sources */,
 				1A665EBA2188426600B7CBA2 /* CornerSide.swift in Sources */,
 				1A665ED92188426600B7CBA2 /* BaseUILabel.swift in Sources */,
+				59CFAE2021AFD37C00082C04 /* ChatViewController.swift in Sources */,
 				1A665F2E21884A4E00B7CBA2 /* ForgetPasswordViewController.swift in Sources */,
 				D067EA0921AAA1760040A492 /* MyExperienceData.swift in Sources */,
 				1A2FEA1321A2BF07005FF1BB /* DetailData.swift in Sources */,
@@ -1923,6 +1953,7 @@
 				D084539C218C7DD9001E57B0 /* HomeVC.swift in Sources */,
 				1A08994A219570920036AEF3 /* PhotosGridCollectionCell.swift in Sources */,
 				1A665F1E21884A1600B7CBA2 /* SplashViewController.swift in Sources */,
+				59CFAE2521AFE82E00082C04 /* InboxCell.swift in Sources */,
 				1D9A4D572194CC1100BDAC84 /* ViewProfileController.swift in Sources */,
 				1A665ECE2188426600B7CBA2 /* BaseUIButton.swift in Sources */,
 				1D692458219891DC002CDE61 /* EditProfileController.swift in Sources */,
@@ -1930,6 +1961,7 @@
 				1A665EE92188426600B7CBA2 /* FontDesignable.swift in Sources */,
 				1D9A4D8421981A4500BDAC84 /* AmenitiesTableCell.swift in Sources */,
 				1AE12C6B21A67CB9000C64AD /* HomePicture.swift in Sources */,
+				59CFAE2321AFD81900082C04 /* ChatCell.swift in Sources */,
 				1A665EDA2188426600B7CBA2 /* BaseUICollectionView.swift in Sources */,
 				1A4BE9D5219E9A060027A67F /* CultureBase.swift in Sources */,
 				1A665EE42188426600B7CBA2 /* BaseUIBarButtonItem.swift in Sources */,
