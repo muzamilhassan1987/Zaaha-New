@@ -10,6 +10,7 @@ import UIKit
 
 class InboxListViewController: UIViewController {
 
+    @IBOutlet weak var inboxTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +28,23 @@ class InboxListViewController: UIViewController {
     }
     */
 
+}
+
+extension InboxListViewController: UITableViewDataSource,UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "InboxCell", for: indexPath) as! InboxCell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showChatingView", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 93
+    }
 }

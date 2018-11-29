@@ -49,7 +49,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeq-Aq-bEz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 939393939393939393 939393939393939393 939393939393939393 939393939393939393 939393939393939393 939393939393939393" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeq-Aq-bEz">
                                                     <rect key="frame" x="113" y="52" width="226" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -64,6 +64,12 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Inbox_notificationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Qfq-z7-i7I">
                                                     <rect key="frame" x="359.66666666666669" y="52.666666666666664" width="21" height="20.999999999999993"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-bS-vmX">
+                                                    <rect key="frame" x="362.66666666666669" y="57" width="15" height="12"/>
+                                                    <fontDescription key="fontDescription" name="FuturaStd-Book" family="Futura Std" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zeq-Aq-bEz" firstAttribute="top" secondItem="Nfb-GC-X5J" secondAttribute="bottom" constant="9" id="07s-vf-zvT"/>
@@ -76,16 +82,28 @@
                                                 <constraint firstItem="zeq-Aq-bEz" firstAttribute="trailing" secondItem="Nfb-GC-X5J" secondAttribute="trailing" id="IsQ-1k-uKv"/>
                                                 <constraint firstAttribute="trailing" secondItem="BWP-J5-i4L" secondAttribute="trailing" constant="23" id="Ive-d0-lUf"/>
                                                 <constraint firstItem="RDr-M6-ITn" firstAttribute="leading" secondItem="TBs-gs-haH" secondAttribute="leading" constant="5" id="R5I-Lr-Mt5"/>
+                                                <constraint firstItem="v9q-bS-vmX" firstAttribute="centerY" secondItem="Qfq-z7-i7I" secondAttribute="centerY" id="RvC-ml-QrU"/>
+                                                <constraint firstItem="RDr-M6-ITn" firstAttribute="bottom" secondItem="zeq-Aq-bEz" secondAttribute="bottom" constant="15" id="V9y-Xt-5dS"/>
                                                 <constraint firstItem="liW-wn-NVB" firstAttribute="leading" secondItem="TBs-gs-haH" secondAttribute="leading" constant="32" id="b7r-4M-cJY"/>
                                                 <constraint firstAttribute="trailing" secondItem="RDr-M6-ITn" secondAttribute="trailing" constant="5" id="cqS-He-h9i"/>
                                                 <constraint firstItem="BWP-J5-i4L" firstAttribute="top" secondItem="Nfb-GC-X5J" secondAttribute="top" id="fV7-GX-Fs0"/>
                                                 <constraint firstItem="zeq-Aq-bEz" firstAttribute="leading" secondItem="Nfb-GC-X5J" secondAttribute="leading" id="g8J-ap-l5D"/>
+                                                <constraint firstItem="v9q-bS-vmX" firstAttribute="centerX" secondItem="Qfq-z7-i7I" secondAttribute="centerX" id="sGR-Pg-PCd"/>
                                                 <constraint firstItem="liW-wn-NVB" firstAttribute="centerY" secondItem="RDr-M6-ITn" secondAttribute="centerY" id="wJm-el-Exq"/>
                                                 <constraint firstItem="Qfq-z7-i7I" firstAttribute="centerX" secondItem="BWP-J5-i4L" secondAttribute="centerX" id="wMK-AK-xU3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="BWP-J5-i4L" id="s2T-UW-WGY"/>
+                                            <outlet property="msgLabel" destination="zeq-Aq-bEz" id="RGw-Ho-fNX"/>
+                                            <outlet property="nameLabel" destination="Nfb-GC-X5J" id="7hz-E5-4DE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9VJ-zD-jT9" id="hbN-I8-37V"/>
+                                    <outlet property="delegate" destination="9VJ-zD-jT9" id="HLJ-f5-KIp"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,6 +115,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z0U-bu-zKX"/>
                     </view>
+                    <connections>
+                        <outlet property="inboxTableView" destination="tks-El-UfD" id="Sf5-Nj-YxD"/>
+                        <segue destination="07I-6j-Ymf" kind="show" identifier="showChatingView" id="bPg-iC-gcV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwi-cw-nnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -236,7 +236,7 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = UIStoryboard(name: "Inbox", bundle: nil).instantiateViewController(withIdentifier: "InboxListViewController") as! ChatViewController
+        let vc = UIStoryboard(name: "Inbox", bundle: nil).instantiateViewController(withIdentifier: "InboxListViewController") as! InboxListViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
         return
