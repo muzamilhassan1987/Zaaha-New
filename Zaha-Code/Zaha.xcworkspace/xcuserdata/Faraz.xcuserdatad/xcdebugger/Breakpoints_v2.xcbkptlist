@@ -58,7 +58,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-                  timestampString = "564876174.560019"
+                  timestampString = "565130680.318313"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
@@ -73,7 +73,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-                  timestampString = "564876174.561955"
+                  timestampString = "565130680.320936"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "126"
@@ -129,38 +129,6 @@
             endingLineNumber = "92"
             landmarkName = "addStoryButtonClicked(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Zaha.CreateStoryController.addStoryButtonClicked(Any) -&gt; ()"
-                  moduleName = "Zaha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-                  timestampString = "564876247.318712"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in Zaha.CreateStoryController.addStoryButtonClicked(Any) -&gt; ()"
-                  moduleName = "Zaha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-                  timestampString = "564876247.320962"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -177,6 +145,38 @@
             endingLineNumber = "98"
             landmarkName = "addStoryButtonClicked(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Zaha.CreateStoryController.addStoryButtonClicked(Any) -&gt; ()"
+                  moduleName = "Zaha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
+                  timestampString = "565130680.34363"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "3295">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Zaha.CreateStoryController.addStoryButtonClicked(Any) -&gt; ()"
+                  moduleName = "Zaha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
+                  timestampString = "565130680.345542"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

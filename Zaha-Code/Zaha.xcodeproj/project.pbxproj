@@ -268,6 +268,7 @@
 		D08453A8218E1301001E57B0 /* InboxModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08453A7218E1301001E57B0 /* InboxModule.storyboard */; };
 		D08453AA218E130F001E57B0 /* SettingModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08453A9218E130F001E57B0 /* SettingModule.storyboard */; };
 		D08453AC218E1318001E57B0 /* AboutModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08453AB218E1318001E57B0 /* AboutModule.storyboard */; };
+		D085C5C621AF44AC00AEA64E /* Inbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D085C5C521AF44AC00AEA64E /* Inbox.storyboard */; };
 		D09B4DF921A9D097007BA219 /* CreateStoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09B4DF821A9D097007BA219 /* CreateStoryController.swift */; };
 		D0A8059421A33A1700F0F245 /* TypeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8058D21A33A1600F0F245 /* TypeResponse.swift */; };
 		D0A8059521A33A1700F0F245 /* TypeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8058E21A33A1600F0F245 /* TypeData.swift */; };
@@ -571,6 +572,7 @@
 		D08453A7218E1301001E57B0 /* InboxModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InboxModule.storyboard; sourceTree = "<group>"; };
 		D08453A9218E130F001E57B0 /* SettingModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingModule.storyboard; sourceTree = "<group>"; };
 		D08453AB218E1318001E57B0 /* AboutModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutModule.storyboard; sourceTree = "<group>"; };
+		D085C5C521AF44AC00AEA64E /* Inbox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inbox.storyboard; sourceTree = "<group>"; };
 		D09B4DF821A9D097007BA219 /* CreateStoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStoryController.swift; sourceTree = "<group>"; };
 		D0A8058D21A33A1600F0F245 /* TypeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeResponse.swift; sourceTree = "<group>"; };
 		D0A8058E21A33A1600F0F245 /* TypeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeData.swift; sourceTree = "<group>"; };
@@ -1038,6 +1040,7 @@
 				D08453AB218E1318001E57B0 /* AboutModule.storyboard */,
 				1D8E52BC218EDF2E00F49674 /* SideMenu.storyboard */,
 				1D89866E2192460200AD57C9 /* Booking.storyboard */,
+				D085C5C521AF44AC00AEA64E /* Inbox.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1596,6 +1599,7 @@
 				1AE68C7A21A548C000D82B0B /* BookingStatusCell.xib in Resources */,
 				1D8E52F6218EE6D600F49674 /* RobotoSlab-Thin.ttf in Resources */,
 				1AB84F5221945D21004D6C58 /* HomeTopView.xib in Resources */,
+				D085C5C621AF44AC00AEA64E /* Inbox.storyboard in Resources */,
 				1A665F9021884EC700B7CBA2 /* bg-home@2x.png in Resources */,
 				1D8E52F5218EE6D600F49674 /* Roboto-Regular.ttf in Resources */,
 				1D8E52EF218EE6D600F49674 /* Poppins-SemiBold.ttf in Resources */,
@@ -2174,17 +2178,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = LQ8XDF245Q;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZY6E7A22M6;
 				INFOPLIST_FILE = Zaha/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamingic.zahanew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.Zaha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Teaming_WildCard_New;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2196,17 +2200,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = LQ8XDF245Q;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZY6E7A22M6;
 				INFOPLIST_FILE = Zaha/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamingic.zahanew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.Zaha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Teaming_WildCard_New;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
