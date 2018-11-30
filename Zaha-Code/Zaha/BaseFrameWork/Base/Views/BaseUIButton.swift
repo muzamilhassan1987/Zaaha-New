@@ -237,7 +237,6 @@ open class BaseUIButton: UIButton, FontDesignable, CornerDesignable, BorderDesig
         super.awakeFromNib();
         self.isExclusiveTouch = true
         configureInspectableProperties();
-        
         self.addTarget(self, action: #selector(self.highlight), for: .touchDown)
         self.addTarget(self, action: #selector(self.unhighlight), for: .touchUpInside)
         self.addTarget(self, action: #selector(self.unhighlight), for: .touchDragOutside)

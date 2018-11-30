@@ -24,8 +24,8 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
         super.viewDidLoad()
         setNavBar()
         
-        //btnForgotPwd1.titleLabel?.font =  UIFont(name: "FuturaStd-Medium", size: 20)
         
+        btnForgotPwd.titleLabel?.backgroundColor = UIColor.green
         
         txtEmail.text = "rrrr@rrrr.com"
         txtPwd.text = "qwerty12"
@@ -66,6 +66,11 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
     }
     override func viewDidAppear(_ animated: Bool) {
         //  animate()
+        super.viewDidAppear(animated)
+        //  btnForgotPwd.titleLabel?.font =  UIFont(name: "FuturaStd-Medium.otf", size: 15)
+        //btnForgotPwd.titleLabel?.font =  UIFont(name: "FuturaStd-Medium", size: 12)
+        // btnForgotPwd.titleLabel?.numberOfLines = 3
+        //btnForgotPwd.setTitle("\nForgot Password ?\n", for: .normal)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -138,7 +143,7 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
         super.didReceiveMemoryWarning()
     }
     @IBAction func gotoHomeController(_ sender: UIButton) {
-        router.goToHomeAsRoot(from: self)
+        router.goToHomeAsRoot()
     }
     
     
@@ -283,9 +288,9 @@ extension LoginViewController {
                 let userDefault = UserDefaults.standard
                 userDefault.set(true, forKey: Login.isLoggedIn)
                 userDefault.set(self.manager.userData?.token, forKey: Login.token)
-                UserDefaults.standard.set(try? PropertyListEncoder().encode(self.manager.userData), forKey:Login.userData)
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(self.manager.userData!), forKey:Login.userData)
                 
-                router.goToHomeAsRoot(from: self)
+                router.goToHomeAsRoot()
                 //self.checkIfUserIsVerified(isVerified : (self.manager.userData?.isVerified)!)
             }
             else {
@@ -305,8 +310,8 @@ extension LoginViewController {
             
             let userDefault = UserDefaults.standard
             userDefault.set(true, forKey: Login.isLoggedIn)
-            //            userDefault.set(self.manager.userData?.token, forKey: Login.token)
-            //   UserDefaults.standard.set(try? PropertyListEncoder().encode(self.manager.userData), forKey:Login.userData)
+            userDefault.set(self.manager.userData?.token, forKey: Login.token)
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(self.manager.userData), forKey:Login.userData)
             if FP.loginGuest == true && CartData.cartDict.count > 0{
                 
             }else{
@@ -372,7 +377,7 @@ extension LoginViewController{
                 userDefault.set(self.manager.userData?.token, forKey: Login.token)
                 UserDefaults.standard.set(try? PropertyListEncoder().encode(self.manager.userData), forKey:Login.userData)
                 
-                router.goToHomeAsRoot(from: self)
+                router.goToHomeAsRoot()
                 
             }
             else {

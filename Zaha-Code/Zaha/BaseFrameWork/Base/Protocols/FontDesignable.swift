@@ -79,6 +79,7 @@ extension FontDesignable where Self: UIView {
         }
         else if let view = self as? BaseUIButton {
             view.titleLabel?.font = fnt;
+            view.titleEdgeInsets = UIEdgeInsets.init(top: -5, left: 0, bottom: -5, right: 0)
             view.setTitleColor(fColor, for: .normal);
         }
     }

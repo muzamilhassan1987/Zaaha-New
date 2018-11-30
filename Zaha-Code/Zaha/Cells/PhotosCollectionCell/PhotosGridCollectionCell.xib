@@ -35,6 +35,16 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hasDropShadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rH1-lI-70V">
+                                <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rH1-lI-70V" secondAttribute="height" multiplier="1:1" id="uyG-PZ-Qkj"/>
+                                </constraints>
+                                <state key="normal" image="home_video_icon"/>
+                                <connections>
+                                    <action selector="PlayVideo:" destination="gTV-IL-0wX" eventType="touchUpInside" id="zmf-q5-ikN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -48,18 +58,23 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="rH1-lI-70V" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="IQt-tD-i0y"/>
                 <constraint firstItem="CUg-eH-RCb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TcX-PJ-zYz"/>
                 <constraint firstAttribute="trailing" secondItem="CUg-eH-RCb" secondAttribute="trailing" id="VI1-pL-EGM"/>
+                <constraint firstItem="rH1-lI-70V" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.6" id="bXJ-MR-jLF"/>
                 <constraint firstAttribute="bottom" secondItem="CUg-eH-RCb" secondAttribute="bottom" id="oax-SX-70b"/>
                 <constraint firstItem="CUg-eH-RCb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uFJ-LB-cA6"/>
+                <constraint firstItem="rH1-lI-70V" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="xgN-NK-hns"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="btnVideo" destination="rH1-lI-70V" id="gZr-wy-HU3"/>
                 <outlet property="imgPhoto" destination="KeH-Le-l4Z" id="MlY-C9-ZB3"/>
             </connections>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="bg-home" width="375" height="239"/>
+        <image name="home_video_icon" width="62" height="62"/>
     </resources>
 </document>

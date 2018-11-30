@@ -14,9 +14,11 @@ class SplashViewController: UIViewController , StoryBoardHandler {
         GlobalStatic.delay(delay: 3) { [weak self] in
 
             
+            
             if let strongSelf = self{
                // router.goToViewController(from: strongSelf, withTitle: "My Form")
-                router.goToLoginScreen(from: strongSelf)
+                strongSelf.checkLogin()
+//                router.goToLoginScreen(from: strongSelf)
             }
 
         }
@@ -26,7 +28,24 @@ class SplashViewController: UIViewController , StoryBoardHandler {
     
 
     
-    
+    func checkLogin(){
+        
+        let userDefault = UserDefaults.standard
+        if userDefault.bool(forKey: Login.isLoggedIn) == true {
+            if let data = UserDefaults.standard.value(forKey: Login.userData) as? Data {
+                CurrentUser.data = try? PropertyListDecoder().decode(UserData.self, from: data)
+            }
+            CurrentUser.token = UserDefaults.standard.value(forKey: Login.token) as! String
+            
+            router.goToHomeAsRoot()
+            // self.navigationController?.setViewControllers([HomeViewController.loadVC()], animated: true)
+            
+        }else{
+                router.goToLoginScreen()
+            // FP.loginGuest = false; self.navigationController?.setViewControllers([WalkThroughViewController.loadVC()], animated: true)
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

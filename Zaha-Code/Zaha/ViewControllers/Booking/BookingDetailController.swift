@@ -518,7 +518,7 @@ extension BookingDetailController: ViewAllCellDelegate
         if (type == .photo){
             router.goToUpPhotosController(from: self, type: detailType, videos: nil, photos: self.arrPhotos)
         }
-        else if (type == .photo){
+        else if (type == .video){
             router.goToUpPhotosController(from: self, type: detailType, videos: self.arrVideos, photos: nil)
         }
         
@@ -535,8 +535,8 @@ extension BookingDetailController{
         var parameters = [String : String]()
         
         
-        //parameters.updateValue("1", forKey: "experience_id")
-        parameters.updateValue(String(experienceData!.id!), forKey: "experience_id")
+        parameters.updateValue("1", forKey: "experience_id")
+        //parameters.updateValue(String(experienceData!.id!), forKey: "experience_id")
         print(parameters)
         let requestParam =  self.manager.paramsDetail(parameters as [String : AnyObject], type: detailType)
         self.manager.api(requestParam, completion: {

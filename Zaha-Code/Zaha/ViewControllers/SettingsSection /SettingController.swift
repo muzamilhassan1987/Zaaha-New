@@ -107,6 +107,13 @@ class SettingController: BaseViewController , StoryBoardHandler {
             
         }
     }
+    func doLogout() {
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        let userDefault = UserDefaults.standard
+        userDefault.set(false, forKey: Login.isLoggedIn)
+        router.goToLoginScreen()
+        router.goToLoginScreen()
+    }
     
     @IBAction func upDatePush(_ sender: BaseUIButton) {
         
@@ -160,7 +167,7 @@ extension SettingController{
         self.manager.apiLogout(requestParam, completion: {
             
             if self.manager.isSuccess {
-                router.goToLoginScreen(from: self)
+                self.doLogout()
             }
         })
     }

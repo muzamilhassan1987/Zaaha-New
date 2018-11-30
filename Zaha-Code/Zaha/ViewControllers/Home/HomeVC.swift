@@ -20,7 +20,7 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
     var detailType = BookingDetailEnum.none
     var arrDataList = [BaseHomeModel]()
     var manager = HomeManager()
-    let LocationMgr = UserLocationManager.SharedManager
+    //let LocationMgr = UserLocationManager.SharedManager
     var isDataLoaded = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
 //
 //
         
-        LocationMgr.delegate = self
+        //LocationMgr.delegate = self
         // Do any additional setup after loading the view.
         
         
@@ -324,6 +324,6 @@ extension HomeVC :LocationUpdateProtocol {
         CurrentUser.currentLocation = location
         print("Latitude : \(CurrentUser.currentLocation!.coordinate.latitude)")
         print("Longitude : \(CurrentUser.currentLocation!.coordinate.longitude)")
-        self.LocationMgr.stopUpdatingLocation()
+        //self.LocationMgr.stopUpdatingLocation()
     }
 }

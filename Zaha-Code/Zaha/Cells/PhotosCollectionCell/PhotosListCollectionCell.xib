@@ -13,18 +13,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosListCollectionCell" id="gTV-IL-0wX" customClass="PhotosListCollectionCell" customModule="Zaha" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="175" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="175" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGF-Bn-O8d">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="150"/>
                         <color key="backgroundColor" red="0.98600260419999997" green="0.95649797030000006" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-home" translatesAutoresizingMaskIntoConstraints="NO" id="Ltj-2v-saP" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="150"/>
                         <color key="backgroundColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -36,11 +36,24 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="hasDropShadow" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8C-7M-ssM">
+                        <rect key="frame" x="35" y="23" width="105" height="105"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="g8C-7M-ssM" secondAttribute="height" multiplier="1:1" id="bYl-dB-Upf"/>
+                        </constraints>
+                        <state key="normal" image="home_video_icon"/>
+                        <connections>
+                            <action selector="PlayVideo:" destination="gTV-IL-0wX" eventType="touchUpInside" id="YT5-rj-FYa"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="g8C-7M-ssM" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="8rc-eY-8AJ"/>
                 <constraint firstItem="vGF-Bn-O8d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9nB-qb-dDE"/>
+                <constraint firstItem="g8C-7M-ssM" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="Ci8-bx-q2b"/>
                 <constraint firstItem="vGF-Bn-O8d" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DFs-M1-HPK"/>
+                <constraint firstItem="g8C-7M-ssM" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.6" id="L9e-qk-LUL"/>
                 <constraint firstItem="Ltj-2v-saP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Q57-3s-YKk"/>
                 <constraint firstItem="Ltj-2v-saP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RON-bz-sf0"/>
                 <constraint firstAttribute="bottom" secondItem="Ltj-2v-saP" secondAttribute="bottom" id="Usu-vL-1YC"/>
@@ -49,12 +62,16 @@
                 <constraint firstAttribute="bottom" secondItem="vGF-Bn-O8d" secondAttribute="bottom" id="ylD-Ve-SUN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="175" height="150"/>
             <connections>
+                <outlet property="btnVideo" destination="g8C-7M-ssM" id="m8j-nr-BMm"/>
                 <outlet property="imgPhoto" destination="Ltj-2v-saP" id="Zkn-xB-SqH"/>
             </connections>
+            <point key="canvasLocation" x="232.80000000000001" y="155.62218890554723"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="bg-home" width="375" height="239"/>
+        <image name="home_video_icon" width="62" height="62"/>
     </resources>
 </document>

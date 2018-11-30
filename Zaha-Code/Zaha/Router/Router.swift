@@ -32,7 +32,7 @@ class Router  {
     }
     
     
-    func goToHomeAsRoot(from vc : viewController)
+    func goToHomeAsRoot()
     {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: Storyboards.sideMenu.rawValue, bundle: nil)
         
@@ -42,7 +42,7 @@ class Router  {
     }
     
     
-    func goToLoginScreen(from vc : viewController) {
+    func goToLoginScreen() {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: Storyboards.registeration.rawValue, bundle: nil)
         

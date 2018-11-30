@@ -10,6 +10,7 @@ import UIKit
 
 class PhotosGridCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var btnVideo: UIButton!
     @IBOutlet weak var imgPhoto: BaseUIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,12 +35,18 @@ class PhotosGridCollectionCell: UICollectionViewCell {
     
     func setPhoto(_ data : HomePicture) {
         
+        btnVideo.isHidden = true
         imgPhoto.setImageFromUrl(urlStr: data.imageUrl!)
     }
     func setVideo(_ data : HomeVideo) {
         
+        btnVideo.isHidden = false
+        print(data.videoThumbUrl!)
         imgPhoto.setImageFromUrl(urlStr: data.videoThumbUrl!)
     }
     
+    @IBAction func PlayVideo(_ sender: UIButton) {
+        
+    }
 
 }
