@@ -10,9 +10,14 @@ import UIKit
 
 class InboxCell: UITableViewCell {
 
+    @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var msgLabel: UILabel!
+    @IBOutlet weak var unreadMsgLabel: UILabel!
+    
+    @IBOutlet weak var unreadMsgBgView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

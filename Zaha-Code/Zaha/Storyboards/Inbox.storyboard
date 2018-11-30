@@ -13,6 +13,9 @@
         <array key="FuturaStd-Book.otf">
             <string>FuturaStd-Book</string>
         </array>
+        <array key="FuturaStd-Medium.otf">
+            <string>FuturaStd-Medium</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Inbox List View Controller-->
@@ -37,66 +40,75 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Inbox_cellBg" translatesAutoresizingMaskIntoConstraints="NO" id="RDr-M6-ITn">
                                                     <rect key="frame" x="5" y="5" width="404" height="83"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="Inbox_Circle" translatesAutoresizingMaskIntoConstraints="NO" id="liW-wn-NVB">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" image="Inbox_Circle" translatesAutoresizingMaskIntoConstraints="NO" id="liW-wn-NVB" customClass="BaseUIImageView" customModule="Zaha" customModuleProvider="target">
                                                     <rect key="frame" x="32" y="12.666666666666664" width="68" height="68"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="liW-wn-NVB" secondAttribute="height" multiplier="1:1" id="ZrM-T1-SFd"/>
+                                                        <constraint firstAttribute="height" constant="68" id="Bjs-ep-Q3T"/>
+                                                        <constraint firstAttribute="width" constant="68" id="aIJ-h8-bXK"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="34"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-GC-X5J">
-                                                    <rect key="frame" x="113" y="22" width="226" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="112.99999999999999" y="22" width="250.66666666666663" height="16"/>
+                                                    <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="16"/>
+                                                    <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 939393939393939393 939393939393939393 939393939393939393 939393939393939393 939393939393939393 939393939393939393" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeq-Aq-bEz">
-                                                    <rect key="frame" x="113" y="52" width="226" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 939393939393939393 9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeq-Aq-bEz">
+                                                    <rect key="frame" x="113" y="47" width="254" height="16"/>
+                                                    <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="16"/>
+                                                    <color key="textColor" red="0.61568627450980395" green="0.61568627450980395" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWP-J5-i4L">
-                                                    <rect key="frame" x="349" y="22" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWP-J5-i4L">
+                                                    <rect key="frame" x="373.66666666666669" y="22" width="24.333333333333314" height="11"/>
+                                                    <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="11"/>
+                                                    <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Inbox_notificationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Qfq-z7-i7I">
-                                                    <rect key="frame" x="359.66666666666669" y="52.666666666666664" width="21" height="20.999999999999993"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="Inbox_notificationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Qfq-z7-i7I">
+                                                    <rect key="frame" x="377" y="47" width="21" height="21"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-bS-vmX">
-                                                    <rect key="frame" x="362.66666666666669" y="57" width="15" height="12"/>
+                                                    <rect key="frame" x="380" y="51.666666666666664" width="15" height="12"/>
                                                     <fontDescription key="fontDescription" name="FuturaStd-Book" family="Futura Std" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="zeq-Aq-bEz" firstAttribute="top" secondItem="Nfb-GC-X5J" secondAttribute="bottom" constant="9" id="07s-vf-zvT"/>
-                                                <constraint firstItem="Nfb-GC-X5J" firstAttribute="top" secondItem="TBs-gs-haH" secondAttribute="top" constant="22" id="0Zh-sB-AHp"/>
-                                                <constraint firstItem="Nfb-GC-X5J" firstAttribute="leading" secondItem="liW-wn-NVB" secondAttribute="trailing" constant="13" id="4Da-rU-l9v"/>
+                                                <constraint firstItem="liW-wn-NVB" firstAttribute="top" secondItem="TBs-gs-haH" secondAttribute="top" constant="12.67" id="3og-TY-lTE"/>
+                                                <constraint firstItem="v9q-bS-vmX" firstAttribute="centerX" secondItem="Qfq-z7-i7I" secondAttribute="centerX" id="5iF-aF-k2U"/>
                                                 <constraint firstItem="RDr-M6-ITn" firstAttribute="top" secondItem="TBs-gs-haH" secondAttribute="top" constant="5" id="8yW-jX-A64"/>
                                                 <constraint firstAttribute="bottom" secondItem="RDr-M6-ITn" secondAttribute="bottom" constant="5" id="AYR-FT-NcT"/>
-                                                <constraint firstItem="Qfq-z7-i7I" firstAttribute="top" secondItem="BWP-J5-i4L" secondAttribute="bottom" constant="9.5999999999999996" id="Dfa-Hl-Uzo"/>
-                                                <constraint firstItem="BWP-J5-i4L" firstAttribute="leading" secondItem="Nfb-GC-X5J" secondAttribute="trailing" constant="10" id="IXD-dz-gkk"/>
-                                                <constraint firstItem="zeq-Aq-bEz" firstAttribute="trailing" secondItem="Nfb-GC-X5J" secondAttribute="trailing" id="IsQ-1k-uKv"/>
-                                                <constraint firstAttribute="trailing" secondItem="BWP-J5-i4L" secondAttribute="trailing" constant="23" id="Ive-d0-lUf"/>
+                                                <constraint firstItem="zeq-Aq-bEz" firstAttribute="leading" secondItem="Nfb-GC-X5J" secondAttribute="leading" id="Jnf-YX-7uM"/>
+                                                <constraint firstItem="BWP-J5-i4L" firstAttribute="top" secondItem="Nfb-GC-X5J" secondAttribute="top" id="KOU-oS-4uI"/>
+                                                <constraint firstAttribute="trailing" secondItem="BWP-J5-i4L" secondAttribute="trailing" constant="16" id="NQo-cV-YuZ"/>
+                                                <constraint firstItem="Qfq-z7-i7I" firstAttribute="trailing" secondItem="BWP-J5-i4L" secondAttribute="trailing" id="O1a-iF-vNa"/>
+                                                <constraint firstItem="Qfq-z7-i7I" firstAttribute="leading" secondItem="zeq-Aq-bEz" secondAttribute="trailing" constant="10" id="Ows-5v-PVT"/>
                                                 <constraint firstItem="RDr-M6-ITn" firstAttribute="leading" secondItem="TBs-gs-haH" secondAttribute="leading" constant="5" id="R5I-Lr-Mt5"/>
-                                                <constraint firstItem="v9q-bS-vmX" firstAttribute="centerY" secondItem="Qfq-z7-i7I" secondAttribute="centerY" id="RvC-ml-QrU"/>
-                                                <constraint firstItem="RDr-M6-ITn" firstAttribute="bottom" secondItem="zeq-Aq-bEz" secondAttribute="bottom" constant="15" id="V9y-Xt-5dS"/>
-                                                <constraint firstItem="liW-wn-NVB" firstAttribute="leading" secondItem="TBs-gs-haH" secondAttribute="leading" constant="32" id="b7r-4M-cJY"/>
+                                                <constraint firstItem="Qfq-z7-i7I" firstAttribute="top" secondItem="zeq-Aq-bEz" secondAttribute="top" id="ZAi-Kx-7cQ"/>
+                                                <constraint firstItem="Nfb-GC-X5J" firstAttribute="leading" secondItem="liW-wn-NVB" secondAttribute="trailing" constant="13" id="ZrI-Us-38K"/>
+                                                <constraint firstItem="zeq-Aq-bEz" firstAttribute="top" secondItem="Nfb-GC-X5J" secondAttribute="bottom" constant="9" id="azJ-dc-naX"/>
+                                                <constraint firstItem="Nfb-GC-X5J" firstAttribute="top" secondItem="TBs-gs-haH" secondAttribute="top" constant="22" id="bJS-Qa-wlt"/>
                                                 <constraint firstAttribute="trailing" secondItem="RDr-M6-ITn" secondAttribute="trailing" constant="5" id="cqS-He-h9i"/>
-                                                <constraint firstItem="BWP-J5-i4L" firstAttribute="top" secondItem="Nfb-GC-X5J" secondAttribute="top" id="fV7-GX-Fs0"/>
-                                                <constraint firstItem="zeq-Aq-bEz" firstAttribute="leading" secondItem="Nfb-GC-X5J" secondAttribute="leading" id="g8J-ap-l5D"/>
-                                                <constraint firstItem="v9q-bS-vmX" firstAttribute="centerX" secondItem="Qfq-z7-i7I" secondAttribute="centerX" id="sGR-Pg-PCd"/>
-                                                <constraint firstItem="liW-wn-NVB" firstAttribute="centerY" secondItem="RDr-M6-ITn" secondAttribute="centerY" id="wJm-el-Exq"/>
-                                                <constraint firstItem="Qfq-z7-i7I" firstAttribute="centerX" secondItem="BWP-J5-i4L" secondAttribute="centerX" id="wMK-AK-xU3"/>
+                                                <constraint firstItem="BWP-J5-i4L" firstAttribute="leading" secondItem="Nfb-GC-X5J" secondAttribute="trailing" constant="10" id="kcG-pg-YO5"/>
+                                                <constraint firstItem="v9q-bS-vmX" firstAttribute="centerY" secondItem="Qfq-z7-i7I" secondAttribute="centerY" id="owm-qU-Pb9"/>
+                                                <constraint firstItem="liW-wn-NVB" firstAttribute="leading" secondItem="TBs-gs-haH" secondAttribute="leading" constant="32" id="u1v-lK-lSQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="BWP-J5-i4L" id="s2T-UW-WGY"/>
                                             <outlet property="msgLabel" destination="zeq-Aq-bEz" id="RGw-Ho-fNX"/>
                                             <outlet property="nameLabel" destination="Nfb-GC-X5J" id="7hz-E5-4DE"/>
+                                            <outlet property="unreadMsgBgView" destination="Qfq-z7-i7I" id="EZ4-fL-8MH"/>
+                                            <outlet property="unreadMsgLabel" destination="v9q-bS-vmX" id="48U-9C-teF"/>
+                                            <outlet property="userImageView" destination="liW-wn-NVB" id="Qif-wq-eAQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

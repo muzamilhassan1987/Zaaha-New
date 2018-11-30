@@ -252,6 +252,12 @@
 		591F02A22186E7C4000CCE12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591F02A02186E7C4000CCE12 /* LaunchScreen.storyboard */; };
 		591F02AD2186E7C4000CCE12 /* ZahaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F02AC2186E7C4000CCE12 /* ZahaTests.swift */; };
 		591F02B82186E7C4000CCE12 /* ZahaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F02B72186E7C4000CCE12 /* ZahaUITests.swift */; };
+		59CCC69521B161A00082177A /* InboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCC69421B161A00082177A /* InboxManager.swift */; };
+		59CCC69B21B169060082177A /* InboxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCC69621B169050082177A /* InboxData.swift */; };
+		59CCC69C21B169060082177A /* InboxResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCC69721B169060082177A /* InboxResponse.swift */; };
+		59CCC69D21B169060082177A /* InboxThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCC69821B169060082177A /* InboxThread.swift */; };
+		59CCC69E21B169060082177A /* InboxListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCC69921B169060082177A /* InboxListing.swift */; };
+		59CCC69F21B169060082177A /* InboxReceiverDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCC69A21B169060082177A /* InboxReceiverDetail.swift */; };
 		59CFAE1E21AFD37300082C04 /* InboxListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CFAE1D21AFD37300082C04 /* InboxListViewController.swift */; };
 		59CFAE2021AFD37C00082C04 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CFAE1F21AFD37C00082C04 /* ChatViewController.swift */; };
 		59CFAE2321AFD81900082C04 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CFAE2221AFD81900082C04 /* ChatCell.swift */; };
@@ -559,6 +565,12 @@
 		591F02B32186E7C4000CCE12 /* ZahaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZahaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		591F02B72186E7C4000CCE12 /* ZahaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZahaUITests.swift; sourceTree = "<group>"; };
 		591F02B92186E7C4000CCE12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59CCC69421B161A00082177A /* InboxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxManager.swift; sourceTree = "<group>"; };
+		59CCC69621B169050082177A /* InboxData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxData.swift; sourceTree = "<group>"; };
+		59CCC69721B169060082177A /* InboxResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxResponse.swift; sourceTree = "<group>"; };
+		59CCC69821B169060082177A /* InboxThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxThread.swift; sourceTree = "<group>"; };
+		59CCC69921B169060082177A /* InboxListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxListing.swift; sourceTree = "<group>"; };
+		59CCC69A21B169060082177A /* InboxReceiverDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxReceiverDetail.swift; sourceTree = "<group>"; };
 		59CFAE1D21AFD37300082C04 /* InboxListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxListViewController.swift; sourceTree = "<group>"; };
 		59CFAE1F21AFD37C00082C04 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		59CFAE2221AFD81900082C04 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
@@ -859,6 +871,7 @@
 			children = (
 				D0A8059021A33A1700F0F245 /* CommonResponse.swift */,
 				D0A8059321A33A1700F0F245 /* CommonServerResponse.swift */,
+				59CCC68921B161820082177A /* Inbox */,
 				D067EA0321AAA1760040A492 /* MyExp */,
 				D0A8059121A33A1700F0F245 /* CreateExp */,
 				D0A8058C21A33A1600F0F245 /* TypeList */,
@@ -1327,6 +1340,7 @@
 				1DF409BF219CA8120009B178 /* RegisterManager.swift */,
 				1A823388219D40D700EBDE31 /* CMSManager.swift */,
 				1A4BE9D6219E9B930027A67F /* CultureManager.swift */,
+				59CCC69421B161A00082177A /* InboxManager.swift */,
 			);
 			path = ServiceManagers;
 			sourceTree = "<group>";
@@ -1414,6 +1428,18 @@
 				591F02B92186E7C4000CCE12 /* Info.plist */,
 			);
 			path = ZahaUITests;
+			sourceTree = "<group>";
+		};
+		59CCC68921B161820082177A /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				59CCC69621B169050082177A /* InboxData.swift */,
+				59CCC69921B169060082177A /* InboxListing.swift */,
+				59CCC69A21B169060082177A /* InboxReceiverDetail.swift */,
+				59CCC69721B169060082177A /* InboxResponse.swift */,
+				59CCC69821B169060082177A /* InboxThread.swift */,
+			);
+			path = Inbox;
 			sourceTree = "<group>";
 		};
 		59CFAE1821AFD28400082C04 /* Inbox */ = {
@@ -1854,6 +1880,7 @@
 				1A089946219564D70036AEF3 /* PhotosController.swift in Sources */,
 				1A665EC02188426600B7CBA2 /* UIColor+Utility.swift in Sources */,
 				1A665F9D21885DC600B7CBA2 /* GenericServerResponse.swift in Sources */,
+				59CCC69E21B169060082177A /* InboxListing.swift in Sources */,
 				1A665ECF2188426600B7CBA2 /* CheckBoxButton.swift in Sources */,
 				1A665EE82188426600B7CBA2 /* FillDesignable.swift in Sources */,
 				1A665F7D21884E3900B7CBA2 /* ImagePickerHelper.swift in Sources */,
@@ -1907,6 +1934,7 @@
 				1A665EB72188426600B7CBA2 /* AFManagerProtocol.swift in Sources */,
 				1A665EF02188426600B7CBA2 /* BaseLayoutConstraint.swift in Sources */,
 				1A665F2D21884A4E00B7CBA2 /* EnterEmailViewController.swift in Sources */,
+				59CCC69B21B169060082177A /* InboxData.swift in Sources */,
 				1A4BE9D3219E9A060027A67F /* CultureResponse.swift in Sources */,
 				1A665EDC2188426600B7CBA2 /* BaseUITextField.swift in Sources */,
 				1A665EC72188426600B7CBA2 /* UILabel+Extensions.swift in Sources */,
@@ -1970,10 +1998,12 @@
 				1A665F1C21884A1600B7CBA2 /* ViewController.swift in Sources */,
 				1A665EF5218846C500B7CBA2 /* Constants.swift in Sources */,
 				1A665ECB2188426600B7CBA2 /* DesignUtility.swift in Sources */,
+				59CCC69521B161A00082177A /* InboxManager.swift in Sources */,
 				D0A805A521A33B5700F0F245 /* PickerView.swift in Sources */,
 				1AE12C7121A67D52000C64AD /* HomeReview.swift in Sources */,
 				1A823392219D539600EBDE31 /* HomeData.swift in Sources */,
 				1A665EBD2188426600B7CBA2 /* MaskType.swift in Sources */,
+				59CCC69F21B169060082177A /* InboxReceiverDetail.swift in Sources */,
 				1A665F3921884A5A00B7CBA2 /* RegisterViewController.swift in Sources */,
 				1D89867B2193834E00AD57C9 /* SettingController.swift in Sources */,
 				1A665F6421884C3500B7CBA2 /* Router.swift in Sources */,
@@ -1981,6 +2011,7 @@
 				D067EA0A21AAA1760040A492 /* MyExperience.swift in Sources */,
 				1DF409C8219CA85B0009B178 /* UserData.swift in Sources */,
 				1A0899552196A90A0036AEF3 /* CreateExperienceController.swift in Sources */,
+				59CCC69D21B169060082177A /* InboxThread.swift in Sources */,
 				1D9A4D8021976E9A00BDAC84 /* BaseViewController+Extension.swift in Sources */,
 				1A665EE22188426600B7CBA2 /* BaseUITextView.swift in Sources */,
 				1A4BE9D7219E9B930027A67F /* CultureManager.swift in Sources */,
@@ -2010,6 +2041,7 @@
 				1A665EEB2188426600B7CBA2 /* MaskDesignable.swift in Sources */,
 				1AB84F562194752D004D6C58 /* HeaderTitleView.swift in Sources */,
 				1D9A4D692197496F00BDAC84 /* UpcomingExpDetailDescriptionTableViewCell.swift in Sources */,
+				59CCC69C21B169060082177A /* InboxResponse.swift in Sources */,
 				1A665EF6218846C500B7CBA2 /* Storyboards.swift in Sources */,
 				1D9A4D8F21982FAA00BDAC84 /* ButtonsCell.swift in Sources */,
 				1A665EE62188426600B7CBA2 /* CornerDesignable.swift in Sources */,
