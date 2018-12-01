@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
         setNavBar()
         
         
-        btnForgotPwd.titleLabel?.backgroundColor = UIColor.green
+       // btnForgotPwd.titleLabel?.backgroundColor = UIColor.green
         
         txtEmail.text = "rrrr@rrrr.com"
         txtPwd.text = "qwerty12"

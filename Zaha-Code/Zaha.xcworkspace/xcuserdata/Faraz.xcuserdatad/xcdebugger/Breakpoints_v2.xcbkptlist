@@ -58,7 +58,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-                  timestampString = "565130680.318313"
+                  timestampString = "565328800.538875"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
@@ -73,7 +73,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-                  timestampString = "565130680.320936"
+                  timestampString = "565328800.541168"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "126"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-            timestampString = "564876174.3219351"
+            timestampString = "565308255.162263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-            timestampString = "564876247.312379"
+            timestampString = "565308255.162419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-            timestampString = "564876249.24401"
+            timestampString = "565308255.1625479"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
@@ -154,7 +154,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-                  timestampString = "565130680.34363"
+                  timestampString = "565328800.575411"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -169,7 +169,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-                  timestampString = "565130680.345542"
+                  timestampString = "565328800.579724"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "101"
@@ -177,6 +177,22 @@
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Zaha/ServiceManagers/InboxManager.swift"
+            timestampString = "565328800.249871"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "apiSendChatMsgs(_:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

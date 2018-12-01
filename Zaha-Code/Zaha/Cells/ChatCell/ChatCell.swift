@@ -11,6 +11,8 @@ import UIKit
 class ChatCell: UITableViewCell {
     @IBOutlet weak var bubbleImageView: UIImageView!
     @IBOutlet weak var chatMsg: UILabel!
+    @IBOutlet weak var chatTimeLabel: UILabel!
+    @IBOutlet weak var userImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +25,7 @@ class ChatCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setDataForChatWithSenderType(chatMsgType: ChatMsgType){
+    func setDataForChatWithSenderType(chatMsgType: ChatMsgType, withMsg: ChatMessages){
         
         if chatMsgType.rawValue == ChatMsgType.chatMsgTypeSender.rawValue{
            
@@ -34,8 +36,15 @@ class ChatCell: UITableViewCell {
                                 resizingMode: .stretch)
                 .withRenderingMode(.alwaysTemplate)
             bubbleImageView.tintColor =  UIColor.init(hexString: "#575756")
+            chatTimeLabel.text = Date.getFormattedDate(string: withMsg.updatedAt!, formatter: "h:mm a")
             
-            chatMsg.text = "ChatMsgType.chatMsgTypeSender.rawValue"
+            print("sender OBJ")
+            print(withMsg.senderDetail)
+            
+            if let imageUrl = withMsg.senderDetail?.imageUrl{
+                userImageView.setImageFromUrl(urlStr: imageUrl)
+            }
+            chatMsg.text = withMsg.message
             
         }else{
             let image = UIImage(named: "Inbox_messageSentBox")
@@ -45,8 +54,17 @@ class ChatCell: UITableViewCell {
                                 resizingMode: .stretch)
                 .withRenderingMode(.alwaysTemplate)
            bubbleImageView.tintColor =  UIColor.init(hexString: "#C89F68")
+            chatTimeLabel.text = Date.getFormattedDate(string: withMsg.updatedAt!, formatter: "h:mm a")
             
-            chatMsg.text = "ChatMsgType.chatMsgTypeReceiver.rawValue"
+            print("Receiver OBJ")
+            print(withMsg.receiverDetail)
+            
+            if let imageUrl = withMsg.receiverDetail?.imageUrl{
+                print("Receiver")
+                print(imageUrl)
+             userImageView.setImageFromUrl(urlStr: imageUrl)
+            }
+            chatMsg.text =  withMsg.message
         }
         
     }

@@ -8,15 +8,41 @@
 
 import UIKit
 
-class InboxListViewController: UIViewController {
+class InboxListViewController: BaseViewController,StoryBoardHandler {
+    
+    static var myStoryBoard: (forIphone: String, forIpad: String?) = (Storyboards.inbox.rawValue , nil)
     var inboxManager = InboxManager()
     @IBOutlet weak var inboxTableView: UITableView!
     var inboxArray  = [InboxThread]()
+    var receiverId = 0
+    var threadId = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getInboxListing()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        baseNavigation?.lblTitle.text = "Inbox"
+        baseNavigation?.createHomeButton(target: self, #selector(actionMenuButton))
+        
+    }
+    
+    func setNavBar()
+    {
+        self.title = "Inbox"
+        self.navigationController?.isNavigationBarHidden = false
+        
+        let menuImg = UIImage.init(named: "home_menuIcon")?.flipIfNeeded()
+        
+        self.addBarButtonItemWithImage(menuImg!,CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionLeft, self, #selector(actionMenuButton))
+    }
+    @objc func actionMenuButton()
+    {
+        sideMenuController?.showLeftViewAnimated()
     }
     
     func getInboxListing() {
@@ -37,15 +63,19 @@ class InboxListViewController: UIViewController {
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showChatingView"{
+            var vc = segue.destination as! ChatViewController
+            vc.receiverId = receiverId
+            vc.threadId = threadId
+            //Data has to be a variable name in your RandomViewController
+        }
     }
-    */
+ 
 
 }
 
@@ -59,11 +89,12 @@ extension InboxListViewController: UITableViewDataSource,UITableViewDelegate{
     
         let inboxObj = inboxArray[indexPath.row]
         
-        
+        cell.selectionStyle = .none
         cell.dateLabel.text = Date.getFormattedDate(string: inboxObj.updatedAt!, formatter: "h:mm a")
         cell.nameLabel.text = inboxObj.senderDetail?.userName
         cell.msgLabel.text = inboxObj.message
-        cell.userImageView.setImageFromUrl(urlStr: (inboxObj.senderDetail?.imageUrl!)!)
+        cell.userImageView.setImageFromUrl(urlStr: (inboxObj.receiverDetail?.imageUrl!)!)
+        receiverId  = inboxObj.receiverId!
         if inboxObj.unreadMessageCount! > 0{
             cell.unreadMsgLabel.text = "\(inboxObj.unreadMessageCount)"
             cell.unreadMsgLabel.isHidden = false
@@ -76,6 +107,8 @@ extension InboxListViewController: UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          let inboxObj = inboxArray[indexPath.row]
+        threadId = inboxObj.id!
         self.performSegue(withIdentifier: "showChatingView", sender: self)
     }
     

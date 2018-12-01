@@ -16,6 +16,7 @@ public enum Storyboards : String {
     case sideMenu = "SideMenu"
     case booking = "Booking"
     case upcommingExperience = "UpcommingExperienceModule"
+    case inbox = "InboxModule"
     
 }
 

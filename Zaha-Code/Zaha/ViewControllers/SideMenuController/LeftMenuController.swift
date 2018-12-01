@@ -115,6 +115,9 @@ extension Menu
 //
 //
             
+        case .inbox:
+            return InboxListViewController.loadVC()
+            
         case .booking:
             return BookingListController.loadVC()
         case .setting:
@@ -331,11 +334,11 @@ extension LeftMenuController: UITableViewDelegate
 ////                self.showAboutPopUp()
 //                return
 //            }
-            if (menu == Menu.inbox) {
-                
-                //                self.showAboutPopUp()
-                return
-            }
+//            if (menu == Menu.inbox) {
+//
+//                //                self.showAboutPopUp()
+//                return
+//            }
             self.changeControllers(menu)
         }
     }
