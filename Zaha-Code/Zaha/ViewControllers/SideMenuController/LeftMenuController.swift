@@ -154,16 +154,16 @@ class LeftMenuController: BaseViewController
     var manager = CultureManager()
 
     var menuArray = [
-        ["icon":"sidebar_homeIcon", "type":Menu.home.rawValue],
-        ["icon":"sidebar_storiesIcon", "type":Menu.stories.rawValue],
-        ["icon":"sidebar_upcomingExpIcon", "type":Menu.upcomingExp.rawValue],
-        ["icon":"sidebar_nearbyIcon", "type":Menu.nearMe.rawValue],
-        ["icon":"sidebar_pastExpIcon", "type":Menu.pastExp.rawValue],
-        ["icon":"sidebar_myExpIcon", "type":Menu.myExp.rawValue],
-        ["icon":"sidebar_inboxIcon", "type":Menu.inbox.rawValue],
-        ["icon":"sidebar_settingsIcon", "type":Menu.setting.rawValue],
-        ["icon":"sidebar_aboutIcon", "type":Menu.about.rawValue],
-        ["icon":"sidebar_aboutIcon", "type":Menu.booking.rawValue]
+        ["icon":"sidebar_homeIcon", "type":Menu.home.rawValue, "selectedIcon":"Home_Selected"],
+        ["icon":"sidebar_storiesIcon", "type":Menu.stories.rawValue, "selectedIcon":"Stories_Selected"],
+        ["icon":"sidebar_upcomingExpIcon", "type":Menu.upcomingExp.rawValue, "selectedIcon":"Upcoming_Selected"],
+        ["icon":"sidebar_nearbyIcon", "type":Menu.nearMe.rawValue, "selectedIcon":"NearMe_Selected"],
+        ["icon":"sidebar_pastExpIcon", "type":Menu.pastExp.rawValue, "selectedIcon":"Past_Selected"],
+        ["icon":"sidebar_myExpIcon", "type":Menu.myExp.rawValue, "selectedIcon":"MyExp_Selected"],
+        ["icon":"sidebar_inboxIcon", "type":Menu.inbox.rawValue, "selectedIcon":"Inbox_Selected"],
+        ["icon":"sidebar_settingsIcon", "type":Menu.setting.rawValue, "selectedIcon":"Settings_Selected"],
+        ["icon":"sidebar_aboutIcon", "type":Menu.about.rawValue, "selectedIcon":"About_Selected"],
+        ["icon":"sidebar_booking", "type":Menu.booking.rawValue, "selectedIcon":"Booking_Selected"]
     ]
     
     override func didReceiveMemoryWarning()

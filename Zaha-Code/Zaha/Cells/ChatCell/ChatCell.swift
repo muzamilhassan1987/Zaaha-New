@@ -50,7 +50,7 @@ class ChatCell: UITableViewCell {
             let image = UIImage(named: "Inbox_messageSentBox")
             bubbleImageView.image = image?
                 .resizableImage(withCapInsets:
-                    UIEdgeInsets(top: 22, left: 76, bottom: 22, right: 76),
+                    UIEdgeInsets(top: 15, left: 29, bottom: 15, right: 29),
                                 resizingMode: .stretch)
                 .withRenderingMode(.alwaysTemplate)
            bubbleImageView.tintColor =  UIColor.init(hexString: "#C89F68")

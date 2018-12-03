@@ -96,7 +96,7 @@ extension InboxListViewController: UITableViewDataSource,UITableViewDelegate{
         cell.userImageView.setImageFromUrl(urlStr: (inboxObj.receiverDetail?.imageUrl!)!)
         receiverId  = inboxObj.receiverId!
         if inboxObj.unreadMessageCount! > 0{
-            cell.unreadMsgLabel.text = "\(inboxObj.unreadMessageCount)"
+            cell.unreadMsgLabel.text = "\(inboxObj.unreadMessageCount!)"
             cell.unreadMsgLabel.isHidden = false
             cell.unreadMsgBgView.isHidden = false
         }else{

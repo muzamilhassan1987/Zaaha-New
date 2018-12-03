@@ -58,7 +58,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-                  timestampString = "565328800.538875"
+                  timestampString = "565557810.0960211"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "125"
@@ -73,7 +73,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-                  timestampString = "565328800.541168"
+                  timestampString = "565557810.097744"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "126"
@@ -154,7 +154,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-                  timestampString = "565328800.575411"
+                  timestampString = "565557810.112648"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -169,7 +169,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-                  timestampString = "565328800.579724"
+                  timestampString = "565557810.1143"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "101"
@@ -193,6 +193,22 @@
             endingLineNumber = "110"
             landmarkName = "apiSendChatMsgs(_:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Zaha/ViewControllers/SideMenuController/LeftMenuController.swift"
+            timestampString = "565557809.804897"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "LeftMenuController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
