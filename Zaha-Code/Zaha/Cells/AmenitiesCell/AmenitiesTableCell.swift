@@ -64,6 +64,9 @@ class AmenitiesTableCell: UITableViewCell {
         case .upcomingExperience:
             self.appendUpcomingData(data)
             break
+        case .nearMe:
+            self.appendUpcomingData(data)
+            break
         case .booking:
             break
         case .stories:
@@ -73,6 +76,7 @@ class AmenitiesTableCell: UITableViewCell {
         case .pastExperience:
             self.appendPastData(data)
             break
+        
         default:
             print("")
         }

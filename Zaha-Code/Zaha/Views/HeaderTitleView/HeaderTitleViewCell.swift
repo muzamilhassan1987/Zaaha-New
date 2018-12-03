@@ -38,7 +38,7 @@ class HeaderTitleViewCell: UITableViewCell {
             break
         case .viewProfile:
             let user = data as! UserData
-            lblTitle.text = user.firstName! + user.lastName!
+            lblTitle.text = user.firstName! + " " + user.lastName!
             lblTitle.textAlignment = .center
             break
         case .experienceDetail:

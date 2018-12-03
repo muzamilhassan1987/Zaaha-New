@@ -18,6 +18,10 @@ class SideMenuTableViewCell: UITableViewCell
         return DesignUtility.getValueFromRatio(45)
     }
     
+    
+
+
+
     override func setSelected(_ selected: Bool, animated: Bool)
     {
         super.setSelected(selected, animated: animated)
@@ -27,6 +31,7 @@ class SideMenuTableViewCell: UITableViewCell
             let selectedView:UIView = UIView()
             selectedView.backgroundColor = Color.appDarkPink
             self.selectedBackgroundView? = selectedView
+//            lblTitle.textColor = UIColor.init(hexString: "#C89F68")
         }
     }
     
@@ -39,6 +44,7 @@ class SideMenuTableViewCell: UITableViewCell
             let selectedView:UIView = UIView()
             selectedView.backgroundColor = Color.appDarkPink
             self.selectedBackgroundView? = selectedView
+//            lblTitle.textColor = UIColor.init(hexString: "#C89F68")
         }
     }
     

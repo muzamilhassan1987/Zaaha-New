@@ -147,6 +147,8 @@ class LeftMenuController: BaseViewController
     @IBOutlet weak var btnProfile: BaseUIButton!
     @IBOutlet weak var lblName: BaseUILabel!
     private let kTableHeaderHeight: CGFloat = DesignUtility.getValueFromRatio(80)
+    
+    var lastSelectedCell:SideMenuTableViewCell?
     //let manager = LogoutManager()
 //    let realm = try! Realm()
     var manager = CultureManager()
@@ -182,6 +184,7 @@ class LeftMenuController: BaseViewController
         //NSNotification.Name(rawValue: kLocationDidChangeNotification)
         self.view.backgroundColor = UIColor.white
        // setHeader()
+        
     }
     
     
@@ -189,7 +192,7 @@ class LeftMenuController: BaseViewController
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        tblSideMenu.reloadData()
     }
     override func viewWillAppear(_ animated: Bool)
     {
@@ -318,7 +321,19 @@ extension LeftMenuController: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        tableView.deselectRow(at: indexPath, animated: true)
+        //tableView.deselectRow(at: indexPath, animated: true)
+        //tableView.selectRow(at: index, animated: <#T##Bool#>, scrollPosition: <#T##UITableView.ScrollPosition#>)
+
+        let cell:SideMenuTableViewCell = tableView.cellForRow(at: indexPath) as! SideMenuTableViewCell
+       
+        cell.imgSideMenuIcon.image = UIImage(named:menuArray[indexPath.row]["icon"]!)
+        if let sel = lastSelectedCell {
+            if (cell != sel) {
+                cell.lblTitle.textColor = UIColor.init(hexString: "#C89F68")
+                lastSelectedCell!.lblTitle.textColor = UIColor.init(hexString: "#554C5B")
+                lastSelectedCell = cell
+            }
+        }
         
         let cellType = (self.menuArray[indexPath.row] as NSDictionary)["type"] as! String
         
@@ -357,8 +372,18 @@ extension LeftMenuController: UITableViewDataSource
         
         cell.imgSideMenuIcon.image = UIImage(named:menuArray[indexPath.row]["icon"]!)
         cell.lblTitle.text = menuArray[indexPath.row]["type"]
+        cell.lblTitle.textColor = UIColor.init(hexString: "#554C5B")
+        if lastSelectedCell == nil {
+            lastSelectedCell = cell
+            lastSelectedCell!.lblTitle.textColor = UIColor.init(hexString: "#C89F68")
+            
+        }
+        else {
+            lastSelectedCell!.lblTitle.textColor = UIColor.init(hexString: "#C89F68")
+        }
         return cell
     }
+    
 }
 
 extension LeftMenuController

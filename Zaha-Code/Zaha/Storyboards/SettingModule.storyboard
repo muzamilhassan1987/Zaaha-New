@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="FuturaStd-Medium.otf">
+        <array key="FuturaStd-Medium.ttf">
             <string>FuturaStd-Medium</string>
         </array>
     </customFonts>
@@ -35,7 +35,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TrG-JS-NiW">
                                                         <rect key="frame" x="16" y="52" width="343" height="200"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxZ-7V-K6O" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxZ-7V-K6O" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="40" width="155" height="30"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -60,7 +60,7 @@
                                                                     <action selector="changePassword:" destination="YS4-H0-NRC" eventType="touchUpInside" id="oGl-He-69y"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63k-4S-DXY" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63k-4S-DXY" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="75" width="60" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <state key="normal" title="Logout">
@@ -75,7 +75,7 @@
                                                                     <action selector="logout:" destination="YS4-H0-NRC" eventType="touchUpInside" id="yX0-no-DIz"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVi-hd-d7N" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVi-hd-d7N" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="110" width="155" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <state key="normal" title="Push Notifications">
@@ -104,7 +104,7 @@
                                                                     <action selector="upDatePush:" destination="YS4-H0-NRC" eventType="touchUpInside" id="JIS-Af-rPp"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI7-iV-ikb" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI7-iV-ikb" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="150" width="159" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <state key="normal" title="Become a Maestro">
@@ -175,7 +175,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTV-81-e1W">
                                                         <rect key="frame" x="16" y="268" width="343" height="170"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USc-y6-IuT" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USc-y6-IuT" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="37" width="186" height="30"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -194,7 +194,7 @@
                                                                     <action selector="showAbout:" destination="YS4-H0-NRC" eventType="touchUpInside" id="1Sz-xq-0Cb"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrQ-Yy-wJd" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrQ-Yy-wJd" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="72" width="118" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <state key="normal" title="Privacy Policy">
@@ -209,7 +209,7 @@
                                                                     <action selector="showPrivacyPolicy:" destination="YS4-H0-NRC" eventType="touchUpInside" id="IeT-U5-HGl"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kx-Se-otg" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kx-Se-otg" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="107" width="186" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <state key="normal" title="Terms and Conditions">
@@ -266,7 +266,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1Q-dR-l9O">
                                                         <rect key="frame" x="16" y="453" width="343" height="170"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4Y-8Q-HGl" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4Y-8Q-HGl" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="37" width="93" height="30"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
@@ -282,7 +282,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizefontLarge"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cC-Mm-499" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cC-Mm-499" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="72" width="84" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <state key="normal" title="Feedback">
@@ -294,7 +294,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizefontLarge"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyL-2Y-7D1" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyL-2Y-7D1" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="107" width="93" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                 <state key="normal" title="Contact us">

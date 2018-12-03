@@ -86,11 +86,27 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
             let editImg = UIImage.init(named: "storeis_plusIcon")?.flipIfNeeded()
             baseNavigation?.createButton(editImg!, CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionRight, self, #selector(gotoCreateStoryController))
         }
+        if (detailType == .upcomingExperience || detailType == .pastExperience) {
+            let editImg = UIImage.init(named: "pastExp_filterIcon")?.flipIfNeeded()
+            baseNavigation?.createButton(editImg!, CustomNavBarEnum.CustomBarButtonItemPosition.BarButtonItemPositionRight, self, #selector(showFilter))
+        }
     }
     
     @objc func gotoCreateStoryController() {
         router.goToCreateStory(from: self)
     }
+    
+    @objc func showFilter() {
+        let controller = FilterController.loadVC()
+//        controller.type = AboutType.privacy
+        controller.view.backgroundColor = UIColor.clear
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true) {
+            
+        }
+    }
+    
     
     
     func setInitialData() {

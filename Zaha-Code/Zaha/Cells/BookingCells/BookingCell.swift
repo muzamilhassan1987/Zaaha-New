@@ -48,9 +48,9 @@ class BookingCell: UITableViewCell {
             lblMaestro.text = experience?.maestrosName!
             lblDateTime.text = experience?.publishDate!
             
-            lblTitle.text = "Lunch at Beach!"
-            lblMaestro.text = "Maestro: Saida Ahmed Imam"
-            lblDateTime.text = "Date/Time: Sat 9th Dec / 0800HRS"
+//            lblTitle.text = "Lunch at Beach!"
+//            lblMaestro.text = "Maestro: Saida Ahmed Imam"
+//            lblDateTime.text = "Date/Time: Sat 9th Dec / 0800HRS"
             imgMain.setImageFromUrl(urlStr: experience!.imageUrl!)
             setBookingStatus()
             if(userRole == .explorer){

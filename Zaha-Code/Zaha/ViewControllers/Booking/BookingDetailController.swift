@@ -113,6 +113,11 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
             tempCollectionCount = 8
             tempDetailCollection = AmenitiesCollectionCell.pastExpDetailData
             break
+        case .nearMe:
+            baseNavigation?.lblTitle.text = "Near Me".uppercased()
+            fetchPtlist("UpComingExperience")
+            tempCollectionCount = 6
+            tempDetailCollection = AmenitiesCollectionCell.upcomingDetailData
         default:
             print("")
         }
@@ -295,7 +300,7 @@ extension BookingDetailController : UITableViewDataSource, UITableViewDelegate {
                 cell.setData(experienceData!, type: detailType)
                 return cell
         case cellIdentifiers.buttons.rawValue:
-            if (detailType == .none || detailType == .upcomingExperience) {
+            if (detailType == .none || detailType == .upcomingExperience || detailType == .nearMe) {
                 if(experienceData?.bookingStatus! == BookingStatus.Available.rawValue) {
                     let cell = tableView.dequeueReusableCell(withIdentifier: identifier!, for: indexPath) as! ButtonsCell
                     cell.buttonCellDelegate = self
@@ -534,8 +539,8 @@ extension BookingDetailController{
         var parameters = [String : String]()
         
         
-        parameters.updateValue("1", forKey: "experience_id")
-        //parameters.updateValue(String(experienceData!.id!), forKey: "experience_id")
+        //parameters.updateValue("1", forKey: "experience_id")
+        parameters.updateValue(String(experienceData!.id!), forKey: "experience_id")
         print(parameters)
         let requestParam =  self.manager.paramsDetail(parameters as [String : AnyObject], type: detailType)
         self.manager.api(requestParam, completion: {

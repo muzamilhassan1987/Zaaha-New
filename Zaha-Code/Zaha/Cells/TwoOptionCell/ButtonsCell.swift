@@ -47,6 +47,10 @@ class ButtonsCell: UITableViewCell {
             btnReject.isHidden = true
             btnConfirm.isHidden = true
             break
+        case .nearMe:
+            btnReject.isHidden = true
+            btnConfirm.isHidden = true
+            break
         default:
             print("")
         }
