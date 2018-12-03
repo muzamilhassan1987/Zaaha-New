@@ -17,9 +17,6 @@
 		1A2FEA0F21A2B552005FF1BB /* DetailPostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FEA0E21A2B552005FF1BB /* DetailPostManager.swift */; };
 		1A2FEA1321A2BF07005FF1BB /* DetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FEA1221A2BF07005FF1BB /* DetailData.swift */; };
 		1A2FEA1521A2BF11005FF1BB /* DetailExperienceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FEA1421A2BF11005FF1BB /* DetailExperienceBase.swift */; };
-		1A43166221AD2537002AF59E /* FuturaStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A43165F21AD2537002AF59E /* FuturaStd-Medium.otf */; };
-		1A43166321AD2537002AF59E /* FuturaStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A43166021AD2537002AF59E /* FuturaStd-Bold.otf */; };
-		1A43166421AD2537002AF59E /* FuturaStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A43166121AD2537002AF59E /* FuturaStd-Book.otf */; };
 		1A4BE9D3219E9A060027A67F /* CultureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BE9D0219E9A060027A67F /* CultureResponse.swift */; };
 		1A4BE9D4219E9A060027A67F /* CultureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BE9D1219E9A060027A67F /* CultureData.swift */; };
 		1A4BE9D5219E9A060027A67F /* CultureBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BE9D2219E9A060027A67F /* CultureBase.swift */; };
@@ -169,6 +166,16 @@
 		1AE12C7121A67D52000C64AD /* HomeReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE12C6E21A67D52000C64AD /* HomeReview.swift */; };
 		1AE68C7921A548C000D82B0B /* BookingStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE68C7721A548C000D82B0B /* BookingStatusCell.swift */; };
 		1AE68C7A21A548C000D82B0B /* BookingStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE68C7821A548C000D82B0B /* BookingStatusCell.xib */; };
+		1D60C10B21B3C00F00E9F21B /* FuturaStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D60C10421B3C00E00E9F21B /* FuturaStd-Bold.ttf */; };
+		1D60C10C21B3C00F00E9F21B /* FuturaStd-BookOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D60C10521B3C00E00E9F21B /* FuturaStd-BookOblique.ttf */; };
+		1D60C10D21B3C00F00E9F21B /* FuturaStd-LightOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D60C10621B3C00E00E9F21B /* FuturaStd-LightOblique.ttf */; };
+		1D60C10E21B3C00F00E9F21B /* FuturaStd-MediumOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D60C10721B3C00E00E9F21B /* FuturaStd-MediumOblique.ttf */; };
+		1D60C10F21B3C00F00E9F21B /* FuturaStd-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D60C10821B3C00E00E9F21B /* FuturaStd-Light.ttf */; };
+		1D60C11021B3C00F00E9F21B /* FuturaStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D60C10921B3C00F00E9F21B /* FuturaStd-Medium.ttf */; };
+		1D60C11121B3C00F00E9F21B /* FuturaStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D60C10A21B3C00F00E9F21B /* FuturaStd-Book.ttf */; };
+		1D60C11321B3D4A900E9F21B /* BookingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60C11221B3D4A900E9F21B /* BookingManager.swift */; };
+		1D60C11721B4203A00E9F21B /* DetailOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60C11521B4203A00E9F21B /* DetailOptionCell.swift */; };
+		1D60C11821B4203A00E9F21B /* DetailOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D60C11621B4203A00E9F21B /* DetailOptionCell.xib */; };
 		1D692458219891DC002CDE61 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D692457219891DC002CDE61 /* EditProfileController.swift */; };
 		1D69245A2198ABF3002CDE61 /* BookSpecialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6924592198ABF3002CDE61 /* BookSpecialController.swift */; };
 		1D69245C2198B030002CDE61 /* PastExperience.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D69245B2198B030002CDE61 /* PastExperience.plist */; };
@@ -325,9 +332,6 @@
 		1A2FEA0E21A2B552005FF1BB /* DetailPostManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPostManager.swift; sourceTree = "<group>"; };
 		1A2FEA1221A2BF07005FF1BB /* DetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailData.swift; sourceTree = "<group>"; };
 		1A2FEA1421A2BF11005FF1BB /* DetailExperienceBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailExperienceBase.swift; sourceTree = "<group>"; };
-		1A43165F21AD2537002AF59E /* FuturaStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Medium.otf"; sourceTree = "<group>"; };
-		1A43166021AD2537002AF59E /* FuturaStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Bold.otf"; sourceTree = "<group>"; };
-		1A43166121AD2537002AF59E /* FuturaStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Book.otf"; sourceTree = "<group>"; };
 		1A4BE9D0219E9A060027A67F /* CultureResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureResponse.swift; sourceTree = "<group>"; };
 		1A4BE9D1219E9A060027A67F /* CultureData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureData.swift; sourceTree = "<group>"; };
 		1A4BE9D2219E9A060027A67F /* CultureBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureBase.swift; sourceTree = "<group>"; };
@@ -477,6 +481,16 @@
 		1AE12C6E21A67D52000C64AD /* HomeReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeReview.swift; sourceTree = "<group>"; };
 		1AE68C7721A548C000D82B0B /* BookingStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingStatusCell.swift; sourceTree = "<group>"; };
 		1AE68C7821A548C000D82B0B /* BookingStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingStatusCell.xib; sourceTree = "<group>"; };
+		1D60C10421B3C00E00E9F21B /* FuturaStd-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Bold.ttf"; sourceTree = "<group>"; };
+		1D60C10521B3C00E00E9F21B /* FuturaStd-BookOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-BookOblique.ttf"; sourceTree = "<group>"; };
+		1D60C10621B3C00E00E9F21B /* FuturaStd-LightOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-LightOblique.ttf"; sourceTree = "<group>"; };
+		1D60C10721B3C00E00E9F21B /* FuturaStd-MediumOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-MediumOblique.ttf"; sourceTree = "<group>"; };
+		1D60C10821B3C00E00E9F21B /* FuturaStd-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Light.ttf"; sourceTree = "<group>"; };
+		1D60C10921B3C00F00E9F21B /* FuturaStd-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Medium.ttf"; sourceTree = "<group>"; };
+		1D60C10A21B3C00F00E9F21B /* FuturaStd-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Book.ttf"; sourceTree = "<group>"; };
+		1D60C11221B3D4A900E9F21B /* BookingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingManager.swift; sourceTree = "<group>"; };
+		1D60C11521B4203A00E9F21B /* DetailOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOptionCell.swift; sourceTree = "<group>"; };
+		1D60C11621B4203A00E9F21B /* DetailOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailOptionCell.xib; sourceTree = "<group>"; };
 		1D692457219891DC002CDE61 /* EditProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		1D6924592198ABF3002CDE61 /* BookSpecialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSpecialController.swift; sourceTree = "<group>"; };
 		1D69245B2198B030002CDE61 /* PastExperience.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PastExperience.plist; sourceTree = "<group>"; };
@@ -956,6 +970,7 @@
 		1A665F4321884BBB00B7CBA2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1D60C11421B4201600E9F21B /* DetailOptionCell */,
 				59CFAE2121AFD7FF00082C04 /* ChatCell */,
 				1D9A4D8C21982F9100BDAC84 /* TwoOptionCell */,
 				1D9A4D8121981A2600BDAC84 /* AmenitiesCell */,
@@ -1149,6 +1164,15 @@
 			path = DescriptionCell;
 			sourceTree = "<group>";
 		};
+		1D60C11421B4201600E9F21B /* DetailOptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				1D60C11521B4203A00E9F21B /* DetailOptionCell.swift */,
+				1D60C11621B4203A00E9F21B /* DetailOptionCell.xib */,
+			);
+			path = DetailOptionCell;
+			sourceTree = "<group>";
+		};
 		1D8986702192468100AD57C9 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
@@ -1256,9 +1280,13 @@
 		1D8E530C218F0B0F00F49674 /* FuturaStd */ = {
 			isa = PBXGroup;
 			children = (
-				1A43166021AD2537002AF59E /* FuturaStd-Bold.otf */,
-				1A43166121AD2537002AF59E /* FuturaStd-Book.otf */,
-				1A43165F21AD2537002AF59E /* FuturaStd-Medium.otf */,
+				1D60C10421B3C00E00E9F21B /* FuturaStd-Bold.ttf */,
+				1D60C10A21B3C00F00E9F21B /* FuturaStd-Book.ttf */,
+				1D60C10521B3C00E00E9F21B /* FuturaStd-BookOblique.ttf */,
+				1D60C10821B3C00E00E9F21B /* FuturaStd-Light.ttf */,
+				1D60C10621B3C00E00E9F21B /* FuturaStd-LightOblique.ttf */,
+				1D60C10921B3C00F00E9F21B /* FuturaStd-Medium.ttf */,
+				1D60C10721B3C00E00E9F21B /* FuturaStd-MediumOblique.ttf */,
 			);
 			path = FuturaStd;
 			sourceTree = "<group>";
@@ -1338,6 +1366,7 @@
 		1DF409BD219CA8120009B178 /* ServiceManagers */ = {
 			isa = PBXGroup;
 			children = (
+				1D60C11221B3D4A900E9F21B /* BookingManager.swift */,
 				D0A8059C21A33A9200F0F245 /* ExperienceManager.swift */,
 				D0A8059D21A33A9200F0F245 /* TypeListManager.swift */,
 				1A2FEA0E21A2B552005FF1BB /* DetailPostManager.swift */,
@@ -1641,6 +1670,7 @@
 				1D8E52FC218EE6D600F49674 /* Roboto-Condensed.ttf in Resources */,
 				1D9A4D7E219769D700BDAC84 /* PhotoCollectionTableCell.xib in Resources */,
 				1A665F5721884BD900B7CBA2 /* AcceptCheckboxTableViewCell.xib in Resources */,
+				1D60C11821B4203A00E9F21B /* DetailOptionCell.xib in Resources */,
 				1D8E52EE218EE6D600F49674 /* Poppins-Regular.ttf in Resources */,
 				1D8E52EC218EE6D600F49674 /* Poppins-Medium.ttf in Resources */,
 				D084539E218E12B7001E57B0 /* StoriesModule.storyboard in Resources */,
@@ -1657,14 +1687,15 @@
 				1D8E52F0218EE6D600F49674 /* Lato-Medium.ttf in Resources */,
 				1D69245E2198C0D6002CDE61 /* MyExperience.plist in Resources */,
 				1D9A4D8521981A4500BDAC84 /* AmenitiesTableCell.xib in Resources */,
-				1A43166421AD2537002AF59E /* FuturaStd-Book.otf in Resources */,
 				1A665F8A21884EC700B7CBA2 /* banner_logo@2x.png in Resources */,
 				1D8E5305218EE6D600F49674 /* Roboto-Bold.ttf in Resources */,
 				1D89866F2192460200AD57C9 /* Booking.storyboard in Resources */,
 				1A08994B219570920036AEF3 /* PhotosGridCollectionCell.xib in Resources */,
 				1AE68C7A21A548C000D82B0B /* BookingStatusCell.xib in Resources */,
+				1D60C11121B3C00F00E9F21B /* FuturaStd-Book.ttf in Resources */,
 				1D8E52F6218EE6D600F49674 /* RobotoSlab-Thin.ttf in Resources */,
 				1AB84F5221945D21004D6C58 /* HomeTopView.xib in Resources */,
+				1D60C10F21B3C00F00E9F21B /* FuturaStd-Light.ttf in Resources */,
 				1A665F9021884EC700B7CBA2 /* bg-home@2x.png in Resources */,
 				1D8E52F5218EE6D600F49674 /* Roboto-Regular.ttf in Resources */,
 				1D8E52EF218EE6D600F49674 /* Poppins-SemiBold.ttf in Resources */,
@@ -1673,6 +1704,7 @@
 				D08453AC218E1318001E57B0 /* AboutModule.storyboard in Resources */,
 				1D8E52FF218EE6D600F49674 /* Roboto-ThinItalic.ttf in Resources */,
 				1A665FA4218861D500B7CBA2 /* LoginModule.storyboard in Resources */,
+				1D60C10C21B3C00F00E9F21B /* FuturaStd-BookOblique.ttf in Resources */,
 				1AB84F64219484BE004D6C58 /* DescriptionCell.xib in Resources */,
 				D08453A0218E12C9001E57B0 /* UpcommingExperienceModule.storyboard in Resources */,
 				1D8E5300218EE6D600F49674 /* Roboto-BoldItalic.ttf in Resources */,
@@ -1680,7 +1712,7 @@
 				1D8E5302218EE6D600F49674 /* Roboto-CondensedItalic.ttf in Resources */,
 				1A665F8C21884EC700B7CBA2 /* HeaderCollectionReusableView.xib in Resources */,
 				1D9A4D92219867F400BDAC84 /* UpComingExperience.plist in Resources */,
-				1A43166221AD2537002AF59E /* FuturaStd-Medium.otf in Resources */,
+				1D60C10E21B3C00F00E9F21B /* FuturaStd-MediumOblique.ttf in Resources */,
 				1D8E52F1218EE6D600F49674 /* Roboto-Medium.ttf in Resources */,
 				1D8E52F3218EE6D600F49674 /* RobotoCondensed-Bold.ttf in Resources */,
 				1D8986792192477900AD57C9 /* BookingCell.xib in Resources */,
@@ -1704,9 +1736,11 @@
 				1D8E52F4218EE6D600F49674 /* RobotoCondensed-Light.ttf in Resources */,
 				1D8E5306218EE6D600F49674 /* Roboto-Thin.ttf in Resources */,
 				1D8E5307218EE6D600F49674 /* Roboto-Black.ttf in Resources */,
+				1D60C10B21B3C00F00E9F21B /* FuturaStd-Bold.ttf in Resources */,
 				1D8E52F7218EE6D600F49674 /* Roboto-MediumItalic.ttf in Resources */,
+				1D60C10D21B3C00F00E9F21B /* FuturaStd-LightOblique.ttf in Resources */,
+				1D60C11021B3C00F00E9F21B /* FuturaStd-Medium.ttf in Resources */,
 				1D8E52F8218EE6D600F49674 /* Roboto-BoldCondensed.ttf in Resources */,
-				1A43166321AD2537002AF59E /* FuturaStd-Bold.otf in Resources */,
 				591F029D2186E7C0000CCE12 /* Main.storyboard in Resources */,
 				D08453A4218E12E2001E57B0 /* PastExperienceModule.storyboard in Resources */,
 				1D9A4D682197496F00BDAC84 /* UpcomingExpDetailImageTableViewCell.xib in Resources */,
@@ -1911,6 +1945,7 @@
 				1A665EAB2188426600B7CBA2 /* FormErrors.swift in Sources */,
 				1A823391219D539600EBDE31 /* HomeStory.swift in Sources */,
 				1A665ED12188426600B7CBA2 /* BaseUIPageControl.swift in Sources */,
+				1D60C11321B3D4A900E9F21B /* BookingManager.swift in Sources */,
 				1A665EC22188426600B7CBA2 /* Integer+Extensions.swift in Sources */,
 				1A665EF12188426600B7CBA2 /* Utility.swift in Sources */,
 				1DF409D021A138A70009B178 /* UserLocationManager.swift in Sources */,
@@ -2080,6 +2115,7 @@
 				591F02982186E7C0000CCE12 /* AppDelegate.swift in Sources */,
 				1D9A4D7D219769D700BDAC84 /* PhotoCollectionTableCell.swift in Sources */,
 				D067EA0B21AAA1760040A492 /* MyExperienceExperiences.swift in Sources */,
+				1D60C11721B4203A00E9F21B /* DetailOptionCell.swift in Sources */,
 				1D8E5312218F2CF800F49674 /* MenuSelectionController.swift in Sources */,
 				1A665F2B21884A4E00B7CBA2 /* ForgetContainerViewController.swift in Sources */,
 			);

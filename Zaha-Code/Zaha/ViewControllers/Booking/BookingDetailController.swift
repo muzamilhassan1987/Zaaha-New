@@ -25,7 +25,6 @@ class BookingDetailController: BaseViewController, StoryBoardHandler  {
     var arrPhotos = [HomePicture]()
     var arrVideos = [HomeVideo]()
     var arrStories = [HomeStory]()
-    var isDataLoaded = false
     override func viewDidLoad() {
         super.viewDidLoad()
         

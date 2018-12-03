@@ -46,6 +46,7 @@ class LoginViewController: BaseViewController, StoryBoardHandler {
     {
         super.viewWillAppear(animated)
         baseNavigation?.lblTitle.text = "LOGIN"
+        baseNavigation?.createBackButton()
     }
     
     func setNavBar()

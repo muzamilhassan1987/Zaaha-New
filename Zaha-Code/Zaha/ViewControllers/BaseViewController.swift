@@ -8,6 +8,7 @@ class BaseViewController: UIViewController {
     
     var storedOffsets = [Int: CGFloat]()
     var baseNavigation : BaseNavigationController?
+    var isDataLoaded = false
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -16,6 +16,10 @@ class ForgetPasswordViewController: BaseViewController, StoryBoardHandler {
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        baseNavigation?.createBackButton()
+    }
     func setNavBar()
     {
         baseNavigation?.lblTitle.text = "FORGOT PASSWORD"

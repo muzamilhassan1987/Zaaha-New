@@ -30,5 +30,7 @@
 	<string>FuturaStd-Book</string>
 	<key>sizeXXLarge</key>
 	<integer>24</integer>
+	<key>sizeXMLarge</key>
+	<integer>21</integer>
 </dict>
 </plist>

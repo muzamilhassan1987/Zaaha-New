@@ -39,6 +39,7 @@ class HomeExperience : Codable, BaseHomeModel {
 	let userId : Int?
     let sortingDate : Date?
     var bookingStatus : Int?
+    var isPublished : Int?
     let videos : [HomeVideo]?
     
     
@@ -71,6 +72,8 @@ class HomeExperience : Codable, BaseHomeModel {
         case reviews = "reviews"
         case stories = "stories"
         case videos = "videos"
+        case isPublished = "is_published"
+        
 	}
 	required init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -91,7 +94,7 @@ class HomeExperience : Codable, BaseHomeModel {
 		title = try values.decodeIfPresent(String.self, forKey: .title) ?? String()
 		userId = try values.decodeIfPresent(Int.self, forKey: .userId) ?? Int()
         bookingStatus = try values.decodeIfPresent(Int.self, forKey: .bookingStatus) ?? Int()
-        
+        isPublished = try values.decodeIfPresent(Int.self, forKey: .isPublished) ?? Int()
         noSeats = try values.decodeIfPresent(Int.self, forKey: .noSeats) ?? Int()
         rating = try values.decodeIfPresent(Int.self, forKey: .rating) ?? Int()
         

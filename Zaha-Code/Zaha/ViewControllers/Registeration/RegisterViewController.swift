@@ -78,6 +78,8 @@ class RegisterViewController: BaseViewController, StoryBoardHandler {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        baseNavigation?.createBackButton()
         //self.navigationController?.isNavigationBarHidden = true
     }
     override func didReceiveMemoryWarning() {

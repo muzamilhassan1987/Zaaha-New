@@ -108,6 +108,12 @@ enum UserType{
     
 }
 
+enum UserRole : Int{
+    case maestro = 4
+    case explorer = 3
+    
+}
+
 
 enum OrderData{
     static var orderNotification : (type: String, id :Int) = ("", 0)
@@ -156,6 +162,7 @@ enum cellIdentifiers : String {
     case buttons = "ButtonsCell"
     case viewAll = "ViewAllCell"
     case photoVideoCell = "PhotoCollectionTableCell"
+    case detailOptionCell = "DetailOptionCell"
     
 }
 
@@ -163,7 +170,7 @@ enum cellIdentifiers : String {
 enum BookingStatus : Int {
     case Available
     case Pending
-    case Cancel
     case Rejected
+    case Cancel
     case Completed  
 }

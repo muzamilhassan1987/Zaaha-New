@@ -244,7 +244,13 @@ open class BaseUIButton: UIButton, FontDesignable, CornerDesignable, BorderDesig
     }
     
     open override func layoutSubviews() {
-        super.layoutSubviews();
+        super.layoutSubviews()
+        
+//        var myFrame : CGRect = (self.titleLabel?.frame)!
+//        myFrame.size.height = self.bounds.size.height;
+//        myFrame.origin.y = self.titleEdgeInsets.top;
+//        self.titleLabel!.frame = myFrame;
+        
         if applyHorizontalValues == true {
             configureButtonImage();
         }

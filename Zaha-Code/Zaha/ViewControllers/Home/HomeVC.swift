@@ -21,9 +21,11 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
     var arrDataList = [BaseHomeModel]()
     var manager = HomeManager()
     //let LocationMgr = UserLocationManager.SharedManager
-    var isDataLoaded = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("CURRENT USER TOKEN")
+        print(CurrentUser.data?.token!)
+        print(CurrentUser.data?.id!)
         setNavBar()
         setInitialData()
         print(detailType)
@@ -236,10 +238,10 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = UIStoryboard(name: "InboxModule", bundle: nil).instantiateViewController(withIdentifier: "InboxListViewController") as! InboxListViewController
-        self.navigationController?.pushViewController(vc, animated: true)
-        
-        return
+//        let vc = UIStoryboard(name: "InboxModule", bundle: nil).instantiateViewController(withIdentifier: "InboxListViewController") as! InboxListViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        
+//        return
             
             
             
