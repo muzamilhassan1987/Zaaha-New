@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="FuturaStd-Bold.ttf">
+            <string>FuturaStd-Bold</string>
+        </array>
         <array key="FuturaStd-Medium.ttf">
             <string>FuturaStd-Medium</string>
         </array>
@@ -103,8 +106,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Zaha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vl-m2-HiD" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="24" width="202" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <rect key="frame" x="30" y="24" width="193" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="FuturaStd-Bold" family="Futura Std" pointSize="21"/>
                                         <color key="textColor" red="0.77647058823529413" green="0.61960784313725492" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -114,8 +117,8 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with love" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsW-ys-AJ5" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="62" width="140.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <rect key="frame" x="30" y="60.5" width="97" height="13"/>
+                                        <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -158,10 +161,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </constraint>
                                     <constraint firstItem="iVB-Fd-AvG" firstAttribute="leading" secondItem="0vl-m2-HiD" secondAttribute="leading" id="FdV-jz-BSX"/>
-                                    <constraint firstItem="WsW-ys-AJ5" firstAttribute="top" secondItem="0vl-m2-HiD" secondAttribute="bottom" constant="8" id="WJU-oc-JDv">
+                                    <constraint firstItem="WsW-ys-AJ5" firstAttribute="top" secondItem="0vl-m2-HiD" secondAttribute="bottom" constant="15" id="WJU-oc-JDv">
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
-                                                <real key="value" value="8"/>
+                                                <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </constraint>
@@ -228,7 +231,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="_cornerSides" value="topleft,topright"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
+                                        <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -700,7 +703,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4r-rO-xE5" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="25" width="180" height="26.5"/>
+                                                <rect key="frame" x="20" y="30" width="180" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <color key="textColor" red="0.77647058820000003" green="0.61960784310000006" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -711,7 +714,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-Ar-OYC" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="101.5" width="335" height="45"/>
+                                                <rect key="frame" x="20" y="106.5" width="335" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="ruJ-lr-NDK">
                                                         <userDefinedRuntimeAttributes>
@@ -743,7 +746,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="501-Y4-u7I" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="166.5" width="335" height="45"/>
+                                                <rect key="frame" x="20" y="171.5" width="335" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="cAa-AY-cU8">
                                                         <userDefinedRuntimeAttributes>
@@ -775,7 +778,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oep-0I-Myz" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="231.5" width="335" height="45"/>
+                                                <rect key="frame" x="20" y="236.5" width="335" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="zy3-y1-5BZ">
                                                         <userDefinedRuntimeAttributes>
@@ -807,7 +810,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F3S-wQ-RMP" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="296.5" width="335" height="45"/>
+                                                <rect key="frame" x="20" y="301.5" width="335" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="07B-aQ-enn">
                                                         <userDefinedRuntimeAttributes>
@@ -839,7 +842,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Gd-gf-AHY" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="361.5" width="335" height="45"/>
+                                                <rect key="frame" x="20" y="366.5" width="335" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="mNF-PN-6ST">
                                                         <userDefinedRuntimeAttributes>
@@ -871,7 +874,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezy-ii-7oR" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="491.5" width="131" height="48"/>
+                                                <rect key="frame" x="20" y="496.5" width="131" height="48"/>
                                                 <state key="normal" title="SIGNUP" backgroundImage="login_login_btn">
                                                     <color key="titleColor" red="0.77647058820000003" green="0.61960784310000006" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -885,7 +888,7 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Upload Photo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CoX-4J-eAL" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="426.5" width="335" height="45"/>
+                                                <rect key="frame" x="20" y="431.5" width="335" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="WNK-QZ-lO5">
                                                         <userDefinedRuntimeAttributes>
@@ -917,7 +920,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Y3-5o-edA" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
-                                                <rect key="frame" x="253" y="434" width="97" height="30"/>
+                                                <rect key="frame" x="253" y="439" width="97" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ZGT-cC-GUw">
                                                         <userDefinedRuntimeAttributes>
@@ -981,10 +984,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </constraint>
-                                            <constraint firstItem="V4r-rO-xE5" firstAttribute="top" secondItem="kGM-ss-Vmj" secondAttribute="top" constant="25" id="TGS-Wv-g8B">
+                                            <constraint firstItem="V4r-rO-xE5" firstAttribute="top" secondItem="kGM-ss-Vmj" secondAttribute="top" constant="30" id="TGS-Wv-g8B">
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
-                                                        <real key="value" value="25"/>
+                                                        <real key="value" value="30"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </constraint>
@@ -1066,6 +1069,319 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGB-0K-taj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2173.913043478261" y="64.402173913043484"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="2Oq-Py-Isx">
+            <objects>
+                <viewController id="DD7-Ke-aN0" customClass="RegisterViewController" customModule="Zaha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Fn-Le-Ypw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbh-Ps-IaX" customClass="BaseUIView" customModule="Zaha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_cornerSides" value="topleft,topright"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-gj-q17">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iA9-Rx-1wF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZI-vv-Zb1" customClass="BaseUILabel" customModule="Zaha" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="30" width="180" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <color key="textColor" red="0.77647058820000003" green="0.61960784310000006" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeXLarge"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42A-uE-StI" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="106.5" width="335" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="DX7-ge-pYj">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                                <real key="value" value="45"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </constraint>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="login_userIcon"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageLeftPadding">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="borderThemeColor" value="fieldBorder"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageRightPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="textfieldGray"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axY-l6-c0f" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="171.5" width="335" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="kPY-Ko-FBt">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                                <real key="value" value="45"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </constraint>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="signup_emailIcon"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageLeftPadding">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="borderThemeColor" value="fieldBorder"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageRightPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="textfieldGray"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-OR-gfr" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="236.5" width="335" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="pq7-MI-nTb">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                                <real key="value" value="45"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </constraint>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="signup_emailIcon"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageLeftPadding">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="borderThemeColor" value="fieldBorder"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageRightPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="textfieldGray"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlT-b9-Tnq" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="301.5" width="335" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="7gQ-7Z-1Dm">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                                <real key="value" value="45"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </constraint>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="singup_lockIcon"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageLeftPadding">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="borderThemeColor" value="fieldBorder"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageRightPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="textfieldGray"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R99-Qe-7Mf" customClass="BaseUITextField" customModule="Zaha" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="366.5" width="335" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Z9k-co-FDH">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                                <real key="value" value="45"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </constraint>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="singup_lockIcon"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageLeftPadding">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="borderThemeColor" value="fieldBorder"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftImageRightPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="textfieldGray"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-rZ-d9H" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="496.5" width="131" height="48"/>
+                                                <state key="normal" title="SEND" backgroundImage="login_login_btn">
+                                                    <color key="titleColor" red="0.77647058820000003" green="0.61960784310000006" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontNameTheme" value="fontMedium"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontColorTheme" value="themeText"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSizeTheme" value="sizeMedium"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signupBtnTapped" destination="DD7-Ke-aN0" eventType="touchUpInside" id="1h6-CB-5XN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="R99-Qe-7Mf" firstAttribute="trailing" secondItem="dlT-b9-Tnq" secondAttribute="trailing" id="0KC-cp-TRm"/>
+                                            <constraint firstItem="R99-Qe-7Mf" firstAttribute="top" secondItem="dlT-b9-Tnq" secondAttribute="bottom" constant="20" id="2zk-ix-Ovl">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                            <constraint firstItem="dlT-b9-Tnq" firstAttribute="top" secondItem="oY1-OR-gfr" secondAttribute="bottom" constant="20" id="7ZN-Y4-0Iu">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                            <constraint firstItem="42A-uE-StI" firstAttribute="leading" secondItem="Bje-Rd-ghG" secondAttribute="leading" constant="20" id="8ve-Xa-gdd"/>
+                                            <constraint firstItem="axY-l6-c0f" firstAttribute="leading" secondItem="42A-uE-StI" secondAttribute="leading" id="9JU-I1-nuW"/>
+                                            <constraint firstItem="oY1-OR-gfr" firstAttribute="trailing" secondItem="axY-l6-c0f" secondAttribute="trailing" id="HGc-bg-xnh"/>
+                                            <constraint firstItem="WEd-rZ-d9H" firstAttribute="leading" secondItem="axY-l6-c0f" secondAttribute="leading" id="IAD-HZ-xfz"/>
+                                            <constraint firstItem="axY-l6-c0f" firstAttribute="top" secondItem="42A-uE-StI" secondAttribute="bottom" constant="20" id="NAc-z5-ye3">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                            <constraint firstItem="42A-uE-StI" firstAttribute="top" secondItem="jZI-vv-Zb1" secondAttribute="bottom" constant="50" id="NAr-K2-ZNR">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                            <constraint firstItem="oY1-OR-gfr" firstAttribute="leading" secondItem="axY-l6-c0f" secondAttribute="leading" id="Nhq-KE-Eso"/>
+                                            <constraint firstItem="jZI-vv-Zb1" firstAttribute="leading" secondItem="Bje-Rd-ghG" secondAttribute="leading" constant="20" id="XC7-aE-QPB"/>
+                                            <constraint firstItem="axY-l6-c0f" firstAttribute="trailing" secondItem="42A-uE-StI" secondAttribute="trailing" id="gLH-vp-WLa"/>
+                                            <constraint firstItem="dlT-b9-Tnq" firstAttribute="leading" secondItem="oY1-OR-gfr" secondAttribute="leading" id="obo-Fx-n2p"/>
+                                            <constraint firstItem="Bje-Rd-ghG" firstAttribute="trailing" secondItem="42A-uE-StI" secondAttribute="trailing" constant="20" id="oyd-o0-dSO"/>
+                                            <constraint firstItem="dlT-b9-Tnq" firstAttribute="trailing" secondItem="oY1-OR-gfr" secondAttribute="trailing" id="qur-6w-vsT"/>
+                                            <constraint firstItem="oY1-OR-gfr" firstAttribute="top" secondItem="axY-l6-c0f" secondAttribute="bottom" constant="20" id="tjo-Ft-K8e">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                            <constraint firstItem="R99-Qe-7Mf" firstAttribute="leading" secondItem="dlT-b9-Tnq" secondAttribute="leading" id="xit-tc-L85"/>
+                                            <constraint firstItem="jZI-vv-Zb1" firstAttribute="top" secondItem="Bje-Rd-ghG" secondAttribute="top" constant="30" id="zKW-it-A9a">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="Bje-Rd-ghG"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iA9-Rx-1wF" firstAttribute="leading" secondItem="KZc-gj-q17" secondAttribute="leading" id="S3z-KE-2ix"/>
+                                    <constraint firstAttribute="trailing" secondItem="iA9-Rx-1wF" secondAttribute="trailing" id="YJi-qd-uL8"/>
+                                    <constraint firstItem="iA9-Rx-1wF" firstAttribute="top" secondItem="KZc-gj-q17" secondAttribute="top" id="awP-lk-qas"/>
+                                    <constraint firstAttribute="bottom" secondItem="iA9-Rx-1wF" secondAttribute="bottom" id="zK3-A1-eYg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JNY-B6-SaL" firstAttribute="bottom" secondItem="KZc-gj-q17" secondAttribute="bottom" id="5Y6-zG-Yye"/>
+                            <constraint firstItem="KZc-gj-q17" firstAttribute="leading" secondItem="JNY-B6-SaL" secondAttribute="leading" id="TZ4-Mu-IoM"/>
+                            <constraint firstItem="KZc-gj-q17" firstAttribute="top" secondItem="dbh-Ps-IaX" secondAttribute="top" id="Vul-5v-Kjq"/>
+                            <constraint firstItem="iA9-Rx-1wF" firstAttribute="height" secondItem="1Fn-Le-Ypw" secondAttribute="height" id="Vvj-xa-F4R"/>
+                            <constraint firstItem="KZc-gj-q17" firstAttribute="trailing" secondItem="JNY-B6-SaL" secondAttribute="trailing" id="bCm-XV-eXU"/>
+                            <constraint firstItem="dbh-Ps-IaX" firstAttribute="leading" secondItem="JNY-B6-SaL" secondAttribute="leading" id="f9j-Dj-xd5"/>
+                            <constraint firstItem="JNY-B6-SaL" firstAttribute="trailing" secondItem="dbh-Ps-IaX" secondAttribute="trailing" id="g3f-j0-dcD"/>
+                            <constraint firstItem="dbh-Ps-IaX" firstAttribute="top" secondItem="JNY-B6-SaL" secondAttribute="top" constant="30" id="kIo-nM-cFp">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="setConstraint">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="JNY-B6-SaL" firstAttribute="bottom" secondItem="dbh-Ps-IaX" secondAttribute="bottom" id="pcD-ly-XT6"/>
+                            <constraint firstItem="iA9-Rx-1wF" firstAttribute="width" secondItem="1Fn-Le-Ypw" secondAttribute="width" id="ux1-On-NK5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JNY-B6-SaL"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtConfirmPassword" destination="R99-Qe-7Mf" id="mwH-HN-vm5"/>
+                        <outlet property="txtEmail" destination="oY1-OR-gfr" id="LEc-1q-S3t"/>
+                        <outlet property="txtFirstName" destination="42A-uE-StI" id="cq3-Ka-F3L"/>
+                        <outlet property="txtLastName" destination="axY-l6-c0f" id="RQV-OX-sl6"/>
+                        <outlet property="txtPassword" destination="dlT-b9-Tnq" id="ghB-mx-dLq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xd3-UC-m9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2935" y="616"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="NY6-LU-SVm">
