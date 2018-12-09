@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class CreateExperienceController: BaseViewController , StoryBoardHandler , PickerViewControllerSelectedDataDelegate {
+class CreateExperienceController: BaseViewController , StoryBoardHandler {
     
     @IBOutlet weak var txtPrice: BaseUITextField!
     @IBOutlet weak var txtVDesc: BaseUITextView!
@@ -41,7 +41,7 @@ class CreateExperienceController: BaseViewController , StoryBoardHandler , Picke
     override func viewDidLoad() {
         super.viewDidLoad()
         setInitialData()
-        setNavBar()
+        //setNavBar()
         createExpRequestModel.latitude = "0"
         createExpRequestModel.longitude = "0"
         
@@ -75,11 +75,13 @@ class CreateExperienceController: BaseViewController , StoryBoardHandler , Picke
         setLeftPaddingTextField(txtPrice)
     }
     
-    
-    func setNavBar()
-    {
-        self.title = "CREATE EXPERIENCE"
-        self.navigationController?.isNavigationBarHidden = false
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //        if let btnBack = baseNavigation?.btnBack {
+        //            btnBack.removeFromSuperview()
+        //        }
+        baseNavigation?.lblTitle.text = "CREATE EXPERIENCE"
+        baseNavigation?.createBackButton()
     }
     
     @IBAction func selectPhoto(_ sender: BaseUIButton) {
@@ -146,29 +148,7 @@ class CreateExperienceController: BaseViewController , StoryBoardHandler , Picke
      // Pass the selected object to the new view controller.
      }
      */
-    
-    func getSelectedArrayIndex(selectedIndex: Int, andSelectedValue: String, andPickerType: PickerType) {
-        
-        switch andPickerType
-        {
-        case .cultureList:
-            let culture = Culture.data![selectedIndex]
-            print(culture.id)
-            self.txtCulture.text = andSelectedValue
-            createExpRequestModel.cultureId = "\(culture.id)"
-            break
-            
-        case .typeList:
-            let type = Type.data![selectedIndex]
-            print(type.id)
-            self.txtType.text = andSelectedValue
-            createExpRequestModel.experienceTypeId = "\(type.id)"
-            break
-            
-        default:
-            print("")
-        }
-    }
+
 }
 
 
@@ -191,12 +171,13 @@ extension CreateExperienceController{
     }
     
     func addPickerForCultureList(){
-        let storyboard = UIStoryboard(name: "PickerViewModule", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PickerViewController") as! PickerViewController
-        vc.arrayOfData = self.cultureNameArray
-        vc.pickerViewControllerSelectedDataDelegate = self as! PickerViewControllerSelectedDataDelegate
-        vc.pickerType = .cultureList
-        self.navigationController?.pushViewController(vc, animated: true)
+        let cultureList = self.cultureNameArray
+        RPicker.selectOption(dataArray: cultureList) { (selctedText, atIndex) in
+            let culture = Culture.data![atIndex]
+            print(culture.id)
+            self.txtCulture.text = selctedText
+            self.createExpRequestModel.cultureId = "\(culture.id)"
+        }
     }
 }
 
@@ -220,12 +201,13 @@ extension CreateExperienceController{
     }
     
     func addPickerForTypeList(){
-        let storyboard = UIStoryboard(name: "PickerViewModule", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PickerViewController") as! PickerViewController
-        vc.arrayOfData = self.typeNameArray
-        vc.pickerViewControllerSelectedDataDelegate = self as! PickerViewControllerSelectedDataDelegate
-        vc.pickerType = .typeList
-        self.navigationController?.pushViewController(vc, animated: true)
+        let typeList = self.typeNameArray
+        RPicker.selectOption(dataArray: typeList) { (selctedText, atIndex) in
+            let type = Type.data![atIndex]
+            print(type.id)
+            self.txtType.text = selctedText
+            self.createExpRequestModel.experienceTypeId = "\(type.id)"
+        }
     }
 }
 

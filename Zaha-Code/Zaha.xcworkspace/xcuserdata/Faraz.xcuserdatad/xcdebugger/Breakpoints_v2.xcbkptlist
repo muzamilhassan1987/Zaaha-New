@@ -26,61 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-            timestampString = "564792841.023326"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "createExperience(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-            timestampString = "564792841.023405"
+            timestampString = "566013874.7054991"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
             endingLineNumber = "125"
             landmarkName = "createExperience(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Zaha.CreateExperienceController.createExperience(Any) -&gt; ()"
-                  moduleName = "Zaha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-                  timestampString = "565557810.0960211"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in Zaha.CreateExperienceController.createExperience(Any) -&gt; ()"
-                  moduleName = "Zaha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-                  timestampString = "565557810.097744"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "126"
-                  endingLineNumber = "126"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Zaha/ViewControllers/UpcomingExperience/CreateExperienceController.swift"
-            timestampString = "564792841.02346"
+            timestampString = "566013874.705905"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
@@ -106,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-            timestampString = "565308255.162263"
+            timestampString = "566013790.1137559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -122,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-            timestampString = "565308255.162419"
+            timestampString = "566013790.113833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -138,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-            timestampString = "565308255.1625479"
+            timestampString = "566013790.1138999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
@@ -154,7 +106,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-                  timestampString = "565557810.112648"
+                  timestampString = "566013920.563435"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -169,7 +121,7 @@
                   moduleName = "Zaha"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Faraz/Desktop/SystemsProject/ZahaNew/Zaha-Code/Zaha/ViewControllers/UpcomingExperience/CreateStoryController.swift"
-                  timestampString = "565557810.1143"
+                  timestampString = "566013920.573965"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "101"

@@ -292,7 +292,7 @@ extension CreateStoryController: UITextFieldDelegate{
 }
 
 
-extension CreateStoryController:PickerViewControllerSelectedDataDelegate{
+extension CreateStoryController{
     
     func getExperienceList() {
         var parameters = [String : String]()
@@ -311,23 +311,30 @@ extension CreateStoryController:PickerViewControllerSelectedDataDelegate{
     }
     
     func addPickerForExperienceList(){
-        let storyboard = UIStoryboard(name: "PickerViewModule", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PickerViewController") as! PickerViewController
-        vc.arrayOfData = self.experienceListArray
-        vc.pickerViewControllerSelectedDataDelegate = self as! PickerViewControllerSelectedDataDelegate
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    
-    func getSelectedArrayIndex(selectedIndex: Int, andSelectedValue: String, andPickerType: PickerType) {
-        self.experienceTxtField.text = andSelectedValue
-        for myExp in self.experienceModelArray{
-            if (myExp.title == andSelectedValue){
-                experienceId  = myExp.id
-                break
+//        let storyboard = UIStoryboard(name: "PickerViewModule", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "PickerViewController") as! PickerViewController
+
+        let expList = self.experienceListArray
+        RPicker.selectOption(dataArray: expList) { (selctedText, atIndex) in
+            self.experienceTxtField.text = selctedText
+            for myExp in self.experienceModelArray{
+                if (myExp.title == selctedText){
+                    self.experienceId  = myExp.id
+                    break
+                }
             }
         }
+        
+
+//        vc.arrayOfData =
+//        vc.pickerViewControllerSelectedDataDelegate = self as! PickerViewControllerSelectedDataDelegate
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
+//    func getSelectedArrayIndex(selectedIndex: Int, andSelectedValue: String, andPickerType: PickerType) {
+//
+//    }
 }
 
 

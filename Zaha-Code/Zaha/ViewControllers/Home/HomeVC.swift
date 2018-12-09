@@ -94,6 +94,7 @@ class HomeVC: BaseViewController,GIDSignInUIDelegate, GIDSignInDelegate, StoryBo
     
     @objc func gotoCreateStoryController() {
         router.goToCreateStory(from: self)
+        //router.goToCreateExperience(from: self)
     }
     
     @objc func showFilter() {
