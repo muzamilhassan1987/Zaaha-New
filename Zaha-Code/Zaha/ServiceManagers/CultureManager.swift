@@ -71,4 +71,6 @@ extension CultureManager {
         let param = AFParam(endpoint: "getCulture", params: [:], headers: headers, method: .get, parameterEncoding:JSONEncoding.default, images: [])
         return param
     }
+    
+    
 }

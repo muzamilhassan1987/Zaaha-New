@@ -11,6 +11,7 @@ import Alamofire
 
 class ExperienceManager: AFManagerProtocol {
     var data : [MyExperienceExperiences]?
+    var maestroNameData : [MaestroResult]?
     
     func api(_ param: AFParam, completion: @escaping () -> Void) {
         
@@ -135,6 +136,44 @@ class ExperienceManager: AFManagerProtocol {
             completion()
         }
     }
+    
+    
+    func apiGetMaestro(_ param: AFParam, completion: @escaping () -> Void) {
+        
+        //set default value
+        
+        self.isSuccess = false
+        
+        //Request
+        AFNetwork.shared.apiRequest(param, isSpinnerNeeded: false, success: { (response) in
+            
+            guard let data = response else { return }
+            
+            do {
+                let decoder = JSONDecoder()
+                let model = try decoder.decode(MaestroBase.self, from: data)
+                
+                //check success case from server
+                if model.code! == ServiceCodes.successCode {
+                    self.isSuccess = true
+                    self.message = model.message ?? " "
+                    self.maestroNameData = model.result
+                }else{
+                    // Alert.showMsg(msg: model.response?.message ?? "Server not responding")
+                }
+                
+            } catch let err {
+                
+                print("Err", err)
+            }
+            
+            completion()
+        }) { (error) in
+            
+            completion()
+        }
+    }
+    
 }
 
 extension ExperienceManager {
@@ -171,6 +210,27 @@ extension ExperienceManager {
         print(CurrentUser.token)
         print("---------------------------------------------------")
         let param = AFParam(endpoint: "getMyExperiences", params: [:], headers: headers, method: .get, parameterEncoding:JSONEncoding.default, images: [])
+        return param
+    }
+    
+    
+    func postFilterParams() -> AFParam {
+        //getCms?type=(term_condition,privacy_policy,about_us)
+        let headers: [String : String] = ["token":CurrentUser.data!.token!]
+        
+        print(CurrentUser.token)
+        print("---------------------------------------------------")
+        let param = AFParam(endpoint: "upcomingExperienceFilter", params: [:], headers: headers, method: .post, parameterEncoding:JSONEncoding.default, images: [])
+        return param
+    }
+    
+    func getMaestroNamesParams() -> AFParam {
+        //getCms?type=(term_condition,privacy_policy,about_us)
+        let headers: [String : String] = ["token":CurrentUser.data!.token!]
+        
+        print(CurrentUser.token)
+        print("---------------------------------------------------")
+        let param = AFParam(endpoint: "getMasteroesName", params: [:], headers: headers, method: .get, parameterEncoding:JSONEncoding.default, images: [])
         return param
     }
     

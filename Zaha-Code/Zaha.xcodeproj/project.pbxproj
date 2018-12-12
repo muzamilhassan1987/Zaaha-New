@@ -260,6 +260,8 @@
 		591F02A22186E7C4000CCE12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591F02A02186E7C4000CCE12 /* LaunchScreen.storyboard */; };
 		591F02AD2186E7C4000CCE12 /* ZahaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F02AC2186E7C4000CCE12 /* ZahaTests.swift */; };
 		591F02B82186E7C4000CCE12 /* ZahaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F02B72186E7C4000CCE12 /* ZahaUITests.swift */; };
+		593F3A8521C10F3C0036BB19 /* MaestroBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593F3A8321C10F3C0036BB19 /* MaestroBase.swift */; };
+		593F3A8621C10F3C0036BB19 /* MaestroResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593F3A8421C10F3C0036BB19 /* MaestroResult.swift */; };
 		59CCC69521B161A00082177A /* InboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCC69421B161A00082177A /* InboxManager.swift */; };
 		59CCC69B21B169060082177A /* InboxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCC69621B169050082177A /* InboxData.swift */; };
 		59CCC69C21B169060082177A /* InboxResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CCC69721B169060082177A /* InboxResponse.swift */; };
@@ -586,6 +588,8 @@
 		591F02B32186E7C4000CCE12 /* ZahaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZahaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		591F02B72186E7C4000CCE12 /* ZahaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZahaUITests.swift; sourceTree = "<group>"; };
 		591F02B92186E7C4000CCE12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		593F3A8321C10F3C0036BB19 /* MaestroBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaestroBase.swift; sourceTree = "<group>"; };
+		593F3A8421C10F3C0036BB19 /* MaestroResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaestroResult.swift; sourceTree = "<group>"; };
 		59CCC69421B161A00082177A /* InboxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxManager.swift; sourceTree = "<group>"; };
 		59CCC69621B169050082177A /* InboxData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxData.swift; sourceTree = "<group>"; };
 		59CCC69721B169060082177A /* InboxResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxResponse.swift; sourceTree = "<group>"; };
@@ -1523,6 +1527,8 @@
 				D067EA0521AAA1760040A492 /* MyExperienceData.swift */,
 				D067EA0621AAA1760040A492 /* MyExperience.swift */,
 				D067EA0721AAA1760040A492 /* MyExperienceExperiences.swift */,
+				593F3A8321C10F3C0036BB19 /* MaestroBase.swift */,
+				593F3A8421C10F3C0036BB19 /* MaestroResult.swift */,
 			);
 			path = MyExp;
 			sourceTree = "<group>";
@@ -1976,6 +1982,7 @@
 				1A665EE02188426600B7CBA2 /* BaseUISegmentedControl.swift in Sources */,
 				1AB84F65219484BE004D6C58 /* DescriptionCell.swift in Sources */,
 				1DF409C7219CA85B0009B178 /* RegisterBase.swift in Sources */,
+				593F3A8621C10F3C0036BB19 /* MaestroResult.swift in Sources */,
 				1D8E52C0218EDFD600F49674 /* SideMenuController.swift in Sources */,
 				1A665F5B21884BD900B7CBA2 /* PhoneTableViewCell.swift in Sources */,
 				1A665F3721884A5A00B7CBA2 /* LoginViewController.swift in Sources */,
@@ -2084,6 +2091,7 @@
 				1A665F3621884A5A00B7CBA2 /* TermsConditionViewController.swift in Sources */,
 				D0A8059921A33A1700F0F245 /* CommonServerResponse.swift in Sources */,
 				D0F6811B21B232E20074653D /* SendChatResponse.swift in Sources */,
+				593F3A8521C10F3C0036BB19 /* MaestroBase.swift in Sources */,
 				D0A8059F21A33A9200F0F245 /* TypeListManager.swift in Sources */,
 				1A665ED42188426600B7CBA2 /* BaseUITableViewCell.swift in Sources */,
 				1DF409C0219CA8120009B178 /* ServiceManagers.swift in Sources */,
