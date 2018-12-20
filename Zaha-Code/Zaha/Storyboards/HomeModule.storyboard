@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kzI-7r-LWq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kzI-7r-LWq">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -349,8 +349,49 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_whiteBox" translatesAutoresizingMaskIntoConstraints="NO" id="Ddb-Qc-iMN">
                                                         <rect key="frame" x="0.0" y="0.0" width="366" height="527"/>
                                                     </imageView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTu-kG-Gv6" userLabel="CultureView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O12-1R-Zus" userLabel="SearchView">
                                                         <rect key="frame" x="33" y="0.0" width="300" height="80.666666666666671"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_Field" translatesAutoresizingMaskIntoConstraints="NO" id="ZiY-5r-kcY">
+                                                                <rect key="frame" x="0.0" y="39.666666666666657" width="300" height="41"/>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEARCH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpO-O2-P5L">
+                                                                <rect key="frame" x="19" y="22.666666666666657" width="44" height="12"/>
+                                                                <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="12"/>
+                                                                <color key="textColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERL-Iv-PW2">
+                                                                <rect key="frame" x="10" y="39.666666666666657" width="243" height="41"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7g-CB-x20">
+                                                                <rect key="frame" x="258" y="41.666666666666657" width="37" height="37"/>
+                                                                <state key="normal" image="upcomingExp_closeBtn"/>
+                                                                <connections>
+                                                                    <action selector="clearSearchButtonClicked:" destination="sHB-nV-vjE" eventType="touchUpInside" id="XNs-6J-Yql"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="z7g-CB-x20" firstAttribute="leading" secondItem="ERL-Iv-PW2" secondAttribute="trailing" constant="5" id="LLD-XF-yqy"/>
+                                                            <constraint firstItem="vpO-O2-P5L" firstAttribute="leading" secondItem="O12-1R-Zus" secondAttribute="leading" constant="19" id="O3t-TU-GjA"/>
+                                                            <constraint firstItem="z7g-CB-x20" firstAttribute="centerY" secondItem="ERL-Iv-PW2" secondAttribute="centerY" id="SaM-bC-uf0"/>
+                                                            <constraint firstItem="ZiY-5r-kcY" firstAttribute="leading" secondItem="O12-1R-Zus" secondAttribute="leading" id="Sui-6x-EyG"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ZiY-5r-kcY" secondAttribute="bottom" id="aQs-pX-6nD"/>
+                                                            <constraint firstItem="ERL-Iv-PW2" firstAttribute="top" secondItem="ZiY-5r-kcY" secondAttribute="top" id="el7-gt-uUf"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ZiY-5r-kcY" secondAttribute="trailing" id="kEw-tp-tIG"/>
+                                                            <constraint firstItem="ZiY-5r-kcY" firstAttribute="trailing" secondItem="z7g-CB-x20" secondAttribute="trailing" constant="5" id="oG6-JM-ZKs"/>
+                                                            <constraint firstItem="ERL-Iv-PW2" firstAttribute="leading" secondItem="ZiY-5r-kcY" secondAttribute="leading" constant="10" id="pSW-eu-9lP"/>
+                                                            <constraint firstItem="ERL-Iv-PW2" firstAttribute="bottom" secondItem="ZiY-5r-kcY" secondAttribute="bottom" id="sPr-Pg-rHG"/>
+                                                            <constraint firstItem="ZiY-5r-kcY" firstAttribute="top" secondItem="vpO-O2-P5L" secondAttribute="bottom" constant="5" id="uNU-Mr-vrt"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTu-kG-Gv6" userLabel="CultureView">
+                                                        <rect key="frame" x="33" y="80.666666666666657" width="300" height="80.666666666666657"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_FieldDown" translatesAutoresizingMaskIntoConstraints="NO" id="N50-3l-Es2">
                                                                 <rect key="frame" x="0.0" y="39.666666666666657" width="300" height="41"/>
@@ -392,19 +433,19 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPC-Mb-cD6" userLabel="Time/DateView">
-                                                        <rect key="frame" x="33" y="80.666666666666657" width="300" height="81"/>
+                                                        <rect key="frame" x="33" y="161.33333333333331" width="300" height="80.333333333333314"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_Field" translatesAutoresizingMaskIntoConstraints="NO" id="sTg-gm-YOq">
-                                                                <rect key="frame" x="0.0" y="40.000000000000028" width="300" height="41"/>
+                                                                <rect key="frame" x="0.0" y="39.333333333333371" width="300" height="41"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME / DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uho-ne-w7u">
-                                                                <rect key="frame" x="19" y="23.000000000000028" width="65.666666666666671" height="12"/>
+                                                                <rect key="frame" x="19" y="22.333333333333371" width="65.666666666666671" height="12"/>
                                                                 <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="12"/>
                                                                 <color key="textColor" red="0.7843137255" green="0.62352941179999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time Date Picker" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vza-39-yrg">
-                                                                <rect key="frame" x="10" y="40.000000000000028" width="280" height="41"/>
+                                                                <rect key="frame" x="10" y="39.333333333333371" width="280" height="41"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -424,7 +465,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Quj-bC-G7M" userLabel="MaestroView">
-                                                        <rect key="frame" x="33" y="161.66666666666669" width="300" height="80.666666666666686"/>
+                                                        <rect key="frame" x="33" y="241.66666666666666" width="300" height="80.666666666666657"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_FieldDown" translatesAutoresizingMaskIntoConstraints="NO" id="CHs-UG-ALZ">
                                                                 <rect key="frame" x="0.0" y="39.666666666666629" width="300" height="41"/>
@@ -466,7 +507,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xa-6w-92C" userLabel="TypeOfExpView">
-                                                        <rect key="frame" x="33" y="242.33333333333329" width="300" height="80.666666666666657"/>
+                                                        <rect key="frame" x="33" y="322.33333333333331" width="300" height="80.666666666666686"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upcomingExp_FieldDown" translatesAutoresizingMaskIntoConstraints="NO" id="97w-PY-72l">
                                                                 <rect key="frame" x="0.0" y="39.666666666666686" width="300" height="41"/>
@@ -508,7 +549,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNW-Um-4H0" customClass="BaseUIButton" customModule="Zaha" customModuleProvider="target">
-                                                        <rect key="frame" x="33" y="354" width="131" height="47"/>
+                                                        <rect key="frame" x="33" y="434" width="131" height="47"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="FILTER" backgroundImage="login_login_btn">
                                                             <color key="titleColor" red="0.77647058820000003" green="0.61960784310000006" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -525,15 +566,17 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="O12-1R-Zus" firstAttribute="leading" secondItem="kTu-kG-Gv6" secondAttribute="leading" id="00E-d0-wmo"/>
                                                     <constraint firstAttribute="trailing" secondItem="8xa-6w-92C" secondAttribute="trailing" constant="33" id="0IN-w6-HR5"/>
                                                     <constraint firstItem="HPC-Mb-cD6" firstAttribute="height" secondItem="kTu-kG-Gv6" secondAttribute="height" id="294-Dv-b1m"/>
                                                     <constraint firstItem="8xa-6w-92C" firstAttribute="height" secondItem="Quj-bC-G7M" secondAttribute="height" id="2Ho-VE-8D4"/>
                                                     <constraint firstItem="HPC-Mb-cD6" firstAttribute="leading" secondItem="Quj-bC-G7M" secondAttribute="leading" id="2Xg-mF-GPN"/>
                                                     <constraint firstItem="HPC-Mb-cD6" firstAttribute="trailing" secondItem="Quj-bC-G7M" secondAttribute="trailing" id="6t7-Ps-smR"/>
+                                                    <constraint firstItem="O12-1R-Zus" firstAttribute="trailing" secondItem="kTu-kG-Gv6" secondAttribute="trailing" id="9dv-2f-r3i"/>
                                                     <constraint firstItem="Ddb-Qc-iMN" firstAttribute="leading" secondItem="tbu-pq-qz8" secondAttribute="leading" id="Cln-dz-7lv"/>
                                                     <constraint firstItem="HPC-Mb-cD6" firstAttribute="top" secondItem="kTu-kG-Gv6" secondAttribute="bottom" id="IF0-Aw-lNs"/>
                                                     <constraint firstItem="Quj-bC-G7M" firstAttribute="trailing" secondItem="8xa-6w-92C" secondAttribute="trailing" id="Ozw-zJ-NKv"/>
-                                                    <constraint firstItem="kTu-kG-Gv6" firstAttribute="top" secondItem="tbu-pq-qz8" secondAttribute="top" id="Ps5-cS-Qlf"/>
+                                                    <constraint firstItem="kTu-kG-Gv6" firstAttribute="top" secondItem="O12-1R-Zus" secondAttribute="bottom" id="QJd-a0-3J7"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ddb-Qc-iMN" secondAttribute="trailing" id="R1g-I9-psl"/>
                                                     <constraint firstAttribute="bottom" secondItem="Ddb-Qc-iMN" secondAttribute="bottom" id="Yd3-Gf-fJ3"/>
                                                     <constraint firstItem="Quj-bC-G7M" firstAttribute="leading" secondItem="8xa-6w-92C" secondAttribute="leading" id="ZDc-TO-ybf"/>
@@ -547,7 +590,9 @@
                                                     <constraint firstItem="cNW-Um-4H0" firstAttribute="leading" secondItem="tbu-pq-qz8" secondAttribute="leading" constant="33" id="qyn-vp-9jS"/>
                                                     <constraint firstItem="kTu-kG-Gv6" firstAttribute="trailing" secondItem="HPC-Mb-cD6" secondAttribute="trailing" id="ruc-NE-TJa"/>
                                                     <constraint firstItem="Quj-bC-G7M" firstAttribute="top" secondItem="HPC-Mb-cD6" secondAttribute="bottom" id="vJw-nI-cZR"/>
-                                                    <constraint firstAttribute="bottom" secondItem="cNW-Um-4H0" secondAttribute="bottom" constant="126" id="yd3-sj-PJV"/>
+                                                    <constraint firstItem="O12-1R-Zus" firstAttribute="top" secondItem="tbu-pq-qz8" secondAttribute="top" id="wr9-eF-e67"/>
+                                                    <constraint firstItem="kTu-kG-Gv6" firstAttribute="height" secondItem="O12-1R-Zus" secondAttribute="height" id="xFA-r0-eUj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cNW-Um-4H0" secondAttribute="bottom" constant="46" id="yd3-sj-PJV"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -594,6 +639,7 @@
                     <connections>
                         <outlet property="txtCulture" destination="Pif-7A-TgN" id="hFP-Mv-nhP"/>
                         <outlet property="txtMaestro" destination="PfQ-mO-ajz" id="GdZ-qw-RUe"/>
+                        <outlet property="txtSearch" destination="ERL-Iv-PW2" id="i6M-cO-IEC"/>
                         <outlet property="txtTime" destination="Vza-39-yrg" id="s5z-xC-IbL"/>
                         <outlet property="txtTypes" destination="Z2s-bt-bAs" id="wuw-rG-pPF"/>
                     </connections>
@@ -604,11 +650,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="login_login_btn" width="131" height="47.666667938232422"/>
-        <image name="upcomingExp_Field" width="262" height="41.666667938232422"/>
-        <image name="upcomingExp_FieldDown" width="262" height="41.666667938232422"/>
-        <image name="upcomingExp_blackBox" width="328.33334350585938" height="590"/>
+        <image name="login_login_btn" width="131" height="47"/>
+        <image name="upcomingExp_Field" width="262" height="41"/>
+        <image name="upcomingExp_FieldDown" width="262" height="41"/>
+        <image name="upcomingExp_blackBox" width="328" height="590"/>
         <image name="upcomingExp_closeBtn" width="37" height="37"/>
-        <image name="upcomingExp_whiteBox" width="328.33334350585938" height="527.33331298828125"/>
+        <image name="upcomingExp_whiteBox" width="328" height="527"/>
     </resources>
 </document>
